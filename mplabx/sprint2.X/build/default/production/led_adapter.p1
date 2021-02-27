@@ -1,0 +1,138 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+[v F325 `(v ~T0 @X0 0 tf ]
+[v F327 `(v ~T0 @X0 0 tf ]
+[v F329 `(v ~T0 @X0 0 tf ]
+[v F331 `(v ~T0 @X0 0 tf1`f ]
+[v F334 `(v ~T0 @X0 0 tf1`f ]
+"30 ./led_adapter.h
+[; ;./led_adapter.h: 30: {
+[s S3 `*F325 1 `*F327 1 `*F329 1 `*F331 1 `*F334 1 ]
+[n S3 led turn_blue turn_green turn_red set_brightness set_color ]
+[v F356 `(v ~T0 @X0 0 tf ]
+[v F360 `(v ~T0 @X0 0 tf ]
+[v F364 `(v ~T0 @X0 0 tf ]
+"18 led_adapter.c
+[; ;led_adapter.c: 18: static void turn_blue()
+[v _turn_blue `(v ~T0 @X0 1 sf ]
+"19
+[; ;led_adapter.c: 19: {
+{
+[e :U _turn_blue ]
+[f ]
+"20
+[; ;led_adapter.c: 20:   printf("Demo 1!\n");
+[e ( _printf :s 1C ]
+"21
+[; ;led_adapter.c: 21: }
+[e :UE 4 ]
+}
+"23
+[; ;led_adapter.c: 23: static void turn_green()
+[v _turn_green `(v ~T0 @X0 1 sf ]
+"24
+[; ;led_adapter.c: 24: {
+{
+[e :U _turn_green ]
+[f ]
+"25
+[; ;led_adapter.c: 25:   printf("Demo 2!\n");
+[e ( _printf :s 2C ]
+"26
+[; ;led_adapter.c: 26: }
+[e :UE 5 ]
+}
+"28
+[; ;led_adapter.c: 28: static void turn_red()
+[v _turn_red `(v ~T0 @X0 1 sf ]
+"29
+[; ;led_adapter.c: 29: {
+{
+[e :U _turn_red ]
+[f ]
+"30
+[; ;led_adapter.c: 30:   printf("Demo 3!\n");
+[e ( _printf :s 3C ]
+"31
+[; ;led_adapter.c: 31: }
+[e :UE 6 ]
+}
+"33
+[; ;led_adapter.c: 33: void set_brightness(float brightness)
+[v _set_brightness `(v ~T0 @X0 1 ef1`f ]
+"34
+[; ;led_adapter.c: 34: {
+{
+[e :U _set_brightness ]
+"33
+[; ;led_adapter.c: 33: void set_brightness(float brightness)
+[v _brightness `f ~T0 @X0 1 r1 ]
+"34
+[; ;led_adapter.c: 34: {
+[f ]
+"35
+[; ;led_adapter.c: 35:   printf("Demo 3!\n");
+[e ( _printf :s 4C ]
+"36
+[; ;led_adapter.c: 36: }
+[e :UE 7 ]
+}
+"38
+[; ;led_adapter.c: 38: void set_color(float temperature)
+[v _set_color `(v ~T0 @X0 1 ef1`f ]
+"39
+[; ;led_adapter.c: 39: {
+{
+[e :U _set_color ]
+"38
+[; ;led_adapter.c: 38: void set_color(float temperature)
+[v _temperature `f ~T0 @X0 1 r1 ]
+"39
+[; ;led_adapter.c: 39: {
+[f ]
+"40
+[; ;led_adapter.c: 40:   printf("Demo 3!\n");
+[e ( _printf :s 5C ]
+"41
+[; ;led_adapter.c: 41: }
+[e :UE 8 ]
+}
+"43
+[; ;led_adapter.c: 43: void initialize_led(led *led)
+[v _initialize_led `(v ~T0 @X0 1 ef1`*S3 ]
+"44
+[; ;led_adapter.c: 44: {
+{
+[e :U _initialize_led ]
+"43
+[; ;led_adapter.c: 43: void initialize_led(led *led)
+[v _led `*S3 ~T0 @X0 1 r1 ]
+"44
+[; ;led_adapter.c: 44: {
+[f ]
+"45
+[; ;led_adapter.c: 45:   led->turn_blue = turn_blue;
+[e = . *U _led 0 -> &U _turn_blue `*F356 ]
+"46
+[; ;led_adapter.c: 46:   led->turn_green = turn_green;
+[e = . *U _led 1 -> &U _turn_green `*F360 ]
+"47
+[; ;led_adapter.c: 47:   led->turn_red = turn_red;
+[e = . *U _led 2 -> &U _turn_red `*F364 ]
+"48
+[; ;led_adapter.c: 48:   led->set_brightness = set_brightness;
+[e = . *U _led 3 &U _set_brightness ]
+"49
+[; ;led_adapter.c: 49:   led->set_color = set_color;
+[e = . *U _led 4 &U _set_color ]
+"50
+[; ;led_adapter.c: 50: }
+[e :UE 9 ]
+}
+[p f _printf 8388608 ]
+[a 3C 68 101 109 111 32 51 33 10 0 ]
+[a 4C 68 101 109 111 32 51 33 10 0 ]
+[a 5C 68 101 109 111 32 51 33 10 0 ]
+[a 2C 68 101 109 111 32 50 33 10 0 ]
+[a 1C 68 101 109 111 32 49 33 10 0 ]

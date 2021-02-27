@@ -47,6 +47,7 @@
 #include "light_sensor.h"
 #include "temp_sensor.h"
 #include "lcd_screen.h"
+#include "led_adapter.h"
 
 /*
                          Main application
@@ -59,6 +60,7 @@ void main(void)
   sensor light_sensor;
   sensor temp_sensor;
   lcd_screen lcd_screen;
+  led led;
 
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);

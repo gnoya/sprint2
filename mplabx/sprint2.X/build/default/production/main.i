@@ -9887,6 +9887,20 @@ typedef struct lcd_screen
 void initialize_lcd_screen(lcd_screen *lcd_screen_var);
 # 49 "main.c" 2
 
+# 1 "./led_adapter.h" 1
+# 29 "./led_adapter.h"
+typedef struct led
+{
+  void (*turn_blue)(void);
+  void (*turn_green)(void);
+  void (*turn_red)(void);
+  void (*set_brightness)(float brightness);
+  void (*set_color)(float temperature);
+} led;
+
+void initialize_led(led *led);
+# 50 "main.c" 2
+
 
 
 
@@ -9899,6 +9913,7 @@ void main(void)
   sensor light_sensor;
   sensor temp_sensor;
   lcd_screen lcd_screen;
+  led led;
 
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
@@ -9907,13 +9922,13 @@ void main(void)
   lcd_screen.demo1();
   lcd_screen.demo2();
   lcd_screen.demo3();
-# 86 "main.c"
+# 88 "main.c"
   while (1)
   {
+    float light_value = light_sensor.read();
+    float temp_value = temp_sensor.read();
 
-
-
-
-
+    printf("Light sensor value: %f\n", light_value);
+    printf("Temperature sensor value: %f\n", temp_value);
   }
 }

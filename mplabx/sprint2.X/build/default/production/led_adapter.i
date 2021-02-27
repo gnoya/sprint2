@@ -1,4 +1,4 @@
-# 1 "lcd_screen.c"
+# 1 "led_adapter.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "lcd_screen.c" 2
+# 1 "led_adapter.c" 2
 
 
 
@@ -171,46 +171,62 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 8 "lcd_screen.c" 2
+# 8 "led_adapter.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 9 "lcd_screen.c" 2
+# 9 "led_adapter.c" 2
 
-# 1 "./lcd_screen.h" 1
-# 29 "./lcd_screen.h"
-typedef struct lcd_screen
+# 1 "./led_adapter.h" 1
+# 29 "./led_adapter.h"
+typedef struct led
 {
-  void (*demo1)(void);
-  void (*demo2)(void);
-  void (*demo3)(void);
-} lcd_screen;
+  void (*turn_blue)(void);
+  void (*turn_green)(void);
+  void (*turn_red)(void);
+  void (*set_brightness)(float brightness);
+  void (*set_color)(float temperature);
+} led;
 
-void initialize_lcd_screen(lcd_screen *lcd_screen_var);
-# 10 "lcd_screen.c" 2
+void initialize_led(led *led);
+# 10 "led_adapter.c" 2
 
 
-static void demo1();
-static void demo2();
-static void demo3();
+static void turn_blue();
+static void turn_green();
+static void turn_red();
+static void set_brightness(float brightness);
+static void set_color(float temperature);
 
-static void demo1()
+static void turn_blue()
 {
   printf("Demo 1!\n");
 }
 
-static void demo2()
+static void turn_green()
 {
   printf("Demo 2!\n");
 }
 
-static void demo3()
+static void turn_red()
 {
   printf("Demo 3!\n");
 }
 
-void initialize_lcd_screen(lcd_screen *lcd_screen_var)
+void set_brightness(float brightness)
 {
-  lcd_screen_var->demo1 = demo1;
-  lcd_screen_var->demo2 = demo2;
-  lcd_screen_var->demo3 = demo3;
+  printf("Demo 3!\n");
+}
+
+void set_color(float temperature)
+{
+  printf("Demo 3!\n");
+}
+
+void initialize_led(led *led)
+{
+  led->turn_blue = turn_blue;
+  led->turn_green = turn_green;
+  led->turn_red = turn_red;
+  led->set_brightness = set_brightness;
+  led->set_color = set_color;
 }
