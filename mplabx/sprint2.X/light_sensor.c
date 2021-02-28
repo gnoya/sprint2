@@ -8,21 +8,21 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "sensor_adapter.h"
+#include "mcc_generated_files/mcc.h"
 
 static bool open();
-static float read();
+static int read();
 static void close();
 
 static bool open()
 {
-  printf("Light sensor opened!\n");
   return true;
 }
 
-static float read()
+static int read()
 {
-  printf("Reading light sensor\n");
-  return 2.2;
+  printf("Reading light sensor\r\n");
+  return ((int)ADC_GetConversion(channel_AN1));;
 }
 
 static void close()

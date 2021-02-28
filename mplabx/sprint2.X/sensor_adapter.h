@@ -8,6 +8,6 @@
 typedef struct sensor
 {
   bool (*open)(void);
-  float (*read)(void);
+  int (*read)(void);
   void (*close)(void);
 } sensor;

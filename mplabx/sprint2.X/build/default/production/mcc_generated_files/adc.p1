@@ -1,39 +1,47 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"8729 D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8729: extern volatile unsigned char PR4 __attribute__((address(0x416)));
-[v _PR4 `Vuc ~T0 @X0 0 e@1046 ]
-"8709
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8709: extern volatile unsigned char TMR4 __attribute__((address(0x415)));
-[v _TMR4 `Vuc ~T0 @X0 0 e@1045 ]
-"783
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 783:     struct {
-[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S46 . CCP2IF TMR4IF TMR6IF BCL1IF . C1IF C2IF OSFIF ]
-"782
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 782: typedef union {
-[u S45 `S46 1 ]
-[n S45 . . ]
-"794
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 794: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x012)));
-[v _PIR2bits `VS45 ~T0 @X0 0 e@18 ]
-"8749
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8749: extern volatile unsigned char T4CON __attribute__((address(0x417)));
-[v _T4CON `Vuc ~T0 @X0 0 e@1047 ]
-"8755
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8755:     struct {
-[s S395 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
-[n S395 . T4CKPS TMR4ON T4OUTPS ]
-"8760
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8760:     struct {
-[s S396 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S396 . T4CKPS0 T4CKPS1 . T4OUTPS0 T4OUTPS1 T4OUTPS2 T4OUTPS3 ]
-"8754
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8754: typedef union {
-[u S394 `S395 1 `S396 1 ]
-[n S394 . . . ]
-"8770
-[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8770: extern volatile T4CONbits_t T4CONbits __attribute__((address(0x417)));
-[v _T4CONbits `VS394 ~T0 @X0 0 e@1047 ]
+[v F5587 `(v ~T0 @X0 0 tf ]
+"2189 D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2189: extern volatile unsigned char ADCON1 __attribute__((address(0x09E)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
+"2242
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2242: extern volatile unsigned char ADCON2 __attribute__((address(0x09F)));
+[v _ADCON2 `Vuc ~T0 @X0 0 e@159 ]
+"2069
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2069: extern volatile unsigned char ADRESL __attribute__((address(0x09B)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
+"2089
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2089: extern volatile unsigned char ADRESH __attribute__((address(0x09C)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
+"2109
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2109: extern volatile unsigned char ADCON0 __attribute__((address(0x09D)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
+"88 mcc_generated_files/adc.c
+[; ;mcc_generated_files/adc.c: 88: void ADC_SelectChannel(adc_channel_t channel)
+[c E5569 0 1 28 29 30 31 .. ]
+[n E5569 . channel_AN0 channel_AN1 channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
+"2115 D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2115:     struct {
+[s S105 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S105 . ADON GO_nDONE CHS ]
+"2120
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2120:     struct {
+[s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S106 . . ADGO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"2129
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2129:     struct {
+[s S107 :1 `uc 1 :1 `uc 1 ]
+[n S107 . . GO ]
+"2114
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2114: typedef union {
+[u S104 `S105 1 `S106 1 `S107 1 ]
+[n S104 . . . . ]
+"2134
+[; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2134: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x09D)));
+[v _ADCON0bits `VS104 ~T0 @X0 0 e@157 ]
+[v F5521 `(v ~T0 @X0 1 tf1`ul ]
+"92 D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
+[v __delay `JF5521 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -961,152 +969,166 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"62 mcc_generated_files/tmr4.c
-[; ;mcc_generated_files/tmr4.c: 62: void TMR4_Initialize(void)
-[v _TMR4_Initialize `(v ~T0 @X0 1 ef ]
-"63
-[; ;mcc_generated_files/tmr4.c: 63: {
-{
-[e :U _TMR4_Initialize ]
-[f ]
+"61 mcc_generated_files/adc.c
+[; ;mcc_generated_files/adc.c: 61: void (*ADC_InterruptHandler)(void);
+[v _ADC_InterruptHandler `*F5587 ~T0 @X0 1 e ]
 "67
-[; ;mcc_generated_files/tmr4.c: 67:     PR4 = 0x40;
-[e = _PR4 -> -> 64 `i `uc ]
-"70
-[; ;mcc_generated_files/tmr4.c: 70:     TMR4 = 0x00;
-[e = _TMR4 -> -> 0 `i `uc ]
-"73
-[; ;mcc_generated_files/tmr4.c: 73:     PIR2bits.TMR4IF = 0;
-[e = . . _PIR2bits 0 1 -> -> 0 `i `uc ]
-"76
-[; ;mcc_generated_files/tmr4.c: 76:     T4CON = 0x07;
-[e = _T4CON -> -> 7 `i `uc ]
-"77
-[; ;mcc_generated_files/tmr4.c: 77: }
-[e :UE 780 ]
-}
-"79
-[; ;mcc_generated_files/tmr4.c: 79: void TMR4_StartTimer(void)
-[v _TMR4_StartTimer `(v ~T0 @X0 1 ef ]
-"80
-[; ;mcc_generated_files/tmr4.c: 80: {
+[; ;mcc_generated_files/adc.c: 67: void ADC_Initialize(void)
+[v _ADC_Initialize `(v ~T0 @X0 1 ef ]
+"68
+[; ;mcc_generated_files/adc.c: 68: {
 {
-[e :U _TMR4_StartTimer ]
+[e :U _ADC_Initialize ]
 [f ]
-"82
-[; ;mcc_generated_files/tmr4.c: 82:     T4CONbits.TMR4ON = 1;
-[e = . . _T4CONbits 0 1 -> -> 1 `i `uc ]
-"83
-[; ;mcc_generated_files/tmr4.c: 83: }
+"72
+[; ;mcc_generated_files/adc.c: 72:     ADCON1 = 0x86;
+[e = _ADCON1 -> -> 134 `i `uc ]
+"75
+[; ;mcc_generated_files/adc.c: 75:     ADCON2 = 0x00;
+[e = _ADCON2 -> -> 0 `i `uc ]
+"78
+[; ;mcc_generated_files/adc.c: 78:     ADRESL = 0x00;
+[e = _ADRESL -> -> 0 `i `uc ]
+"81
+[; ;mcc_generated_files/adc.c: 81:     ADRESH = 0x00;
+[e = _ADRESH -> -> 0 `i `uc ]
+"84
+[; ;mcc_generated_files/adc.c: 84:     ADCON0 = 0x01;
+[e = _ADCON0 -> -> 1 `i `uc ]
+"86
+[; ;mcc_generated_files/adc.c: 86: }
 [e :UE 781 ]
 }
-"85
-[; ;mcc_generated_files/tmr4.c: 85: void TMR4_StopTimer(void)
-[v _TMR4_StopTimer `(v ~T0 @X0 1 ef ]
-"86
-[; ;mcc_generated_files/tmr4.c: 86: {
-{
-[e :U _TMR4_StopTimer ]
-[f ]
 "88
-[; ;mcc_generated_files/tmr4.c: 88:     T4CONbits.TMR4ON = 0;
-[e = . . _T4CONbits 0 1 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/adc.c: 88: void ADC_SelectChannel(adc_channel_t channel)
+[v _ADC_SelectChannel `(v ~T0 @X0 1 ef1`E5569 ]
 "89
-[; ;mcc_generated_files/tmr4.c: 89: }
+[; ;mcc_generated_files/adc.c: 89: {
+{
+[e :U _ADC_SelectChannel ]
+"88
+[; ;mcc_generated_files/adc.c: 88: void ADC_SelectChannel(adc_channel_t channel)
+[v _channel `E5569 ~T0 @X0 1 r1 ]
+"89
+[; ;mcc_generated_files/adc.c: 89: {
+[f ]
+"91
+[; ;mcc_generated_files/adc.c: 91:     ADCON0bits.CHS = channel;
+[e = . . _ADCON0bits 0 2 -> _channel `uc ]
+"93
+[; ;mcc_generated_files/adc.c: 93:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"94
+[; ;mcc_generated_files/adc.c: 94: }
 [e :UE 782 ]
 }
-"91
-[; ;mcc_generated_files/tmr4.c: 91: uint8_t TMR4_ReadTimer(void)
-[v _TMR4_ReadTimer `(uc ~T0 @X0 1 ef ]
-"92
-[; ;mcc_generated_files/tmr4.c: 92: {
-{
-[e :U _TMR4_ReadTimer ]
-[f ]
-"93
-[; ;mcc_generated_files/tmr4.c: 93:     uint8_t readVal;
-[v _readVal `uc ~T0 @X0 1 a ]
-"95
-[; ;mcc_generated_files/tmr4.c: 95:     readVal = TMR4;
-[e = _readVal _TMR4 ]
+"96
+[; ;mcc_generated_files/adc.c: 96: void ADC_StartConversion(void)
+[v _ADC_StartConversion `(v ~T0 @X0 1 ef ]
 "97
-[; ;mcc_generated_files/tmr4.c: 97:     return readVal;
-[e ) _readVal ]
-[e $UE 783  ]
-"98
-[; ;mcc_generated_files/tmr4.c: 98: }
+[; ;mcc_generated_files/adc.c: 97: {
+{
+[e :U _ADC_StartConversion ]
+[f ]
+"99
+[; ;mcc_generated_files/adc.c: 99:     ADCON0bits.GO_nDONE = 1;
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
+"100
+[; ;mcc_generated_files/adc.c: 100: }
 [e :UE 783 ]
 }
-"100
-[; ;mcc_generated_files/tmr4.c: 100: void TMR4_WriteTimer(uint8_t timerVal)
-[v _TMR4_WriteTimer `(v ~T0 @X0 1 ef1`uc ]
-"101
-[; ;mcc_generated_files/tmr4.c: 101: {
-{
-[e :U _TMR4_WriteTimer ]
-"100
-[; ;mcc_generated_files/tmr4.c: 100: void TMR4_WriteTimer(uint8_t timerVal)
-[v _timerVal `uc ~T0 @X0 1 r1 ]
-"101
-[; ;mcc_generated_files/tmr4.c: 101: {
-[f ]
 "103
-[; ;mcc_generated_files/tmr4.c: 103:     TMR4 = timerVal;
-[e = _TMR4 _timerVal ]
+[; ;mcc_generated_files/adc.c: 103: _Bool ADC_IsConversionDone(void)
+[v _ADC_IsConversionDone `(a ~T0 @X0 1 ef ]
 "104
-[; ;mcc_generated_files/tmr4.c: 104: }
+[; ;mcc_generated_files/adc.c: 104: {
+{
+[e :U _ADC_IsConversionDone ]
+[f ]
+"106
+[; ;mcc_generated_files/adc.c: 106:    return ((_Bool)(!ADCON0bits.GO_nDONE));
+[e ) -> -> ! != -> . . _ADCON0bits 0 1 `i -> 0 `i `i `a ]
+[e $UE 784  ]
+"107
+[; ;mcc_generated_files/adc.c: 107: }
 [e :UE 784 ]
 }
-"106
-[; ;mcc_generated_files/tmr4.c: 106: void TMR4_LoadPeriodRegister(uint8_t periodVal)
-[v _TMR4_LoadPeriodRegister `(v ~T0 @X0 1 ef1`uc ]
-"107
-[; ;mcc_generated_files/tmr4.c: 107: {
-{
-[e :U _TMR4_LoadPeriodRegister ]
-"106
-[; ;mcc_generated_files/tmr4.c: 106: void TMR4_LoadPeriodRegister(uint8_t periodVal)
-[v _periodVal `uc ~T0 @X0 1 r1 ]
-"107
-[; ;mcc_generated_files/tmr4.c: 107: {
-[f ]
-"108
-[; ;mcc_generated_files/tmr4.c: 108:    PR4 = periodVal;
-[e = _PR4 _periodVal ]
 "109
-[; ;mcc_generated_files/tmr4.c: 109: }
+[; ;mcc_generated_files/adc.c: 109: adc_result_t ADC_GetConversionResult(void)
+[v _ADC_GetConversionResult `(us ~T0 @X0 1 ef ]
+"110
+[; ;mcc_generated_files/adc.c: 110: {
+{
+[e :U _ADC_GetConversionResult ]
+[f ]
+"112
+[; ;mcc_generated_files/adc.c: 112:     return ((adc_result_t)((ADRESH << 8) + ADRESL));
+[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
+[e $UE 785  ]
+"113
+[; ;mcc_generated_files/adc.c: 113: }
 [e :UE 785 ]
 }
-"111
-[; ;mcc_generated_files/tmr4.c: 111: _Bool TMR4_HasOverflowOccured(void)
-[v _TMR4_HasOverflowOccured `(a ~T0 @X0 1 ef ]
-"112
-[; ;mcc_generated_files/tmr4.c: 112: {
-{
-[e :U _TMR4_HasOverflowOccured ]
-[f ]
-"114
-[; ;mcc_generated_files/tmr4.c: 114:     _Bool status = PIR2bits.TMR4IF;
-[v _status `a ~T0 @X0 1 a ]
-[e = _status -> . . _PIR2bits 0 1 `a ]
 "115
-[; ;mcc_generated_files/tmr4.c: 115:     if(status)
-[e $ ! != -> _status `i -> 0 `i 787  ]
+[; ;mcc_generated_files/adc.c: 115: adc_result_t ADC_GetConversion(adc_channel_t channel)
+[v _ADC_GetConversion `(us ~T0 @X0 1 ef1`E5569 ]
 "116
-[; ;mcc_generated_files/tmr4.c: 116:     {
+[; ;mcc_generated_files/adc.c: 116: {
 {
+[e :U _ADC_GetConversion ]
+"115
+[; ;mcc_generated_files/adc.c: 115: adc_result_t ADC_GetConversion(adc_channel_t channel)
+[v _channel `E5569 ~T0 @X0 1 r1 ]
+"116
+[; ;mcc_generated_files/adc.c: 116: {
+[f ]
 "118
-[; ;mcc_generated_files/tmr4.c: 118:         PIR2bits.TMR4IF = 0;
-[e = . . _PIR2bits 0 1 -> -> 0 `i `uc ]
-"119
-[; ;mcc_generated_files/tmr4.c: 119:     }
+[; ;mcc_generated_files/adc.c: 118:     ADCON0bits.CHS = channel;
+[e = . . _ADCON0bits 0 2 -> _channel `uc ]
+"121
+[; ;mcc_generated_files/adc.c: 121:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"124
+[; ;mcc_generated_files/adc.c: 124:     _delay((unsigned long)((5)*(1000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
+"127
+[; ;mcc_generated_files/adc.c: 127:     ADCON0bits.GO_nDONE = 1;
+[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
+"130
+[; ;mcc_generated_files/adc.c: 130:     while (ADCON0bits.GO_nDONE)
+[e $U 787  ]
+[e :U 788 ]
+"131
+[; ;mcc_generated_files/adc.c: 131:     {
+{
+"132
+[; ;mcc_generated_files/adc.c: 132:     }
 }
 [e :U 787 ]
-"120
-[; ;mcc_generated_files/tmr4.c: 120:     return status;
-[e ) _status ]
+"130
+[; ;mcc_generated_files/adc.c: 130:     while (ADCON0bits.GO_nDONE)
+[e $ != -> . . _ADCON0bits 0 1 `i -> 0 `i 788  ]
+[e :U 789 ]
+"135
+[; ;mcc_generated_files/adc.c: 135:     return ((adc_result_t)((ADRESH << 8) + ADRESL));
+[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
 [e $UE 786  ]
-"121
-[; ;mcc_generated_files/tmr4.c: 121: }
+"136
+[; ;mcc_generated_files/adc.c: 136: }
 [e :UE 786 ]
+}
+"138
+[; ;mcc_generated_files/adc.c: 138: void ADC_TemperatureAcquisitionDelay(void)
+[v _ADC_TemperatureAcquisitionDelay `(v ~T0 @X0 1 ef ]
+"139
+[; ;mcc_generated_files/adc.c: 139: {
+{
+[e :U _ADC_TemperatureAcquisitionDelay ]
+[f ]
+"140
+[; ;mcc_generated_files/adc.c: 140:     _delay((unsigned long)((200)*(1000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
+"141
+[; ;mcc_generated_files/adc.c: 141: }
+[e :UE 790 ]
 }

@@ -54,6 +54,7 @@
 #include <conio.h>
 #include "pwm3.h"
 #include "tmr4.h"
+#include "adc.h"
 #include "eusart.h"
 
 

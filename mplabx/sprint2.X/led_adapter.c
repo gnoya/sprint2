@@ -49,26 +49,26 @@ static void turn_selectors(bool selector1, bool selector2)
 
 static void turn_blue()
 {
-  printf("Color is blue!\n");
+  printf("Color is blue!\r\n");
   turn_selectors(1, 0);
 }
 
 static void turn_green()
 {
-  printf("Color is green!\n");
+  printf("Color is green!\r\n");
   turn_selectors(0, 1);
 }
 
 static void turn_red()
 {
-  printf("Color is red!\n");
+  printf("Color is red!\r\n");
   turn_selectors(0, 0);
 }
 
 static void set_brightness(int brightness)
 {
   duty_cycle = (uint16_t)(100 - map(brightness, 0, 100, 0, 100));
-  printf("Duty cycle is: %d\n", duty_cycle);
+  printf("Duty cycle is: %d\r\n", duty_cycle);
 
   // from 0 to 100
   PWM3_LoadDutyValue(duty_cycle);

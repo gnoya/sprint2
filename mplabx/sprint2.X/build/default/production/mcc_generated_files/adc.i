@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/pwm3.c"
+# 1 "mcc_generated_files/adc.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/pwm3.c" 2
-# 51 "mcc_generated_files/pwm3.c"
+# 1 "mcc_generated_files/adc.c" 2
+# 51 "mcc_generated_files/adc.c"
 # 1 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9531,10 +9531,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 2 3
-# 51 "mcc_generated_files/pwm3.c" 2
+# 51 "mcc_generated_files/adc.c" 2
 
-# 1 "mcc_generated_files/pwm3.h" 1
-# 55 "mcc_generated_files/pwm3.h"
+# 1 "mcc_generated_files/adc.h" 1
+# 55 "mcc_generated_files/adc.h"
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 3
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9620,39 +9620,135 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 2 3
-# 55 "mcc_generated_files/pwm3.h" 2
-# 102 "mcc_generated_files/pwm3.h"
- void PWM3_Initialize(void);
-# 129 "mcc_generated_files/pwm3.h"
- void PWM3_LoadDutyValue(uint16_t dutyValue);
-# 52 "mcc_generated_files/pwm3.c" 2
+# 55 "mcc_generated_files/adc.h" 2
+
+# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
+# 56 "mcc_generated_files/adc.h" 2
+# 72 "mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
+
+
+
+
+typedef struct
+{
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "mcc_generated_files/adc.h"
+typedef enum
+{
+    channel_AN0 = 0x0,
+    channel_AN1 = 0x1,
+    channel_DAC2_Output = 0x1C,
+    channel_Temp = 0x1D,
+    channel_DAC1_Output = 0x1E,
+    channel_FVRBuffer1 = 0x1F
+} adc_channel_t;
+# 138 "mcc_generated_files/adc.h"
+void ADC_Initialize(void);
+# 168 "mcc_generated_files/adc.h"
+void ADC_SelectChannel(adc_channel_t channel);
+# 195 "mcc_generated_files/adc.h"
+void ADC_StartConversion(void);
+# 227 "mcc_generated_files/adc.h"
+_Bool ADC_IsConversionDone(void);
+# 260 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversionResult(void);
+# 290 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 318 "mcc_generated_files/adc.h"
+void ADC_TemperatureAcquisitionDelay(void);
+# 52 "mcc_generated_files/adc.c" 2
+
+# 1 "mcc_generated_files/device_config.h" 1
+# 53 "mcc_generated_files/adc.c" 2
 
 
 
 
 
 
- void PWM3_Initialize(void)
- {
 
 
-    PWM3CON = 0x80;
+void (*ADC_InterruptHandler)(void);
 
 
-    PWM3DCH = 0x00;
 
 
-    PWM3DCL = 0x00;
+
+void ADC_Initialize(void)
+{
 
 
-    CCPTMRSbits.P3TSEL = 1;
- }
 
- void PWM3_LoadDutyValue(uint16_t dutyValue)
- {
-
-     PWM3DCH = (dutyValue & 0x03FC)>>2;
+    ADCON1 = 0x86;
 
 
-     PWM3DCL = (dutyValue & 0x0003)<<6;
- }
+    ADCON2 = 0x00;
+
+
+    ADRESL = 0x00;
+
+
+    ADRESH = 0x00;
+
+
+    ADCON0 = 0x01;
+
+}
+
+void ADC_SelectChannel(adc_channel_t channel)
+{
+
+    ADCON0bits.CHS = channel;
+
+    ADCON0bits.ADON = 1;
+}
+
+void ADC_StartConversion(void)
+{
+
+    ADCON0bits.GO_nDONE = 1;
+}
+
+
+_Bool ADC_IsConversionDone(void)
+{
+
+   return ((_Bool)(!ADCON0bits.GO_nDONE));
+}
+
+adc_result_t ADC_GetConversionResult(void)
+{
+
+    return ((adc_result_t)((ADRESH << 8) + ADRESL));
+}
+
+adc_result_t ADC_GetConversion(adc_channel_t channel)
+{
+
+    ADCON0bits.CHS = channel;
+
+
+    ADCON0bits.ADON = 1;
+
+
+    _delay((unsigned long)((5)*(1000000/4000000.0)));
+
+
+    ADCON0bits.GO_nDONE = 1;
+
+
+    while (ADCON0bits.GO_nDONE)
+    {
+    }
+
+
+    return ((adc_result_t)((ADRESH << 8) + ADRESL));
+}
+
+void ADC_TemperatureAcquisitionDelay(void)
+{
+    _delay((unsigned long)((200)*(1000000/4000000.0)));
+}

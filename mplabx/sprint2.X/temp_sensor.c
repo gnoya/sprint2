@@ -8,28 +8,21 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "sensor_adapter.h"
+#include "mcc_generated_files/mcc.h"
 
 static bool open();
-static float read();
+static int read();
 static void close();
 
 static bool open()
 {
-  bool opened = true;
-
-  if (opened)
-  {
-    printf("Temp sensor opened!\n");
-    return true;
-  }
-  printf("Temp sensor opening failed!\n");
-  return false;
+  return true;
 }
 
-static float read()
+static int read()
 {
-  printf("Reading temp sensor\n");
-  return 4.4;
+  printf("Reading temp sensor\r\n");
+  return ((int)ADC_GetConversion(channel_AN0));
 }
 
 static void close()

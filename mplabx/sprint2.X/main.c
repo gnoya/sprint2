@@ -67,7 +67,7 @@ void main(void)
   initialize_lcd_screen(&lcd_screen);
   initialize_led(&led);
 
-  printf("\n");
+  printf("\r\n");
 
   // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
   // Use the following macros to:
@@ -88,19 +88,19 @@ void main(void)
 
   while (1)
   {
-    // float light_value = light_sensor.read();
-    // float temp_value = temp_sensor.read();
+    int light_value = light_sensor.read();
+    int temp_value = temp_sensor.read();
 
-    // printf("Light sensor value: %f\n", light_value);
-    // printf("Temperature sensor value: %f\n", temp_value);
-    printf("Brightness value: %d\n", brightness);
-    printf("Temperature value: %d\n", temperature);
+    printf("Light sensor value: %d\r\n", light_value);
+    printf("Temperature sensor value: %d\r\n", temp_value);
+    printf("Brightness value: %d\r\n", brightness);
+    printf("Temperature value: %d\r\n", temperature);
 
     led.set_brightness(brightness);
     led.set_color(temperature);
     brightness = (brightness + 1) % 101;
     temperature = (temperature + 1) % 101;
-    printf("\n");
+    printf("\r\n");
   }
 }
 /**

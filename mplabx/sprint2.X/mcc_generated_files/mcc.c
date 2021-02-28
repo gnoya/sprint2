@@ -53,6 +53,7 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    ADC_Initialize();
     TMR4_Initialize();
     PWM3_Initialize();
     EUSART_Initialize();
