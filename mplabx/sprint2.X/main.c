@@ -98,9 +98,8 @@ void main(void)
 
     led.set_brightness(brightness);
     led.set_color(temperature);
-    brightness = (brightness + 1) % 10;
-    temperature = (temperature + 1) % 10;
-    __delay_ms(1000);
+    brightness = (brightness + 1) % 101;
+    temperature = (temperature + 1) % 101;
     printf("\n");
   }
 }

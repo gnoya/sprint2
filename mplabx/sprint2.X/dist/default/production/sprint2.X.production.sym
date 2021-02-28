@@ -3,21 +3,24 @@ ___aodiv@counter 71 0 COMMON 1
 ___awdiv@counter 20 0 BANK0 1
 __Hstringtext14 0 0 ABS 0
 __Lstringtext14 0 0 ABS 0
-_EUSART_SetFramingErrorHandler EA3 0 CODE 0
-__pstringtext14 10CD 0 STRCODE 0
+_EUSART_SetFramingErrorHandler EE4 0 CODE 0
+__pstringtext14 10F1 0 STRCODE 0
 __size_of_set_brightness 0 0 ABS 0
 _PR4 416 0 ABS 0
-__S0 10DF 0 ABS 0
-__S1 ED 0 ABS 0
+__S0 110C 0 ABS 0
+__S1 EE 0 ABS 0
 __S2 0 0 ABS 0
 __Hintentry 2 0 CODE 0
 __Lintentry 2 0 CODE 0
-_initialize_light FCE 0 CODE 0
-_pad 215 0 CODE 0
-__end_of___awdiv 2CE 0 CODE 0
-_map 6F 0 CODE 0
-_abs 14 0 CODE 0
+_initialize_light FB5 0 CODE 0
+_pad 206 0 CODE 0
+__end_of___awdiv 2BF 0 CODE 0
+_map 70 0 CODE 0
+_abs 15 0 CODE 0
 __size_of_PWM3_LoadDutyValue 0 0 ABS 0
+__Hstringtext17 0 0 ABS 0
+__Lstringtext17 0 0 ABS 0
+__pstringtext17 0 0 STRCODE 0
 _TMR4 415 0 ABS 0
 __size_of_PWM3_Initialize 0 0 ABS 0
 _LATA 10C 0 ABS 0
@@ -26,14 +29,14 @@ _LATC 10E 0 ABS 0
 _LATD 10F 0 ABS 0
 _EUSART_DefaultOverrunErrorHandler 0 0 ABS 0
 _LATE 110 0 ABS 0
-__end_of_initialize_led F34 0 CODE 0
+__end_of_initialize_led 15 0 CODE 0
 _WPUA 20C 0 ABS 0
 _WPUB 20D 0 ABS 0
 _WPUC 20E 0 ABS 0
 _WPUD 20F 0 ABS 0
 _WPUE 210 0 ABS 0
-__end_of_PIN_MANAGER_Initialize 177 0 CODE 0
-_turn_selectors F46 0 CODE 0
+__end_of_PIN_MANAGER_Initialize 1B3 0 CODE 0
+_turn_selectors F72 0 CODE 0
 abs@a 73 0 COMMON 1
 pad@i 28 0 BANK0 1
 pad@p 25 0 BANK0 1
@@ -43,31 +46,31 @@ pad@w 2A 0 BANK0 1
 _prec A4 0 BANK1 1
 map@x 24 0 BANK0 1
 _dtoa 687 0 CODE 0
-_dbuf A9 0 BANK1 1
+_dbuf AB 0 BANK1 1
 ?_map 24 0 BANK0 1
 ?_abs 73 0 COMMON 1
-_main 341 0 CODE 0
+_main 332 0 CODE 0
 _open 0 0 ABS 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 2 0 CODE 0
 _nout A0 0 BANK1 1
 printf@ap 6D 0 BANK0 1
-_EUSART_Write EE7 0 CODE 0
+_EUSART_Write F0D 0 CODE 0
 _TRISA 8C 0 ABS 0
 _TRISB 8D 0 ABS 0
 _TRISC 8E 0 ABS 0
 reset_vec 0 0 CODE 0
 _TRISD 8F 0 ABS 0
-_turn_red F15 0 CODE 0
+_turn_red F30 0 CODE 0
 _TRISE 90 0 ABS 0
 _T4CON 417 0 ABS 0
-_demo1 EC2 0 CODE 0
-_demo2 ECB 0 CODE 0
+_demo1 0 0 ABS 0
+_close@temp_sensor$F540 0 0 ABS 0
+_demo2 0 0 ABS 0
 __size_of_vfprintf 0 0 ABS 0
 wtemp0 7E 0 ABS 0
-_demo3 ED4 0 CODE 0
-_close@temp_sensor$F433 0 0 ABS 0
+_demo3 0 0 ABS 0
 _RXPPS E24 0 ABS 0
 __Hconfig 8009 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
@@ -78,38 +81,37 @@ dtoa@d 30 0 BANK0 1
 __pstringtext1 800 0 STRCODE 0
 ?___awmod 70 0 COMMON 1
 dtoa@i 4C 0 BANK0 1
+_dtoa$1025 3B 0 BANK0 1
 dtoa@n 44 0 BANK0 1
 dtoa@p 3D 0 BANK0 1
 dtoa@s 42 0 BANK0 1
 __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
-_EUSART_OverrunErrorHandler E9 0 BANK1 1
+_EUSART_OverrunErrorHandler EA 0 BANK1 1
 dtoa@w 40 0 BANK0 1
 __size_of_initialize_temp 0 0 ABS 0
 pad@fp 2C 0 BANK0 1
 ?_dtoa 30 0 BANK0 1
 __Hram 0 0 ABS 0
-__end_of_map 94 0 CODE 0
+__end_of_map 95 0 CODE 0
 __Lram 0 0 ABS 0
-_putch EAF 0 CODE 0
+_putch EF0 0 CODE 0
 _close 0 0 ABS 0
-_fputc ED 0 CODE 0
+_fputc 12B 0 CODE 0
 _width A2 0 BANK1 1
-__end_of_demo2 ED4 0 CODE 0
 _flags A6 0 BANK1 1
-__end_of_set_color 341 0 CODE 0
-_vfprintf BC 0 CODE 0
+__end_of_set_color 332 0 CODE 0
+_vfprintf BD 0 CODE 0
 __Hstringtext7 0 0 ABS 0
 __Lstringtext7 0 0 ABS 0
-_fputs 94 0 CODE 0
-__pstringtext7 1057 0 STRCODE 0
-__end_of_abs 2E 0 CODE 0
+_fputs 95 0 CODE 0
+__pstringtext7 106F 0 STRCODE 0
+__end_of_abs 2F 0 CODE 0
 __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
-__end_of_WDT_Initialize E9D 0 CODE 0
-_dtoa$1067 3B 0 BANK0 1
+__end_of_WDT_Initialize EDE 0 CODE 0
 __end_of_vfpfcnvrt 49C 0 CODE 0
-__end_of_putch EB5 0 CODE 0
+__end_of_putch EF6 0 CODE 0
 __size_of_initialize_lcd_screen 0 0 ABS 0
 __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
@@ -138,13 +140,13 @@ _TX1STA 19E 0 ABS 0
 _INLVLB 38D 0 ABS 0
 _ODCONE 290 0 ABS 0
 _INLVLC 38E 0 ABS 0
-__end_of_strlen FB5 0 CODE 0
-__end_of_PWM3_Initialize EFC 0 CODE 0
+__end_of_strlen 1000 0 CODE 0
+__end_of_PWM3_Initialize F22 0 CODE 0
 _INLVLD 38F 0 ABS 0
 _INLVLE 390 0 ABS 0
 initialize_led@led 70 0 COMMON 1
 __size_of_EUSART_Initialize 0 0 ABS 0
-main@lcd_screen E1 0 BANK1 1
+main@lcd_screen DA 0 BANK1 1
 _OSCCON 99 0 ABS 0
 __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
@@ -152,7 +154,6 @@ _BORCON 116 0 ABS 0
 _WDTCON 97 0 ABS 0
 __Hsfr0 0 0 ABS 0
 __Lsfr0 0 0 ABS 0
-__size_of_PWM4_LoadDutyValue 0 0 ABS 0
 __Hsfr1 0 0 ABS 0
 __Lsfr1 0 0 ABS 0
 __Hsfr2 0 0 ABS 0
@@ -160,7 +161,6 @@ __Lsfr2 0 0 ABS 0
 __Hsfr3 0 0 ABS 0
 __Lsfr3 0 0 ABS 0
 _RB0PPS E98 0 ABS 0
-_RB1PPS E99 0 ABS 0
 __Hsfr4 0 0 ABS 0
 _RC6PPS EA6 0 ABS 0
 __Lsfr4 0 0 ABS 0
@@ -171,45 +171,41 @@ __size_of_fputc 0 0 ABS 0
 __Lsfr6 0 0 ABS 0
 __Hsfr7 0 0 ABS 0
 __Lsfr7 0 0 ABS 0
-__size_of_PWM4_Initialize 0 0 ABS 0
 __Hsfr8 0 0 ABS 0
 __Lsfr8 0 0 ABS 0
-__end_of_EUSART_Write EF1 0 CODE 0
+__end_of_EUSART_Write F17 0 CODE 0
 __Hsfr9 0 0 ABS 0
 __Lsfr9 0 0 ABS 0
-__end_of_turn_red F23 0 CODE 0
+__end_of_turn_red F3E 0 CODE 0
 PWM3_LoadDutyValue@dutyValue 70 0 COMMON 1
-PWM4_LoadDutyValue@dutyValue 70 0 COMMON 1
-__end_of_set_brightness 1C2 0 CODE 0
+__end_of_set_brightness 12B 0 CODE 0
 fputc@c 72 0 COMMON 1
 ___stackhi 23EF 0 ABS 0
 fputs@c 20 0 BANK0 1
 EUSART_SetErrorHandler@interruptHandler 70 0 COMMON 1
 fputs@i 21 0 BANK0 1
-__end_of___awmod 215 0 CODE 0
+__end_of___awmod 206 0 CODE 0
 __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 fputs@s 23 0 BANK0 1
 dtoa@fp 3F 0 BANK0 1
-_turn_blue F07 0 CODE 0
+_turn_blue F22 0 CODE 0
 pad@buf 24 0 BANK0 1
 EUSART_SetFramingErrorHandler@interruptHandler 70 0 COMMON 1
-__end_of_PWM4_Initialize F07 0 CODE 0
 __HcstackBANK0 0 0 ABS 0
 __LcstackBANK0 0 0 ABS 0
 __size_of_map 0 0 ABS 0
 ___aomod@sign 72 0 COMMON 1
-_printf F34 0 CODE 0
+_printf F4D 0 CODE 0
 __pcstackBANK0 20 0 BANK0 1
-_strlen F9C 0 CODE 0
+_strlen FE7 0 CODE 0
 ___awmod@sign 76 0 COMMON 1
 __Hstringtext2 0 0 ABS 0
 __Lstringtext2 0 0 ABS 0
 __Hinit 2 0 CODE 0
 __Linit 2 0 CODE 0
-___wmul 2E 0 CODE 0
-__pstringtext2 81D 0 STRCODE 0
-__size_of_demo2 0 0 ABS 0
+___wmul 2F 0 CODE 0
+__pstringtext2 1000 0 STRCODE 0
 __end_of_main 3C1 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
@@ -217,7 +213,6 @@ map@in_min 26 0 BANK0 1
 __size_of_TMR4_Initialize 0 0 ABS 0
 ?_vfprintf 5E 0 BANK0 1
 ___wmul@multiplier 70 0 COMMON 1
-__end_of_demo3 EDD 0 CODE 0
 __size_of_pad 0 0 ABS 0
 end_of_initialization 7FD 0 CODE 0
 __Hstringtext12 0 0 ABS 0
@@ -225,13 +220,13 @@ __Lstringtext12 0 0 ABS 0
 ___aodiv@sign 72 0 COMMON 1
 ___awdiv@sign 21 0 BANK0 1
 __size_of_initialize_light 0 0 ABS 0
-__pstringtext12 10B5 0 STRCODE 0
+__pstringtext12 10D2 0 STRCODE 0
 __Hstringtext8 0 0 ABS 0
 __Lstringtext8 0 0 ABS 0
-__end_of_TMR4_Initialize EE7 0 CODE 0
-__pstringtext8 106C 0 STRCODE 0
+__end_of_TMR4_Initialize F0D 0 CODE 0
+__pstringtext8 1084 0 STRCODE 0
 __size_of_abs 0 0 ABS 0
-___stacklo 209D 0 ABS 0
+___stacklo 209E 0 ABS 0
 ___wmul@multiplicand 72 0 COMMON 1
 printf@fmt 66 0 BANK0 1
 __Hsfr10 0 0 ABS 0
@@ -243,7 +238,7 @@ __Hsfr30 0 0 ABS 0
 __Hsfr11 0 0 ABS 0
 __Lsfr30 0 0 ABS 0
 __Lsfr11 0 0 ABS 0
-_EUSART_SetOverrunErrorHandler EA9 0 CODE 0
+_EUSART_SetOverrunErrorHandler EEA 0 CODE 0
 __Hsfr21 0 0 ABS 0
 __HnvBANK1 0 0 ABS 0
 __Lsfr21 0 0 ABS 0
@@ -254,7 +249,7 @@ __Lsfr31 0 0 ABS 0
 __Lsfr12 0 0 ABS 0
 __Hsfr22 0 0 ABS 0
 __Lsfr22 0 0 ABS 0
-__pnvBANK1 E7 0 BANK1 1
+__pnvBANK1 E8 0 BANK1 1
 __Hsfr13 0 0 ABS 0
 __Lsfr13 0 0 ABS 0
 __end_of___aodiv 687 0 CODE 0
@@ -273,12 +268,12 @@ __Hsfr25 0 0 ABS 0
 __Lsfr25 0 0 ABS 0
 __Hsfr16 0 0 ABS 0
 __Lsfr16 0 0 ABS 0
-__pstringtext15 10D6 0 STRCODE 0
+__pstringtext15 10FA 0 STRCODE 0
 __Hsfr26 0 0 ABS 0
 __Lsfr26 0 0 ABS 0
-__end_of_fputs BC 0 CODE 0
+__end_of_fputs BD 0 CODE 0
 __size_of_putch 0 0 ABS 0
-_EUSART_FramingErrorHandler EB 0 BANK1 1
+_EUSART_FramingErrorHandler EC 0 BANK1 1
 __Hsfr17 0 0 ABS 0
 __Lsfr17 0 0 ABS 0
 __Hsfr27 0 0 ABS 0
@@ -291,35 +286,32 @@ __Hsfr19 0 0 ABS 0
 __Lsfr19 0 0 ABS 0
 __Hsfr29 0 0 ABS 0
 __Lsfr29 0 0 ABS 0
-__end_of_initialize_temp 1000 0 CODE 0
+__end_of_initialize_temp FE7 0 CODE 0
 map@in_max 28 0 BANK0 1
 vfprintf@ap 60 0 BANK0 1
 _PWM3DCH 618 0 ABS 0
-_PWM4DCH 61B 0 ABS 0
 __Hstrings 0 0 ABS 0
 _T4CONbits 417 0 ABS 0
 __Lstrings 0 0 ABS 0
-set_color@color CA 0 BANK1 1
+set_color@color CC 0 BANK1 1
 _SLRCONA 30C 0 ABS 0
 _PWM3DCL 617 0 ABS 0
-_PWM4DCL 61A 0 ABS 0
 _SLRCONB 30D 0 ABS 0
-__end_of_initialize_lcd_screen FCE 0 CODE 0
+__end_of_initialize_lcd_screen FB5 0 CODE 0
 _SLRCONC 30E 0 ABS 0
 _SP1BRGH 19C 0 ABS 0
 _SLRCOND 30F 0 ABS 0
 set_brightness@brightness 6E 0 BANK0 1
-_SYSTEM_Initialize F5A 0 CODE 0
+_SYSTEM_Initialize F5F 0 CODE 0
 __size_of_EUSART_SetFramingErrorHandler 0 0 ABS 0
 _SLRCONE 310 0 ABS 0
-_set_color 2CE 0 CODE 0
+_set_color 2BF 0 CODE 0
 _SP1BRGL 19B 0 ABS 0
 __size_of_strlen 0 0 ABS 0
 _OSCTUNE 98 0 ABS 0
-_EUSART_Initialize 4D 0 CODE 0
+_EUSART_Initialize 4E 0 CODE 0
 _PWM3CON 619 0 ABS 0
-_PWM4CON 61C 0 ABS 0
-__end_of_turn_green 14 0 CODE 0
+__end_of_turn_green F4D 0 CODE 0
 __Hbank0 0 0 ABS 0
 __Lbank0 0 0 ABS 0
 __Hbank1 0 0 ABS 0
@@ -344,115 +336,113 @@ __Hbank8 0 0 ABS 0
 __Lbank8 0 0 ABS 0
 __Hbank9 0 0 ABS 0
 __Lbank9 0 0 ABS 0
-__ptext1 2CE 0 CODE 0
-__ptext2 F15 0 CODE 0
-__ptext3 5 0 CODE 0
-__ptext4 F07 0 CODE 0
-__ptext5 F46 0 CODE 0
-__ptext6 177 0 CODE 0
-__ptext7 6F 0 CODE 0
-__end_of_EUSART_Initialize 6F 0 CODE 0
+__ptext1 2BF 0 CODE 0
+__ptext2 F30 0 CODE 0
+__ptext3 F3E 0 CODE 0
+__ptext4 F22 0 CODE 0
+__ptext5 F72 0 CODE 0
+__ptext6 EE 0 CODE 0
+__ptext7 F4D 0 CODE 0
+__end_of_EUSART_Initialize 70 0 CODE 0
 __HcstackBANK1 0 0 ABS 0
 __LcstackBANK1 0 0 ABS 0
-__ptext8 2E 0 CODE 0
-__ptext9 26E 0 CODE 0
-__pcstackBANK1 C9 0 BANK1 1
+__ptext8 BD 0 CODE 0
+__ptext9 3C1 0 CODE 0
+__pcstackBANK1 CB 0 BANK1 1
 _vfpfcnvrt 3C1 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
+_duty_cycle A8 0 BANK1 1
 __Hstringtext3 0 0 ABS 0
 __Lstringtext3 0 0 ABS 0
-__pstringtext3 1000 0 STRCODE 0
+__pstringtext3 1017 0 STRCODE 0
 __size_of_printf 0 0 ABS 0
-main@brightness D9 0 BANK1 1
-_set_brightness 177 0 CODE 0
+main@brightness E0 0 BANK1 1
+_set_brightness EE 0 CODE 0
 strlen@a 73 0 COMMON 1
 __Hstringtext9 0 0 ABS 0
 __end_of__initialization 7FD 0 CODE 0
 __Lstringtext9 0 0 ABS 0
-__pstringtext9 1081 0 STRCODE 0
+__pstringtext9 1099 0 STRCODE 0
 __size_of_turn_red 0 0 ABS 0
 __size_of_initialize_led 0 0 ABS 0
 __size_of_turn_blue 0 0 ABS 0
 __size_of_dtoa 0 0 ABS 0
-_eusartRxLastError A8 0 BANK1 1
+_eusartRxLastError AA 0 BANK1 1
 _CCPTMRSbits 29E 0 ABS 0
-main@led DD 0 BANK1 1
+main@led E4 0 BANK1 1
 strlen@s 74 0 COMMON 1
-_PWM3_Initialize EF1 0 CODE 0
-_PWM4_Initialize EFC 0 CODE 0
-_TMR4_Initialize EDD 0 CODE 0
-__end_of_turn_blue F15 0 CODE 0
+_PWM3_Initialize F17 0 CODE 0
+_TMR4_Initialize F03 0 CODE 0
+__end_of_turn_blue F30 0 CODE 0
 fputc@fp 74 0 COMMON 1
 fputs@fp 7A 0 COMMON 1
 __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
-_EUSART_ErrorHandler E7 0 BANK1 1
+_EUSART_ErrorHandler E8 0 BANK1 1
 ___aomod 49C 0 CODE 0
-___awmod 1C2 0 CODE 0
+___awmod 1B3 0 CODE 0
 __size_of___aomod 0 0 ABS 0
-__Hspace_0 10DF 0 ABS 0
+__Hspace_0 110C 0 ABS 0
 __Lspace_0 0 0 ABS 0
 ?_printf 66 0 BANK0 1
 __end_of___aomod 586 0 CODE 0
-_turn_green 5 0 CODE 0
-__Hspace_1 ED 0 ABS 0
+_turn_green F3E 0 CODE 0
+__Hspace_1 EE 0 ABS 0
 __Lspace_1 0 0 ABS 0
 ?_strlen 70 0 COMMON 1
 EUSART_Write@txData 70 0 COMMON 1
-__end_of_EUSART_SetFramingErrorHandler EA9 0 CODE 0
+__end_of_EUSART_SetFramingErrorHandler EEA 0 CODE 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 ?___wmul 70 0 COMMON 1
 __Hcinit 800 0 CODE 0
 __Lcinit 7F5 0 CODE 0
 turn_selectors@selector1 71 0 COMMON 1
-_initialize_temp FE7 0 CODE 0
+_initialize_temp FCE 0 CODE 0
 ___aodiv 586 0 CODE 0
 turn_selectors@selector2 70 0 COMMON 1
-___awdiv 26E 0 CODE 0
+___awdiv 25F 0 CODE 0
 __Hspace_3 0 0 ABS 0
 __Lspace_3 0 0 ABS 0
 __size_of_main 0 0 ABS 0
 set_color@temperature 6E 0 BANK0 1
-__end_of_fputc 12C 0 CODE 0
+__end_of_fputc 16A 0 CODE 0
 __Hspace_4 10010 0 ABS 0
 __Lspace_4 0 0 ABS 0
-_PIN_MANAGER_Initialize 12C 0 CODE 0
+_PIN_MANAGER_Initialize 16A 0 CODE 0
 __Hstringtext10 0 0 ABS 0
 __Lstringtext10 0 0 ABS 0
 map@out_min 2A 0 BANK0 1
-__pstringtext10 1094 0 STRCODE 0
+__pstringtext10 10AE 0 STRCODE 0
 __Hstringtext4 0 0 ABS 0
 __Lstringtext4 0 0 ABS 0
-__pstringtext4 1016 0 STRCODE 0
-__size_of_demo3 0 0 ABS 0
-clear_ram0 EB5 0 CODE 0
-__end_of_pad 26E 0 CODE 0
+__pstringtext4 102D 0 STRCODE 0
+clear_ram0 EF6 0 CODE 0
+__end_of_pad 25F 0 CODE 0
 __size_of_SYSTEM_Initialize 0 0 ABS 0
 __Hstringtext13 0 0 ABS 0
 putch@txData 71 0 COMMON 1
 __Lstringtext13 0 0 ABS 0
-__pstringtext13 10C4 0 STRCODE 0
+__pstringtext13 10E2 0 STRCODE 0
 initialize_temp@sensor_var 70 0 COMMON 1
 __Hbank10 0 0 ABS 0
 __Lbank10 0 0 ABS 0
-set_brightness@duty_cycle C9 0 BANK1 1
 __Hbank20 0 0 BANK20 1
 __Lbank20 0 0 BANK20 1
-main@temperature DB 0 BANK1 1
+main@temperature E2 0 BANK1 1
 __Hbank30 0 0 BANK30 1
 __Hbank11 0 0 ABS 0
 __Lbank30 0 0 BANK30 1
 __Lbank11 0 0 ABS 0
 __Hbank21 0 0 BANK21 1
 __Lbank21 0 0 BANK21 1
-__end_of_OSCILLATOR_Initialize EC2 0 CODE 0
+__end_of_OSCILLATOR_Initialize F03 0 CODE 0
 __Hbank31 0 0 BANK31 1
 __Hbank12 0 0 ABS 0
 __Lbank31 0 0 BANK31 1
 __Lbank12 0 0 ABS 0
-__end_of_SYSTEM_Initialize F70 0 CODE 0
+__end_of_SYSTEM_Initialize F72 0 CODE 0
 __Hbank22 0 0 BANK22 1
 __Lbank22 0 0 BANK22 1
 __Hbank13 0 0 BANK13 1
@@ -468,78 +458,72 @@ __Lbank14 0 0 BANK14 1
 __Hbank24 0 0 BANK24 1
 __Lbank24 0 0 BANK24 1
 __Hstringtext16 0 0 ABS 0
-__ptext10 F86 0 CODE 0
+__ptext10 687 0 CODE 0
 __Lstringtext16 0 0 ABS 0
 __Hbank15 0 0 BANK15 1
 __Lbank15 0 0 BANK15 1
-__ptext20 BC 0 CODE 0
+__ptext20 70 0 CODE 0
 __Hbank25 0 0 BANK25 1
-__pstringtext16 0 0 STRCODE 0
+__pstringtext16 1103 0 STRCODE 0
 __Lbank25 0 0 BANK25 1
-__ptext11 F70 0 CODE 0
-__ptext30 49C 0 CODE 0
+__ptext11 206 0 CODE 0
+__ptext30 EDA 0 CODE 0
 __Hbank16 0 0 BANK16 1
 __Lbank16 0 0 BANK16 1
-__ptext21 3C1 0 CODE 0
-__ptext40 4D 0 CODE 0
+__ptext21 2F 0 CODE 0
 __Hbank26 0 0 BANK26 1
 __Lbank26 0 0 BANK26 1
 __ptext12 FE7 0 CODE 0
-__ptext31 586 0 CODE 0
+__ptext31 F03 0 CODE 0
 __Hbank17 0 0 BANK17 1
 __size_of_set_color 0 0 ABS 0
 __Lbank17 0 0 BANK17 1
-__ptext22 687 0 CODE 0
-__ptext41 EA9 0 CODE 0
+__ptext22 25F 0 CODE 0
 __Hbank27 0 0 BANK27 1
 __Lbank27 0 0 BANK27 1
-__ptext13 FCE 0 CODE 0
-__ptext32 1C2 0 CODE 0
+__ptext13 95 0 CODE 0
+__ptext32 F17 0 CODE 0
 __Hbank18 0 0 BANK18 1
 __Lbank18 0 0 BANK18 1
-__ptext23 215 0 CODE 0
-__ptext42 EA3 0 CODE 0
+__ptext23 F86 0 CODE 0
 __Hbank28 0 0 BANK28 1
 __size_of___awdiv 0 0 ABS 0
 __Lbank28 0 0 BANK28 1
-__ptext14 F23 0 CODE 0
-__ptext33 F5A 0 CODE 0
-__end_of_EUSART_SetErrorHandler EA3 0 CODE 0
+__ptext14 12B 0 CODE 0
+__ptext33 16A 0 CODE 0
+__end_of_EUSART_SetErrorHandler EE4 0 CODE 0
 __Hbank19 0 0 BANK19 1
-_PWM3_LoadDutyValue F70 0 CODE 0
+_PWM3_LoadDutyValue F86 0 CODE 0
 __Lbank19 0 0 BANK19 1
-_PWM4_LoadDutyValue F86 0 CODE 0
 __size_of_fputs 0 0 ABS 0
-__ptext24 F9C 0 CODE 0
-__ptext43 E9D 0 CODE 0
+__ptext24 FCE 0 CODE 0
 __Hbank29 0 0 BANK29 1
 __Lbank29 0 0 BANK29 1
-__ptext15 FB5 0 CODE 0
-__ptext34 E99 0 CODE 0
-__ptext25 94 0 CODE 0
+__ptext15 EF0 0 CODE 0
+__ptext34 EFC 0 CODE 0
+__ptext25 FB5 0 CODE 0
 __size_of_EUSART_SetErrorHandler 0 0 ABS 0
-__ptext16 ED4 0 CODE 0
-__ptext35 EDD 0 CODE 0
-__ptext26 ED 0 CODE 0
+__ptext16 F0D 0 CODE 0
+__ptext35 4E 0 CODE 0
+__ptext26 4 0 CODE 0
 __size_of_EUSART_Write 0 0 ABS 0
-__end_of_EUSART_SetOverrunErrorHandler EAF 0 CODE 0
+__end_of_EUSART_SetOverrunErrorHandler EF0 0 CODE 0
 ___aomod@divisor 20 0 BANK0 1
-__end_of_printf F46 0 CODE 0
-__ptext17 ECB 0 CODE 0
-__ptext36 EFC 0 CODE 0
+__end_of_printf F5F 0 CODE 0
+__ptext17 15 0 CODE 0
+__ptext36 EEA 0 CODE 0
 ___awmod@divisor 70 0 COMMON 1
-__ptext27 EAF 0 CODE 0
-__ptext18 EC2 0 CODE 0
-__ptext37 EF1 0 CODE 0
+__ptext27 F9C 0 CODE 0
+__ptext18 49C 0 CODE 0
+__ptext37 EE4 0 CODE 0
 _RC1STAbits 19D 0 ABS 0
 _TX1STAbits 19E 0 ABS 0
-__ptext28 EE7 0 CODE 0
-__ptext19 F34 0 CODE 0
-__ptext38 12C 0 CODE 0
-__ptext29 14 0 CODE 0
+__ptext28 1B3 0 CODE 0
+__ptext19 586 0 CODE 0
+__ptext38 EDE 0 CODE 0
+__ptext29 F5F 0 CODE 0
 __end_of_dtoa 7F5 0 CODE 0
-__ptext39 EBB 0 CODE 0
-_initialize_led F23 0 CODE 0
+_initialize_led 4 0 CODE 0
 __Hend_init 4 0 CODE 0
 __Lend_init 2 0 CODE 0
 EUSART_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1
@@ -547,9 +531,9 @@ map@out_max 2C 0 BANK0 1
 ___aodiv@divisor 20 0 BANK0 1
 ___awdiv@divisor 76 0 COMMON 1
 vfpfcnvrt@fmt 4E 0 BANK0 1
-_WDT_Initialize E99 0 CODE 0
-_EUSART_SetErrorHandler E9D 0 CODE 0
-_OSCILLATOR_Initialize EBB 0 CODE 0
+_WDT_Initialize EDA 0 CODE 0
+_EUSART_SetErrorHandler EDE 0 CODE 0
+_OSCILLATOR_Initialize EFC 0 CODE 0
 __size_of_turn_selectors 0 0 ABS 0
 __size_of___wmul 0 0 ABS 0
 __Hreset_vec 2 0 CODE 0
@@ -558,7 +542,7 @@ __size_of_PIN_MANAGER_Initialize 0 0 ABS 0
 _BAUD1CON 19F 0 ABS 0
 __Hstringtext5 0 0 ABS 0
 __Lstringtext5 0 0 ABS 0
-__pstringtext5 102C 0 STRCODE 0
+__pstringtext5 1043 0 STRCODE 0
 vfpfcnvrt@ap 4F 0 BANK0 1
 intlevel0 0 0 ENTRY 0
 intlevel1 0 0 ENTRY 0
@@ -566,281 +550,189 @@ vfprintf@cfmt 64 0 BANK0 1
 intlevel2 0 0 ENTRY 0
 _EUSART_DefaultFramingErrorHandler 0 0 ABS 0
 intlevel3 0 0 ENTRY 0
-__end_of_vfprintf ED 0 CODE 0
-main@temp_sensor D3 0 BANK1 1
+__end_of_vfprintf EE 0 CODE 0
+main@temp_sensor D4 0 BANK1 1
 intlevel4 0 0 ENTRY 0
 intlevel5 0 0 ENTRY 0
 __size_of_WDT_Initialize 0 0 ABS 0
-main@light_sensor CD 0 BANK1 1
-__end_of_turn_selectors F5A 0 CODE 0
-__end_of_PWM3_LoadDutyValue F86 0 CODE 0
+main@light_sensor CE 0 BANK1 1
+__end_of_turn_selectors F86 0 CODE 0
+__end_of_PWM3_LoadDutyValue F9C 0 CODE 0
 vfpfcnvrt@ll 55 0 BANK0 1
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
 __pcstackCOMMON 70 0 COMMON 1
-__end_of___wmul 4D 0 CODE 0
+__end_of___wmul 4E 0 CODE 0
 start_initialization 7F5 0 CODE 0
 ___aodiv@quotient 73 0 COMMON 1
 ___awdiv@quotient 22 0 BANK0 1
-_initialize_lcd_screen FB5 0 CODE 0
-_read@temp_sensor$F431 0 0 ABS 0
+_initialize_lcd_screen F9C 0 CODE 0
+_read@temp_sensor$F538 0 0 ABS 0
+_open@temp_sensor$F534 0 0 ABS 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-_open@temp_sensor$F427 0 0 ABS 0
 ?_vfpfcnvrt 4E 0 BANK0 1
-__pmaintext 341 0 CODE 0
+__pmaintext 332 0 CODE 0
 vfpfcnvrt@fp 5D 0 BANK0 1
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0
 _OPTION_REGbits 95 0 ABS 0
 __size_of___awmod 0 0 ABS 0
 initialize_lcd_screen@lcd_screen_var 70 0 COMMON 1
 __initialization 7F5 0 CODE 0
-__size_of_demo1 0 0 ABS 0
 _EUSART_DefaultErrorHandler 0 0 ABS 0
-__end_of_initialize_light FE7 0 CODE 0
+__end_of_initialize_light FCE 0 CODE 0
 __size_of_turn_green 0 0 ABS 0
 ___aomod@dividend 28 0 BANK0 1
-__end_of_PWM4_LoadDutyValue F9C 0 CODE 0
 ___awmod@dividend 72 0 COMMON 1
 ___aomod@counter 71 0 COMMON 1
-__end_of_demo1 ECB 0 CODE 0
 ___awmod@counter 75 0 COMMON 1
 ___wmul@product 74 0 COMMON 1
 __Hstringtext11 0 0 ABS 0
 __Lstringtext11 0 0 ABS 0
-__pstringtext11 10A5 0 STRCODE 0
+__pstringtext11 10C1 0 STRCODE 0
 __Hstringtext6 0 0 ABS 0
 __Lstringtext6 0 0 ABS 0
-__pstringtext6 1042 0 STRCODE 0
+__pstringtext6 1059 0 STRCODE 0
 __size_of_vfpfcnvrt 0 0 ABS 0
 ___aodiv@dividend 28 0 BANK0 1
 ___awdiv@dividend 78 0 COMMON 1
 %segments
-reset_vec 0 7 CODE 0 0
+reset_vec 0 29 CODE 0 0
 cinit FEA FFF CODE FEA 0
 cstackCOMMON 70 7D COMMON 70 1
 cstackBANK0 20 6F BANK0 20 1
-bssBANK1 A0 EC BANK1 A0 1
-text22 D0E FE9 CODE D0E 0
-text31 B0C D0D CODE B0C 0
-text30 938 B0B CODE 938 0
-text21 782 937 CODE 782 0
-maintext 682 781 CODE 682 0
-text1 59C 681 CODE 59C 0
-text9 4DC 59B CODE 4DC 0
-text23 42A 4DB CODE 42A 0
-text32 384 429 CODE 384 0
-text6 2EE 383 CODE 2EE 0
-text38 258 2ED CODE 258 0
-text26 1DA 257 CODE 1DA 0
-text20 178 1D9 CODE 178 0
-text25 128 177 CODE 128 0
-text7 DE 127 CODE DE 0
-text40 9A DD CODE 9A 0
-text8 5C 99 CODE 5C 0
-stringtext1 1000 106F STRCODE 1000 0
-text29 28 5B CODE 28 0
+bssBANK1 A0 ED BANK1 A0 1
+text10 D0E FE9 CODE D0E 0
+text19 B0C D0D CODE B0C 0
+text18 938 B0B CODE 938 0
+text9 782 937 CODE 782 0
+maintext 664 781 CODE 664 0
+text1 57E 663 CODE 57E 0
+text22 4BE 57D CODE 4BE 0
+text11 40C 4BD CODE 40C 0
+text28 366 40B CODE 366 0
+text33 2D4 365 CODE 2D4 0
+text14 256 2D3 CODE 256 0
+text6 1DC 255 CODE 1DC 0
+text8 17A 1DB CODE 17A 0
+text13 12A 179 CODE 12A 0
+text20 E0 129 CODE E0 0
+text35 9C DF CODE 9C 0
+text21 5E 9B CODE 5E 0
+stringtext1 1000 1039 STRCODE 1000 0
+text17 2A 5D CODE 2A 0
 text12 1FCE 1FFF CODE 1FCE 0
-text13 1F9C 1FCD CODE 1F9C 0
-text15 1F6A 1F9B CODE 1F6A 0
-text24 1F38 1F69 CODE 1F38 0
-stringtext3 2000 21BD STRCODE 2000 0
-text10 1F0C 1F37 CODE 1F0C 0
-text11 1EE0 1F0B CODE 1EE0 0
-text33 1EB4 1EDF CODE 1EB4 0
-text5 1E8C 1EB3 CODE 1E8C 0
-text19 1E68 1E8B CODE 1E68 0
-text14 1E46 1E67 CODE 1E46 0
-text3 A 27 CODE A 0
-text2 1E2A 1E45 CODE 1E2A 0
-text4 1E0E 1E29 CODE 1E0E 0
-text36 1DF8 1E0D CODE 1DF8 0
-text37 1DE2 1DF7 CODE 1DE2 0
-text28 1DCE 1DE1 CODE 1DCE 0
-text35 1DBA 1DCD CODE 1DBA 0
-text16 1DA8 1DB9 CODE 1DA8 0
-text17 1D96 1DA7 CODE 1D96 0
-text18 1D84 1D95 CODE 1D84 0
-text39 1D76 1D83 CODE 1D76 0
-clrtext 1D6A 1D75 CODE 1D6A 0
-text27 1D5E 1D69 CODE 1D5E 0
-text41 1D52 1D5D CODE 1D52 0
-text42 1D46 1D51 CODE 1D46 0
-text43 1D3A 1D45 CODE 1D3A 0
-text34 1D32 1D39 CODE 1D32 0
+text24 1F9C 1FCD CODE 1F9C 0
+text25 1F6A 1F9B CODE 1F6A 0
+text27 1F38 1F69 CODE 1F38 0
+stringtext2 2000 2217 STRCODE 2000 0
+text23 1F0C 1F37 CODE 1F0C 0
+text5 1EE4 1F0B CODE 1EE4 0
+text29 1EBE 1EE3 CODE 1EBE 0
+text7 1E9A 1EBD CODE 1E9A 0
+text3 1E7C 1E99 CODE 1E7C 0
+text2 1E60 1E7B CODE 1E60 0
+text4 1E44 1E5F CODE 1E44 0
+text32 1E2E 1E43 CODE 1E2E 0
+text16 1E1A 1E2D CODE 1E1A 0
+text31 1E06 1E19 CODE 1E06 0
+text34 1DF8 1E05 CODE 1DF8 0
+clrtext 1DEC 1DF7 CODE 1DEC 0
+text15 1DE0 1DEB CODE 1DE0 0
+text36 1DD4 1DDF CODE 1DD4 0
+text37 1DC8 1DD3 CODE 1DC8 0
+text38 1DBC 1DC7 CODE 1DBC 0
+text30 1DB4 1DBB CODE 1DB4 0
 %locals
 dist/default/production\sprint2.X.production.o
-C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
-5659 7F5 0 CODE 0
-5662 7F5 0 CODE 0
-5701 7F5 0 CODE 0
-5702 7F6 0 CODE 0
-5703 7F7 0 CODE 0
-5704 7F8 0 CODE 0
-5705 7F9 0 CODE 0
-5706 7FA 0 CODE 0
-5712 7FD 0 CODE 0
-5714 7FD 0 CODE 0
-5715 7FE 0 CODE 0
-5690 EB5 0 CODE 0
-5691 EB5 0 CODE 0
-5692 EB6 0 CODE 0
-5693 EB6 0 CODE 0
-5694 EB7 0 CODE 0
-5695 EB8 0 CODE 0
-5696 EB9 0 CODE 0
-5697 EBA 0 CODE 0
+C:\Users\GABRIE~1\AppData\Local\Temp\sjq4.s
+5061 7F5 0 CODE 0
+5064 7F5 0 CODE 0
+5106 7F5 0 CODE 0
+5107 7F6 0 CODE 0
+5108 7F7 0 CODE 0
+5109 7F8 0 CODE 0
+5110 7F9 0 CODE 0
+5111 7FA 0 CODE 0
+5117 7FD 0 CODE 0
+5119 7FD 0 CODE 0
+5120 7FE 0 CODE 0
+5095 EF6 0 CODE 0
+5096 EF6 0 CODE 0
+5097 EF7 0 CODE 0
+5098 EF7 0 CODE 0
+5099 EF8 0 CODE 0
+5100 EF9 0 CODE 0
+5101 EFA 0 CODE 0
+5102 EFB 0 CODE 0
 main.c
-55 341 0 CODE 0
-58 341 0 CODE 0
-65 344 0 CODE 0
-66 348 0 CODE 0
-67 34C 0 CODE 0
-68 350 0 CODE 0
-70 354 0 CODE 0
-71 35A 0 CODE 0
-72 363 0 CODE 0
-88 36C 0 CODE 0
-89 36F 0 CODE 0
-99 371 0 CODE 0
-100 37F 0 CODE 0
-101 390 0 CODE 0
-102 3A3 0 CODE 0
-103 3B5 0 CODE 0
+55 332 0 CODE 0
+58 332 0 CODE 0
+65 335 0 CODE 0
+66 339 0 CODE 0
+67 33D 0 CODE 0
+68 341 0 CODE 0
+70 345 0 CODE 0
+86 34D 0 CODE 0
+87 350 0 CODE 0
+96 352 0 CODE 0
+97 362 0 CODE 0
+99 372 0 CODE 0
+100 380 0 CODE 0
+101 391 0 CODE 0
+102 3A4 0 CODE 0
+103 3B6 0 CODE 0
 led_adapter.c
-77 2CE 0 CODE 0
-79 2CE 0 CODE 0
-81 2EC 0 CODE 0
-83 2FD 0 CODE 0
-84 300 0 CODE 0
-85 301 0 CODE 0
-87 31D 0 CODE 0
-88 320 0 CODE 0
-89 321 0 CODE 0
-91 33D 0 CODE 0
-93 340 0 CODE 0
-60 F15 0 CODE 0
-62 F15 0 CODE 0
-63 F1D 0 CODE 0
-64 F22 0 CODE 0
-54 5 0 CODE 0
-56 5 0 CODE 0
-57 D 0 CODE 0
-58 13 0 CODE 0
-48 F07 0 CODE 0
-50 F07 0 CODE 0
-51 F0F 0 CODE 0
-52 F14 0 CODE 0
-27 F46 0 CODE 0
-29 F47 0 CODE 0
-31 F4C 0 CODE 0
-35 F4F 0 CODE 0
-38 F51 0 CODE 0
-40 F56 0 CODE 0
-44 F58 0 CODE 0
-46 F59 0 CODE 0
-66 177 0 CODE 0
-68 177 0 CODE 0
-69 183 0 CODE 0
-70 1A1 0 CODE 0
-73 1B1 0 CODE 0
-74 1B9 0 CODE 0
-75 1C1 0 CODE 0
-22 6F 0 CODE 0
-24 6F 0 CODE 0
-25 93 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
-15 2E 0 CODE 0
-43 2E 0 CODE 0
-45 30 0 CODE 0
-46 34 0 CODE 0
-47 38 0 CODE 0
-48 3D 0 CODE 0
-49 42 0 CODE 0
-52 48 0 CODE 0
-53 4C 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-5 26E 0 CODE 0
-13 26E 0 CODE 0
-14 270 0 CODE 0
-15 274 0 CODE 0
-16 279 0 CODE 0
-18 27B 0 CODE 0
-19 27F 0 CODE 0
-20 284 0 CODE 0
-22 288 0 CODE 0
-23 28A 0 CODE 0
-24 290 0 CODE 0
-25 292 0 CODE 0
-26 293 0 CODE 0
-27 298 0 CODE 0
-25 29C 0 CODE 0
-30 2A0 0 CODE 0
-31 2A5 0 CODE 0
-32 2AF 0 CODE 0
-33 2B3 0 CODE 0
-35 2B4 0 CODE 0
-36 2B9 0 CODE 0
-38 2BF 0 CODE 0
-39 2C4 0 CODE 0
-40 2C9 0 CODE 0
-41 2CD 0 CODE 0
-mcc_generated_files/pwm4.c
-74 F86 0 CODE 0
-77 F86 0 CODE 0
-80 F91 0 CODE 0
-81 F9B 0 CODE 0
-mcc_generated_files/pwm3.c
-74 F70 0 CODE 0
-77 F70 0 CODE 0
-80 F7B 0 CODE 0
-81 F85 0 CODE 0
-temp_sensor.c
-40 FE7 0 CODE 0
-42 FE8 0 CODE 0
-43 FEF 0 CODE 0
-44 FF7 0 CODE 0
-45 FFF 0 CODE 0
-light_sensor.c
-33 FCE 0 CODE 0
-35 FCF 0 CODE 0
-36 FD6 0 CODE 0
-37 FDE 0 CODE 0
-38 FE6 0 CODE 0
-led_adapter.c
-95 F23 0 CODE 0
-97 F24 0 CODE 0
-98 F2B 0 CODE 0
-99 F33 0 CODE 0
-lcd_screen.c
-31 FB5 0 CODE 0
-33 FB6 0 CODE 0
-34 FBD 0 CODE 0
-35 FC5 0 CODE 0
-36 FCD 0 CODE 0
-26 ED4 0 CODE 0
-28 ED4 0 CODE 0
-29 EDC 0 CODE 0
-21 ECB 0 CODE 0
-23 ECB 0 CODE 0
-24 ED3 0 CODE 0
-16 EC2 0 CODE 0
-18 EC2 0 CODE 0
-19 ECA 0 CODE 0
+77 2BF 0 CODE 0
+79 2BF 0 CODE 0
+81 2DD 0 CODE 0
+83 2EE 0 CODE 0
+84 2F1 0 CODE 0
+85 2F2 0 CODE 0
+87 30E 0 CODE 0
+88 311 0 CODE 0
+89 312 0 CODE 0
+91 32E 0 CODE 0
+93 331 0 CODE 0
+62 F30 0 CODE 0
+64 F30 0 CODE 0
+65 F38 0 CODE 0
+66 F3D 0 CODE 0
+56 F3E 0 CODE 0
+58 F3E 0 CODE 0
+59 F46 0 CODE 0
+60 F4C 0 CODE 0
+50 F22 0 CODE 0
+52 F22 0 CODE 0
+53 F2A 0 CODE 0
+54 F2F 0 CODE 0
+29 F72 0 CODE 0
+31 F73 0 CODE 0
+33 F78 0 CODE 0
+37 F7B 0 CODE 0
+40 F7D 0 CODE 0
+42 F82 0 CODE 0
+46 F84 0 CODE 0
+48 F85 0 CODE 0
+68 EE 0 CODE 0
+70 EE 0 CODE 0
+71 112 0 CODE 0
+74 122 0 CODE 0
+75 12A 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-5 F34 0 CODE 0
-9 F34 0 CODE 0
-10 F39 0 CODE 0
-13 F45 0 CODE 0
+5 F4D 0 CODE 0
+9 F4D 0 CODE 0
+10 F52 0 CODE 0
+13 F5E 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1390 BC 0 CODE 0
-1395 BE 0 CODE 0
-1396 C2 0 CODE 0
-1397 C5 0 CODE 0
-1398 C6 0 CODE 0
-1397 DA 0 CODE 0
-1400 E4 0 CODE 0
-1404 EC 0 CODE 0
+1390 BD 0 CODE 0
+1395 BF 0 CODE 0
+1396 C3 0 CODE 0
+1397 C6 0 CODE 0
+1398 C7 0 CODE 0
+1397 DB 0 CODE 0
+1400 E5 0 CODE 0
+1404 ED 0 CODE 0
 692 3C1 0 CODE 0
 702 3C3 0 CODE 0
 703 3D4 0 CODE 0
@@ -888,58 +780,58 @@ C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
 323 7CA 0 CODE 0
 327 7E1 0 CODE 0
 328 7F4 0 CODE 0
-72 215 0 CODE 0
-77 217 0 CODE 0
-78 21C 0 CODE 0
-82 225 0 CODE 0
-83 231 0 CODE 0
-84 233 0 CODE 0
-85 234 0 CODE 0
-86 240 0 CODE 0
-84 245 0 CODE 0
-90 253 0 CODE 0
-91 258 0 CODE 0
-92 261 0 CODE 0
-94 261 0 CODE 0
-95 26D 0 CODE 0
+72 206 0 CODE 0
+77 208 0 CODE 0
+78 20D 0 CODE 0
+82 216 0 CODE 0
+83 222 0 CODE 0
+84 224 0 CODE 0
+85 225 0 CODE 0
+86 231 0 CODE 0
+84 236 0 CODE 0
+90 244 0 CODE 0
+91 249 0 CODE 0
+92 252 0 CODE 0
+94 252 0 CODE 0
+95 25E 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-5 F9C 0 CODE 0
-7 F9D 0 CODE 0
-8 FA1 0 CODE 0
-9 FA2 0 CODE 0
-8 FA6 0 CODE 0
-11 FAE 0 CODE 0
-12 FB4 0 CODE 0
+5 FE7 0 CODE 0
+7 FE8 0 CODE 0
+8 FEC 0 CODE 0
+9 FED 0 CODE 0
+8 FF1 0 CODE 0
+11 FF9 0 CODE 0
+12 FFF 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-8 94 0 CODE 0
-13 96 0 CODE 0
-14 98 0 CODE 0
-15 99 0 CODE 0
-16 A7 0 CODE 0
-14 AC 0 CODE 0
-19 BB 0 CODE 0
+8 95 0 CODE 0
+13 97 0 CODE 0
+14 99 0 CODE 0
+15 9A 0 CODE 0
+16 A8 0 CODE 0
+14 AD 0 CODE 0
+19 BC 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-8 ED 0 CODE 0
-12 ED 0 CODE 0
-13 F7 0 CODE 0
-14 FB 0 CODE 0
-15 FC 0 CODE 0
-20 123 0 CODE 0
-24 12B 0 CODE 0
+8 12B 0 CODE 0
+12 12B 0 CODE 0
+13 135 0 CODE 0
+14 139 0 CODE 0
+15 13A 0 CODE 0
+20 161 0 CODE 0
+24 169 0 CODE 0
 mcc_generated_files/eusart.c
-146 EAF 0 CODE 0
-148 EB0 0 CODE 0
-149 EB4 0 CODE 0
-132 EE7 0 CODE 0
-134 EE8 0 CODE 0
-136 EE8 0 CODE 0
-134 EE8 0 CODE 0
-138 EED 0 CODE 0
-139 EF0 0 CODE 0
+146 EF0 0 CODE 0
+148 EF1 0 CODE 0
+149 EF5 0 CODE 0
+132 F0D 0 CODE 0
+134 F0E 0 CODE 0
+136 F0E 0 CODE 0
+134 F0E 0 CODE 0
+138 F13 0 CODE 0
+139 F16 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
-1 14 0 CODE 0
-3 14 0 CODE 0
-4 2D 0 CODE 0
+1 15 0 CODE 0
+3 15 0 CODE 0
+4 2E 0 CODE 0
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
 7 49C 0 CODE 0
 14 49C 0 CODE 0
@@ -988,129 +880,188 @@ C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
 41 657 0 CODE 0
 42 675 0 CODE 0
 43 686 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-5 1C2 0 CODE 0
-12 1C2 0 CODE 0
-13 1C3 0 CODE 0
-14 1C7 0 CODE 0
-15 1CC 0 CODE 0
-17 1CE 0 CODE 0
-18 1D2 0 CODE 0
-19 1D7 0 CODE 0
-20 1DD 0 CODE 0
-21 1DF 0 CODE 0
-22 1E0 0 CODE 0
-23 1E5 0 CODE 0
-21 1E9 0 CODE 0
-26 1ED 0 CODE 0
-27 1F7 0 CODE 0
-28 1FB 0 CODE 0
-29 200 0 CODE 0
-31 206 0 CODE 0
-32 20B 0 CODE 0
-33 210 0 CODE 0
-34 214 0 CODE 0
-mcc_generated_files/mcc.c
-50 F5A 0 CODE 0
-53 F5A 0 CODE 0
-54 F5D 0 CODE 0
-55 F60 0 CODE 0
-56 F63 0 CODE 0
-57 F66 0 CODE 0
-58 F69 0 CODE 0
-59 F6C 0 CODE 0
-60 F6F 0 CODE 0
-72 E99 0 CODE 0
-75 E99 0 CODE 0
-76 E9C 0 CODE 0
-mcc_generated_files/tmr4.c
-62 EDD 0 CODE 0
-67 EDD 0 CODE 0
-70 EE0 0 CODE 0
-73 EE1 0 CODE 0
-76 EE3 0 CODE 0
-77 EE6 0 CODE 0
-mcc_generated_files/pwm4.c
-58 EFC 0 CODE 0
-62 EFC 0 CODE 0
-65 EFF 0 CODE 0
-68 F00 0 CODE 0
-71 F01 0 CODE 0
-72 F06 0 CODE 0
+led_adapter.c
+24 70 0 CODE 0
+26 70 0 CODE 0
+27 94 0 CODE 0
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+15 2F 0 CODE 0
+43 2F 0 CODE 0
+45 31 0 CODE 0
+46 35 0 CODE 0
+47 39 0 CODE 0
+48 3E 0 CODE 0
+49 43 0 CODE 0
+52 49 0 CODE 0
+53 4D 0 CODE 0
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+5 25F 0 CODE 0
+13 25F 0 CODE 0
+14 261 0 CODE 0
+15 265 0 CODE 0
+16 26A 0 CODE 0
+18 26C 0 CODE 0
+19 270 0 CODE 0
+20 275 0 CODE 0
+22 279 0 CODE 0
+23 27B 0 CODE 0
+24 281 0 CODE 0
+25 283 0 CODE 0
+26 284 0 CODE 0
+27 289 0 CODE 0
+25 28D 0 CODE 0
+30 291 0 CODE 0
+31 296 0 CODE 0
+32 2A0 0 CODE 0
+33 2A4 0 CODE 0
+35 2A5 0 CODE 0
+36 2AA 0 CODE 0
+38 2B0 0 CODE 0
+39 2B5 0 CODE 0
+40 2BA 0 CODE 0
+41 2BE 0 CODE 0
 mcc_generated_files/pwm3.c
-58 EF1 0 CODE 0
-62 EF1 0 CODE 0
-65 EF4 0 CODE 0
-68 EF5 0 CODE 0
-71 EF6 0 CODE 0
-72 EFB 0 CODE 0
-mcc_generated_files/pin_manager.c
-55 12C 0 CODE 0
-60 12C 0 CODE 0
-61 12E 0 CODE 0
-62 12F 0 CODE 0
-63 130 0 CODE 0
-64 131 0 CODE 0
-69 132 0 CODE 0
-70 135 0 CODE 0
-71 137 0 CODE 0
-72 139 0 CODE 0
-73 13B 0 CODE 0
-78 13D 0 CODE 0
-79 140 0 CODE 0
-80 142 0 CODE 0
-81 144 0 CODE 0
-82 146 0 CODE 0
-87 148 0 CODE 0
-88 14A 0 CODE 0
-89 14B 0 CODE 0
-90 14C 0 CODE 0
-91 14D 0 CODE 0
-92 14E 0 CODE 0
-97 150 0 CODE 0
-98 152 0 CODE 0
-99 153 0 CODE 0
-100 154 0 CODE 0
-101 155 0 CODE 0
-106 156 0 CODE 0
-107 159 0 CODE 0
-108 15B 0 CODE 0
-109 15D 0 CODE 0
-110 15F 0 CODE 0
-115 161 0 CODE 0
-116 164 0 CODE 0
-117 166 0 CODE 0
-118 168 0 CODE 0
-119 16A 0 CODE 0
-128 16C 0 CODE 0
-129 16F 0 CODE 0
-130 172 0 CODE 0
-131 174 0 CODE 0
-132 176 0 CODE 0
+74 F86 0 CODE 0
+77 F86 0 CODE 0
+80 F91 0 CODE 0
+81 F9B 0 CODE 0
+temp_sensor.c
+40 FCE 0 CODE 0
+42 FCF 0 CODE 0
+43 FD6 0 CODE 0
+44 FDE 0 CODE 0
+45 FE6 0 CODE 0
+light_sensor.c
+33 FB5 0 CODE 0
+35 FB6 0 CODE 0
+36 FBD 0 CODE 0
+37 FC5 0 CODE 0
+38 FCD 0 CODE 0
+led_adapter.c
+95 4 0 CODE 0
+97 5 0 CODE 0
+98 C 0 CODE 0
+99 14 0 CODE 0
+lcd_screen.c
+31 F9C 0 CODE 0
+33 F9D 0 CODE 0
+34 FA4 0 CODE 0
+35 FAC 0 CODE 0
+36 FB4 0 CODE 0
+C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+5 1B3 0 CODE 0
+12 1B3 0 CODE 0
+13 1B4 0 CODE 0
+14 1B8 0 CODE 0
+15 1BD 0 CODE 0
+17 1BF 0 CODE 0
+18 1C3 0 CODE 0
+19 1C8 0 CODE 0
+20 1CE 0 CODE 0
+21 1D0 0 CODE 0
+22 1D1 0 CODE 0
+23 1D6 0 CODE 0
+21 1DA 0 CODE 0
+26 1DE 0 CODE 0
+27 1E8 0 CODE 0
+28 1EC 0 CODE 0
+29 1F1 0 CODE 0
+31 1F7 0 CODE 0
+32 1FC 0 CODE 0
+33 201 0 CODE 0
+34 205 0 CODE 0
 mcc_generated_files/mcc.c
-62 EBB 0 CODE 0
-65 EBB 0 CODE 0
-67 EBE 0 CODE 0
-69 EBF 0 CODE 0
-70 EC1 0 CODE 0
+50 F5F 0 CODE 0
+53 F5F 0 CODE 0
+54 F62 0 CODE 0
+55 F65 0 CODE 0
+56 F68 0 CODE 0
+57 F6B 0 CODE 0
+58 F6E 0 CODE 0
+59 F71 0 CODE 0
+71 EDA 0 CODE 0
+74 EDA 0 CODE 0
+75 EDD 0 CODE 0
+mcc_generated_files/tmr4.c
+62 F03 0 CODE 0
+67 F03 0 CODE 0
+70 F06 0 CODE 0
+73 F07 0 CODE 0
+76 F09 0 CODE 0
+77 F0C 0 CODE 0
+mcc_generated_files/pwm3.c
+58 F17 0 CODE 0
+62 F17 0 CODE 0
+65 F1A 0 CODE 0
+68 F1B 0 CODE 0
+71 F1C 0 CODE 0
+72 F21 0 CODE 0
+mcc_generated_files/pin_manager.c
+55 16A 0 CODE 0
+60 16A 0 CODE 0
+61 16C 0 CODE 0
+62 16D 0 CODE 0
+63 16E 0 CODE 0
+64 16F 0 CODE 0
+69 170 0 CODE 0
+70 173 0 CODE 0
+71 175 0 CODE 0
+72 177 0 CODE 0
+73 179 0 CODE 0
+78 17B 0 CODE 0
+79 17E 0 CODE 0
+80 180 0 CODE 0
+81 182 0 CODE 0
+82 184 0 CODE 0
+87 186 0 CODE 0
+88 188 0 CODE 0
+89 189 0 CODE 0
+90 18A 0 CODE 0
+91 18B 0 CODE 0
+92 18C 0 CODE 0
+97 18E 0 CODE 0
+98 190 0 CODE 0
+99 191 0 CODE 0
+100 192 0 CODE 0
+101 193 0 CODE 0
+106 194 0 CODE 0
+107 197 0 CODE 0
+108 199 0 CODE 0
+109 19B 0 CODE 0
+110 19D 0 CODE 0
+115 19F 0 CODE 0
+116 1A2 0 CODE 0
+117 1A4 0 CODE 0
+118 1A6 0 CODE 0
+119 1A8 0 CODE 0
+128 1AA 0 CODE 0
+129 1AD 0 CODE 0
+130 1B0 0 CODE 0
+131 1B2 0 CODE 0
+mcc_generated_files/mcc.c
+61 EFC 0 CODE 0
+64 EFC 0 CODE 0
+66 EFF 0 CODE 0
+68 F00 0 CODE 0
+69 F02 0 CODE 0
 mcc_generated_files/eusart.c
-66 4D 0 CODE 0
-71 4D 0 CODE 0
-74 50 0 CODE 0
-77 52 0 CODE 0
-80 54 0 CODE 0
-83 56 0 CODE 0
-86 57 0 CODE 0
-87 5E 0 CODE 0
-88 65 0 CODE 0
-90 6C 0 CODE 0
-92 6E 0 CODE 0
-170 EA9 0 CODE 0
-171 EA9 0 CODE 0
-172 EAE 0 CODE 0
-166 EA3 0 CODE 0
-167 EA3 0 CODE 0
-168 EA8 0 CODE 0
-174 E9D 0 CODE 0
-175 E9D 0 CODE 0
-176 EA2 0 CODE 0
+66 4E 0 CODE 0
+71 4E 0 CODE 0
+74 51 0 CODE 0
+77 53 0 CODE 0
+80 55 0 CODE 0
+83 57 0 CODE 0
+86 58 0 CODE 0
+87 5F 0 CODE 0
+88 66 0 CODE 0
+90 6D 0 CODE 0
+92 6F 0 CODE 0
+170 EEA 0 CODE 0
+171 EEA 0 CODE 0
+172 EEF 0 CODE 0
+166 EE4 0 CODE 0
+167 EE4 0 CODE 0
+168 EE9 0 CODE 0
+174 EDE 0 CODE 0
+175 EDE 0 CODE 0
+176 EE3 0 CODE 0

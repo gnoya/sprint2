@@ -9542,9 +9542,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 186 "./mcc_generated_files/pin_manager.h"
+# 154 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 198 "./mcc_generated_files/pin_manager.h"
+# 166 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -9692,13 +9692,6 @@ void TMR4_LoadPeriodRegister(uint8_t periodVal);
 # 325 "./mcc_generated_files/tmr4.h"
 _Bool TMR4_HasOverflowOccured(void);
 # 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pwm4.h" 1
-# 102 "./mcc_generated_files/pwm4.h"
- void PWM4_Initialize(void);
-# 129 "./mcc_generated_files/pwm4.h"
- void PWM4_LoadDutyValue(uint16_t dutyValue);
-# 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 57 "./mcc_generated_files/eusart.h"
@@ -9871,12 +9864,12 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 398 "./mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 58 "./mcc_generated_files/mcc.h" 2
-# 73 "./mcc_generated_files/mcc.h"
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "./mcc_generated_files/mcc.h"
+# 85 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 98 "./mcc_generated_files/mcc.h"
+# 97 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 45 "main.c" 2
 
@@ -9948,10 +9941,8 @@ void main(void)
   initialize_lcd_screen(&lcd_screen);
   initialize_led(&led);
 
-  lcd_screen.demo1();
-  lcd_screen.demo2();
-  lcd_screen.demo3();
-# 88 "main.c"
+  printf("\n");
+# 86 "main.c"
   int brightness = 0;
   int temperature = 0;
 
@@ -9962,11 +9953,13 @@ void main(void)
 
 
 
+    printf("Brightness value: %d\n", brightness);
+    printf("Temperature value: %d\n", temperature);
 
     led.set_brightness(brightness);
     led.set_color(temperature);
-    brightness = (brightness + 1) % 10;
-    temperature = (temperature + 1) % 10;
-    _delay((unsigned long)((100)*(1000000/4000.0)));
+    brightness = (brightness + 1) % 101;
+    temperature = (temperature + 1) % 101;
+    printf("\n");
   }
 }

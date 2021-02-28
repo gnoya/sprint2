@@ -19,6 +19,8 @@ static void set_color(int temperature);
 static void turn_selectors(bool selector1, bool selector2);
 static int map(int x, int in_min, int in_max, int out_min, int out_max);
 
+uint16_t duty_cycle = 0;
+
 static int map(int x, int in_min, int in_max, int out_min, int out_max)
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -65,17 +67,16 @@ static void turn_red()
 
 static void set_brightness(int brightness)
 {
-  uint16_t duty_cycle = (uint16_t)map(brightness, 0, 10, 0, 100);
+  duty_cycle = (uint16_t)(100 - map(brightness, 0, 100, 0, 100));
   printf("Duty cycle is: %d\n", duty_cycle);
 
   // from 0 to 100
   PWM3_LoadDutyValue(duty_cycle);
-  PWM4_LoadDutyValue(duty_cycle);
 }
 
 static void set_color(int temperature)
 {
-  int color = map(temperature, 0, 10, 0, 60);
+  int color = map(temperature, 0, 100, 0, 60);
 
   if (color >= 0 && color < 20)
   {

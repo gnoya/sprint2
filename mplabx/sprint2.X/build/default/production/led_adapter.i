@@ -9699,9 +9699,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 186 "./mcc_generated_files/pin_manager.h"
+# 154 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 198 "./mcc_generated_files/pin_manager.h"
+# 166 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -9850,13 +9850,6 @@ void TMR4_LoadPeriodRegister(uint8_t periodVal);
 _Bool TMR4_HasOverflowOccured(void);
 # 56 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pwm4.h" 1
-# 102 "./mcc_generated_files/pwm4.h"
- void PWM4_Initialize(void);
-# 129 "./mcc_generated_files/pwm4.h"
- void PWM4_LoadDutyValue(uint16_t dutyValue);
-# 57 "./mcc_generated_files/mcc.h" 2
-
 # 1 "./mcc_generated_files/eusart.h" 1
 # 76 "./mcc_generated_files/eusart.h"
 typedef union {
@@ -9888,12 +9881,12 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 398 "./mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 58 "./mcc_generated_files/mcc.h" 2
-# 73 "./mcc_generated_files/mcc.h"
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "./mcc_generated_files/mcc.h"
+# 85 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 98 "./mcc_generated_files/mcc.h"
+# 97 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 11 "led_adapter.c" 2
 
@@ -9907,6 +9900,8 @@ static void set_color(int temperature);
 static void turn_selectors(_Bool selector1, _Bool selector2);
 static int map(int x, int in_min, int in_max, int out_min, int out_max);
 
+uint16_t duty_cycle = 0;
+
 static int map(int x, int in_min, int in_max, int out_min, int out_max)
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -9916,20 +9911,20 @@ static void turn_selectors(_Bool selector1, _Bool selector2)
 {
   if (selector1)
   {
+    do { LATBbits.LATB1 = 1; } while(0);
+  }
+  else
+  {
+    do { LATBbits.LATB1 = 0; } while(0);
+  }
+
+  if (selector2)
+  {
     do { LATBbits.LATB2 = 1; } while(0);
   }
   else
   {
     do { LATBbits.LATB2 = 0; } while(0);
-  }
-
-  if (selector2)
-  {
-    do { LATBbits.LATB3 = 1; } while(0);
-  }
-  else
-  {
-    do { LATBbits.LATB3 = 0; } while(0);
   }
 }
 
@@ -9953,18 +9948,16 @@ static void turn_red()
 
 static void set_brightness(int brightness)
 {
-  printf("Setting brightness of %d!\n", brightness);
-  uint16_t duty_cycle = (uint16_t)map(brightness, 0, 10, 0, 100);
+  duty_cycle = (uint16_t)(100 - map(brightness, 0, 100, 0, 100));
   printf("Duty cycle is: %d\n", duty_cycle);
 
 
   PWM3_LoadDutyValue(duty_cycle);
-  PWM4_LoadDutyValue(duty_cycle);
 }
 
 static void set_color(int temperature)
 {
-  int color = map(temperature, 0, 10, 0, 60);
+  int color = map(temperature, 0, 100, 0, 60);
 
   if (color >= 0 && color < 20)
   {

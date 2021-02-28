@@ -5,7 +5,6 @@ mcc_generated_files/device_config.h  \
 mcc_generated_files/pin_manager.h  \
 mcc_generated_files/pwm3.h  \
 mcc_generated_files/tmr4.h  \
-mcc_generated_files/pwm4.h  \
 mcc_generated_files/eusart.h  \
 sensor_adapter.h  \
 light_sensor.h  \

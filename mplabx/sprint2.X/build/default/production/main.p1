@@ -1,27 +1,27 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"73 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 73: void SYSTEM_Initialize(void);
+"72 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F5946 `(a ~T0 @X0 0 tf ]
-[v F5948 `(f ~T0 @X0 0 tf ]
-[v F5950 `(v ~T0 @X0 0 tf ]
+[v F5943 `(a ~T0 @X0 0 tf ]
+[v F5945 `(f ~T0 @X0 0 tf ]
+[v F5947 `(v ~T0 @X0 0 tf ]
 "9 ./sensor_adapter.h
 [; ;./sensor_adapter.h: 9: {
-[s S784 `*F5946 1 `*F5948 1 `*F5950 1 ]
+[s S784 `*F5943 1 `*F5945 1 `*F5947 1 ]
 [n S784 sensor open read close ]
-[v F5958 `(v ~T0 @X0 0 tf ]
-[v F5960 `(v ~T0 @X0 0 tf ]
-[v F5962 `(v ~T0 @X0 0 tf ]
+[v F5955 `(v ~T0 @X0 0 tf ]
+[v F5957 `(v ~T0 @X0 0 tf ]
+[v F5959 `(v ~T0 @X0 0 tf ]
 "30 ./lcd_screen.h
 [; ;./lcd_screen.h: 30: {
-[s S785 `*F5958 1 `*F5960 1 `*F5962 1 ]
+[s S785 `*F5955 1 `*F5957 1 `*F5959 1 ]
 [n S785 lcd_screen demo1 demo2 demo3 ]
+[v F5965 `(v ~T0 @X0 0 tf1`i ]
 [v F5968 `(v ~T0 @X0 0 tf1`i ]
-[v F5971 `(v ~T0 @X0 0 tf1`i ]
 "30 ./led_adapter.h
 [; ;./led_adapter.h: 30: {
-[s S786 `*F5968 1 `*F5971 1 ]
+[s S786 `*F5965 1 `*F5968 1 ]
 [n S786 led set_brightness set_color ]
 "29 ./light_sensor.h
 [; ;./light_sensor.h: 29: void initialize_light(sensor *sensor);
@@ -35,10 +35,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35 ./led_adapter.h
 [; ;./led_adapter.h: 35: void initialize_led(led *led);
 [v _initialize_led `(v ~T0 @X0 0 ef1`*S786 ]
-[v F5521 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
-[v __delay `JF5521 ~T0 @X0 0 e ]
-[p i __delay ]
+"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1003,28 +1001,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 68:   initialize_led(&led);
 [e ( _initialize_led (1 &U _led ]
 "70
-[; ;main.c: 70:   lcd_screen.demo1();
-[e ( *U . _lcd_screen 0 ..  ]
-"71
-[; ;main.c: 71:   lcd_screen.demo2();
-[e ( *U . _lcd_screen 1 ..  ]
-"72
-[; ;main.c: 72:   lcd_screen.demo3();
-[e ( *U . _lcd_screen 2 ..  ]
-"88
-[; ;main.c: 88:   int brightness = 0;
+[; ;main.c: 70:   printf("\n");
+[e ( _printf :s 1C ]
+"86
+[; ;main.c: 86:   int brightness = 0;
 [v _brightness `i ~T0 @X0 1 a ]
 [e = _brightness -> 0 `i ]
-"89
-[; ;main.c: 89:   int temperature = 0;
+"87
+[; ;main.c: 87:   int temperature = 0;
 [v _temperature `i ~T0 @X0 1 a ]
 [e = _temperature -> 0 `i ]
-"91
-[; ;main.c: 91:   while (1)
+"89
+[; ;main.c: 89:   while (1)
 [e :U 789 ]
-"92
-[; ;main.c: 92:   {
+"90
+[; ;main.c: 90:   {
 {
+"96
+[; ;main.c: 96:     printf("Brightness value: %d\n", brightness);
+[e ( _printf , (. :s 2C _brightness ]
+"97
+[; ;main.c: 97:     printf("Temperature value: %d\n", temperature);
+[e ( _printf , (. :s 3C _temperature ]
 "99
 [; ;main.c: 99:     led.set_brightness(brightness);
 [e ( *U . _led 0 (1 _brightness ]
@@ -1032,14 +1030,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 100:     led.set_color(temperature);
 [e ( *U . _led 1 (1 _temperature ]
 "101
-[; ;main.c: 101:     brightness = (brightness + 1) % 10;
-[e = _brightness % + _brightness -> 1 `i -> 10 `i ]
+[; ;main.c: 101:     brightness = (brightness + 1) % 101;
+[e = _brightness % + _brightness -> 1 `i -> 101 `i ]
 "102
-[; ;main.c: 102:     temperature = (temperature + 1) % 10;
-[e = _temperature % + _temperature -> 1 `i -> 10 `i ]
+[; ;main.c: 102:     temperature = (temperature + 1) % 101;
+[e = _temperature % + _temperature -> 1 `i -> 101 `i ]
 "103
-[; ;main.c: 103:     _delay((unsigned long)((100)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 103:     printf("\n");
+[e ( _printf :s 4C ]
 "104
 [; ;main.c: 104:   }
 }
@@ -1050,3 +1048,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 105: }
 [e :UE 787 ]
 }
+[p f _printf 8388736 ]
+[a 2C 66 114 105 103 104 116 110 101 115 115 32 118 97 108 117 101 58 32 37 100 10 0 ]
+[a 3C 84 101 109 112 101 114 97 116 117 114 101 32 118 97 108 117 101 58 32 37 100 10 0 ]
+[a 1C 10 0 ]
+[a 4C 10 0 ]

@@ -15,9 +15,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "129 ./mcc_generated_files/pwm3.h
 [; ;./mcc_generated_files/pwm3.h: 129:  void PWM3_LoadDutyValue(uint16_t dutyValue);
 [v _PWM3_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
-"129 ./mcc_generated_files/pwm4.h
-[; ;./mcc_generated_files/pwm4.h: 129:  void PWM4_LoadDutyValue(uint16_t dutyValue);
-[v _PWM4_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
 [v F325 `(v ~T0 @X0 0 tf1`i ]
 [v F328 `(v ~T0 @X0 0 tf1`i ]
 "30 ./led_adapter.h
@@ -952,199 +949,198 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 "22 led_adapter.c
-[; ;led_adapter.c: 22: static int map(int x, int in_min, int in_max, int out_min, int out_max)
+[; ;led_adapter.c: 22: uint16_t duty_cycle = 0;
+[v _duty_cycle `us ~T0 @X0 1 e ]
+[i _duty_cycle
+-> -> 0 `i `us
+]
+"24
+[; ;led_adapter.c: 24: static int map(int x, int in_min, int in_max, int out_min, int out_max)
 [v _map `(i ~T0 @X0 1 sf5`i`i`i`i`i ]
-"23
-[; ;led_adapter.c: 23: {
+"25
+[; ;led_adapter.c: 25: {
 {
 [e :U _map ]
-"22
-[; ;led_adapter.c: 22: static int map(int x, int in_min, int in_max, int out_min, int out_max)
+"24
+[; ;led_adapter.c: 24: static int map(int x, int in_min, int in_max, int out_min, int out_max)
 [v _x `i ~T0 @X0 1 r1 ]
 [v _in_min `i ~T0 @X0 1 r2 ]
 [v _in_max `i ~T0 @X0 1 r3 ]
 [v _out_min `i ~T0 @X0 1 r4 ]
 [v _out_max `i ~T0 @X0 1 r5 ]
-"23
-[; ;led_adapter.c: 23: {
+"25
+[; ;led_adapter.c: 25: {
 [f ]
-"24
-[; ;led_adapter.c: 24:   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+"26
+[; ;led_adapter.c: 26:   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 [e ) + / * - _x _in_min - _out_max _out_min - _in_max _in_min _out_min ]
 [e $UE 785  ]
-"25
-[; ;led_adapter.c: 25: }
+"27
+[; ;led_adapter.c: 27: }
 [e :UE 785 ]
 }
-"27
-[; ;led_adapter.c: 27: static void turn_selectors(_Bool selector1, _Bool selector2)
+"29
+[; ;led_adapter.c: 29: static void turn_selectors(_Bool selector1, _Bool selector2)
 [v _turn_selectors `(v ~T0 @X0 1 sf2`a`a ]
-"28
-[; ;led_adapter.c: 28: {
+"30
+[; ;led_adapter.c: 30: {
 {
 [e :U _turn_selectors ]
-"27
-[; ;led_adapter.c: 27: static void turn_selectors(_Bool selector1, _Bool selector2)
+"29
+[; ;led_adapter.c: 29: static void turn_selectors(_Bool selector1, _Bool selector2)
 [v _selector1 `a ~T0 @X0 1 r1 ]
 [v _selector2 `a ~T0 @X0 1 r2 ]
-"28
-[; ;led_adapter.c: 28: {
-[f ]
-"29
-[; ;led_adapter.c: 29:   if (selector1)
-[e $ ! != -> _selector1 `i -> 0 `i 787  ]
 "30
-[; ;led_adapter.c: 30:   {
-{
+[; ;led_adapter.c: 30: {
+[f ]
 "31
-[; ;led_adapter.c: 31:     do { LATBbits.LATB2 = 1; } while(0);
+[; ;led_adapter.c: 31:   if (selector1)
+[e $ ! != -> _selector1 `i -> 0 `i 787  ]
+"32
+[; ;led_adapter.c: 32:   {
+{
+"33
+[; ;led_adapter.c: 33:     do { LATBbits.LATB1 = 1; } while(0);
 [e :U 790 ]
+{
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 789 ]
+"34
+[; ;led_adapter.c: 34:   }
+}
+[e $U 791  ]
+"35
+[; ;led_adapter.c: 35:   else
+[e :U 787 ]
+"36
+[; ;led_adapter.c: 36:   {
+{
+"37
+[; ;led_adapter.c: 37:     do { LATBbits.LATB1 = 0; } while(0);
+[e :U 794 ]
+{
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+}
+[e :U 793 ]
+"38
+[; ;led_adapter.c: 38:   }
+}
+[e :U 791 ]
+"40
+[; ;led_adapter.c: 40:   if (selector2)
+[e $ ! != -> _selector2 `i -> 0 `i 795  ]
+"41
+[; ;led_adapter.c: 41:   {
+{
+"42
+[; ;led_adapter.c: 42:     do { LATBbits.LATB2 = 1; } while(0);
+[e :U 798 ]
 {
 [e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
 }
-[e :U 789 ]
-"32
-[; ;led_adapter.c: 32:   }
+[e :U 797 ]
+"43
+[; ;led_adapter.c: 43:   }
 }
-[e $U 791  ]
-"33
-[; ;led_adapter.c: 33:   else
-[e :U 787 ]
-"34
-[; ;led_adapter.c: 34:   {
+[e $U 799  ]
+"44
+[; ;led_adapter.c: 44:   else
+[e :U 795 ]
+"45
+[; ;led_adapter.c: 45:   {
 {
-"35
-[; ;led_adapter.c: 35:     do { LATBbits.LATB2 = 0; } while(0);
-[e :U 794 ]
+"46
+[; ;led_adapter.c: 46:     do { LATBbits.LATB2 = 0; } while(0);
+[e :U 802 ]
 {
 [e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 793 ]
-"36
-[; ;led_adapter.c: 36:   }
-}
-[e :U 791 ]
-"38
-[; ;led_adapter.c: 38:   if (selector2)
-[e $ ! != -> _selector2 `i -> 0 `i 795  ]
-"39
-[; ;led_adapter.c: 39:   {
-{
-"40
-[; ;led_adapter.c: 40:     do { LATBbits.LATB3 = 1; } while(0);
-[e :U 798 ]
-{
-[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
-}
-[e :U 797 ]
-"41
-[; ;led_adapter.c: 41:   }
-}
-[e $U 799  ]
-"42
-[; ;led_adapter.c: 42:   else
-[e :U 795 ]
-"43
-[; ;led_adapter.c: 43:   {
-{
-"44
-[; ;led_adapter.c: 44:     do { LATBbits.LATB3 = 0; } while(0);
-[e :U 802 ]
-{
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-}
 [e :U 801 ]
-"45
-[; ;led_adapter.c: 45:   }
+"47
+[; ;led_adapter.c: 47:   }
 }
 [e :U 799 ]
-"46
-[; ;led_adapter.c: 46: }
+"48
+[; ;led_adapter.c: 48: }
 [e :UE 786 ]
 }
-"48
-[; ;led_adapter.c: 48: static void turn_blue()
+"50
+[; ;led_adapter.c: 50: static void turn_blue()
 [v _turn_blue `(v ~T0 @X0 1 sf ]
-"49
-[; ;led_adapter.c: 49: {
+"51
+[; ;led_adapter.c: 51: {
 {
 [e :U _turn_blue ]
 [f ]
-"50
-[; ;led_adapter.c: 50:   printf("Color is blue!\n");
-[e ( _printf :s 1C ]
-"51
-[; ;led_adapter.c: 51:   turn_selectors(1, 0);
-[e ( _turn_selectors (2 , -> -> 1 `i `a -> -> 0 `i `a ]
 "52
-[; ;led_adapter.c: 52: }
+[; ;led_adapter.c: 52:   printf("Color is blue!\n");
+[e ( _printf :s 1C ]
+"53
+[; ;led_adapter.c: 53:   turn_selectors(1, 0);
+[e ( _turn_selectors (2 , -> -> 1 `i `a -> -> 0 `i `a ]
+"54
+[; ;led_adapter.c: 54: }
 [e :UE 803 ]
 }
-"54
-[; ;led_adapter.c: 54: static void turn_green()
+"56
+[; ;led_adapter.c: 56: static void turn_green()
 [v _turn_green `(v ~T0 @X0 1 sf ]
-"55
-[; ;led_adapter.c: 55: {
+"57
+[; ;led_adapter.c: 57: {
 {
 [e :U _turn_green ]
 [f ]
-"56
-[; ;led_adapter.c: 56:   printf("Color is green!\n");
-[e ( _printf :s 2C ]
-"57
-[; ;led_adapter.c: 57:   turn_selectors(0, 1);
-[e ( _turn_selectors (2 , -> -> 0 `i `a -> -> 1 `i `a ]
 "58
-[; ;led_adapter.c: 58: }
+[; ;led_adapter.c: 58:   printf("Color is green!\n");
+[e ( _printf :s 2C ]
+"59
+[; ;led_adapter.c: 59:   turn_selectors(0, 1);
+[e ( _turn_selectors (2 , -> -> 0 `i `a -> -> 1 `i `a ]
+"60
+[; ;led_adapter.c: 60: }
 [e :UE 804 ]
 }
-"60
-[; ;led_adapter.c: 60: static void turn_red()
+"62
+[; ;led_adapter.c: 62: static void turn_red()
 [v _turn_red `(v ~T0 @X0 1 sf ]
-"61
-[; ;led_adapter.c: 61: {
+"63
+[; ;led_adapter.c: 63: {
 {
 [e :U _turn_red ]
 [f ]
-"62
-[; ;led_adapter.c: 62:   printf("Color is red!\n");
-[e ( _printf :s 3C ]
-"63
-[; ;led_adapter.c: 63:   turn_selectors(0, 0);
-[e ( _turn_selectors (2 , -> -> 0 `i `a -> -> 0 `i `a ]
 "64
-[; ;led_adapter.c: 64: }
+[; ;led_adapter.c: 64:   printf("Color is red!\n");
+[e ( _printf :s 3C ]
+"65
+[; ;led_adapter.c: 65:   turn_selectors(0, 0);
+[e ( _turn_selectors (2 , -> -> 0 `i `a -> -> 0 `i `a ]
+"66
+[; ;led_adapter.c: 66: }
 [e :UE 805 ]
 }
-"66
-[; ;led_adapter.c: 66: static void set_brightness(int brightness)
+"68
+[; ;led_adapter.c: 68: static void set_brightness(int brightness)
 [v _set_brightness `(v ~T0 @X0 1 sf1`i ]
-"67
-[; ;led_adapter.c: 67: {
+"69
+[; ;led_adapter.c: 69: {
 {
 [e :U _set_brightness ]
-"66
-[; ;led_adapter.c: 66: static void set_brightness(int brightness)
-[v _brightness `i ~T0 @X0 1 r1 ]
-"67
-[; ;led_adapter.c: 67: {
-[f ]
 "68
-[; ;led_adapter.c: 68:   printf("Setting brightness of %d!\n", brightness);
-[e ( _printf , (. :s 4C _brightness ]
+[; ;led_adapter.c: 68: static void set_brightness(int brightness)
+[v _brightness `i ~T0 @X0 1 r1 ]
 "69
-[; ;led_adapter.c: 69:   uint16_t duty_cycle = (uint16_t)map(brightness, 0, 10, 0, 100);
-[v _duty_cycle `us ~T0 @X0 1 a ]
-[e = _duty_cycle -> ( _map (4 , , , , _brightness -> 0 `i -> 10 `i -> 0 `i -> 100 `i `us ]
+[; ;led_adapter.c: 69: {
+[f ]
 "70
-[; ;led_adapter.c: 70:   printf("Duty cycle is: %d\n", duty_cycle);
-[e ( _printf , (. :s 5C -> _duty_cycle `ui ]
-"73
-[; ;led_adapter.c: 73:   PWM3_LoadDutyValue(duty_cycle);
-[e ( _PWM3_LoadDutyValue (1 _duty_cycle ]
+[; ;led_adapter.c: 70:   duty_cycle = (uint16_t)(100 - map(brightness, 0, 100, 0, 100));
+[e = _duty_cycle -> - -> 100 `i ( _map (4 , , , , _brightness -> 0 `i -> 100 `i -> 0 `i -> 100 `i `us ]
+"71
+[; ;led_adapter.c: 71:   printf("Duty cycle is: %d\n", duty_cycle);
+[e ( _printf , (. :s 4C -> _duty_cycle `ui ]
 "74
-[; ;led_adapter.c: 74:   PWM4_LoadDutyValue(duty_cycle);
-[e ( _PWM4_LoadDutyValue (1 _duty_cycle ]
+[; ;led_adapter.c: 74:   PWM3_LoadDutyValue(duty_cycle);
+[e ( _PWM3_LoadDutyValue (1 _duty_cycle ]
 "75
 [; ;led_adapter.c: 75: }
 [e :UE 806 ]
@@ -1163,9 +1159,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;led_adapter.c: 78: {
 [f ]
 "79
-[; ;led_adapter.c: 79:   int color = map(temperature, 0, 10, 0, 60);
+[; ;led_adapter.c: 79:   int color = map(temperature, 0, 100, 0, 60);
 [v _color `i ~T0 @X0 1 a ]
-[e = _color ( _map (4 , , , , _temperature -> 0 `i -> 10 `i -> 0 `i -> 60 `i ]
+[e = _color ( _map (4 , , , , _temperature -> 0 `i -> 100 `i -> 0 `i -> 60 `i ]
 "81
 [; ;led_adapter.c: 81:   if (color >= 0 && color < 20)
 [e $ ! && >= _color -> 0 `i < _color -> 20 `i 808  ]
@@ -1237,8 +1233,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 813 ]
 }
 [p f _printf 8388736 ]
-[a 5C 68 117 116 121 32 99 121 99 108 101 32 105 115 58 32 37 100 10 0 ]
+[a 4C 68 117 116 121 32 99 121 99 108 101 32 105 115 58 32 37 100 10 0 ]
 [a 2C 67 111 108 111 114 32 105 115 32 103 114 101 101 110 33 10 0 ]
 [a 1C 67 111 108 111 114 32 105 115 32 98 108 117 101 33 10 0 ]
 [a 3C 67 111 108 111 114 32 105 115 32 114 101 100 33 10 0 ]
-[a 4C 83 101 116 116 105 110 103 32 98 114 105 103 104 116 110 101 115 115 32 111 102 32 37 100 33 10 0 ]
