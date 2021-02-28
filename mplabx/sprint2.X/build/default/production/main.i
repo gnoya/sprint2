@@ -9946,17 +9946,27 @@ void main(void)
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
   initialize_lcd_screen(&lcd_screen);
+  initialize_led(&led);
 
   lcd_screen.demo1();
   lcd_screen.demo2();
   lcd_screen.demo3();
 # 88 "main.c"
+  int brightness = 0;
+  int temperature = 0;
+
   while (1)
   {
-    float light_value = light_sensor.read();
-    float temp_value = temp_sensor.read();
 
-    printf("Light sensor value: %f\n", light_value);
-    printf("Temperature sensor value: %f\n", temp_value);
+
+
+
+
+
+    led.set_brightness(brightness);
+    led.set_color(temperature);
+    brightness = (brightness + 1) % 10;
+    temperature = (temperature + 1) % 10;
+    _delay((unsigned long)((100)*(1000000/4000.0)));
   }
 }

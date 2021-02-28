@@ -11,87 +11,77 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
+$C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 2 2
 $dist/default/production\sprint2.X.production.o
-cinit CODE 0 7EB 7EB 15 2
-text1 CODE 0 11CC 11CC 12 2
-text2 CODE 0 11BA 11BA 12 2
-text3 CODE 0 125E 125E 1C 2
-text4 CODE 0 1242 1242 1C 2
-text5 CODE 0 1226 1226 1C 2
-text6 CODE 0 800 800 9 2
-text7 CODE 0 116A 116A 9 2
-text8 CODE 0 1161 1161 9 2
-text9 CODE 0 11A8 11A8 12 2
-text10 CODE 0 132B 132B 31 2
-text11 CODE 0 809 809 1AD 2
-text12 CODE 0 1487 1487 58 2
-text13 CODE 0 B7 B7 734 2
-text14 CODE 0 12DD 12DD 25 2
-text15 CODE 0 11F4 11F4 18 2
-text16 CODE 0 129A 129A 21 2
-text17 CODE 0 14DF 14DF 59 2
-text18 CODE 0 120C 120C 1A 2
-text19 CODE 0 1302 1302 29 2
-text20 CODE 0 135C 135C 3F 2
-text21 CODE 0 114E 114E 6 2
-text22 CODE 0 117D 117D A 2
-text23 CODE 0 1715 1715 EB 2
-text24 CODE 0 160B 160B 7F 2
-text25 CODE 0 1597 1597 74 2
-text26 CODE 0 127A 127A 20 2
-text27 CODE 0 B6A B6A 23F 2
-text28 CODE 0 119D 119D B 2
-text29 CODE 0 DA9 DA9 257 2
-text30 CODE 0 4 4 23 2
-text31 CODE 0 168A 168A 8B 2
-text32 CODE 0 13E6 13E6 4E 2
-text33 CODE 0 9B6 9B6 1B4 2
-text34 CODE 0 1434 1434 53 2
-text35 CODE 0 1538 1538 5F 2
-text36 CODE 0 11DE 11DE 16 2
-text37 CODE 0 1138 1138 4 2
-text38 CODE 0 1173 1173 A 2
-text39 CODE 0 1192 1192 B 2
-text40 CODE 0 1187 1187 B 2
-text41 CODE 0 139B 139B 4B 2
-text42 CODE 0 115A 115A 7 2
-text43 CODE 0 12BB 12BB 22 2
-text44 CODE 0 1148 1148 6 2
-text45 CODE 0 1142 1142 6 2
-text46 CODE 0 113C 113C 6 2
-nvBANK1 BANK1 1 ED ED 2 1
-nvBANK2 BANK2 1 13A 13A 4 1
-maintext CODE 0 27 27 90 2
+cinit CODE 0 7F5 7F5 B 2
+text1 CODE 0 2CE 2CE 73 2
+text2 CODE 0 F15 F15 E 2
+text3 CODE 0 5 5 F 2
+text4 CODE 0 F07 F07 E 2
+text5 CODE 0 F46 F46 14 2
+text6 CODE 0 177 177 4B 2
+text7 CODE 0 6F 6F 25 2
+text8 CODE 0 2E 2E 1F 2
+text9 CODE 0 26E 26E 60 2
+text10 CODE 0 F86 F86 16 2
+text11 CODE 0 F70 F70 16 2
+text12 CODE 0 FE7 FE7 19 2
+text13 CODE 0 FCE FCE 19 2
+text14 CODE 0 F23 F23 11 2
+text15 CODE 0 FB5 FB5 19 2
+text16 CODE 0 ED4 ED4 9 2
+text17 CODE 0 ECB ECB 9 2
+text18 CODE 0 EC2 EC2 9 2
+text19 CODE 0 F34 F34 12 2
+text20 CODE 0 BC BC 31 2
+text21 CODE 0 3C1 3C1 DB 2
+text22 CODE 0 687 687 16E 2
+text23 CODE 0 215 215 59 2
+text24 CODE 0 F9C F9C 19 2
+text25 CODE 0 94 94 28 2
+text26 CODE 0 ED ED 3F 2
+text27 CODE 0 EAF EAF 6 2
+text28 CODE 0 EE7 EE7 A 2
+text29 CODE 0 14 14 1A 2
+text30 CODE 0 49C 49C EA 2
+text31 CODE 0 586 586 101 2
+text32 CODE 0 1C2 1C2 53 2
+text33 CODE 0 F5A F5A 16 2
+text34 CODE 0 E99 E99 4 2
+text35 CODE 0 EDD EDD A 2
+text36 CODE 0 EFC EFC B 2
+text37 CODE 0 EF1 EF1 B 2
+text38 CODE 0 12C 12C 4B 2
+text39 CODE 0 EBB EBB 7 2
+text40 CODE 0 4D 4D 22 2
+text41 CODE 0 EA9 EA9 6 2
+text42 CODE 0 EA3 EA3 6 2
+text43 CODE 0 E9D E9D 6 2
+nvBANK1 BANK1 1 E7 E7 6 1
+maintext CODE 0 341 341 80 2
 cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK0 BANK0 1 20 20 4F 1
-cstackBANK1 BANK1 1 A0 A0 3D 1
-cstackBANK2 BANK2 1 120 120 1A 1
-stringtext1 STRCODE 0 1800 1800 1E 2
-stringtext2 STRCODE 0 181E 181E 1D 2
-stringtext3 STRCODE 0 183B 183B 18 2
-stringtext4 STRCODE 0 1853 1853 16 2
-stringtext5 STRCODE 0 1869 1869 16 2
-stringtext6 STRCODE 0 187F 187F 16 2
-stringtext7 STRCODE 0 1895 1895 15 2
-stringtext8 STRCODE 0 18AA 18AA 15 2
-stringtext9 STRCODE 0 18BF 18BF 15 2
-bssBANK0 BANK0 1 6F 6F 1 1
-bssBANK1 BANK1 1 DD DD 10 1
-bssBANK3 BANK3 1 1A0 1A0 50 1
-clrtext CODE 0 1154 1154 6 2
-stringtext10 STRCODE 0 18D4 18D4 15 2
-stringtext11 STRCODE 0 18E9 18E9 9 2
-stringtext12 STRCODE 0 18F2 18F2 9 2
-stringtext13 STRCODE 0 18FB 18FB 9 2
-stringtext14 STRCODE 0 1904 1904 4 2
-stringtext15 STRCODE 0 1908 1908 4 2
-stringtext16 STRCODE 0 190C 190C 4 2
-stringtext17 STRCODE 0 1910 1910 4 2
-stringtext18 STRCODE 0 1914 1914 3 2
+cstackBANK0 BANK0 1 20 20 50 1
+cstackBANK1 BANK1 1 C9 C9 1E 1
+stringtext1 STRCODE 0 800 800 1D 2
+stringtext2 STRCODE 0 81D 81D 1B 2
+stringtext3 STRCODE 0 1000 1000 16 2
+stringtext4 STRCODE 0 1016 1016 16 2
+stringtext5 STRCODE 0 102C 102C 16 2
+stringtext6 STRCODE 0 1042 1042 15 2
+stringtext7 STRCODE 0 1057 1057 15 2
+stringtext8 STRCODE 0 106C 106C 15 2
+stringtext9 STRCODE 0 1081 1081 13 2
+bssBANK1 BANK1 1 A0 A0 29 1
+clrtext CODE 0 EB5 EB5 6 2
+stringtext10 STRCODE 0 1094 1094 11 2
+stringtext11 STRCODE 0 10A5 10A5 10 2
+stringtext12 STRCODE 0 10B5 10B5 F 2
+stringtext13 STRCODE 0 10C4 10C4 9 2
+stringtext14 STRCODE 0 10CD 10CD 9 2
+stringtext15 STRCODE 0 10D6 10D6 9 2
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -99,8 +89,9 @@ config CONFIG 4 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM EF-EF 1
-RAM 13E-16F 1
+RAM ED-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
 RAM 220-26F 1
 RAM 2A0-2EF 1
 RAM 320-36F 1
@@ -110,18 +101,21 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK1 EF-EF 1
-BANK2 13E-16F 1
+BANK1 ED-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
 BANK4 220-26F 1
 BANK5 2A0-2EF 1
 BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 1000-1137 2
-CONST 1917-1FFF 2
-ENTRY 1000-1137 2
-ENTRY 1917-1FFF 2
+CONST 4-4 2
+CONST 838-E98 2
+CONST 10DF-1FFF 2
+ENTRY 4-4 2
+ENTRY 838-E98 2
+ENTRY 10DF-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -145,9 +139,10 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2140-23EF 1
-CODE 1000-1137 2
-CODE 1917-1FFF 2
+STACK 209D-23EF 1
+CODE 4-4 2
+CODE 838-E98 2
+CODE 10DF-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -162,10 +157,12 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-STRCODE 1000-1137 2
-STRCODE 1917-1FFF 2
-STRING 1000-1137 2
-STRING 1917-1FFF 2
+STRCODE 4-4 2
+STRCODE 838-E98 2
+STRCODE 10DF-1FFF 2
+STRING 4-4 2
+STRING 838-E98 2
+STRING 10DF-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -180,837 +177,421 @@ STRING 1917-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\sprint2.X.production.o
-7EB cinit CODE >5690:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7EB cinit CODE >5693:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7EB cinit CODE >5744:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7EC cinit CODE >5745:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7ED cinit CODE >5749:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7EE cinit CODE >5750:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7EF cinit CODE >5751:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F0 cinit CODE >5752:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F1 cinit CODE >5753:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F2 cinit CODE >5754:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F5 cinit CODE >5758:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F6 cinit CODE >5759:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F7 cinit CODE >5760:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F8 cinit CODE >5761:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7F9 cinit CODE >5762:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7FA cinit CODE >5763:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7FD cinit CODE >5769:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7FD cinit CODE >5771:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-7FE cinit CODE >5772:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-113C text46 CODE >174:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-113C text46 CODE >175:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1141 text46 CODE >176:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1142 text45 CODE >166:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1142 text45 CODE >167:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1147 text45 CODE >168:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1148 text44 CODE >170:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1148 text44 CODE >171:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-114D text44 CODE >172:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12BB text43 CODE >66:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12BB text43 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12BE text43 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12C0 text43 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12C2 text43 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12C4 text43 CODE >83:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12C5 text43 CODE >86:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12CC text43 CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12D3 text43 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12DA text43 CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12DC text43 CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-115A text42 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-115A text42 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-115D text42 CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-115E text42 CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1160 text42 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-139B text41 CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-139B text41 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-139D text41 CODE >61:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-139E text41 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-139F text41 CODE >63:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13A0 text41 CODE >64:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13A1 text41 CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13A4 text41 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13A6 text41 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13A8 text41 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13AA text41 CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13AC text41 CODE >78:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13AF text41 CODE >79:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13B1 text41 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13B3 text41 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13B5 text41 CODE >82:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13B7 text41 CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13B9 text41 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13BA text41 CODE >89:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13BB text41 CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13BC text41 CODE >91:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13BD text41 CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13BF text41 CODE >97:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13C1 text41 CODE >98:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13C2 text41 CODE >99:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13C3 text41 CODE >100:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13C4 text41 CODE >101:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13C5 text41 CODE >106:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13C8 text41 CODE >107:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13CA text41 CODE >108:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13CC text41 CODE >109:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13CE text41 CODE >110:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13D0 text41 CODE >115:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13D3 text41 CODE >116:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13D5 text41 CODE >117:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13D7 text41 CODE >118:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13D9 text41 CODE >119:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13DB text41 CODE >128:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13DE text41 CODE >129:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13E1 text41 CODE >130:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13E3 text41 CODE >131:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-13E5 text41 CODE >132:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-1187 text40 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-1187 text40 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-118A text40 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-118B text40 CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-118C text40 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-1191 text40 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-1192 text39 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
-1192 text39 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
-1195 text39 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
-1196 text39 CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
-1197 text39 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
-119C text39 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
-1173 text38 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-1173 text38 CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-1176 text38 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-1177 text38 CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-1179 text38 CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-117C text38 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-1138 text37 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1138 text37 CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-113B text37 CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11DE text36 CODE >50:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11DE text36 CODE >53:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11E1 text36 CODE >54:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11E4 text36 CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11E7 text36 CODE >56:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11EA text36 CODE >57:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11ED text36 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11F0 text36 CODE >59:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11F3 text36 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1538 text35 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1538 text35 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1539 text35 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-153D text35 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1542 text35 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1544 text35 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1548 text35 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-154D text35 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1551 text35 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1553 text35 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1559 text35 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-155B text35 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-155C text35 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1561 text35 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1565 text35 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1569 text35 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-156E text35 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1578 text35 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-157C text35 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-157D text35 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1582 text35 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1588 text35 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-158D text35 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1592 text35 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1596 text35 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
-1434 text34 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1434 text34 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1435 text34 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1439 text34 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-143E text34 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1440 text34 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1444 text34 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1449 text34 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-144F text34 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1451 text34 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1452 text34 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1457 text34 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-145B text34 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-145F text34 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1469 text34 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-146D text34 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1472 text34 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1478 text34 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-147D text34 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1482 text34 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-1486 text34 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
-9B6 text33 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9B6 text33 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9BC text33 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9C0 text33 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9C4 text33 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9C5 text33 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9CA text33 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9CF text33 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9D7 text33 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9D8 text33 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9D9 text33 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9DA text33 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9E2 text33 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9E7 text33 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9EB text33 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9EF text33 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9F0 text33 CODE >56:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9F5 text33 CODE >58:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-9FA text33 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A02 text33 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A03 text33 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A04 text33 CODE >66:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A05 text33 CODE >69:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A0D text33 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A0D text33 CODE >75:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A15 text33 CODE >76:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A1D text33 CODE >77:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A21 text33 CODE >78:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A25 text33 CODE >79:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A2E text33 CODE >83:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A33 text33 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A33 text33 CODE >85:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A3C text33 CODE >89:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A4C text33 CODE >92:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A54 text33 CODE >93:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A5C text33 CODE >94:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A64 text33 CODE >96:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A65 text33 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A66 text33 CODE >100:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A6B text33 CODE >101:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A72 text33 CODE >102:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A79 text33 CODE >103:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A7D text33 CODE >104:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A7E text33 CODE >106:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A85 text33 CODE >112:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A97 text33 CODE >115:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-A98 text33 CODE >116:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AA0 text33 CODE >118:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AA4 text33 CODE >97:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AAA text33 CODE >122:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AB2 text33 CODE >123:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AB4 text33 CODE >128:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-ABB text33 CODE >129:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-ABF text33 CODE >130:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AC0 text33 CODE >132:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AC7 text33 CODE >133:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-ACB text33 CODE >127:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-ACF text33 CODE >139:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AD0 text33 CODE >140:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AD4 text33 CODE >141:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AE8 text33 CODE >142:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AEA text33 CODE >143:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AEB text33 CODE >144:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AEB text33 CODE >145:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AF0 text33 CODE >150:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AF5 text33 CODE >151:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-AFD text33 CODE >152:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B01 text33 CODE >153:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B19 text33 CODE >154:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B1D text33 CODE >159:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B2A text33 CODE >160:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B2F text33 CODE >161:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B37 text33 CODE >162:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B37 text33 CODE >165:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B45 text33 CODE >166:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B48 text33 CODE >167:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B50 text33 CODE >169:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B51 text33 CODE >170:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B51 text33 CODE >173:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B56 text33 CODE >175:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B5A text33 CODE >176:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B5B text33 CODE >177:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B5C text33 CODE >180:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B60 text33 CODE >181:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B60 text33 CODE >182:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B64 text33 CODE >183:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-B69 text33 CODE >185:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcdiv.c
-13E6 text32 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
-13E6 text32 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
-13FA text32 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
-1402 text32 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
-1416 text32 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
-141E text32 CODE >11:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
-1433 text32 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fleq.c
-168A text31 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-168A text31 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-169F text31 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16A7 text31 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16BB text31 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16C3 text31 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16C7 text31 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16DF text31 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16E3 text31 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16FB text31 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16FD text31 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-16FF text31 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-1714 text31 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flge.c
-4 text30 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-5 text30 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-7 text30 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-E text30 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-12 text30 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-16 text30 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-16 text30 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-1B text30 CODE >55:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-1D text30 CODE >56:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-22 text30 CODE >59:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-26 text30 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
-DA9 text29 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DA9 text29 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DAF text29 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DB3 text29 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DB7 text29 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DB8 text29 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DBD text29 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DC2 text29 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DCA text29 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DCB text29 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DCC text29 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DD4 text29 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DD9 text29 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DDD text29 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DE1 text29 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DE2 text29 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DE7 text29 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DEC text29 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DF4 text29 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DF5 text29 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DF6 text29 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-DFE text29 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E08 text29 CODE >66:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E11 text29 CODE >119:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E1E text29 CODE >120:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E2B text29 CODE >121:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E38 text29 CODE >122:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E45 text29 CODE >123:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E52 text29 CODE >124:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E5F text29 CODE >125:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E6C text29 CODE >126:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E79 text29 CODE >127:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E86 text29 CODE >128:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E8D text29 CODE >129:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-E9A text29 CODE >130:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EA1 text29 CODE >131:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EAE text29 CODE >132:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EB5 text29 CODE >133:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EBC text29 CODE >134:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EC9 text29 CODE >135:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-ED0 text29 CODE >136:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EDD text29 CODE >137:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EE4 text29 CODE >138:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EF1 text29 CODE >139:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-EF8 text29 CODE >140:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F05 text29 CODE >141:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F1A text29 CODE >145:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F31 text29 CODE >146:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F38 text29 CODE >149:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F43 text29 CODE >152:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F44 text29 CODE >153:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F4B text29 CODE >154:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F4F text29 CODE >155:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F50 text29 CODE >157:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F57 text29 CODE >158:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F5B text29 CODE >152:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F5F text29 CODE >163:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F60 text29 CODE >164:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F64 text29 CODE >165:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F78 text29 CODE >166:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F7A text29 CODE >167:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F7B text29 CODE >168:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F7B text29 CODE >169:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F80 text29 CODE >174:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F85 text29 CODE >175:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F8D text29 CODE >176:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-F91 text29 CODE >177:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FA9 text29 CODE >178:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FAD text29 CODE >183:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FBA text29 CODE >184:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FC3 text29 CODE >185:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FC4 text29 CODE >187:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FD2 text29 CODE >188:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FDB text29 CODE >190:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FDC text29 CODE >191:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FDD text29 CODE >194:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FE2 text29 CODE >195:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FEA text29 CODE >196:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FEE text29 CODE >197:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FEF text29 CODE >199:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FF3 text29 CODE >200:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FF3 text29 CODE >201:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FF7 text29 CODE >203:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-FFF text29 CODE >205:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcmul.c
-119D text28 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flneg.c
-119D text28 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flneg.c
-11A5 text28 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flneg.c
-11A7 text28 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flneg.c
-11A7 text28 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\flneg.c
-B6A text27 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B6A text27 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B70 text27 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B74 text27 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B78 text27 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B79 text27 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B7E text27 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B83 text27 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B8B text27 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B8C text27 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B8D text27 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B8E text27 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B96 text27 CODE >44:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-B9B text27 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BA1 text27 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BA2 text27 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BA6 text27 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BAA text27 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BAB text27 CODE >55:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BB0 text27 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BB5 text27 CODE >59:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BBD text27 CODE >62:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BBE text27 CODE >64:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BBF text27 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BC0 text27 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BC8 text27 CODE >69:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BC8 text27 CODE >75:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BCE text27 CODE >77:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BD2 text27 CODE >78:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BD6 text27 CODE >81:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BDA text27 CODE >82:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BDE text27 CODE >83:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BE2 text27 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BE6 text27 CODE >85:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BEA text27 CODE >86:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BEE text27 CODE >87:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BF2 text27 CODE >88:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BF6 text27 CODE >89:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BFA text27 CODE >90:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-BFE text27 CODE >91:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C02 text27 CODE >92:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C06 text27 CODE >93:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C0A text27 CODE >94:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C0E text27 CODE >95:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C12 text27 CODE >98:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C13 text27 CODE >100:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C2A text27 CODE >101:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C38 text27 CODE >102:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C40 text27 CODE >103:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C44 text27 CODE >104:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C45 text27 CODE >106:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C45 text27 CODE >109:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C49 text27 CODE >110:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C4F text27 CODE >111:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C50 text27 CODE >113:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C52 text27 CODE >115:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C56 text27 CODE >116:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C57 text27 CODE >118:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C60 text27 CODE >119:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C64 text27 CODE >106:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C6A text27 CODE >121:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C6A text27 CODE >124:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C6E text27 CODE >127:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C73 text27 CODE >128:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C7C text27 CODE >132:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C84 text27 CODE >134:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C88 text27 CODE >135:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C8C text27 CODE >136:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C92 text27 CODE >137:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C93 text27 CODE >139:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C95 text27 CODE >141:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C99 text27 CODE >142:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-C9A text27 CODE >144:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CA3 text27 CODE >145:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CA8 text27 CODE >153:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CBF text27 CODE >154:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CE3 text27 CODE >155:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CE7 text27 CODE >156:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CE9 text27 CODE >157:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CEE text27 CODE >158:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CF7 text27 CODE >162:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CFF text27 CODE >163:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-CFF text27 CODE >166:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D0C text27 CODE >167:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D15 text27 CODE >172:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D1C text27 CODE >173:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D20 text27 CODE >174:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D21 text27 CODE >175:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D21 text27 CODE >176:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D25 text27 CODE >177:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D27 text27 CODE >178:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D28 text27 CODE >180:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D2A text27 CODE >182:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D2F text27 CODE >183:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D31 text27 CODE >171:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D35 text27 CODE >192:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D36 text27 CODE >193:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D3A text27 CODE >194:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D40 text27 CODE >195:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D42 text27 CODE >196:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D43 text27 CODE >197:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D43 text27 CODE >198:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D48 text27 CODE >203:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D4D text27 CODE >204:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D55 text27 CODE >205:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D59 text27 CODE >206:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D72 text27 CODE >207:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D77 text27 CODE >208:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D7B text27 CODE >211:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D7B text27 CODE >215:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D85 text27 CODE >216:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D8D text27 CODE >218:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D92 text27 CODE >219:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D93 text27 CODE >225:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D97 text27 CODE >226:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D98 text27 CODE >227:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D99 text27 CODE >230:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D9E text27 CODE >231:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-D9E text27 CODE >232:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-DA3 text27 CODE >233:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-DA7 text27 CODE >234:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-DA8 text27 CODE >235:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-DA8 text27 CODE >237:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-127A text26 CODE >242:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-127A text26 CODE >248:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-127D text26 CODE >249:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-1299 text26 CODE >250:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
-1597 text25 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-1597 text25 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15A2 text25 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15AB text25 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15BE text25 CODE >50:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15BF text25 CODE >51:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15C7 text25 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15C9 text25 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15CD text25 CODE >54:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15D5 text25 CODE >57:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15E5 text25 CODE >60:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15EC text25 CODE >63:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15F3 text25 CODE >64:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15F5 text25 CODE >62:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15F5 text25 CODE >65:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15FA text25 CODE >67:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-15FF text25 CODE >68:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-160A text25 CODE >70:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\fltol.c
-160B text24 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__fpclassifyf.c
-160B text24 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__fpclassifyf.c
-1623 text24 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__fpclassifyf.c
-1638 text24 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__fpclassifyf.c
-165F text24 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__fpclassifyf.c
-1685 text24 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__fpclassifyf.c
-1689 text24 CODE >11:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__fpclassifyf.c
-1715 text23 CODE >3:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-1715 text23 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-172D text23 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-1748 text23 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-1755 text23 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-1756 text23 CODE >11:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-175B text23 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-1773 text23 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-1788 text23 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-179F text23 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17A7 text23 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17B7 text23 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17B8 text23 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17CF text23 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17D8 text23 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17EF text23 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17F7 text23 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17F7 text23 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-17FF text23 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\floorf.c
-117D text22 CODE >132:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-117E text22 CODE >134:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-117E text22 CODE >136:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1183 text22 CODE >138:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1186 text22 CODE >139:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-114E text21 CODE >146:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-114F text21 CODE >148:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-1153 text21 CODE >149:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-135C text20 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-135C text20 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-1366 text20 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-136A text20 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-136B text20 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-1392 text20 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-139A text20 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-1302 text19 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-1304 text19 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-1306 text19 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-1307 text19 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-1315 text19 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-131A text19 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-132A text19 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-120C text18 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-120D text18 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1211 text18 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1212 text18 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1216 text18 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-121F text18 CODE >11:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1225 text18 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-14DF text17 CODE >72:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-14E1 text17 CODE >77:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-14E6 text17 CODE >78:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-14EF text17 CODE >82:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-14FB text17 CODE >83:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-14FD text17 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-14FE text17 CODE >85:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-150A text17 CODE >86:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-150F text17 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-151D text17 CODE >90:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1522 text17 CODE >91:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-152B text17 CODE >92:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-152B text17 CODE >94:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1537 text17 CODE >95:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-129A text16 CODE >3:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strcpy.c
-129B text16 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strcpy.c
-129F text16 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strcpy.c
-12A3 text16 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strcpy.c
-12BA text16 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strcpy.c
-11F4 text15 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\isupper.c
-11F4 text15 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\isupper.c
-120B text15 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\isupper.c
-12DD text14 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\tolower.c
-12DD text14 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\tolower.c
-1301 text14 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\tolower.c
-B7 text13 CODE >332:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-B9 text13 CODE >339:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-BB text13 CODE >340:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-CB text13 CODE >341:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-E9 text13 CODE >342:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-EE text13 CODE >343:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-102 text13 CODE >347:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-105 text13 CODE >348:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-109 text13 CODE >349:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-113 text13 CODE >350:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-128 text13 CODE >351:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-12D text13 CODE >352:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-131 text13 CODE >356:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-142 text13 CODE >357:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-164 text13 CODE >358:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-16D text13 CODE >359:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-16E text13 CODE >360:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-177 text13 CODE >362:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-17C text13 CODE >363:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-194 text13 CODE >365:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1A6 text13 CODE >366:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1C8 text13 CODE >367:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1D1 text13 CODE >368:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1D2 text13 CODE >369:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1DB text13 CODE >371:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1E0 text13 CODE >372:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1F8 text13 CODE >376:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-201 text13 CODE >377:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-203 text13 CODE >378:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-21B text13 CODE >380:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-247 text13 CODE >381:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-24B text13 CODE >379:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-287 text13 CODE >384:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2A4 text13 CODE >385:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2A8 text13 CODE >383:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2CF text13 CODE >390:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2E0 text13 CODE >391:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2E6 text13 CODE >392:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2EC text13 CODE >393:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2F2 text13 CODE >394:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2F6 text13 CODE >395:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2F6 text13 CODE >396:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-311 text13 CODE >397:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-311 text13 CODE >398:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-316 text13 CODE >402:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-31C text13 CODE >403:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-347 text13 CODE >404:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-34D text13 CODE >405:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-34E text13 CODE >406:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-354 text13 CODE >408:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-354 text13 CODE >411:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-358 text13 CODE >412:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-368 text13 CODE >413:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-36C text13 CODE >417:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-372 text13 CODE >418:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-376 text13 CODE >419:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-37E text13 CODE >420:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-380 text13 CODE >422:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-386 text13 CODE >423:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-38A text13 CODE >428:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-38C text13 CODE >429:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-394 text13 CODE >430:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-39C text13 CODE >431:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-39D text13 CODE >432:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3CD text13 CODE >433:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3DD text13 CODE >434:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-42B text13 CODE >435:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-447 text13 CODE >436:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-44B text13 CODE >431:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-45D text13 CODE >440:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-489 text13 CODE >441:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-4AF text13 CODE >442:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-4B8 text13 CODE >443:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-4B9 text13 CODE >445:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-4D6 text13 CODE >446:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-4DE text13 CODE >451:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-4FB text13 CODE >453:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-535 text13 CODE >454:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-53A text13 CODE >455:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-566 text13 CODE >456:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-56C text13 CODE >458:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-570 text13 CODE >460:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-570 text13 CODE >463:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-579 text13 CODE >464:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-586 text13 CODE >465:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-588 text13 CODE >466:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-58A text13 CODE >467:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-58C text13 CODE >468:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-58D text13 CODE >469:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5BD text13 CODE >470:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5CD text13 CODE >471:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5E1 text13 CODE >472:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5E5 text13 CODE >473:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5E6 text13 CODE >474:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5F0 text13 CODE >475:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-601 text13 CODE >476:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-605 text13 CODE >477:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-60A text13 CODE >480:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-61B text13 CODE >481:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-61F text13 CODE >482:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-623 text13 CODE >479:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-629 text13 CODE >484:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-63B text13 CODE >485:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-63F text13 CODE >487:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-68D text13 CODE >488:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6A9 text13 CODE >489:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6AD text13 CODE >490:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6B1 text13 CODE >468:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D3 text13 CODE >492:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6DE text13 CODE >493:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6EF text13 CODE >495:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6F5 text13 CODE >498:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6FB text13 CODE >499:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6FF text13 CODE >500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-705 text13 CODE >501:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-707 text13 CODE >502:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-70B text13 CODE >503:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-70F text13 CODE >504:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-714 text13 CODE >506:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-718 text13 CODE >507:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-719 text13 CODE >508:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-71E text13 CODE >509:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-736 text13 CODE >510:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-747 text13 CODE >511:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-74B text13 CODE >512:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-74F text13 CODE >507:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-764 text13 CODE >514:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-769 text13 CODE >515:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-784 text13 CODE >516:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-789 text13 CODE >517:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-78D text13 CODE >518:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7C4 text13 CODE >519:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7C9 text13 CODE >520:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7D3 text13 CODE >524:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7EA text13 CODE >525:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1487 text12 CODE >3:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strncmp.c
-1488 text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strncmp.c
-1490 text12 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strncmp.c
-149F text12 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strncmp.c
-14D1 text12 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strncmp.c
-14DE text12 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strncmp.c
-809 text11 CODE >692:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-80B text11 CODE >702:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-81C text11 CODE >703:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-824 text11 CODE >705:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-829 text11 CODE >706:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-82D text11 CODE >779:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-848 text11 CODE >780:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-84D text11 CODE >781:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-86A text11 CODE >782:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-86F text11 CODE >783:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-88C text11 CODE >942:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-892 text11 CODE >944:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-8A1 text11 CODE >945:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-8A9 text11 CODE >946:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-8B9 text11 CODE >948:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-8CF text11 CODE >950:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-8E1 text11 CODE >952:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-8F4 text11 CODE >953:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-91D text11 CODE >954:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-92D text11 CODE >955:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-92E text11 CODE >956:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-93E text11 CODE >958:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-946 text11 CODE >960:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-95C text11 CODE >1372:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-96E text11 CODE >1373:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-976 text11 CODE >1374:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-981 text11 CODE >1375:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-987 text11 CODE >1379:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-98F text11 CODE >1380:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-992 text11 CODE >1384:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-9AB text11 CODE >1385:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-9B5 text11 CODE >1387:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-132B text10 CODE >1390:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-132D text10 CODE >1395:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1331 text10 CODE >1396:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1334 text10 CODE >1397:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1335 text10 CODE >1398:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1349 text10 CODE >1397:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1353 text10 CODE >1400:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-135B text10 CODE >1404:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-11A8 text9 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-11A8 text9 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-11AD text9 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-11B9 text9 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-1161 text8 CODE >16:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1161 text8 CODE >18:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1169 text8 CODE >19:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-116A text7 CODE >21:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-116A text7 CODE >23:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1172 text7 CODE >24:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-800 text6 CODE >26:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-800 text6 CODE >28:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-808 text6 CODE >29:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1226 text5 CODE >31:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1227 text5 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-122F text5 CODE >34:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1238 text5 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1241 text5 CODE >36:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-1242 text4 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-1243 text4 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-124B text4 CODE >36:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-1254 text4 CODE >37:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-125D text4 CODE >38:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-125E text3 CODE >40:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-125F text3 CODE >42:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-1267 text3 CODE >43:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-1270 text3 CODE >44:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-1279 text3 CODE >45:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-11BA text2 CODE >29:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-11BA text2 CODE >31:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-11C2 text2 CODE >32:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-11CB text2 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-11CC text1 CODE >22:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-11CC text1 CODE >24:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-11D4 text1 CODE >25:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-11DD text1 CODE >26:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-27 maintext CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-27 maintext CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2A maintext CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2E maintext CODE >66:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-32 maintext CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-36 maintext CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-3C maintext CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-46 maintext CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-50 maintext CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-6A maintext CODE >91:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-84 maintext CODE >93:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-9C maintext CODE >94:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-1154 clrtext CODE >5733:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-1154 clrtext CODE >5734:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-1155 clrtext CODE >5735:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-1155 clrtext CODE >5736:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-1156 clrtext CODE >5737:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-1157 clrtext CODE >5738:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-1158 clrtext CODE >5739:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
-1159 clrtext CODE >5740:C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.s
+7F5 cinit CODE >5659:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7F5 cinit CODE >5662:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7F5 cinit CODE >5701:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7F6 cinit CODE >5702:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7F7 cinit CODE >5703:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7F8 cinit CODE >5704:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7F9 cinit CODE >5705:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7FA cinit CODE >5706:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7FD cinit CODE >5712:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7FD cinit CODE >5714:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+7FE cinit CODE >5715:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+E9D text43 CODE >174:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+E9D text43 CODE >175:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EA2 text43 CODE >176:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EA3 text42 CODE >166:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EA3 text42 CODE >167:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EA8 text42 CODE >168:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EA9 text41 CODE >170:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EA9 text41 CODE >171:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EAE text41 CODE >172:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+4D text40 CODE >66:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+4D text40 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+50 text40 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+52 text40 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+54 text40 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+56 text40 CODE >83:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+57 text40 CODE >86:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+5E text40 CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+65 text40 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+6C text40 CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+6E text40 CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EBB text39 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+EBB text39 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+EBE text39 CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+EBF text39 CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+EC1 text39 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+12C text38 CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+12C text38 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+12E text38 CODE >61:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+12F text38 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+130 text38 CODE >63:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+131 text38 CODE >64:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+132 text38 CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+135 text38 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+137 text38 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+139 text38 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+13B text38 CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+13D text38 CODE >78:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+140 text38 CODE >79:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+142 text38 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+144 text38 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+146 text38 CODE >82:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+148 text38 CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+14A text38 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+14B text38 CODE >89:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+14C text38 CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+14D text38 CODE >91:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+14E text38 CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+150 text38 CODE >97:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+152 text38 CODE >98:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+153 text38 CODE >99:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+154 text38 CODE >100:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+155 text38 CODE >101:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+156 text38 CODE >106:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+159 text38 CODE >107:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+15B text38 CODE >108:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+15D text38 CODE >109:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+15F text38 CODE >110:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+161 text38 CODE >115:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+164 text38 CODE >116:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+166 text38 CODE >117:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+168 text38 CODE >118:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+16A text38 CODE >119:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+16C text38 CODE >128:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+16F text38 CODE >129:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+172 text38 CODE >130:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+174 text38 CODE >131:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+176 text38 CODE >132:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+EF1 text37 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+EF1 text37 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+EF4 text37 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+EF5 text37 CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+EF6 text37 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+EFB text37 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+EFC text36 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+EFC text36 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+EFF text36 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+F00 text36 CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+F01 text36 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+F06 text36 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+EDD text35 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+EDD text35 CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+EE0 text35 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+EE1 text35 CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+EE3 text35 CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+EE6 text35 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+E99 text34 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+E99 text34 CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+E9C text34 CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F5A text33 CODE >50:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F5A text33 CODE >53:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F5D text33 CODE >54:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F60 text33 CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F63 text33 CODE >56:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F66 text33 CODE >57:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F69 text33 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F6C text33 CODE >59:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+F6F text33 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+1C2 text32 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1C2 text32 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1C3 text32 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1C7 text32 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1CC text32 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1CE text32 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1D2 text32 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1D7 text32 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1DD text32 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1DF text32 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1E0 text32 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1E5 text32 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1E9 text32 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1ED text32 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1F7 text32 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+1FB text32 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+200 text32 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+206 text32 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+20B text32 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+210 text32 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+214 text32 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awmod.c
+586 text31 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+586 text31 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+587 text31 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+591 text31 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5B0 text31 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5B2 text31 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5BC text31 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5DB text31 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5DF text31 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5E9 text31 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5F6 text31 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5F8 text31 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5F9 text31 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+601 text31 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+605 text31 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+609 text31 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+611 text31 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+633 text31 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+643 text31 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+644 text31 CODE >37:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+64C text31 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+652 text31 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+657 text31 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+675 text31 CODE >42:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+686 text31 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+49C text30 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+49C text30 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+49D text30 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4A7 text30 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4C6 text30 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4C8 text30 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4D2 text30 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4F1 text30 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4FE text30 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+500 text30 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+501 text30 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+509 text30 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+50D text30 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+511 text30 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+533 text30 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+543 text30 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+54B text30 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+551 text30 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+556 text30 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+574 text30 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+585 text30 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+14 text29 CODE >1:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
+14 text29 CODE >3:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
+2D text29 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
+EE7 text28 CODE >132:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EE8 text28 CODE >134:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EE8 text28 CODE >136:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EED text28 CODE >138:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EF0 text28 CODE >139:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EAF text27 CODE >146:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EB0 text27 CODE >148:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+EB4 text27 CODE >149:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+ED text26 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+ED text26 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+F7 text26 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+FB text26 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+FC text26 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+123 text26 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+12B text26 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+94 text25 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+96 text25 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+98 text25 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+99 text25 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+A7 text25 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+AC text25 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+BB text25 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+F9C text24 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+F9D text24 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+FA1 text24 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+FA2 text24 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+FA6 text24 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+FAE text24 CODE >11:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+FB4 text24 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+215 text23 CODE >72:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+217 text23 CODE >77:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+21C text23 CODE >78:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+225 text23 CODE >82:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+231 text23 CODE >83:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+233 text23 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+234 text23 CODE >85:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+240 text23 CODE >86:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+245 text23 CODE >84:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+253 text23 CODE >90:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+258 text23 CODE >91:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+261 text23 CODE >92:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+261 text23 CODE >94:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+26D text23 CODE >95:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+687 text22 CODE >287:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+689 text22 CODE >293:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+699 text22 CODE >294:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6AC text22 CODE >295:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6B2 text22 CODE >296:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D0 text22 CODE >297:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D0 text22 CODE >300:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D5 text22 CODE >301:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D9 text22 CODE >302:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D9 text22 CODE >303:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6F6 text22 CODE >304:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6FE text22 CODE >305:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+709 text22 CODE >306:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+70E text22 CODE >307:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+70E text22 CODE >310:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+713 text22 CODE >311:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+715 text22 CODE >312:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+716 text22 CODE >313:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+71B text22 CODE >314:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+749 text22 CODE >315:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+74D text22 CODE >316:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+751 text22 CODE >317:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+77E text22 CODE >312:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+77E text22 CODE >318:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7B9 text22 CODE >321:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7C5 text22 CODE >322:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7CA text22 CODE >323:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7E1 text22 CODE >327:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7F4 text22 CODE >328:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3C1 text21 CODE >692:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3C3 text21 CODE >702:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3D4 text21 CODE >703:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3DC text21 CODE >705:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3E1 text21 CODE >706:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3E5 text21 CODE >847:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+408 text21 CODE >849:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+410 text21 CODE >850:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+429 text21 CODE >852:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+443 text21 CODE >1372:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+454 text21 CODE >1373:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+45C text21 CODE >1374:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+467 text21 CODE >1375:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+46D text21 CODE >1379:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+475 text21 CODE >1380:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+478 text21 CODE >1384:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+491 text21 CODE >1385:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+49B text21 CODE >1387:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+BC text20 CODE >1390:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+BE text20 CODE >1395:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+C2 text20 CODE >1396:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+C5 text20 CODE >1397:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+C6 text20 CODE >1398:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+DA text20 CODE >1397:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+E4 text20 CODE >1400:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+EC text20 CODE >1404:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+F34 text19 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+F34 text19 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+F39 text19 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+F45 text19 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+EC2 text18 CODE >16:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+EC2 text18 CODE >18:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+ECA text18 CODE >19:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+ECB text17 CODE >21:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+ECB text17 CODE >23:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+ED3 text17 CODE >24:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+ED4 text16 CODE >26:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+ED4 text16 CODE >28:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+EDC text16 CODE >29:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+FB5 text15 CODE >31:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+FB6 text15 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+FBD text15 CODE >34:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+FC5 text15 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+FCD text15 CODE >36:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
+F23 text14 CODE >95:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F24 text14 CODE >97:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F2B text14 CODE >98:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F33 text14 CODE >99:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+FCE text13 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
+FCF text13 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
+FD6 text13 CODE >36:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
+FDE text13 CODE >37:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
+FE6 text13 CODE >38:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
+FE7 text12 CODE >40:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
+FE8 text12 CODE >42:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
+FEF text12 CODE >43:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
+FF7 text12 CODE >44:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
+FFF text12 CODE >45:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
+F70 text11 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+F70 text11 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+F7B text11 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+F85 text11 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+F86 text10 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+F86 text10 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+F91 text10 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+F9B text10 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm4.c
+26E text9 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+26E text9 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+270 text9 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+274 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+279 text9 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+27B text9 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+27F text9 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+284 text9 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+288 text9 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+28A text9 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+290 text9 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+292 text9 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+293 text9 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+298 text9 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+29C text9 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2A0 text9 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2A5 text9 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2AF text9 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2B3 text9 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2B4 text9 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2B9 text9 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2BF text9 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2C4 text9 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2C9 text9 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2CD text9 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\awdiv.c
+2E text8 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+2E text8 CODE >43:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+30 text8 CODE >45:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+34 text8 CODE >46:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+38 text8 CODE >47:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+3D text8 CODE >48:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+42 text8 CODE >49:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+48 text8 CODE >52:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+4C text8 CODE >53:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul16.c
+6F text7 CODE >22:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+6F text7 CODE >24:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+93 text7 CODE >25:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+177 text6 CODE >66:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+177 text6 CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+183 text6 CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+1A1 text6 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+1B1 text6 CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+1B9 text6 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+1C1 text6 CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F46 text5 CODE >27:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F47 text5 CODE >29:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F4C text5 CODE >31:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F4F text5 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F51 text5 CODE >38:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F56 text5 CODE >40:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F58 text5 CODE >44:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F59 text5 CODE >46:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F07 text4 CODE >48:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F07 text4 CODE >50:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F0F text4 CODE >51:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F14 text4 CODE >52:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+5 text3 CODE >54:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+5 text3 CODE >56:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+D text3 CODE >57:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+13 text3 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F15 text2 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F15 text2 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F1D text2 CODE >63:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+F22 text2 CODE >64:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+2CE text1 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+2CE text1 CODE >79:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+2EC text1 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+2FD text1 CODE >83:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+300 text1 CODE >84:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+301 text1 CODE >85:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+31D text1 CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+320 text1 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+321 text1 CODE >89:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+33D text1 CODE >91:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+340 text1 CODE >93:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+341 maintext CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+341 maintext CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+344 maintext CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+348 maintext CODE >66:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+34C maintext CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+350 maintext CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+354 maintext CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+35A maintext CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+363 maintext CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+36C maintext CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+36F maintext CODE >89:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+371 maintext CODE >99:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+37F maintext CODE >100:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+390 maintext CODE >101:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+3A3 maintext CODE >102:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+3B5 maintext CODE >103:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+EB5 clrtext CODE >5690:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+EB5 clrtext CODE >5691:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+EB6 clrtext CODE >5692:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+EB6 clrtext CODE >5693:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+EB7 clrtext CODE >5694:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+EB8 clrtext CODE >5695:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+EB9 clrtext CODE >5696:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
+EBA clrtext CODE >5697:C:\Users\GABRIE~1\AppData\Local\Temp\simc.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1024,19 +605,14 @@ EE text13 CODE >343:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___awdiv@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___fpclassifyf@e 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___fpclassifyf@u 22 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___fpclassifyf@x 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__Hspace_0 1917 0 ABS 0 - -
-__Hspace_1 1F0 0 ABS 0 - -
+___awdiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__Hspace_0 10DF 0 ABS 0 - -
+__Hspace_1 ED 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
 __size_of_initialize_lcd_screen 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_set_color 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-strncmp@_l 75 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-strncmp@_r 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+_set_color 59C 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
 _PWM3CON 619 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PWM3DCH 618 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PWM3DCL 617 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1044,10 +620,12 @@ _PWM4CON 61C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PWM4DCH 61B 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PWM4DCL 61A 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
+?_abs 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+?_map 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 ?_pad 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_WDT_Initialize 2278 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
+__end_of_WDT_Initialize 1D3A 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
-?_vfprintf 5D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+?_vfprintf 5E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 _LATA 10C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _LATB 10D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _LATC 10E 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1059,35 +637,31 @@ _WPUB 20D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUD 20F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUE 210 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-_dbuf 1A0 0 BANK3 1 bssBANK3 dist/default/production\sprint2.X.production.o
-_main 4E 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
-_nout E5 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+_dbuf A9 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+_dtoa D0E 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
+_main 682 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
+_nout A0 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
 _open 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_prec E9 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
-_read 2398 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
+_prec A4 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+_read 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+abs@a 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\sprint2.X.production.o
+map@x 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 pad@i 28 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 pad@p 25 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 pad@w 2A 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-start 4 0 CODE 0 init C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-___flmul@aexp 2D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flmul@bexp 2E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flmul@prod 2F 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flmul@sign 28 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flmul@temp 33 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_EUSART_Write 22FA 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
-_set_brightness 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+start 4 0 CODE 0 init C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+___aomod@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+_EUSART_Write 1DCE 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
+_set_brightness 2EE 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
+__end_of_PWM3_LoadDutyValue 1F0C 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
+__size_of___aodiv 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of___aomod 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of___fladd 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of___fldiv 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of___flmul 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of___flneg 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of___flsub 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of___fltol 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of_dtoa 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of_read 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hstringtext10 0 0 ABS 0 stringtext10 -
 __Hstringtext11 0 0 ABS 0 stringtext11 -
 __Hstringtext12 0 0 ABS 0 stringtext12 -
@@ -1095,110 +669,83 @@ __Hstringtext13 0 0 ABS 0 stringtext13 -
 __Hstringtext14 0 0 ABS 0 stringtext14 -
 __Hstringtext15 0 0 ABS 0 stringtext15 -
 __Hstringtext16 0 0 ABS 0 stringtext16 -
-__Hstringtext17 0 0 ABS 0 stringtext17 -
-__Hstringtext18 0 0 ABS 0 stringtext18 -
-__Hstringtext19 0 0 ABS 0 stringtext19 -
-main@temp_sensor 12E 0 BANK2 1 cstackBANK2 dist/default/production\sprint2.X.production.o
+main@temp_sensor D3 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
 pad@fp 2C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_tolower 25BA 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
-__end_of_EUSART_SetFramingErrorHandler 2290 0 CODE 0 text45 dist/default/production\sprint2.X.production.o
-__end_of_EUSART_SetOverrunErrorHandler 229C 0 CODE 0 text44 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_SetFramingErrorHandler 1D52 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_SetOverrunErrorHandler 1D5E 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
+?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\sprint2.X.production.o
-isupper@c 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-efgtoa@fp BE 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@ne B0 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@ou B4 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@pp AE 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-__end_of_EUSART_Initialize 25BA 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_Initialize DE 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
+__size_of_turn_green 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-__end_of_vfpfcnvrt 136C 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
+set_brightness@duty_cycle C9 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
+__end_of_vfpfcnvrt 938 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
 ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-floorf@e 3B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-floorf@m 37 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-floorf@u 3D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-floorf@x 2D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-?_efgtoa 41 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+PWM3_LoadDutyValue@dutyValue 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\sprint2.X.production.o
-?_floorf 2D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__size_of_PWM4_LoadDutyValue 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_PWM3_LoadDutyValue 1EE0 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _RC1STAbits 19D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _EUSART_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _EUSART_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_EUSART_Write 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___awdiv@sign 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+___awdiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_vfpfcnvrt 1012 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
-main@lcd_screen 134 0 BANK2 1 cstackBANK2 dist/default/production\sprint2.X.production.o
+_vfpfcnvrt 782 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
+dtoa@fp 3F 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+main@lcd_screen E1 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
+__end_of_set_brightness 384 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
+___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ANSELC 18E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ANSELD 18F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ANSELE 190 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of__Umul8_16 4E 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
-___awdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+___awdiv@dividend 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _BORCON 116 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of__Umul8_16 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-?_tolower 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__end_of___fleq 2868 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
-__end_of___flge 2E2A 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
-__end_of_EUSART_Write 230E 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
-__end_of_initialize_temp 24F4 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+__end_of___wmul 9A 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_Write 1DE2 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
+__end_of_initialize_temp 2000 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
+main@led DD 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
+set_brightness@brightness 6E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___fldiv@aexp 2C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___fldiv@bexp 2B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___fldiv@sign 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-?_printf 65 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+?_printf 66 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __LnvBANK1 0 0 ABS 0 nvBANK1 -
-__LnvBANK2 0 0 ABS 0 nvBANK2 -
-___awdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__end_of___awdiv 2B2E 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
-__end_of___awmod 290E 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
-__Umul8_16 8 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
-__end_of___fladd 1B52 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
-__end_of___fldiv 16D4 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
-__end_of___flmul 2000 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
-__end_of___flneg 2350 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
-__end_of___flsub 2534 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
-__end_of___fltol 2C16 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
-?___fpclassifyf 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__size_of_isupper 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+___awdiv@divisor 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+set_color@color CA 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
+__end_of___aodiv D0E 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
+__end_of___aomod B0C 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
+__end_of___awdiv 59C 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
+__end_of___awmod 42A 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
+___aodiv@quotient 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _INLVLA 38C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLB 38D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLC 38E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLD 38F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLE 390 0 ABS 0 - dist/default/production\sprint2.X.production.o
 ?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-___stacklo 2140 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-__end_of_efgtoa FD6 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
-__size_of_strncmp 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_EUSART_Initialize 2576 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
-__end_of_floorf 3000 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
+___stackhi 23EF 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+___stacklo 209D 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+___aomod@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+_initialize_led 1E46 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
+_EUSART_Initialize 9A 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
 __size_of_demo1 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_demo2 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_demo3 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_fputs 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___fladd@a 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___fladd@b 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___fldiv@a 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___fldiv@b 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_open@temp_sensor$F421 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_open@temp_sensor$F427 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_putch 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___flmul@a 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flmul@b 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flsub@a 35 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flsub@b 39 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_PIN_MANAGER_Initialize 2736 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
+_PIN_MANAGER_Initialize 258 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
 __Lstringtext10 0 0 ABS 0 stringtext10 -
 __Lstringtext11 0 0 ABS 0 stringtext11 -
 __Lstringtext12 0 0 ABS 0 stringtext12 -
@@ -1206,39 +753,20 @@ __Lstringtext13 0 0 ABS 0 stringtext13 -
 __Lstringtext14 0 0 ABS 0 stringtext14 -
 __Lstringtext15 0 0 ABS 0 stringtext15 -
 __Lstringtext16 0 0 ABS 0 stringtext16 -
-__Lstringtext17 0 0 ABS 0 stringtext17 -
-__Lstringtext18 0 0 ABS 0 stringtext18 -
-__Lstringtext19 0 0 ABS 0 stringtext19 -
-start_initialization FD6 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
+___aomod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+start_initialization FEA 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
 _ODCONA 28C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ODCONB 28D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ODCONC 28E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ODCOND 28F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ODCONE 290 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _CCPTMRSbits 29E 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_EUSART_SetErrorHandler 2278 0 CODE 0 text46 dist/default/production\sprint2.X.production.o
+_EUSART_SetErrorHandler 1D3A 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\sprint2.X.production.o
-efgtoa@c 45 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-efgtoa@d B8 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@e D1 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@f 41 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-efgtoa@g CD 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@h C3 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@i CB 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@l C7 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@m B2 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@n D3 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@p BC 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@t AC 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@u D5 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@w BF 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
 EUSART_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_tolower$1226 7C 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_initialize_light 2484 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
-_initialize_temp 24BC 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+_initialize_light 1F9C 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
+_initialize_temp 1FCE 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
 initialize_temp@sensor_var 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-efgtoa@mode C2 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-efgtoa@sign BA 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
 _RB0PPS E98 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RB1PPS E99 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RC1REG 199 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1246,21 +774,21 @@ _RC1STA 19D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RC6PPS EA6 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_EUSART_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_EUSART_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_SYSTEM_Initialize 23E8 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
-__end_of_read@temp_sensor$F425 2398 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
-clear_ram0 22A8 0 CODE 0 clrtext dist/default/production\sprint2.X.production.o
+__end_of_SYSTEM_Initialize 1EE0 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
+__size_of_turn_red 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+clear_ram0 1D6A 0 CODE 0 clrtext dist/default/production\sprint2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-__pcstackBANK2 120 0 BANK2 1 cstackBANK2 dist/default/production\sprint2.X.production.o
+__pcstackBANK1 C9 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
 _TX1REG 19A 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TX1STA 19E 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_printf 2374 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
-__end_of_TMR4_Initialize 22FA 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
+__end_of_printf 1E8C 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
+__end_of_TMR4_Initialize 1DCE 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\sprint2.X.production.o
 fputc@fp 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 fputs@fp 7A 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-__end_of_PWM3_Initialize 2324 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
+__end_of_initialize_led 1E68 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
+__end_of_PWM3_Initialize 1DF8 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -1272,9 +800,8 @@ __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
 __Hcinit 1000 0 CODE 0 cinit -
-__end_of_strcpy 2576 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
-__end_of_strlen 244C 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
-_read@temp_sensor$F425 2374 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
+__end_of_strlen 1F6A 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
+_read@temp_sensor$F431 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -1324,7 +851,7 @@ __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 _BAUD1CON 19F 0 ABS 0 - dist/default/production\sprint2.X.production.o
-efgtoa@nmode C1 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
+__size_of_turn_selectors 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -1337,7 +864,7 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit FD6 0 CODE 0 cinit -
+__Lcinit FEA 0 CODE 0 cinit -
 EUSART_SetErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -1362,10 +889,6 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-__end_of_isupper 2418 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
-___flmul@grs 29 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-main@temp_value 124 0 BANK2 1 cstackBANK2 dist/default/production\sprint2.X.production.o
-__end_of_strncmp 29BE 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 4 0 CODE 0 init -
@@ -1394,66 +917,62 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 3000 0 STRCODE 0 stringtext1 dist/default/production\sprint2.X.production.o
-__pstringtext2 303C 0 STRCODE 0 stringtext2 dist/default/production\sprint2.X.production.o
-__pstringtext3 3076 0 STRCODE 0 stringtext3 dist/default/production\sprint2.X.production.o
-__pstringtext4 30A6 0 STRCODE 0 stringtext4 dist/default/production\sprint2.X.production.o
-__pstringtext5 30D2 0 STRCODE 0 stringtext5 dist/default/production\sprint2.X.production.o
-__pstringtext6 30FE 0 STRCODE 0 stringtext6 dist/default/production\sprint2.X.production.o
-__pstringtext7 312A 0 STRCODE 0 stringtext7 dist/default/production\sprint2.X.production.o
-__pstringtext8 3154 0 STRCODE 0 stringtext8 dist/default/production\sprint2.X.production.o
-__pstringtext9 317E 0 STRCODE 0 stringtext9 dist/default/production\sprint2.X.production.o
-__pnvBANK1 ED 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
-__pnvBANK2 13A 0 BANK2 1 nvBANK2 dist/default/production\sprint2.X.production.o
-__pstringtext10 31A8 0 STRCODE 0 stringtext10 dist/default/production\sprint2.X.production.o
-__pstringtext11 31D2 0 STRCODE 0 stringtext11 dist/default/production\sprint2.X.production.o
-__pstringtext12 31E4 0 STRCODE 0 stringtext12 dist/default/production\sprint2.X.production.o
-__pstringtext13 31F6 0 STRCODE 0 stringtext13 dist/default/production\sprint2.X.production.o
-__pstringtext14 3208 0 STRCODE 0 stringtext14 dist/default/production\sprint2.X.production.o
-__pstringtext15 3210 0 STRCODE 0 stringtext15 dist/default/production\sprint2.X.production.o
-__pstringtext16 3218 0 STRCODE 0 stringtext16 dist/default/production\sprint2.X.production.o
-__pstringtext17 3220 0 STRCODE 0 stringtext17 dist/default/production\sprint2.X.production.o
-__pstringtext18 3228 0 STRCODE 0 stringtext18 dist/default/production\sprint2.X.production.o
-__pstringtext19 0 0 STRCODE 0 stringtext19 dist/default/production\sprint2.X.production.o
-___fleq 27CC 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
-___flge 2D14 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
+__pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\sprint2.X.production.o
+__pstringtext2 103A 0 STRCODE 0 stringtext2 dist/default/production\sprint2.X.production.o
+__pstringtext3 2000 0 STRCODE 0 stringtext3 dist/default/production\sprint2.X.production.o
+__pstringtext4 202C 0 STRCODE 0 stringtext4 dist/default/production\sprint2.X.production.o
+__pstringtext5 2058 0 STRCODE 0 stringtext5 dist/default/production\sprint2.X.production.o
+__pstringtext6 2084 0 STRCODE 0 stringtext6 dist/default/production\sprint2.X.production.o
+__pstringtext7 20AE 0 STRCODE 0 stringtext7 dist/default/production\sprint2.X.production.o
+__pstringtext8 20D8 0 STRCODE 0 stringtext8 dist/default/production\sprint2.X.production.o
+__pstringtext9 2102 0 STRCODE 0 stringtext9 dist/default/production\sprint2.X.production.o
+__pnvBANK1 E7 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
+___aodiv@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+__pstringtext10 2128 0 STRCODE 0 stringtext10 dist/default/production\sprint2.X.production.o
+__pstringtext11 214A 0 STRCODE 0 stringtext11 dist/default/production\sprint2.X.production.o
+__pstringtext12 216A 0 STRCODE 0 stringtext12 dist/default/production\sprint2.X.production.o
+__pstringtext13 2188 0 STRCODE 0 stringtext13 dist/default/production\sprint2.X.production.o
+__pstringtext14 219A 0 STRCODE 0 stringtext14 dist/default/production\sprint2.X.production.o
+__pstringtext15 21AC 0 STRCODE 0 stringtext15 dist/default/production\sprint2.X.production.o
+__pstringtext16 0 0 STRCODE 0 stringtext16 dist/default/production\sprint2.X.production.o
+___wmul 5C 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
+___aomod@sign 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
-__LcstackBANK2 0 0 ABS 0 cstackBANK2 -
+set_color@temperature 6E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+_turn_red 1E2A 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PR4 416 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__S0 1917 0 ABS 0 - -
-__S1 1F0 0 ABS 0 - -
+__S0 10DF 0 ABS 0 - -
+__S1 ED 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-_pad 29BE 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
-_TMR4_Initialize 22E6 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
-_PWM3_Initialize 230E 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
-__end_of_initialize_light 24BC 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
-___fpclassifyf 2C16 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
-_efgtoa 16E 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
-__size_of_tolower 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_abs 28 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
+_map DE 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
+_pad 42A 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
+_TMR4_Initialize 1DBA 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
+turn_selectors@selector1 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+turn_selectors@selector2 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+__end_of_turn_red 1E46 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
+__size_of_PWM3_LoadDutyValue 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_PWM3_Initialize 1DE2 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
+__end_of_initialize_light 1FCE 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
+___aodiv@sign 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __size_of_initialize_temp 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_SYSTEM_Initialize 23BC 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
-_vfpfcnvrt$1135 52 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_floorf 2E2A 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
-__end_of_pad 2A70 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
+_SYSTEM_Initialize 1EB4 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
+_dtoa$1067 3B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__end_of_abs 5C 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
+__end_of_map 128 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
+__end_of_pad 4DC 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
 __size_of_initialize_light 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_initialize_lcd_screen 2484 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+__end_of_initialize_lcd_screen 1F9C 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
-__HnvBANK2 0 0 ABS 0 nvBANK2 -
 __Lintentry 4 0 CODE 0 intentry -
-strcpy@d 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-strcpy@s 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\GABRIE~1\AppData\Local\Temp\sl7s.o
-?_read@temp_sensor$F425 D9 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\GABRIE~1\AppData\Local\Temp\simc.o
 strlen@a 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 strlen@s 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__size_of___fleq 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of___flge 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of___wmul 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
-__LbssBANK3 0 0 ABS 0 bssBANK3 -
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
 __Lstringtext3 0 0 ABS 0 stringtext3 -
@@ -1463,59 +982,52 @@ __Lstringtext6 0 0 ABS 0 stringtext6 -
 __Lstringtext7 0 0 ABS 0 stringtext7 -
 __Lstringtext8 0 0 ABS 0 stringtext8 -
 __Lstringtext9 0 0 ABS 0 stringtext9 -
-vfpfcnvrt@fmt 4A 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_PWM4_Initialize 233A 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
+vfpfcnvrt@fmt 4E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__end_of_PWM4_Initialize 1E0E 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
 ___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 EUSART_SetFramingErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_initialize_lcd_screen 244C 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+_initialize_lcd_screen 1F6A 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
 pad@buf 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___fladd@signs 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__ptext10 2656 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
-__ptext11 1012 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
-__ptext12 290E 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
-__ptext13 16E 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
-__ptext14 25BA 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
-__ptext15 23E8 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
-__ptext16 2534 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
-__ptext17 29BE 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
-__ptext18 2418 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
-__ptext19 2604 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
-__ptext20 26B8 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
-__ptext21 229C 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
-__ptext22 22FA 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
-__ptext23 2E2A 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
-__ptext24 2C16 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
-__ptext25 2B2E 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
-__ptext26 24F4 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
-__ptext27 16D4 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
-__ptext28 233A 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
-__ptext29 1B52 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
-__ptext30 8 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
-__ptext31 2D14 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
-__ptext32 27CC 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
-__ptext33 136C 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
-__ptext34 2868 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
-__ptext35 2A70 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
-__ptext36 23BC 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
-__ptext37 2270 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
-__ptext38 22E6 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
-__ptext39 2324 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
-__ptext40 230E 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
-__ptext41 2736 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
-__ptext42 22B4 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
-__ptext43 2576 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
-__ptext44 2290 0 CODE 0 text44 dist/default/production\sprint2.X.production.o
-__ptext45 2284 0 CODE 0 text45 dist/default/production\sprint2.X.production.o
-__ptext46 2278 0 CODE 0 text46 dist/default/production\sprint2.X.production.o
-__end_of_PIN_MANAGER_Initialize 27CC 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
-___awdiv 2A70 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
-___awmod 2868 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
-___fladd 16D4 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
-___fldiv 136C 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
-___flmul 1B52 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
-___flneg 233A 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
-___flsub 24F4 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
-___fltol 2B2E 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
+__ptext10 1F0C 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
+__ptext11 1EE0 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
+__ptext12 1FCE 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
+__ptext13 1F9C 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
+__ptext14 1E46 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
+__ptext15 1F6A 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
+__ptext16 1DA8 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
+__ptext17 1D96 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
+__ptext18 1D84 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
+__ptext19 1E68 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
+__ptext20 178 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
+__ptext21 782 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
+__ptext22 D0E 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
+__ptext23 42A 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
+__ptext24 1F38 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
+__ptext25 128 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
+__ptext26 1DA 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
+__ptext27 1D5E 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
+__ptext28 1DCE 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
+__ptext29 28 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
+__ptext30 938 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
+__ptext31 B0C 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
+__ptext32 384 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
+__ptext33 1EB4 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
+__ptext34 1D32 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
+__ptext35 1DBA 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
+__ptext36 1DF8 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
+__ptext37 1DE2 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
+__ptext38 258 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
+__ptext39 1D76 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
+__ptext40 9A 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
+__ptext41 1D52 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
+__ptext42 1D46 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
+__ptext43 1D3A 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
+__end_of_PIN_MANAGER_Initialize 2EE 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
+___aodiv B0C 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
+___aomod 938 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
+___awdiv 4DC 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
+___awmod 384 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
+__size_of_set_brightness 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -1538,63 +1050,52 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 4E 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
+__pmaintext 682 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
-__end_of_EUSART_SetErrorHandler 2284 0 CODE 0 text46 dist/default/production\sprint2.X.production.o
-__Umul8_16@multiplier 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-?_read D9 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_SetErrorHandler 1D46 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
+?_dtoa 30 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf 2350 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
-__size_of_efgtoa 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-strncmp@l 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-strncmp@n 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-strncmp@r 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+_printf 1E68 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
+___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _LATBbits 10D 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___fldiv@grs 27 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___fldiv@rem 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__size_of_floorf 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_strcpy 2534 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
-_strlen 2418 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
-___fldiv@new_exp 25 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_EUSART_FramingErrorHandler ED 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
-_EUSART_OverrunErrorHandler 13C 0 BANK2 1 nvBANK2 dist/default/production\sprint2.X.production.o
+_turn_green A 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+_strlen 1F38 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
+map@in_max 28 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+map@in_min 26 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+_EUSART_FramingErrorHandler EB 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
+_EUSART_OverrunErrorHandler E9 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_TMR4_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\sprint2.X.production.o
-tolower@c 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___fladd@grs 7B 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-strcpy@dest 77 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_EUSART_ErrorHandler 13A 0 BANK2 1 nvBANK2 dist/default/production\sprint2.X.production.o
-___fleq@ff1 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___fleq@ff2 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-?_vfpfcnvrt 4A 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+_EUSART_ErrorHandler E7 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
+?_vfpfcnvrt 4E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
+__end_of_PWM4_LoadDutyValue 1F38 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
 __size_of_PWM3_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_PWM4_Initialize 2324 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
+_PWM4_Initialize 1DF8 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 -
-__HcstackBANK2 0 0 ABS 0 cstackBANK2 -
-__Umul8_16@product 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___flge@ff1 35 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flge@ff2 39 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 _PIR1bits 11 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PIR2bits 12 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lend_init 4 0 CODE 0 end_init -
-__end_of_tolower 2604 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
 _EUSART_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+___aodiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+___aodiv@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-___fltol@exp1 7A 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-printf@ap 6E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__size_of___fpclassifyf 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_EUSART_SetFramingErrorHandler 2284 0 CODE 0 text45 dist/default/production\sprint2.X.production.o
-_EUSART_SetOverrunErrorHandler 2290 0 CODE 0 text44 dist/default/production\sprint2.X.production.o
+__end_of_turn_blue 1E2A 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
+printf@ap 6D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+_EUSART_SetFramingErrorHandler 1D46 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
+_EUSART_SetOverrunErrorHandler 1D52 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
+__size_of_turn_blue 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
+map@out_max 2C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+map@out_min 2A 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __size_of_printf 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 fputc@c 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 fputs@c 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
@@ -1602,51 +1103,41 @@ fputs@i 21 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 fputs@s 23 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 _TX1STAbits 19E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lstrings 0 0 ABS 0 strings -
-___awdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-?___awdiv 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+___awdiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+?___aodiv 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+?___aomod 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+?___awdiv 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 ?___awmod 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-?___fladd 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-?___fldiv 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-?___flmul 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-?___flneg 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-?___flsub 35 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-?___fltol 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-vfprintf@fmt 5D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+vfprintf@fmt 5E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
-__HbssBANK0 0 0 ABS 0 bssBANK0 -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
-__HbssBANK3 0 0 ABS 0 bssBANK3 -
 ___awmod@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__size_of_strcpy 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_strlen 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+main@brightness D9 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
 initialize_light@sensor_var 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-vfpfcnvrt@ap 4B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-vfpfcnvrt@ct 58 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-vfpfcnvrt@fp 5C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-___flneg@f1 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__ptext1 2398 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
-__ptext2 2374 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
-__ptext3 24BC 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
-__ptext4 2484 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
-__ptext5 244C 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
-__ptext6 1000 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
-__ptext7 22D4 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
-__ptext8 22C2 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
-__ptext9 2350 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
-vfprintf@ap 5F 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-vfprintf@fp 62 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-vfprintf@cfmt 63 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-?__Umul8_16 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_vfprintf 2656 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
+vfpfcnvrt@ap 4F 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+vfpfcnvrt@fp 5D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+vfpfcnvrt@ll 55 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__ptext1 59C 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
+__ptext2 1E2A 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
+__ptext3 A 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+__ptext4 1E0E 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
+__ptext5 1E8C 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+__ptext6 2EE 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
+__ptext7 DE 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
+__ptext8 5C 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
+__ptext9 4DC 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
+_turn_blue 1E0E 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
+vfprintf@ap 60 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+vfprintf@fp 63 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+vfprintf@cfmt 64 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+_PWM4_LoadDutyValue 1F0C 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
+__end_of_turn_green 28 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+_vfprintf 178 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of___fpclassifyf 2D14 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
-___fladd@aexp 79 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___fladd@bexp 7A 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__Umul8_16@word_mpld 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _T4CONbits 417 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___fltol@sign1 79 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_isupper 23E8 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
+PWM4_LoadDutyValue@dutyValue 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
@@ -1657,41 +1148,38 @@ __Hstringtext6 0 0 ABS 0 stringtext6 -
 __Hstringtext7 0 0 ABS 0 stringtext7 -
 __Hstringtext8 0 0 ABS 0 stringtext8 -
 __Hstringtext9 0 0 ABS 0 stringtext9 -
-_close@temp_sensor$F427 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__size_of_read@temp_sensor$F425 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_vfprintf 26B8 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
-_strncmp 290E 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
+_close@temp_sensor$F433 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+initialize_led@led 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+__end_of_vfprintf 1DA 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
 _SLRCONA 30C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCONB 30D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCONC 30E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCOND 30F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCONE 310 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___fltol@f1 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+__size_of_initialize_led 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 EUSART_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-strcpy@src 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
 ___awmod@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 _SP1BRGH 19C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SP1BRGL 19B 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
+main@temperature DB 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
 __size_of_EUSART_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_turn_selectors 1E8C 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-main@light_sensor 128 0 BANK2 1 cstackBANK2 dist/default/production\sprint2.X.production.o
-___fpclassifyf@F465 E1 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+main@light_sensor CD 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
 __size_of_PWM4_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-vfpfcnvrt@c 5B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-vfpfcnvrt@f 54 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 putch@txData 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__end_of_main 16E 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
-__end_of_read 23BC 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
-printf@fmt 65 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_demo1 22D4 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
-__end_of_demo2 22E6 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
-__end_of_demo3 1012 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
-__end_of_fputc 2736 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
-__end_of_fputs 2656 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
+__end_of_dtoa FEA 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
+__end_of_main 782 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
+printf@fmt 66 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__end_of_demo1 1D96 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
+__end_of_demo2 1DA8 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
+__end_of_demo3 1DBA 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
+__end_of_fputc 258 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
+__end_of_fputs 178 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
 _RXPPS E24 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _T4CON 417 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1699,40 +1187,40 @@ _TRISB 8D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISD 8F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISE 90 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_putch 22A8 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
+__end_of_putch 1D6A 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _close 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_demo1 22C2 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
-_demo2 22D4 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
-_demo3 1000 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
-_flags EB 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
-_fputc 26B8 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
-_fputs 2604 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
-_putch 229C 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
-_efgtoa$1106 A0 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-_efgtoa$1107 A2 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-_efgtoa$1112 A4 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-_efgtoa$1116 A6 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-_efgtoa$1117 A8 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-_efgtoa$1118 AA 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
-_width E7 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+_demo1 1D84 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
+_demo2 1D96 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
+_demo3 1DA8 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
+_flags A6 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+_fputc 1DA 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
+_fputs 128 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
+_putch 1D5E 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
+_width A2 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_eusartRxLastError 6F 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
-_WDT_Initialize 2270 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
-floorf@F527 DD 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
-?_isupper 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+_eusartRxLastError A8 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+_WDT_Initialize 1D32 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
+__size_of_abs 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of_map 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_pad 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_EUSART_SetErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_OSCILLATOR_Initialize 22C2 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
-?_strncmp 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__initialization FD6 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
-__pbssBANK0 6F 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
-__pbssBANK1 DD 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
-__pbssBANK3 1A0 0 BANK3 1 bssBANK3 dist/default/production\sprint2.X.production.o
+__end_of_OSCILLATOR_Initialize 1D84 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
+__initialization FEA 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+__end_of_set_color 682 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
+___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+dtoa@d 30 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+dtoa@i 4C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+dtoa@n 44 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+dtoa@p 3D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+dtoa@s 42 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+dtoa@w 40 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__size_of_set_color 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 initialize_lcd_screen@lcd_screen_var 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-main@light_value 120 0 BANK2 1 cstackBANK2 dist/default/production\sprint2.X.production.o
-_OSCILLATOR_Initialize 22B4 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
+__end_of_turn_selectors 1EB4 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+_OSCILLATOR_Initialize 1D76 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1758,60 +1246,58 @@ _OSCILLATOR_Initialize 22B4 0 CODE 0 text42 dist/default/production\sprint2.X.pr
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7EB FD6 1E 2
-text1 0 11CC 2398 12 2
-text2 0 11BA 2374 12 2
-text3 0 125E 24BC 1C 2
-text4 0 1242 2484 1C 2
-text5 0 1226 244C 1C 2
-text7 0 116A 22D4 9 2
-text8 0 1161 22C2 9 2
-text9 0 11A8 2350 12 2
-text10 0 132B 2656 31 2
-text11 0 809 1012 1AD 2
-text12 0 1487 290E 58 2
-text13 0 B7 16E 734 2
-text14 0 12DD 25BA 25 2
-text15 0 11F4 23E8 18 2
-text16 0 129A 2534 21 2
-text17 0 14DF 29BE 59 2
-text18 0 120C 2418 1A 2
-text19 0 1302 2604 29 2
-text20 0 135C 26B8 3F 2
-text21 0 114E 229C 6 2
-text22 0 117D 22FA A 2
-text23 0 1715 2E2A EB 2
-text24 0 160B 2C16 7F 2
-text25 0 1597 2B2E 74 2
-text26 0 127A 24F4 20 2
-text27 0 B6A 16D4 23F 2
-text28 0 119D 233A B 2
-text29 0 DA9 1B52 257 2
-text31 0 168A 2D14 8B 2
-text32 0 13E6 27CC 4E 2
-text33 0 9B6 136C 1B4 2
-text34 0 1434 2868 53 2
-text35 0 1538 2A70 5F 2
-text36 0 11DE 23BC 16 2
-text37 0 1138 2270 4 2
-text38 0 1173 22E6 A 2
-text39 0 1192 2324 B 2
-text40 0 1187 230E B 2
-text41 0 139B 2736 4B 2
-text42 0 115A 22B4 7 2
-text43 0 12BB 2576 22 2
-text44 0 1148 2290 6 2
-text45 0 1142 2284 6 2
-text46 0 113C 2278 6 2
-maintext 0 27 4E 90 2
+cinit 0 7F5 FEA B 2
+text1 0 2CE 59C 73 2
+text2 0 F15 1E2A E 2
+text3 0 5 A F 2
+text4 0 F07 1E0E E 2
+text5 0 F46 1E8C 14 2
+text6 0 177 2EE 4B 2
+text7 0 6F DE 25 2
+text8 0 2E 5C 1F 2
+text9 0 26E 4DC 60 2
+text10 0 F86 1F0C 16 2
+text11 0 F70 1EE0 16 2
+text12 0 FE7 1FCE 19 2
+text13 0 FCE 1F9C 19 2
+text14 0 F23 1E46 11 2
+text15 0 FB5 1F6A 19 2
+text16 0 ED4 1DA8 9 2
+text17 0 ECB 1D96 9 2
+text18 0 EC2 1D84 9 2
+text19 0 F34 1E68 12 2
+text20 0 BC 178 31 2
+text21 0 3C1 782 DB 2
+text22 0 687 D0E 16E 2
+text23 0 215 42A 59 2
+text24 0 F9C 1F38 19 2
+text25 0 94 128 28 2
+text26 0 ED 1DA 3F 2
+text27 0 EAF 1D5E 6 2
+text28 0 EE7 1DCE A 2
+text29 0 14 28 1A 2
+text30 0 49C 938 EA 2
+text31 0 586 B0C 101 2
+text32 0 1C2 384 53 2
+text33 0 F5A 1EB4 16 2
+text34 0 E99 1D32 4 2
+text35 0 EDD 1DBA A 2
+text36 0 EFC 1DF8 B 2
+text37 0 EF1 1DE2 B 2
+text38 0 12C 258 4B 2
+text39 0 EBB 1D76 7 2
+text40 0 4D 9A 22 2
+text41 0 EA9 1D52 6 2
+text42 0 EA3 1D46 6 2
+text43 0 E9D 1D3A 6 2
+maintext 0 341 682 80 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 50 1
-cstackBANK1 1 A0 A0 4F 1
-cstackBANK2 1 120 120 1E 1
-stringtext1 0 1800 3000 117 2
-reset_vec 0 0 0 27 2
-bssBANK3 1 1A0 1A0 50 1
-clrtext 0 1154 22A8 6 2
+stringtext1 0 800 1000 38 2
+stringtext3 0 1000 2000 DF 2
+reset_vec 0 0 0 4 2
+bssBANK1 1 A0 A0 4D 1
+clrtext 0 EB5 1D6A 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

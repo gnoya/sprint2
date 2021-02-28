@@ -32,8 +32,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36 ./lcd_screen.h
 [; ;./lcd_screen.h: 36: void initialize_lcd_screen(lcd_screen *lcd_screen_var);
 [v _initialize_lcd_screen `(v ~T0 @X0 0 ef1`*S785 ]
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"35 ./led_adapter.h
+[; ;./led_adapter.h: 35: void initialize_led(led *led);
+[v _initialize_led `(v ~T0 @X0 0 ef1`*S786 ]
+[v F5521 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
+[v __delay `JF5521 ~T0 @X0 0 e ]
+[p i __delay ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -994,45 +999,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 "67
 [; ;main.c: 67:   initialize_lcd_screen(&lcd_screen);
 [e ( _initialize_lcd_screen (1 &U _lcd_screen ]
-"69
-[; ;main.c: 69:   lcd_screen.demo1();
-[e ( *U . _lcd_screen 0 ..  ]
+"68
+[; ;main.c: 68:   initialize_led(&led);
+[e ( _initialize_led (1 &U _led ]
 "70
-[; ;main.c: 70:   lcd_screen.demo2();
-[e ( *U . _lcd_screen 1 ..  ]
+[; ;main.c: 70:   lcd_screen.demo1();
+[e ( *U . _lcd_screen 0 ..  ]
 "71
-[; ;main.c: 71:   lcd_screen.demo3();
+[; ;main.c: 71:   lcd_screen.demo2();
+[e ( *U . _lcd_screen 1 ..  ]
+"72
+[; ;main.c: 72:   lcd_screen.demo3();
 [e ( *U . _lcd_screen 2 ..  ]
 "88
-[; ;main.c: 88:   while (1)
-[e :U 789 ]
+[; ;main.c: 88:   int brightness = 0;
+[v _brightness `i ~T0 @X0 1 a ]
+[e = _brightness -> 0 `i ]
 "89
-[; ;main.c: 89:   {
-{
-"90
-[; ;main.c: 90:     float light_value = light_sensor.read();
-[v _light_value `f ~T0 @X0 1 a ]
-[e = _light_value ( *U . _light_sensor 1 ..  ]
+[; ;main.c: 89:   int temperature = 0;
+[v _temperature `i ~T0 @X0 1 a ]
+[e = _temperature -> 0 `i ]
 "91
-[; ;main.c: 91:     float temp_value = temp_sensor.read();
-[v _temp_value `f ~T0 @X0 1 a ]
-[e = _temp_value ( *U . _temp_sensor 1 ..  ]
-"93
-[; ;main.c: 93:     printf("Light sensor value: %f\n", light_value);
-[e ( _printf , (. :s 1C -> _light_value `d ]
-"94
-[; ;main.c: 94:     printf("Temperature sensor value: %f\n", temp_value);
-[e ( _printf , (. :s 2C -> _temp_value `d ]
-"95
-[; ;main.c: 95:   }
+[; ;main.c: 91:   while (1)
+[e :U 789 ]
+"92
+[; ;main.c: 92:   {
+{
+"99
+[; ;main.c: 99:     led.set_brightness(brightness);
+[e ( *U . _led 0 (1 _brightness ]
+"100
+[; ;main.c: 100:     led.set_color(temperature);
+[e ( *U . _led 1 (1 _temperature ]
+"101
+[; ;main.c: 101:     brightness = (brightness + 1) % 10;
+[e = _brightness % + _brightness -> 1 `i -> 10 `i ]
+"102
+[; ;main.c: 102:     temperature = (temperature + 1) % 10;
+[e = _temperature % + _temperature -> 1 `i -> 10 `i ]
+"103
+[; ;main.c: 103:     _delay((unsigned long)((100)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"104
+[; ;main.c: 104:   }
 }
 [e :U 788 ]
 [e $U 789  ]
 [e :U 790 ]
-"96
-[; ;main.c: 96: }
+"105
+[; ;main.c: 105: }
 [e :UE 787 ]
 }
-[p f _printf 8396800 ]
-[a 1C 76 105 103 104 116 32 115 101 110 115 111 114 32 118 97 108 117 101 58 32 37 102 10 0 ]
-[a 2C 84 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 118 97 108 117 101 58 32 37 102 10 0 ]

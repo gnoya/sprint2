@@ -14,13 +14,9 @@ static void turn_blue();
 static void turn_green();
 static void turn_red();
 
-static void turn_light_blue();
-static void turn_purple();
-static void turn_yellow();
-
 static void set_brightness(int brightness);
 static void set_color(int temperature);
-static void turn_selectors(bool selector1, bool selector2, bool selector3);
+static void turn_selectors(bool selector1, bool selector2);
 static int map(int x, int in_min, int in_max, int out_min, int out_max);
 
 static int map(int x, int in_min, int in_max, int out_min, int out_max)
@@ -28,7 +24,7 @@ static int map(int x, int in_min, int in_max, int out_min, int out_max)
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-static void turn_selectors(bool selector1, bool selector2, bool selector3)
+static void turn_selectors(bool selector1, bool selector2)
 {
   if (selector1)
   {
@@ -47,51 +43,31 @@ static void turn_selectors(bool selector1, bool selector2, bool selector3)
   {
     SELECTOR_2_SetLow();
   }
-
-  if (selector3)
-  {
-    SELECTOR_3_SetHigh();
-  }
-  else
-  {
-    SELECTOR_3_SetLow();
-  }
 }
 
 static void turn_blue()
 {
-  turn_selectors(0, 0, 0);
+  printf("Color is blue!\n");
+  turn_selectors(1, 0);
 }
 
 static void turn_green()
 {
-  turn_selectors(0, 0, 1);
+  printf("Color is green!\n");
+  turn_selectors(0, 1);
 }
 
 static void turn_red()
 {
-  turn_selectors(0, 1, 0);
-}
-
-static void turn_light_blue()
-{
-  turn_selectors(0, 1, 1);
-}
-
-static void turn_purple()
-{
-  turn_selectors(1, 0, 0);
-}
-
-static void turn_yellow()
-{
-  turn_selectors(1, 0, 1);
+  printf("Color is red!\n");
+  turn_selectors(0, 0);
 }
 
 static void set_brightness(int brightness)
 {
-  printf("Setting brightness!\n");
-  uint16_t duty_cycle = (uint16_t)map(brightness, 0, 5, 0, 100);
+  uint16_t duty_cycle = (uint16_t)map(brightness, 0, 10, 0, 100);
+  printf("Duty cycle is: %d\n", duty_cycle);
+
   // from 0 to 100
   PWM3_LoadDutyValue(duty_cycle);
   PWM4_LoadDutyValue(duty_cycle);
@@ -99,29 +75,17 @@ static void set_brightness(int brightness)
 
 static void set_color(int temperature)
 {
-  int color = map(temperature, 0, 5, 0, 120);
+  int color = map(temperature, 0, 10, 0, 60);
 
   if (color >= 0 && color < 20)
   {
-    turn_purple();
+    turn_blue();
   }
   else if (color >= 20 && color < 40)
   {
-    turn_blue();
-  }
-  else if (color >= 40 && color < 60)
-  {
-    turn_light_blue();
-  }
-  else if (color >= 60 && color < 80)
-  {
     turn_green();
   }
-  else if (color >= 80 && color < 100)
-  {
-    turn_yellow();
-  }
-  else if (color >= 100 && color <= 120)
+  else if (color >= 40 && color <= 60)
   {
     turn_red();
   }
