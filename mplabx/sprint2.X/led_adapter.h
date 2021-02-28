@@ -28,11 +28,8 @@
 
 typedef struct led
 {
-  void (*turn_blue)(void);
-  void (*turn_green)(void);
-  void (*turn_red)(void);
-  void (*set_brightness)(float brightness);
-  void (*set_color)(float temperature);
+  void (*set_brightness)(int brightness);
+  void (*set_color)(int temperature);
 } led;
 
 void initialize_led(led *led);

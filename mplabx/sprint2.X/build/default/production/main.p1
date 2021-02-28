@@ -1,31 +1,28 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"70 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 70: void SYSTEM_Initialize(void);
+"73 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 73: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F5931 `(a ~T0 @X0 0 tf ]
-[v F5933 `(f ~T0 @X0 0 tf ]
-[v F5935 `(v ~T0 @X0 0 tf ]
+[v F5946 `(a ~T0 @X0 0 tf ]
+[v F5948 `(f ~T0 @X0 0 tf ]
+[v F5950 `(v ~T0 @X0 0 tf ]
 "9 ./sensor_adapter.h
 [; ;./sensor_adapter.h: 9: {
-[s S784 `*F5931 1 `*F5933 1 `*F5935 1 ]
+[s S784 `*F5946 1 `*F5948 1 `*F5950 1 ]
 [n S784 sensor open read close ]
-[v F5943 `(v ~T0 @X0 0 tf ]
-[v F5945 `(v ~T0 @X0 0 tf ]
-[v F5947 `(v ~T0 @X0 0 tf ]
+[v F5958 `(v ~T0 @X0 0 tf ]
+[v F5960 `(v ~T0 @X0 0 tf ]
+[v F5962 `(v ~T0 @X0 0 tf ]
 "30 ./lcd_screen.h
 [; ;./lcd_screen.h: 30: {
-[s S785 `*F5943 1 `*F5945 1 `*F5947 1 ]
+[s S785 `*F5958 1 `*F5960 1 `*F5962 1 ]
 [n S785 lcd_screen demo1 demo2 demo3 ]
-[v F5953 `(v ~T0 @X0 0 tf ]
-[v F5955 `(v ~T0 @X0 0 tf ]
-[v F5957 `(v ~T0 @X0 0 tf ]
-[v F5959 `(v ~T0 @X0 0 tf1`f ]
-[v F5962 `(v ~T0 @X0 0 tf1`f ]
+[v F5968 `(v ~T0 @X0 0 tf1`i ]
+[v F5971 `(v ~T0 @X0 0 tf1`i ]
 "30 ./led_adapter.h
 [; ;./led_adapter.h: 30: {
-[s S786 `*F5953 1 `*F5955 1 `*F5957 1 `*F5959 1 `*F5962 1 ]
-[n S786 led turn_blue turn_green turn_red set_brightness set_color ]
+[s S786 `*F5968 1 `*F5971 1 ]
+[n S786 led set_brightness set_color ]
 "29 ./light_sensor.h
 [; ;./light_sensor.h: 29: void initialize_light(sensor *sensor);
 [v _initialize_light `(v ~T0 @X0 0 ef1`*S784 ]
