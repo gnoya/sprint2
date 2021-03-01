@@ -65,45 +65,45 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
-// get/set channel_AN0 aliases
-#define channel_AN0_TRIS                 TRISAbits.TRISA0
-#define channel_AN0_LAT                  LATAbits.LATA0
-#define channel_AN0_PORT                 PORTAbits.RA0
-#define channel_AN0_WPU                  WPUAbits.WPUA0
-#define channel_AN0_OD                   ODCONAbits.ODA0
-#define channel_AN0_ANS                  ANSELAbits.ANSA0
-#define channel_AN0_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
-#define channel_AN0_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
-#define channel_AN0_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
-#define channel_AN0_GetValue()           PORTAbits.RA0
-#define channel_AN0_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
-#define channel_AN0_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
-#define channel_AN0_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
-#define channel_AN0_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
-#define channel_AN0_SetPushPull()        do { ODCONAbits.ODA0 = 0; } while(0)
-#define channel_AN0_SetOpenDrain()       do { ODCONAbits.ODA0 = 1; } while(0)
-#define channel_AN0_SetAnalogMode()      do { ANSELAbits.ANSA0 = 1; } while(0)
-#define channel_AN0_SetDigitalMode()     do { ANSELAbits.ANSA0 = 0; } while(0)
+// get/set SENSOR_TEMP aliases
+#define SENSOR_TEMP_TRIS                 TRISAbits.TRISA0
+#define SENSOR_TEMP_LAT                  LATAbits.LATA0
+#define SENSOR_TEMP_PORT                 PORTAbits.RA0
+#define SENSOR_TEMP_WPU                  WPUAbits.WPUA0
+#define SENSOR_TEMP_OD                   ODCONAbits.ODA0
+#define SENSOR_TEMP_ANS                  ANSELAbits.ANSA0
+#define SENSOR_TEMP_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
+#define SENSOR_TEMP_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
+#define SENSOR_TEMP_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
+#define SENSOR_TEMP_GetValue()           PORTAbits.RA0
+#define SENSOR_TEMP_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
+#define SENSOR_TEMP_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
+#define SENSOR_TEMP_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
+#define SENSOR_TEMP_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
+#define SENSOR_TEMP_SetPushPull()        do { ODCONAbits.ODA0 = 0; } while(0)
+#define SENSOR_TEMP_SetOpenDrain()       do { ODCONAbits.ODA0 = 1; } while(0)
+#define SENSOR_TEMP_SetAnalogMode()      do { ANSELAbits.ANSA0 = 1; } while(0)
+#define SENSOR_TEMP_SetDigitalMode()     do { ANSELAbits.ANSA0 = 0; } while(0)
 
-// get/set channel_AN1 aliases
-#define channel_AN1_TRIS                 TRISAbits.TRISA1
-#define channel_AN1_LAT                  LATAbits.LATA1
-#define channel_AN1_PORT                 PORTAbits.RA1
-#define channel_AN1_WPU                  WPUAbits.WPUA1
-#define channel_AN1_OD                   ODCONAbits.ODA1
-#define channel_AN1_ANS                  ANSELAbits.ANSA1
-#define channel_AN1_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
-#define channel_AN1_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
-#define channel_AN1_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
-#define channel_AN1_GetValue()           PORTAbits.RA1
-#define channel_AN1_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
-#define channel_AN1_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
-#define channel_AN1_SetPullup()          do { WPUAbits.WPUA1 = 1; } while(0)
-#define channel_AN1_ResetPullup()        do { WPUAbits.WPUA1 = 0; } while(0)
-#define channel_AN1_SetPushPull()        do { ODCONAbits.ODA1 = 0; } while(0)
-#define channel_AN1_SetOpenDrain()       do { ODCONAbits.ODA1 = 1; } while(0)
-#define channel_AN1_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
-#define channel_AN1_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
+// get/set SENSOR_LIGHT aliases
+#define SENSOR_LIGHT_TRIS                 TRISAbits.TRISA1
+#define SENSOR_LIGHT_LAT                  LATAbits.LATA1
+#define SENSOR_LIGHT_PORT                 PORTAbits.RA1
+#define SENSOR_LIGHT_WPU                  WPUAbits.WPUA1
+#define SENSOR_LIGHT_OD                   ODCONAbits.ODA1
+#define SENSOR_LIGHT_ANS                  ANSELAbits.ANSA1
+#define SENSOR_LIGHT_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
+#define SENSOR_LIGHT_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
+#define SENSOR_LIGHT_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
+#define SENSOR_LIGHT_GetValue()           PORTAbits.RA1
+#define SENSOR_LIGHT_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
+#define SENSOR_LIGHT_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
+#define SENSOR_LIGHT_SetPullup()          do { WPUAbits.WPUA1 = 1; } while(0)
+#define SENSOR_LIGHT_ResetPullup()        do { WPUAbits.WPUA1 = 0; } while(0)
+#define SENSOR_LIGHT_SetPushPull()        do { ODCONAbits.ODA1 = 0; } while(0)
+#define SENSOR_LIGHT_SetOpenDrain()       do { ODCONAbits.ODA1 = 1; } while(0)
+#define SENSOR_LIGHT_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
+#define SENSOR_LIGHT_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
 
 // get/set RA2 procedures
 #define RA2_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)

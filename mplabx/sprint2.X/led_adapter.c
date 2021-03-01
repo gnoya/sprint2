@@ -17,13 +17,13 @@ static void turn_red();
 static void set_brightness(int brightness);
 static void set_color(int temperature);
 static void turn_selectors(bool selector1, bool selector2);
-static int map(int x, int in_min, int in_max, int out_min, int out_max);
+static long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 uint16_t duty_cycle = 0;
 
-static int map(int x, int in_min, int in_max, int out_min, int out_max)
+static long map(int x, long in_min, long in_max, long out_min, long out_max)
 {
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  return ((long)x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 static void turn_selectors(bool selector1, bool selector2)
@@ -49,35 +49,40 @@ static void turn_selectors(bool selector1, bool selector2)
 
 static void turn_blue()
 {
-  printf("Color is blue!\r\n");
   turn_selectors(1, 0);
 }
 
 static void turn_green()
 {
-  printf("Color is green!\r\n");
   turn_selectors(0, 1);
 }
 
 static void turn_red()
 {
-  printf("Color is red!\r\n");
   turn_selectors(0, 0);
 }
 
 static void set_brightness(int brightness)
 {
-  duty_cycle = (uint16_t)(100 - map(brightness, 0, 100, 0, 100));
-  printf("Duty cycle is: %d\r\n", duty_cycle);
+  // Keep the brightness in the linear zone
+  brightness = (int)map(brightness, 10, 1000, 372, 901);
 
-  // from 0 to 100
+  // Map between a duty cycle of 0 to 100
+  int mapped_value = (int)map(brightness, 372, 901, 0, 100);
+
+  // It is (100 - mapped_value) because there is a NOT gate in the Demux
+  duty_cycle = (uint16_t)(100 - mapped_value);
+
+  // Set the duty cycle. This function receives a value between 0 and 100
   PWM3_LoadDutyValue(duty_cycle);
 }
 
 static void set_color(int temperature)
 {
-  int color = map(temperature, 0, 100, 0, 60);
+  // Map the temperature between 0 and 60 (arbitrary values)
+  int color = (int)map(temperature, 19, 358, 0, 60);
 
+  // Turn a different color depending on the mapped value
   if (color >= 0 && color < 20)
   {
     turn_blue();

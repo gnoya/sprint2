@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/sensor_adapter.h</file>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/mcc_generated_files/mcc.c</file>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/light_sensor.c</file>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/led_adapter.c</file>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/main.c</file>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/temp_sensor.c</file>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/sensor_adapter.c</file>
-            <file>file:/D:/Mis%20documentos/master/sprint2/mplabx/sprint2.X/mcc_generated_files/adc.c</file>
+            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/main.c</file>
+            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/led_adapter.c</file>
+            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/light_sensor.c</file>
         </group>
     </open-files>
 </project-private>

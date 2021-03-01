@@ -42,6 +42,7 @@
 */
 
 #include <stdbool.h>
+#include <string.h>
 #include "mcc_generated_files/mcc.h"
 #include "sensor_adapter.h"
 #include "light_sensor.h"
@@ -52,55 +53,64 @@
 /*
                          Main application
  */
+sensor light_sensor;
+sensor temp_sensor;
+lcd_screen lcd_screen_var;
+led led_var;
+
+void read_sensors(void)
+{
+}
+
 void main(void)
 {
-  // initialize the device
   SYSTEM_Initialize();
 
-  sensor light_sensor;
-  sensor temp_sensor;
-  lcd_screen lcd_screen;
-  led led;
+  // ------------------- Initializing variables ---------------- //
+  char *sensor_names[3] = {};
+  char **names_pointer = sensor_names;
+  int sensor_counter = 0;
 
+  // ------------------- Initializing structs ----------------- //
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
-  initialize_lcd_screen(&lcd_screen);
-  initialize_led(&led);
+  initialize_lcd_screen(&lcd_screen_var);
+  initialize_led(&led_var);
 
-  printf("\r\n");
+  // --------------------- Opening sensors ------------------- //
+  if (temp_sensor.open())
+  {
+    printf("Temperature sensor is available\r\n");
+    names_pointer[sensor_counter++] = temp_sensor.name;
+  }
+
+  if (light_sensor.open())
+  {
+    printf("Light sensor is available\r\n");
+    names_pointer[sensor_counter++] = light_sensor.name;
+  }
+
+  // --------------------- Printing available sensors ------------------- //
+  int i;
+  for (i = 0; i < sensor_counter; i++)
+    printf("%s \r\n", names_pointer[i]);
 
   // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
   // Use the following macros to:
 
   // Enable the Global Interrupts
-  //INTERRUPT_GlobalInterruptEnable();
+  // INTERRUPT_GlobalInterruptEnable();
 
   // Enable the Peripheral Interrupts
-  //INTERRUPT_PeripheralInterruptEnable();
-
-  // Disable the Global Interrupts
-  //INTERRUPT_GlobalInterruptDisable();
-
-  // Disable the Peripheral Interrupts
-  //INTERRUPT_PeripheralInterruptDisable();
-  int brightness = 0;
-  int temperature = 0;
+  // INTERRUPT_PeripheralInterruptEnable();
 
   while (1)
   {
     int light_value = light_sensor.read();
     int temp_value = temp_sensor.read();
 
-    printf("Light sensor value: %d\r\n", light_value);
-    printf("Temperature sensor value: %d\r\n", temp_value);
-    printf("Brightness value: %d\r\n", brightness);
-    printf("Temperature value: %d\r\n", temperature);
-
-    led.set_brightness(brightness);
-    led.set_color(temperature);
-    brightness = (brightness + 1) % 101;
-    temperature = (temperature + 1) % 101;
-    printf("\r\n");
+    led_var.set_brightness(light_value);
+    led_var.set_color(temp_value);
   }
 }
 /**

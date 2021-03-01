@@ -12,27 +12,26 @@
 
 static bool open();
 static int read();
-static void close();
 
 static bool open()
 {
-  return true;
+  // Reading the sensor to check if the value is 0
+  int opening_value = (int)ADC_GetConversion(SENSOR_TEMP);
+
+  // If the value is greater than 0, the sensor is connected
+  bool is_connected = opening_value > 0;
+  return is_connected;
 }
 
 static int read()
 {
-  printf("Reading temp sensor\r\n");
-  return ((int)ADC_GetConversion(channel_AN0));
-}
-
-static void close()
-{
-  printf("Temp sensor closed!\n");
+  // 19 to 358
+  return (int)ADC_GetConversion(SENSOR_TEMP);
 }
 
 void initialize_temp(sensor *sensor_var)
 {
+  sensor_var->name = "Temperature";
   sensor_var->open = open;
   sensor_var->read = read;
-  sensor_var->close = close;
 }

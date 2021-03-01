@@ -16,23 +16,23 @@ static void close();
 
 static bool open()
 {
-  return true;
+  // Reading the sensor to check if the value is 0
+  int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
+
+  // If the value is greater than 0, the sensor is connected
+  bool is_connected = opening_value > 0;
+  return is_connected;
 }
 
 static int read()
 {
-  printf("Reading light sensor\r\n");
-  return ((int)ADC_GetConversion(channel_AN1));;
-}
-
-static void close()
-{
-  printf("Light sensor closed!\n");
+  // 10 to 1000
+  return (int)ADC_GetConversion(SENSOR_LIGHT);
 }
 
 void initialize_light(sensor *sensor_var)
 {
+  sensor_var->name = "Light";
   sensor_var->open = open;
   sensor_var->read = read;
-  sensor_var->close = close;
 }

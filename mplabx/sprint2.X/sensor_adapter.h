@@ -7,7 +7,7 @@
 
 typedef struct sensor
 {
+  char *name;
   bool (*open)(void);
   int (*read)(void);
-  void (*close)(void);
 } sensor;
