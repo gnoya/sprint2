@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/tmr4.c"
+# 1 "menu.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,179 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/tmr4.c" 2
-# 51 "mcc_generated_files/tmr4.c"
+# 1 "menu.c" 2
+
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 2 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 122 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned size_t;
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 168 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 204 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __uint24 uint24_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 9 "menu.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
+# 10 "menu.c" 2
+
+# 1 "./mcc_generated_files/mcc.h" 1
+# 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -21,29 +192,10 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int wchar_t;
-# 122 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 2 3
 
 
@@ -9531,10 +9683,42 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 2 3
-# 51 "mcc_generated_files/tmr4.c" 2
+# 49 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/tmr4.h" 1
-# 54 "mcc_generated_files/tmr4.h"
+# 1 "./mcc_generated_files/device_config.h" 1
+# 50 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pin_manager.h" 1
+# 432 "./mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+# 444 "./mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_IOC(void);
+# 457 "./mcc_generated_files/pin_manager.h"
+void IOCAF5_ISR(void);
+# 480 "./mcc_generated_files/pin_manager.h"
+void IOCAF5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 504 "./mcc_generated_files/pin_manager.h"
+extern void (*IOCAF5_InterruptHandler)(void);
+# 528 "./mcc_generated_files/pin_manager.h"
+void IOCAF5_DefaultInterruptHandler(void);
+# 541 "./mcc_generated_files/pin_manager.h"
+void IOCAF6_ISR(void);
+# 564 "./mcc_generated_files/pin_manager.h"
+void IOCAF6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 588 "./mcc_generated_files/pin_manager.h"
+extern void (*IOCAF6_InterruptHandler)(void);
+# 612 "./mcc_generated_files/pin_manager.h"
+void IOCAF6_DefaultInterruptHandler(void);
+# 625 "./mcc_generated_files/pin_manager.h"
+void IOCAF7_ISR(void);
+# 648 "./mcc_generated_files/pin_manager.h"
+void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
+# 672 "./mcc_generated_files/pin_manager.h"
+extern void (*IOCAF7_InterruptHandler)(void);
+# 696 "./mcc_generated_files/pin_manager.h"
+void IOCAF7_DefaultInterruptHandler(void);
+# 51 "./mcc_generated_files/mcc.h" 2
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9620,83 +9804,372 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 2 3
-# 54 "mcc_generated_files/tmr4.h" 2
+# 52 "./mcc_generated_files/mcc.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 55 "mcc_generated_files/tmr4.h" 2
-# 103 "mcc_generated_files/tmr4.h"
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\conio.h" 1 3
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\errno.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\errno.h" 3
+extern int errno;
+# 8 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\conio.h" 2 3
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\__null.h" 1 3
+# 9 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\conio.h" 2 3
+
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+
+
+extern char * cgets(char *);
+extern void cputs(const char *);
+# 54 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/interrupt_manager.h" 1
+# 55 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pwm3.h" 1
+# 102 "./mcc_generated_files/pwm3.h"
+ void PWM3_Initialize(void);
+# 129 "./mcc_generated_files/pwm3.h"
+ void PWM3_LoadDutyValue(uint16_t dutyValue);
+# 56 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/tmr4.h" 1
+# 103 "./mcc_generated_files/tmr4.h"
 void TMR4_Initialize(void);
-# 132 "mcc_generated_files/tmr4.h"
+# 132 "./mcc_generated_files/tmr4.h"
 void TMR4_StartTimer(void);
-# 164 "mcc_generated_files/tmr4.h"
+# 164 "./mcc_generated_files/tmr4.h"
 void TMR4_StopTimer(void);
-# 199 "mcc_generated_files/tmr4.h"
+# 199 "./mcc_generated_files/tmr4.h"
 uint8_t TMR4_ReadTimer(void);
-# 238 "mcc_generated_files/tmr4.h"
+# 238 "./mcc_generated_files/tmr4.h"
 void TMR4_WriteTimer(uint8_t timerVal);
-# 290 "mcc_generated_files/tmr4.h"
+# 290 "./mcc_generated_files/tmr4.h"
 void TMR4_LoadPeriodRegister(uint8_t periodVal);
-# 325 "mcc_generated_files/tmr4.h"
+# 325 "./mcc_generated_files/tmr4.h"
 _Bool TMR4_HasOverflowOccured(void);
-# 52 "mcc_generated_files/tmr4.c" 2
-# 62 "mcc_generated_files/tmr4.c"
-void TMR4_Initialize(void)
+# 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/adc.h" 1
+# 72 "./mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
+
+
+
+
+typedef struct
+{
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "./mcc_generated_files/adc.h"
+typedef enum
+{
+    SENSOR_TEMP = 0x0,
+    SENSOR_LIGHT = 0x1,
+    channel_DAC2_Output = 0x1C,
+    channel_Temp = 0x1D,
+    channel_DAC1_Output = 0x1E,
+    channel_FVRBuffer1 = 0x1F
+} adc_channel_t;
+# 138 "./mcc_generated_files/adc.h"
+void ADC_Initialize(void);
+# 168 "./mcc_generated_files/adc.h"
+void ADC_SelectChannel(adc_channel_t channel);
+# 195 "./mcc_generated_files/adc.h"
+void ADC_StartConversion(void);
+# 227 "./mcc_generated_files/adc.h"
+_Bool ADC_IsConversionDone(void);
+# 260 "./mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversionResult(void);
+# 290 "./mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 318 "./mcc_generated_files/adc.h"
+void ADC_TemperatureAcquisitionDelay(void);
+# 58 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/eusart.h" 1
+# 76 "./mcc_generated_files/eusart.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart_status_t;
+# 111 "./mcc_generated_files/eusart.h"
+void EUSART_Initialize(void);
+# 159 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_ready(void);
+# 207 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_rx_ready(void);
+# 254 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_done(void);
+# 302 "./mcc_generated_files/eusart.h"
+eusart_status_t EUSART_get_last_status(void);
+# 322 "./mcc_generated_files/eusart.h"
+uint8_t EUSART_Read(void);
+# 342 "./mcc_generated_files/eusart.h"
+void EUSART_Write(uint8_t txData);
+# 362 "./mcc_generated_files/eusart.h"
+void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 380 "./mcc_generated_files/eusart.h"
+void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 398 "./mcc_generated_files/eusart.h"
+void EUSART_SetErrorHandler(void (* interruptHandler)(void));
+# 59 "./mcc_generated_files/mcc.h" 2
+# 74 "./mcc_generated_files/mcc.h"
+void SYSTEM_Initialize(void);
+# 87 "./mcc_generated_files/mcc.h"
+void OSCILLATOR_Initialize(void);
+# 99 "./mcc_generated_files/mcc.h"
+void WDT_Initialize(void);
+# 11 "menu.c" 2
+
+# 1 "./lcd.h" 1
+# 120 "./lcd.h"
+void LCD_Initialize(void);
+# 138 "./lcd.h"
+void LCDPutChar(uint8_t ch);
+# 156 "./lcd.h"
+void LCDPutCmd(uint8_t ch);
+# 174 "./lcd.h"
+void LCDPutStr(const char *);
+# 192 "./lcd.h"
+void LCDWriteNibble(uint8_t ch,uint8_t rs);
+# 214 "./lcd.h"
+void LCDGoto(uint8_t pos, uint8_t ln);
+# 12 "menu.c" 2
+
+# 1 "./lcd_screen.h" 1
+# 29 "./lcd_screen.h"
+typedef struct lcd_screen
 {
 
 
 
-    PR4 = 0xFF;
 
 
-    TMR4 = 0x00;
+
+} lcd_screen;
+
+void lcd_clear(void);
+# 13 "menu.c" 2
 
 
-    PIR2bits.TMR4IF = 0;
+int menu_current = 0;
+int menu_index = 0;
+_Bool show = 0;
 
+void index_add(void);
+void index_sub(void);
+void index_current(void);
+void show_index(void);
+void lcd_menu_main(void);
+void lcd_menu_mode(void);
+void lcd_menu_sensors(void);
 
-    T4CON = 0x06;
+void index_add(void) {
+
+    menu_index = menu_index + 1;
+    if(menu_current == 0 && menu_index >4) menu_index = 4;
+    if(menu_current == 1 && menu_index >4) menu_index = 4;
+    if(menu_current == 2 && menu_index >3) menu_index = 3;
+    show = 1;
+
 }
 
-void TMR4_StartTimer(void)
-{
+void index_sub(void) {
 
-    T4CONbits.TMR4ON = 1;
+    menu_index = menu_index - 1;
+    if (menu_index < 0) menu_index = 0;
+    show = 1;
+
 }
 
-void TMR4_StopTimer(void)
-{
+void index_current(void) {
 
-    T4CONbits.TMR4ON = 0;
-}
-
-uint8_t TMR4_ReadTimer(void)
-{
-    uint8_t readVal;
-
-    readVal = TMR4;
-
-    return readVal;
-}
-
-void TMR4_WriteTimer(uint8_t timerVal)
-{
-
-    TMR4 = timerVal;
-}
-
-void TMR4_LoadPeriodRegister(uint8_t periodVal)
-{
-   PR4 = periodVal;
-}
-
-_Bool TMR4_HasOverflowOccured(void)
-{
-
-    _Bool status = PIR2bits.TMR4IF;
-    if(status)
+    if (menu_current == 1 && menu_index == 4 )
     {
-
-        PIR2bits.TMR4IF = 0;
+        menu_current = 0;
+        menu_index = 0;
+        show = 1;
+        return;
     }
-    return status;
+    if (menu_current == 2 && menu_index == 3 )
+    {
+        menu_current = 0;
+        menu_index = 0;
+        show = 1;
+        return;
+    }
+    if (menu_current != 0 || (menu_current == 0 && menu_index > 1)) return;
+    menu_current = menu_index+1;
+    menu_index = 0;
+    show = 1;
+
+}
+
+void show_index(void){
+
+    printf("menu_index: %d \n\r", menu_index);
+    printf("menu_current: %d \n\r", menu_current);
+}
+
+void lcd_menu(void)
+{
+    switch(menu_current)
+    {
+        case 0:
+            lcd_menu_main();
+        break;
+        case 1:
+            lcd_menu_mode();
+        break;
+        case 2:
+            lcd_menu_sensors();
+        break;
+        default:
+            menu_current = 0;
+        break;
+    }
+}
+
+void lcd_menu_main(void)
+{
+    switch(menu_index)
+    {
+        case 0:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("  Modo de uso  >");
+        break;
+        case 1:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<   Sensores   >");
+        break;
+        case 2:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("< Temporizador >");
+            LCDGoto(0,1);
+            LCDPutStr("     Apagado    ");
+        break;
+        case 3:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<   Hora de    >");
+            LCDGoto(0,1);
+            LCDPutStr("    Encendido   ");
+        break;
+        case 4:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<   Hora de ");
+            LCDGoto(0,1);
+            LCDPutStr("    Apagado   ");
+        break;
+        default:
+            menu_index = 1;
+        break;
+    }
+}
+
+void lcd_menu_mode(void)
+{
+    switch(menu_index)
+    {
+        case 0:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("Automatico por >");
+            LCDGoto(0,1);
+            LCDPutStr("    Sensores   ");
+        break;
+        case 1:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<  Intensidad  >");
+            LCDGoto(0,1);
+            LCDPutStr("     Baja     ");
+        break;
+        case 2:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<  Intensidad  >");
+            LCDGoto(0,1);
+            LCDPutStr("     Media     ");
+        break;
+        case 3:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<  Intensidad  >");
+            LCDGoto(0,1);
+            LCDPutStr("     Alta     ");
+        break;
+        case 4:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<   Regresar   ");
+        break;
+        default:
+            menu_index = 1;
+        break;
+    }
+}
+
+void lcd_menu_sensors(void)
+{
+    switch(menu_index)
+    {
+        case 0:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("  Sensor de    >");
+            LCDGoto(0,1);
+            LCDPutStr("  Temperatura    ");
+        break;
+        case 1:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<  Sensor de   >");
+            LCDGoto(0,1);
+            LCDPutStr("    Luminocidad  ");
+        break;
+        case 2:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<  Sensor de   >");
+            LCDGoto(0,1);
+            LCDPutStr("     Sonido     ");
+        break;
+        case 3:
+            lcd_clear();
+            LCDGoto(0,0);
+            LCDPutStr("<   Regresar   ");
+        break;
+        default:
+            menu_index = 1;
+        break;
+    }
 }

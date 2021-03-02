@@ -20,21 +20,20 @@
  */
 
 /* 
- * File: lcd_screen.h
+ * File:   menu.c
  * Author: Group 2
  * Comments:
  * Revision history: 
  */
+extern bool show;
+int menu_current;
+int menu_index;
 
-typedef struct lcd_screen
-{
-  /*
-  void (*demo1)(void);
-  void (*demo2)(void);
-  void (*demo3)(void);
-   */
-  //void (*lcd_clear)(void);
-} lcd_screen;
-
-void lcd_clear(void);
-//void initialize_lcd_screen(lcd_screen *lcd_screen_var);
+void index_add(void);
+void index_sub(void);
+void index_current(void);
+void show_index(void);
+void lcd_menu (void);
+void lcd_menu_main(void);
+void lcd_menu_mode(void);
+void lcd_menu_sensors(void);

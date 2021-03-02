@@ -50,13 +50,14 @@
 #include "lcd_screen.h"
 #include "led_adapter.h"
 #include "lcd.h"
+#include "menu.h"
 
 /*
                          Main application
  */
 sensor light_sensor;
 sensor temp_sensor;
-lcd_screen lcd_screen_var;
+//lcd_screen lcd_screen_var;
 led led_var;
 
 void read_sensors(void)
@@ -75,7 +76,7 @@ void main(void)
   // ------------------- Initializing structs ----------------- //
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
-  initialize_lcd_screen(&lcd_screen_var);
+  //initialize_lcd_screen(&lcd_screen_var);
   initialize_led(&led_var);
 
   // --------------------- Opening sensors ------------------- //
@@ -100,11 +101,17 @@ void main(void)
   // Use the following macros to:
 
   // Enable the Global Interrupts
-  // INTERRUPT_GlobalInterruptEnable();
+   INTERRUPT_GlobalInterruptEnable();
 
   // Enable the Peripheral Interrupts
-  // INTERRUPT_PeripheralInterruptEnable();
-  LCDPutStr("hola");
+   INTERRUPT_PeripheralInterruptEnable();
+  IOCAF5_SetInterruptHandler(index_add);
+  IOCAF6_SetInterruptHandler(index_sub);
+  IOCAF7_SetInterruptHandler(index_current);
+  
+  LCDPutStr("¡hola!");
+  __delay_ms(100);
+  show = 1;
   while (1)
   {
     int light_value = light_sensor.read();
@@ -112,6 +119,12 @@ void main(void)
 
     led_var.set_brightness(light_value);
     led_var.set_color(temp_value);
+    if(show)
+    {
+        show_index();
+        lcd_menu();
+        show = 0;
+    }
   }
 }
 /**
