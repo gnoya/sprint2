@@ -49,6 +49,7 @@
 #include "temp_sensor.h"
 #include "lcd_screen.h"
 #include "led_adapter.h"
+#include "lcd.h"
 
 /*
                          Main application
@@ -65,7 +66,7 @@ void read_sensors(void)
 void main(void)
 {
   SYSTEM_Initialize();
-
+  LCD_Initialize();
   // ------------------- Initializing variables ---------------- //
   char *sensor_names[3] = {};
   char **names_pointer = sensor_names;
@@ -103,7 +104,7 @@ void main(void)
 
   // Enable the Peripheral Interrupts
   // INTERRUPT_PeripheralInterruptEnable();
-
+  LCDPutStr("hola");
   while (1)
   {
     int light_value = light_sensor.read();

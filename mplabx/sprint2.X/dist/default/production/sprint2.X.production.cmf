@@ -11,55 +11,60 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
+$C:\Users\leonardo\AppData\Local\Temp\sc8g.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 2 2
 $dist/default/production\sprint2.X.production.o
 cinit CODE 0 7E1 7E1 1F 2
-text1 CODE 0 488 488 82 2
-text2 CODE 0 13A 13A 6 2
-text3 CODE 0 153 153 7 2
-text4 CODE 0 134 134 6 2
-text5 CODE 0 1BE 1BE 14 2
-text6 CODE 0 41E 41E 6A 2
-text7 CODE 0 3B7 3B7 67 2
-text8 CODE 0 2FC 2FC 33 2
-text9 CODE 0 50A 50A 90 2
-text10 CODE 0 1E8 1E8 16 2
-text11 CODE 0 173 173 9 2
-text12 CODE 0 16A 16A 9 2
-text13 CODE 0 1AC 1AC 12 2
-text14 CODE 0 2D4 2D4 28 2
-text15 CODE 0 59A 59A AC 2
-text16 CODE 0 646 646 CC 2
-text17 CODE 0 261 261 19 2
-text18 CODE 0 32F 32F 3F 2
-text19 CODE 0 12E 12E 6 2
-text20 CODE 0 186 186 A 2
-text21 CODE 0 296 296 1C 2
-text22 CODE 0 27A 27A 1C 2
-text23 CODE 0 1FE 1FE 18 2
-text24 CODE 0 248 248 19 2
-text25 CODE 0 22F 22F 19 2
-text26 CODE 0 19B 19B 11 2
-text27 CODE 0 216 216 19 2
-text28 CODE 0 1D2 1D2 16 2
-text29 CODE 0 118 118 4 2
-text30 CODE 0 17C 17C A 2
-text31 CODE 0 190 190 B 2
-text32 CODE 0 36E 36E 49 2
-text33 CODE 0 14C 14C 7 2
-text34 CODE 0 2B2 2B2 22 2
-text35 CODE 0 128 128 6 2
-text36 CODE 0 122 122 6 2
-text37 CODE 0 11C 11C 6 2
-text38 CODE 0 161 161 9 2
+text1 CODE 0 47E 47E 82 2
+text2 CODE 0 8E 8E 6 2
+text3 CODE 0 A7 A7 7 2
+text4 CODE 0 88 88 6 2
+text5 CODE 0 112 112 14 2
+text6 CODE 0 414 414 6A 2
+text7 CODE 0 3AD 3AD 67 2
+text8 CODE 0 2F4 2F4 33 2
+text9 CODE 0 500 500 90 2
+text10 CODE 0 13C 13C 16 2
+text11 CODE 0 C7 C7 9 2
+text12 CODE 0 BE BE 9 2
+text13 CODE 0 100 100 12 2
+text14 CODE 0 2CC 2CC 28 2
+text15 CODE 0 590 590 AC 2
+text16 CODE 0 63C 63C CC 2
+text17 CODE 0 1B5 1B5 19 2
+text18 CODE 0 327 327 3F 2
+text19 CODE 0 82 82 6 2
+text20 CODE 0 DA DA A 2
+text21 CODE 0 1EA 1EA 1C 2
+text22 CODE 0 1CE 1CE 1C 2
+text23 CODE 0 152 152 18 2
+text24 CODE 0 19C 19C 19 2
+text25 CODE 0 183 183 19 2
+text26 CODE 0 EF EF 11 2
+text27 CODE 0 16A 16A 19 2
+text28 CODE 0 126 126 16 2
+text29 CODE 0 6C 6C 4 2
+text30 CODE 0 D0 D0 A 2
+text31 CODE 0 E4 E4 B 2
+text32 CODE 0 366 366 47 2
+text33 CODE 0 A0 A0 7 2
+text34 CODE 0 284 284 22 2
+text35 CODE 0 7C 7C 6 2
+text36 CODE 0 76 76 6 2
+text37 CODE 0 70 70 6 2
+text38 CODE 0 B5 B5 9 2
+text39 CODE 0 262 262 22 2
+text40 CODE 0 223 223 1F 2
+text41 CODE 0 2A6 2A6 26 2
+text42 CODE 0 206 206 1D 2
+text43 CODE 0 242 242 20 2
 nvBANK1 BANK1 1 E2 E2 6 1
-maintext CODE 0 712 712 CF 2
+maintext CODE 0 708 708 D9 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 44 1
-inittext CODE 0 146 146 6 2
+inittext CODE 0 9A 9A 6 2
 stringtext1 STRCODE 0 800 800 22 2
 stringtext2 STRCODE 0 822 822 1C 2
 stringtext3 STRCODE 0 83E 83E C 2
@@ -68,11 +73,12 @@ stringtext5 STRCODE 0 853 853 9 2
 stringtext6 STRCODE 0 85C 85C 9 2
 stringtext7 STRCODE 0 865 865 6 2
 stringtext8 STRCODE 0 86B 86B 6 2
+stringtext9 STRCODE 0 871 871 5 2
 bssBANK0 BANK0 1 64 64 B 1
 bssBANK1 BANK1 1 A0 A0 3B 1
-idataBANK1 CODE 0 15A 15A 7 2
+idataBANK1 CODE 0 AE AE 7 2
 dataBANK1 BANK1 1 DB DB 7 1
-clrtext CODE 0 140 140 6 2
+clrtext CODE 0 94 94 6 2
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -103,10 +109,10 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-117 2
-CONST 871-1FFF 2
-ENTRY 4-117 2
-ENTRY 871-1FFF 2
+CONST 4-6B 2
+CONST 876-1FFF 2
+ENTRY 4-6B 2
+ENTRY 876-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -131,8 +137,8 @@ SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 2098-23EF 1
-CODE 4-117 2
-CODE 871-1FFF 2
+CODE 4-6B 2
+CODE 876-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -147,10 +153,10 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-STRCODE 4-117 2
-STRCODE 871-1FFF 2
-STRING 4-117 2
-STRING 871-1FFF 2
+STRCODE 4-6B 2
+STRCODE 876-1FFF 2
+STRING 4-6B 2
+STRING 876-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -165,365 +171,407 @@ STRING 871-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\sprint2.X.production.o
-7E1 cinit CODE >6699:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E1 cinit CODE >6702:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E1 cinit CODE >6771:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E2 cinit CODE >6772:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E3 cinit CODE >6773:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E4 cinit CODE >6774:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E5 cinit CODE >6775:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E6 cinit CODE >6776:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E7 cinit CODE >6777:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E8 cinit CODE >6778:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7E9 cinit CODE >6779:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7EA cinit CODE >6780:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7ED cinit CODE >6797:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7EE cinit CODE >6798:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7EF cinit CODE >6799:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F0 cinit CODE >6800:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F1 cinit CODE >6801:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F2 cinit CODE >6802:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F5 cinit CODE >6806:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F6 cinit CODE >6807:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F7 cinit CODE >6808:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F8 cinit CODE >6809:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7F9 cinit CODE >6810:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7FA cinit CODE >6811:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7FD cinit CODE >6817:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7FD cinit CODE >6819:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-7FE cinit CODE >6820:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-161 text38 CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-161 text38 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-164 text38 CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-165 text38 CODE >78:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-166 text38 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-167 text38 CODE >84:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-169 text38 CODE >86:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-11C text37 CODE >174:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-11C text37 CODE >175:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-121 text37 CODE >176:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-122 text36 CODE >166:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-122 text36 CODE >167:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-127 text36 CODE >168:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-128 text35 CODE >170:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-128 text35 CODE >171:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12D text35 CODE >172:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2B2 text34 CODE >66:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2B2 text34 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2B5 text34 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2B7 text34 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2B9 text34 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2BB text34 CODE >83:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2BC text34 CODE >86:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2C3 text34 CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2CA text34 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2D1 text34 CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-2D3 text34 CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-14C text33 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-14C text33 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-14F text33 CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-150 text33 CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-152 text33 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-36E text32 CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-36E text32 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-370 text32 CODE >61:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-371 text32 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-372 text32 CODE >63:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-373 text32 CODE >64:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-374 text32 CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-377 text32 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-379 text32 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-37B text32 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-37D text32 CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-37F text32 CODE >78:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-382 text32 CODE >79:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-384 text32 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-386 text32 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-388 text32 CODE >82:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-38A text32 CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-38C text32 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-38D text32 CODE >89:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-38E text32 CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-38F text32 CODE >91:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-390 text32 CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-392 text32 CODE >97:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-394 text32 CODE >98:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-395 text32 CODE >99:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-396 text32 CODE >100:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-397 text32 CODE >101:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-398 text32 CODE >106:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-39B text32 CODE >107:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-39D text32 CODE >108:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-39F text32 CODE >109:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3A1 text32 CODE >110:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3A3 text32 CODE >115:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3A6 text32 CODE >116:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3A8 text32 CODE >117:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3AA text32 CODE >118:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3AC text32 CODE >119:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3AE text32 CODE >128:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3B1 text32 CODE >129:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3B4 text32 CODE >130:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-3B6 text32 CODE >131:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
-190 text31 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-190 text31 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-193 text31 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-194 text31 CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-195 text31 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-19A text31 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-17C text30 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-17C text30 CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-17F text30 CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-180 text30 CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-182 text30 CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-185 text30 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
-118 text29 CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-118 text29 CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-11B text29 CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1D2 text28 CODE >50:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1D2 text28 CODE >53:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1D5 text28 CODE >54:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1D8 text28 CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1DB text28 CODE >56:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1DE text28 CODE >57:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1E1 text28 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1E4 text28 CODE >59:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-1E7 text28 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
-216 text27 CODE >31:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-217 text27 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-21E text27 CODE >34:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-226 text27 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-22E text27 CODE >36:C:\SE1\sprint2\mplabx\sprint2.X\lcd_screen.c
-19B text26 CODE >100:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-19C text26 CODE >102:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1A3 text26 CODE >103:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1AB text26 CODE >104:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-22F text25 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-230 text25 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-237 text25 CODE >36:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-23F text25 CODE >37:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-247 text25 CODE >38:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-248 text24 CODE >32:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-249 text24 CODE >34:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-250 text24 CODE >35:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-258 text24 CODE >36:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-260 text24 CODE >37:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-1FE text23 CODE >115:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-1FF text23 CODE >118:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-209 text23 CODE >121:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-20A text23 CODE >124:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-20B text23 CODE >127:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-20D text23 CODE >130:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-20D text23 CODE >132:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-211 text23 CODE >135:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-215 text23 CODE >136:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
-27A text22 CODE >16:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-27A text22 CODE >19:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-282 text22 CODE >22:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-294 text22 CODE >23:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-295 text22 CODE >24:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-296 text21 CODE >17:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-296 text21 CODE >20:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-29E text21 CODE >23:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-2B0 text21 CODE >24:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-2B1 text21 CODE >25:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-186 text20 CODE >132:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-187 text20 CODE >134:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-187 text20 CODE >136:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-18C text20 CODE >138:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-18F text20 CODE >139:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12E text19 CODE >146:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-12F text19 CODE >148:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-133 text19 CODE >149:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-32F text18 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-32F text18 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-339 text18 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-33D text18 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-33E text18 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-365 text18 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-36D text18 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-261 text17 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-261 text17 CODE >7:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-265 text17 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-266 text17 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-26A text17 CODE >8:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-273 text17 CODE >11:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-279 text17 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-646 text16 CODE >568:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-648 text16 CODE >570:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-656 text16 CODE >574:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-65A text16 CODE >575:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-660 text16 CODE >576:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-664 text16 CODE >580:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-670 text16 CODE >581:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-674 text16 CODE >582:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-68C text16 CODE >583:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-691 text16 CODE >584:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-695 text16 CODE >587:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-69A text16 CODE >589:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6A6 text16 CODE >590:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6AB text16 CODE >588:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6B9 text16 CODE >595:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6BC text16 CODE >596:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6BD text16 CODE >597:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D0 text16 CODE >598:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D5 text16 CODE >599:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D9 text16 CODE >596:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6E7 text16 CODE >603:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6ED text16 CODE >605:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6F9 text16 CODE >606:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6FE text16 CODE >604:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-70C text16 CODE >610:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-711 text16 CODE >611:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-59A text15 CODE >692:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-59C text15 CODE >702:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5AD text15 CODE >703:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5B5 text15 CODE >705:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5B9 text15 CODE >706:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5BD text15 CODE >1171:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5CE text15 CODE >1173:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5D6 text15 CODE >1174:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5E2 text15 CODE >1176:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-5EF text15 CODE >1372:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-600 text15 CODE >1373:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-608 text15 CODE >1374:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-613 text15 CODE >1375:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-618 text15 CODE >1379:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-620 text15 CODE >1380:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-623 text15 CODE >1384:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-63C text15 CODE >1385:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-645 text15 CODE >1387:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2D4 text14 CODE >1390:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2D6 text14 CODE >1395:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2DA text14 CODE >1396:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2DC text14 CODE >1397:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2DD text14 CODE >1398:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2EE text14 CODE >1397:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2F7 text14 CODE >1400:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-2FB text14 CODE >1404:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1AC text13 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-1AC text13 CODE >9:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-1B1 text13 CODE >10:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-1BD text13 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-16A text12 CODE >26:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-16A text12 CODE >29:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-172 text12 CODE >30:C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-173 text11 CODE >27:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-173 text11 CODE >30:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-17B text11 CODE >31:C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-1E8 text10 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-1E8 text10 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-1F3 text10 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-1FD text10 CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-50A text9 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-50A text9 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-50C text9 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-510 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-51B text9 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-51D text9 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-51D text9 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-521 text9 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-52C text9 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-530 text9 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-538 text9 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-540 text9 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-542 text9 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-543 text9 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-54A text9 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-54E text9 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-552 text9 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-559 text9 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-56B text9 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-573 text9 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-574 text9 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-57B text9 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-581 text9 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-586 text9 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-591 text9 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-599 text9 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-2FC text8 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-2FC text8 CODE >119:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-304 text8 CODE >121:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-308 text8 CODE >122:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-310 text8 CODE >123:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-317 text8 CODE >124:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-31E text8 CODE >125:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-326 text8 CODE >128:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-32E text8 CODE >129:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-3B7 text7 CODE >24:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-3B7 text7 CODE >26:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-41D text7 CODE >27:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-41E text6 CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-41E text6 CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-44B text6 CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-477 text6 CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-480 text6 CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-487 text6 CODE >78:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1BE text5 CODE >29:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1BF text5 CODE >31:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1C4 text5 CODE >33:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1C7 text5 CODE >37:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1C9 text5 CODE >40:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1CE text5 CODE >42:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1D0 text5 CODE >46:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-1D1 text5 CODE >48:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-134 text4 CODE >50:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-134 text4 CODE >52:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-139 text4 CODE >53:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-153 text3 CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-153 text3 CODE >57:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-159 text3 CODE >58:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-13A text2 CODE >60:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-13A text2 CODE >62:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-13F text2 CODE >63:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-488 text1 CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-488 text1 CODE >83:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-4B5 text1 CODE >86:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-4C6 text1 CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-4C9 text1 CODE >89:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-4CA text1 CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-4E6 text1 CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-4E9 text1 CODE >93:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-4EA text1 CODE >94:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-506 text1 CODE >96:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-509 text1 CODE >98:C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-712 maintext CODE >65:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-712 maintext CODE >67:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-715 maintext CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-720 maintext CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-724 maintext CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-726 maintext CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-72A maintext CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-72E maintext CODE >77:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-732 maintext CODE >78:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-736 maintext CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-744 maintext CODE >83:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-74C maintext CODE >84:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-75A maintext CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-768 maintext CODE >89:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-770 maintext CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-781 maintext CODE >95:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-785 maintext CODE >96:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-7AA maintext CODE >109:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-7B8 maintext CODE >110:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-7C6 maintext CODE >112:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-7D0 maintext CODE >113:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-140 clrtext CODE >6786:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-140 clrtext CODE >6787:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-141 clrtext CODE >6788:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-141 clrtext CODE >6789:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-142 clrtext CODE >6790:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-143 clrtext CODE >6791:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-144 clrtext CODE >6792:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-145 clrtext CODE >6793:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-146 inittext CODE >6760:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-146 inittext CODE >6761:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-147 inittext CODE >6762:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-147 inittext CODE >6763:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-148 inittext CODE >6764:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-149 inittext CODE >6765:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-14A inittext CODE >6766:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
-14B inittext CODE >6767:C:\Users\GABRIE~1\AppData\Local\Temp\sj48.s
+7E1 cinit CODE >7337:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E1 cinit CODE >7340:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E1 cinit CODE >7409:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E2 cinit CODE >7410:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E3 cinit CODE >7411:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E4 cinit CODE >7412:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E5 cinit CODE >7413:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E6 cinit CODE >7414:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E7 cinit CODE >7415:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E8 cinit CODE >7416:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7E9 cinit CODE >7417:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7EA cinit CODE >7418:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7ED cinit CODE >7435:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7EE cinit CODE >7436:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7EF cinit CODE >7437:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F0 cinit CODE >7438:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F1 cinit CODE >7439:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F2 cinit CODE >7440:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F5 cinit CODE >7444:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F6 cinit CODE >7445:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F7 cinit CODE >7446:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F8 cinit CODE >7447:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7F9 cinit CODE >7448:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7FA cinit CODE >7449:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7FD cinit CODE >7455:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7FD cinit CODE >7457:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+7FE cinit CODE >7458:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+242 text43 CODE >76:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+243 text43 CODE >79:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+24D text43 CODE >82:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+252 text43 CODE >85:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+256 text43 CODE >88:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+259 text43 CODE >91:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+25E text43 CODE >94:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+25F text43 CODE >97:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+260 text43 CODE >100:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+261 text43 CODE >101:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+206 text42 CODE >103:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+207 text42 CODE >105:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+20B text42 CODE >108:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+211 text42 CODE >111:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+21C text42 CODE >114:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+222 text42 CODE >115:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+2A6 text41 CODE >135:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+2A6 text41 CODE >137:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+2A7 text41 CODE >140:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+2A8 text41 CODE >143:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+2BB text41 CODE >140:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+2CB text41 CODE >146:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+223 text40 CODE >118:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+224 text40 CODE >120:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+228 text40 CODE >123:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+22D text40 CODE >126:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+238 text40 CODE >128:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+23C text40 CODE >131:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+241 text40 CODE >132:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+262 text39 CODE >46:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+262 text39 CODE >49:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+264 text39 CODE >51:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+266 text39 CODE >54:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+268 text39 CODE >57:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+26F text39 CODE >60:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+273 text39 CODE >63:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+277 text39 CODE >66:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+27B text39 CODE >68:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+27F text39 CODE >71:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+283 text39 CODE >73:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd.c
+B5 text38 CODE >67:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+B5 text38 CODE >72:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+B8 text38 CODE >75:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+B9 text38 CODE >78:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+BA text38 CODE >81:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+BB text38 CODE >84:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+BD text38 CODE >86:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+70 text37 CODE >174:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+70 text37 CODE >175:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+75 text37 CODE >176:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+76 text36 CODE >166:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+76 text36 CODE >167:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+7B text36 CODE >168:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+7C text35 CODE >170:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+7C text35 CODE >171:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+81 text35 CODE >172:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+284 text34 CODE >66:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+284 text34 CODE >71:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+287 text34 CODE >74:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+289 text34 CODE >77:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+28B text34 CODE >80:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+28D text34 CODE >83:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+28E text34 CODE >86:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+295 text34 CODE >87:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+29C text34 CODE >88:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+2A3 text34 CODE >90:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+2A5 text34 CODE >92:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+A0 text33 CODE >62:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+A0 text33 CODE >65:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+A3 text33 CODE >67:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+A4 text33 CODE >69:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+A6 text33 CODE >70:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+366 text32 CODE >55:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+366 text32 CODE >60:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+368 text32 CODE >61:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+369 text32 CODE >62:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+36A text32 CODE >63:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+36B text32 CODE >64:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+36C text32 CODE >69:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+36F text32 CODE >70:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+371 text32 CODE >71:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+373 text32 CODE >72:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+375 text32 CODE >73:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+376 text32 CODE >78:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+378 text32 CODE >79:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+37A text32 CODE >80:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+37C text32 CODE >81:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+37E text32 CODE >82:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+380 text32 CODE >87:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+382 text32 CODE >88:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+383 text32 CODE >89:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+384 text32 CODE >90:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+385 text32 CODE >91:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+386 text32 CODE >92:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+388 text32 CODE >97:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+38A text32 CODE >98:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+38B text32 CODE >99:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+38C text32 CODE >100:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+38D text32 CODE >101:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+38E text32 CODE >106:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+391 text32 CODE >107:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+393 text32 CODE >108:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+395 text32 CODE >109:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+397 text32 CODE >110:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+399 text32 CODE >115:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+39C text32 CODE >116:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+39E text32 CODE >117:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+3A0 text32 CODE >118:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+3A2 text32 CODE >119:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+3A4 text32 CODE >128:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+3A7 text32 CODE >129:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+3AA text32 CODE >130:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+3AC text32 CODE >131:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
+E4 text31 CODE >58:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+E4 text31 CODE >62:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+E7 text31 CODE >65:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+E8 text31 CODE >68:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+E9 text31 CODE >71:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+EE text31 CODE >72:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+D0 text30 CODE >62:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+D0 text30 CODE >67:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+D3 text30 CODE >70:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+D4 text30 CODE >73:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+D6 text30 CODE >76:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+D9 text30 CODE >77:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
+6C text29 CODE >72:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+6C text29 CODE >75:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+6F text29 CODE >76:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+126 text28 CODE >50:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+126 text28 CODE >53:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+129 text28 CODE >54:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+12C text28 CODE >55:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+12F text28 CODE >56:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+132 text28 CODE >57:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+135 text28 CODE >58:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+138 text28 CODE >59:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+13B text28 CODE >60:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
+16A text27 CODE >31:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd_screen.c
+16B text27 CODE >33:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd_screen.c
+172 text27 CODE >34:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd_screen.c
+17A text27 CODE >35:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd_screen.c
+182 text27 CODE >36:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\lcd_screen.c
+EF text26 CODE >100:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+F0 text26 CODE >102:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+F7 text26 CODE >103:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+FF text26 CODE >104:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+183 text25 CODE >33:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+184 text25 CODE >35:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+18B text25 CODE >36:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+193 text25 CODE >37:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+19B text25 CODE >38:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+19C text24 CODE >32:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+19D text24 CODE >34:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1A4 text24 CODE >35:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1AC text24 CODE >36:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1B4 text24 CODE >37:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+152 text23 CODE >115:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+153 text23 CODE >118:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+15D text23 CODE >121:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+15E text23 CODE >124:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+15F text23 CODE >127:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+161 text23 CODE >130:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+161 text23 CODE >132:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+165 text23 CODE >135:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+169 text23 CODE >136:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
+1CE text22 CODE >16:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1CE text22 CODE >19:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1D6 text22 CODE >22:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1E8 text22 CODE >23:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1E9 text22 CODE >24:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+1EA text21 CODE >17:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+1EA text21 CODE >20:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+1F2 text21 CODE >23:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+204 text21 CODE >24:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+205 text21 CODE >25:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+DA text20 CODE >132:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+DB text20 CODE >134:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+DB text20 CODE >136:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+E0 text20 CODE >138:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+E3 text20 CODE >139:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+82 text19 CODE >146:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+83 text19 CODE >148:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+87 text19 CODE >149:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+327 text18 CODE >8:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+327 text18 CODE >12:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+331 text18 CODE >13:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+335 text18 CODE >14:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+336 text18 CODE >15:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+35D text18 CODE >20:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+365 text18 CODE >24:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+1B5 text17 CODE >5:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1B5 text17 CODE >7:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1B9 text17 CODE >8:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1BA text17 CODE >9:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1BE text17 CODE >8:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1C7 text17 CODE >11:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1CD text17 CODE >12:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+63C text16 CODE >568:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+63E text16 CODE >570:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+64C text16 CODE >574:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+650 text16 CODE >575:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+656 text16 CODE >576:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+65A text16 CODE >580:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+666 text16 CODE >581:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+66A text16 CODE >582:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+682 text16 CODE >583:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+687 text16 CODE >584:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+68B text16 CODE >587:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+690 text16 CODE >589:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+69C text16 CODE >590:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6A1 text16 CODE >588:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6AF text16 CODE >595:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6B2 text16 CODE >596:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6B3 text16 CODE >597:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6C6 text16 CODE >598:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6CB text16 CODE >599:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6CF text16 CODE >596:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6DD text16 CODE >603:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6E3 text16 CODE >605:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6EF text16 CODE >606:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6F4 text16 CODE >604:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+702 text16 CODE >610:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+707 text16 CODE >611:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+590 text15 CODE >692:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+592 text15 CODE >702:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5A3 text15 CODE >703:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5AB text15 CODE >705:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5AF text15 CODE >706:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5B3 text15 CODE >1171:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5C4 text15 CODE >1173:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5CC text15 CODE >1174:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5D8 text15 CODE >1176:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5E5 text15 CODE >1372:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5F6 text15 CODE >1373:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+5FE text15 CODE >1374:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+609 text15 CODE >1375:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+60E text15 CODE >1379:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+616 text15 CODE >1380:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+619 text15 CODE >1384:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+632 text15 CODE >1385:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+63B text15 CODE >1387:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2CC text14 CODE >1390:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2CE text14 CODE >1395:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2D2 text14 CODE >1396:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2D4 text14 CODE >1397:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2D5 text14 CODE >1398:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2E6 text14 CODE >1397:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2EF text14 CODE >1400:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+2F3 text14 CODE >1404:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+100 text13 CODE >5:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+100 text13 CODE >9:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+105 text13 CODE >10:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+111 text13 CODE >13:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+BE text12 CODE >26:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+BE text12 CODE >29:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+C6 text12 CODE >30:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\temp_sensor.c
+C7 text11 CODE >27:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+C7 text11 CODE >30:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+CF text11 CODE >31:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\light_sensor.c
+13C text10 CODE >74:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+13C text10 CODE >77:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+147 text10 CODE >80:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+151 text10 CODE >81:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+500 text9 CODE >5:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+500 text9 CODE >13:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+502 text9 CODE >14:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+506 text9 CODE >15:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+511 text9 CODE >16:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+513 text9 CODE >17:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+513 text9 CODE >18:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+517 text9 CODE >19:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+522 text9 CODE >20:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+526 text9 CODE >22:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+52E text9 CODE >23:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+536 text9 CODE >24:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+538 text9 CODE >25:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+539 text9 CODE >26:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+540 text9 CODE >27:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+544 text9 CODE >25:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+548 text9 CODE >30:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+54F text9 CODE >31:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+561 text9 CODE >32:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+569 text9 CODE >33:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+56A text9 CODE >35:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+571 text9 CODE >36:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+577 text9 CODE >38:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+57C text9 CODE >39:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+587 text9 CODE >40:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+58F text9 CODE >41:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+2F4 text8 CODE >15:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+2F4 text8 CODE >119:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+2FC text8 CODE >121:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+300 text8 CODE >122:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+308 text8 CODE >123:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+30F text8 CODE >124:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+316 text8 CODE >125:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+31E text8 CODE >128:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+326 text8 CODE >129:D:\Programas\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+3AD text7 CODE >24:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+3AD text7 CODE >26:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+413 text7 CODE >27:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+414 text6 CODE >65:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+414 text6 CODE >68:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+441 text6 CODE >71:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+46D text6 CODE >74:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+476 text6 CODE >77:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+47D text6 CODE >78:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+112 text5 CODE >29:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+113 text5 CODE >31:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+118 text5 CODE >33:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+11B text5 CODE >37:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+11D text5 CODE >40:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+122 text5 CODE >42:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+124 text5 CODE >46:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+125 text5 CODE >48:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+88 text4 CODE >50:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+88 text4 CODE >52:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+8D text4 CODE >53:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+A7 text3 CODE >55:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+A7 text3 CODE >57:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+AD text3 CODE >58:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+8E text2 CODE >60:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+8E text2 CODE >62:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+93 text2 CODE >63:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+47E text1 CODE >80:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+47E text1 CODE >83:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4AB text1 CODE >86:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4BC text1 CODE >88:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4BF text1 CODE >89:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4C0 text1 CODE >90:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4DC text1 CODE >92:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4DF text1 CODE >93:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4E0 text1 CODE >94:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4FC text1 CODE >96:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+4FF text1 CODE >98:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\led_adapter.c
+708 maintext CODE >66:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+708 maintext CODE >68:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+70B maintext CODE >69:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+70E maintext CODE >71:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+719 maintext CODE >72:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+71D maintext CODE >73:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+71F maintext CODE >76:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+723 maintext CODE >77:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+727 maintext CODE >78:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+72B maintext CODE >79:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+72F maintext CODE >82:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+73D maintext CODE >84:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+745 maintext CODE >85:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+753 maintext CODE >88:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+761 maintext CODE >90:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+769 maintext CODE >91:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+77A maintext CODE >96:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+77E maintext CODE >97:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+7A3 maintext CODE >107:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+7AA maintext CODE >110:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+7B8 maintext CODE >111:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+7C6 maintext CODE >113:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+7D0 maintext CODE >114:D:\Mis documentos\master\sprint2\mplabx\sprint2.X\main.c
+94 clrtext CODE >7424:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+94 clrtext CODE >7425:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+95 clrtext CODE >7426:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+95 clrtext CODE >7427:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+96 clrtext CODE >7428:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+97 clrtext CODE >7429:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+98 clrtext CODE >7430:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+99 clrtext CODE >7431:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9A inittext CODE >7398:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9A inittext CODE >7399:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9B inittext CODE >7400:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9B inittext CODE >7401:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9C inittext CODE >7402:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9D inittext CODE >7403:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9E inittext CODE >7404:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
+9F inittext CODE >7405:C:\Users\leonardo\AppData\Local\Temp\sc8g.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -537,8 +585,9 @@ $dist/default/production\sprint2.X.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_LCDPutChar 40C 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
 __LdataBANK1 0 0 ABS 0 dataBANK1 -
-__Hspace_0 871 0 ABS 0 - -
+__Hspace_0 876 0 ABS 0 - -
 __Hspace_1 E8 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -546,13 +595,14 @@ __Hspace_4 10010 0 ABS 0 - -
 __size_of_initialize_lcd_screen 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
 stoa@F1133 DB 0 BANK1 1 dataBANK1 dist/default/production\sprint2.X.production.o
-_set_color 910 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
+_LCD_Initialize 4C4 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
+_set_color 8FC 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
 _PWM3CON 619 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PWM3DCH 618 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PWM3DCL 617 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 ?_map 2E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_WDT_Initialize 238 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
+__end_of_WDT_Initialize E0 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
 main@i 5F 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 ADC_GetConversion@channel 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
@@ -568,31 +618,32 @@ _WPUB 20D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUD 20F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUE 210 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-_main E24 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+_main E10 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
 _nout 64 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
-_open 52C 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
+_open 3D4 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
 _prec 68 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
-_read 2E6 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
-_stoa C8C 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
+_read 18E 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
+_stoa C78 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_ADC_GetConversion 42C 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
+__end_of_ADC_GetConversion 2D4 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
 map@x 2E 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-start 4 0 CODE 0 init C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-_EUSART_Write 30C 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
-_set_brightness 83C 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
-__end_of_PWM3_LoadDutyValue 3FC 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
+start 4 0 CODE 0 init C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+_EUSART_Write 1B4 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
+_set_brightness 828 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
+__end_of_PWM3_LoadDutyValue 2A4 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_open 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_read 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_stoa 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_EUSART_SetFramingErrorHandler 250 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
-__end_of_EUSART_SetOverrunErrorHandler 25C 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
+__Hstringtext10 0 0 ABS 0 stringtext10 -
+__end_of_EUSART_SetFramingErrorHandler F8 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_SetOverrunErrorHandler 104 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
 ?___lmul 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
-__end_of_EUSART_Initialize 5A8 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_Initialize 54C 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
 __size_of_turn_green 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 stoa@i 2A 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
@@ -601,21 +652,23 @@ stoa@p 31 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 stoa@s 7A 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 stoa@w 2C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 main@names_pointer 61 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_vfpfcnvrt C8C 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
+__end_of_vfpfcnvrt C78 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+__end_of_LCD_Initialize 508 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
 _temp_sensor CB 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
+__end_of_LCDPutChar 446 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
 PWM3_LoadDutyValue@dutyValue 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __size_of_ADC_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 ___aldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_PWM3_LoadDutyValue 3D0 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
+_PWM3_LoadDutyValue 278 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _RC1STAbits 19D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _EUSART_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -623,10 +676,10 @@ _EUSART_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X
 __size_of_EUSART_Write 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 ___aldiv@sign 29 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_vfpfcnvrt B34 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
-open@temp_sensor$F623@opening_value 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+__size_of_LCDWriteNibble 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_vfpfcnvrt B20 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
 main@sensor_names 55 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_set_brightness 910 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
+__end_of_set_brightness 8FC 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
 _ADCON0 9D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ADCON1 9E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ADCON2 9F 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -637,35 +690,40 @@ _ANSELB 18D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ANSELC 18E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ANSELD 18F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ANSELE 190 0 ABS 0 - dist/default/production\sprint2.X.production.o
-open@temp_sensor$F623@is_connected 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _BORCON 116 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of___lmul 65E 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
-__end_of_EUSART_Write 320 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
-__end_of_initialize_temp 4C2 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
+open@temp_sensor$F633@opening_value 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+__end_of___lmul 64E 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_Write 1C8 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
+__end_of_initialize_temp 36A 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
 set_brightness@brightness 50 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of_open@temp_sensor$F623 52C 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
+__end_of_open@temp_sensor$F633 3D4 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
 ?_printf 45 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_ADC_GetConversion 3FC 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
+_ADC_GetConversion 2A4 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
 __LnvBANK1 0 0 ABS 0 nvBANK1 -
 set_color@color 52 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of___aldiv B34 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
+__end_of___aldiv B20 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
 _INLVLA 38C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLB 38D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLC 38E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLD 38F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLE 390 0 ABS 0 - dist/default/production\sprint2.X.production.o
 ?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-___stacklo 2098 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
+___stackhi 23EF 0 ABS 0 - C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+___stacklo 2098 0 ABS 0 - C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+__end_of_LCDPutCmd 484 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
+__end_of_LCDPutStr 598 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
 open@is_connected 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_initialize_led 336 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
+_initialize_led 1DE 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
 set_brightness@mapped_value 52 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_EUSART_Initialize 564 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
+_EUSART_Initialize 508 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
+__size_of_LCDPutCmd 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of_LCDPutStr 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_open@temp_sensor$F623 4F4 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
+_open@temp_sensor$F633 39C 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
 __size_of_putch 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_PIN_MANAGER_Initialize 6DC 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
+_PIN_MANAGER_Initialize 6CC 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
+__Lstringtext10 0 0 ABS 0 stringtext10 -
 start_initialization FC2 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
 _ODCONA 28C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ODCONB 28D 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -673,12 +731,14 @@ _ODCONC 28E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ODCOND 28F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _ODCONE 290 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _CCPTMRSbits 29E 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_EUSART_SetErrorHandler 238 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
+_EUSART_SetErrorHandler E0 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_LCDPutCmd 446 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
+_LCDPutStr 54C 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
 ___aldiv@quotient 2A 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 EUSART_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_initialize_light 45E 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
-_initialize_temp 490 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
+_initialize_light 306 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
+_initialize_temp 338 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
 initialize_temp@sensor_var 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _RB0PPS E98 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RC1REG 199 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -686,20 +746,20 @@ _RC1STA 19D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RC6PPS EA6 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_EUSART_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_EUSART_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_SYSTEM_Initialize 3D0 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
+__end_of_SYSTEM_Initialize 278 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
 __size_of_turn_red 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_read@temp_sensor$F626 2E6 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
-clear_ram0 280 0 CODE 0 clrtext dist/default/production\sprint2.X.production.o
+__end_of_read@temp_sensor$F636 18E 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
+clear_ram0 128 0 CODE 0 clrtext dist/default/production\sprint2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 _TX1REG 19A 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TX1STA 19E 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_printf 37C 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
-__end_of_TMR4_Initialize 30C 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
+__end_of_printf 224 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
+__end_of_TMR4_Initialize 1B4 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\sprint2.X.production.o
 fputc@fp 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-__end_of_initialize_led 358 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
-__end_of_PWM3_Initialize 336 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+__end_of_initialize_led 200 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
+__end_of_PWM3_Initialize 1DE 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -711,8 +771,8 @@ __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
 __Hcinit 1000 0 CODE 0 cinit -
-__end_of_strlen 4F4 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
-_read@temp_sensor$F626 2D4 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
+__end_of_strlen 39C 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
+_read@temp_sensor$F636 17C 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -800,9 +860,11 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram 28C 0 CODE 0 inittext dist/default/production\sprint2.X.production.o
+__size_of_LCDPutChar 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+init_ram 134 0 CODE 0 inittext dist/default/production\sprint2.X.production.o
 main@temp_value 5D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Linittext 0 0 ABS 0 inittext -
+_PORTDbits F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 4 0 CODE 0 init -
@@ -839,38 +901,40 @@ __pstringtext5 10A6 0 STRCODE 0 stringtext5 dist/default/production\sprint2.X.pr
 __pstringtext6 10B8 0 STRCODE 0 stringtext6 dist/default/production\sprint2.X.production.o
 __pstringtext7 10CA 0 STRCODE 0 stringtext7 dist/default/production\sprint2.X.production.o
 __pstringtext8 10D6 0 STRCODE 0 stringtext8 dist/default/production\sprint2.X.production.o
-__pstringtext9 0 0 STRCODE 0 stringtext9 dist/default/production\sprint2.X.production.o
+__pstringtext9 10E2 0 STRCODE 0 stringtext9 dist/default/production\sprint2.X.production.o
 __pnvBANK1 E2 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
-___lmul 5F8 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
+__pstringtext10 0 0 STRCODE 0 stringtext10 dist/default/production\sprint2.X.production.o
+___lmul 5E8 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 set_color@temperature 50 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_turn_red 274 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
+_turn_red 11C 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PR4 416 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__S0 871 0 ABS 0 - -
+__S0 876 0 ABS 0 - -
 __S1 E8 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-_map 76E 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
-_TMR4_Initialize 2F8 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
+_map 75A 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
+_TMR4_Initialize 1A0 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
 turn_selectors@selector1 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 turn_selectors@selector2 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__end_of_turn_red 280 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
+__end_of_turn_red 128 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
 __size_of_PWM3_LoadDutyValue 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_PWM3_Initialize 320 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
-__end_of_initialize_light 490 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
+_PWM3_Initialize 1C8 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
+__end_of_initialize_light 338 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
 __size_of_initialize_temp 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_SYSTEM_Initialize 3A4 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
-__end_of_map 83C 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
+_SYSTEM_Initialize 24C 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
+__end_of_map 828 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
 __size_of_initialize_light 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_initialize_lcd_screen 45E 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
+__end_of_initialize_lcd_screen 306 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 4 0 CODE 0 intentry -
 _duty_cycle 6C 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\GABRIE~1\AppData\Local\Temp\sj48.o
-?_read@temp_sensor$F626 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\leonardo\AppData\Local\Temp\sc8g.o
+?_read@temp_sensor$F636 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 strlen@a 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 strlen@s 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+__size_of_LCD_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __pdataBANK1 DB 0 BANK1 1 dataBANK1 dist/default/production\sprint2.X.production.o
 __size_of___lmul 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
@@ -886,43 +950,50 @@ __Lstringtext7 0 0 ABS 0 stringtext7 -
 __Lstringtext8 0 0 ABS 0 stringtext8 -
 __Lstringtext9 0 0 ABS 0 stringtext9 -
 vfpfcnvrt@fmt 7C 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_ADC_Initialize 2C2 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
+_ADC_Initialize 16A 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
 ?_ADC_GetConversion 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 EUSART_SetFramingErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_initialize_lcd_screen 42C 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
+_initialize_lcd_screen 2D4 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
+LCDPutStr@i 7C 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 stoa@nuls 23 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__ptext10 3D0 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
-__ptext11 2E6 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
-__ptext12 2D4 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
-__ptext13 358 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
-__ptext14 5A8 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
-__ptext15 B34 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
-__ptext16 C8C 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
-__ptext17 4C2 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
-__ptext18 65E 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
-__ptext19 25C 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
-__ptext20 30C 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
-__ptext21 52C 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
-__ptext22 4F4 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
-__ptext23 3FC 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
-__ptext24 490 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
-__ptext25 45E 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
-__ptext26 336 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
-__ptext27 42C 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
-__ptext28 3A4 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
-__ptext29 230 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
-__ptext30 2F8 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
-__ptext31 320 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
-__ptext32 6DC 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
-__ptext33 298 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
-__ptext34 564 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
-__ptext35 250 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
-__ptext36 244 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
-__ptext37 238 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
-__ptext38 2C2 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
-__end_of_PIN_MANAGER_Initialize 76E 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
-___aldiv A14 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
+__ptext10 278 0 CODE 0 text10 dist/default/production\sprint2.X.production.o
+__ptext11 18E 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
+__ptext12 17C 0 CODE 0 text12 dist/default/production\sprint2.X.production.o
+__ptext13 200 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
+__ptext14 598 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
+__ptext15 B20 0 CODE 0 text15 dist/default/production\sprint2.X.production.o
+__ptext16 C78 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
+__ptext17 36A 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
+__ptext18 64E 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
+__ptext19 104 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
+__ptext20 1B4 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
+__ptext21 3D4 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
+__ptext22 39C 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
+__ptext23 2A4 0 CODE 0 text23 dist/default/production\sprint2.X.production.o
+__ptext24 338 0 CODE 0 text24 dist/default/production\sprint2.X.production.o
+__ptext25 306 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
+__ptext26 1DE 0 CODE 0 text26 dist/default/production\sprint2.X.production.o
+__ptext27 2D4 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
+__ptext28 24C 0 CODE 0 text28 dist/default/production\sprint2.X.production.o
+__ptext29 D8 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
+__ptext30 1A0 0 CODE 0 text30 dist/default/production\sprint2.X.production.o
+__ptext31 1C8 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
+__ptext32 6CC 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
+__ptext33 140 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
+__ptext34 508 0 CODE 0 text34 dist/default/production\sprint2.X.production.o
+__ptext35 F8 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
+__ptext36 EC 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
+__ptext37 E0 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
+__ptext38 16A 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
+__ptext39 4C4 0 CODE 0 text39 dist/default/production\sprint2.X.production.o
+__ptext40 446 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
+__ptext41 54C 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
+__ptext42 40C 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
+__ptext43 484 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
+__end_of_PIN_MANAGER_Initialize 75A 0 CODE 0 text32 dist/default/production\sprint2.X.production.o
+___aldiv A00 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
 __size_of_set_brightness 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_LCDWriteNibble 484 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -945,19 +1016,19 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext E24 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
+__pmaintext E10 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 ___lmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__end_of_EUSART_SetErrorHandler 244 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
+__end_of_EUSART_SetErrorHandler EC 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
 ?_read 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 ?_stoa 7A 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf 358 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
+_printf 200 0 CODE 0 text13 dist/default/production\sprint2.X.production.o
 __Hinittext 0 0 ABS 0 inittext -
 _LATBbits 10D 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_turn_green 2A6 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
-_strlen 4C2 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
+_turn_green 14E 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+_strlen 36A 0 CODE 0 text17 dist/default/production\sprint2.X.production.o
 map@in_max 34 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 map@in_min 30 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 _EUSART_FramingErrorHandler E6 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
@@ -975,24 +1046,25 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__size_of_open@temp_sensor$F623 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of_open@temp_sensor$F633 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_PWM3_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_ADC_Initialize 2D4 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
+__end_of_ADC_Initialize 17C 0 CODE 0 text38 dist/default/production\sprint2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits 11 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PIR2bits 12 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lend_init 4 0 CODE 0 end_init -
 _EUSART_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__end_of_turn_blue 274 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
+__end_of_turn_blue 11C 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
 printf@ap 4C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_EUSART_SetFramingErrorHandler 244 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
-_EUSART_SetOverrunErrorHandler 250 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
+_EUSART_SetFramingErrorHandler EC 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
+_EUSART_SetOverrunErrorHandler F8 0 CODE 0 text35 dist/default/production\sprint2.X.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
 __size_of_turn_blue 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
 map@out_max 3C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 map@out_min 38 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+__end_of_LCDWriteNibble 4C4 0 CODE 0 text43 dist/default/production\sprint2.X.production.o
 __size_of_printf 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 fputc@c 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _TX1STAbits 19E 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1000,6 +1072,7 @@ __Lstrings 0 0 ABS 0 strings -
 ?___aldiv 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 vfprintf@fmt 3D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
+LCDPutCmd@ch 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 __size_of_strlen 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1007,22 +1080,22 @@ initialize_light@sensor_var 70 0 COMMON 1 cstackCOMMON dist/default/production\s
 vfpfcnvrt@ap 7D 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 vfpfcnvrt@cp 3A 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 vfpfcnvrt@fp 3C 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__ptext1 910 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
-__ptext2 274 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
-__ptext3 2A6 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
-__ptext4 268 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
-__ptext5 37C 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
-__ptext6 83C 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
-__ptext7 76E 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
-__ptext8 5F8 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
-__ptext9 A14 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
-_turn_blue 268 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
+__ptext1 8FC 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
+__ptext2 11C 0 CODE 0 text2 dist/default/production\sprint2.X.production.o
+__ptext3 14E 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+__ptext4 110 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
+__ptext5 224 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+__ptext6 828 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
+__ptext7 75A 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
+__ptext8 5E8 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
+__ptext9 A00 0 CODE 0 text9 dist/default/production\sprint2.X.production.o
+_turn_blue 110 0 CODE 0 text4 dist/default/production\sprint2.X.production.o
 vfprintf@ap 3F 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 vfprintf@fp 42 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 vfprintf@cfmt 43 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 ___aldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_turn_green 2B4 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
-_vfprintf 5A8 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
+__end_of_turn_green 15C 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
+_vfprintf 598 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 _T4CONbits 417 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1036,20 +1109,22 @@ __Hstringtext6 0 0 ABS 0 stringtext6 -
 __Hstringtext7 0 0 ABS 0 stringtext7 -
 __Hstringtext8 0 0 ABS 0 stringtext8 -
 __Hstringtext9 0 0 ABS 0 stringtext9 -
-__size_of_read@temp_sensor$F626 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of_read@temp_sensor$F636 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 initialize_led@led 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__end_of_vfprintf 5F8 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
+__end_of_vfprintf 5E8 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
+LCDPutStr@str 77 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _SLRCONA 30C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCONB 30D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCONC 30E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCOND 30F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SLRCONE 310 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_ADC_GetConversion 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+open@temp_sensor$F633@is_connected 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __size_of_initialize_led 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 EUSART_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK1 2B4 0 CODE 0 idataBANK1 dist/default/production\sprint2.X.production.o
+__pidataBANK1 15C 0 CODE 0 idataBANK1 dist/default/production\sprint2.X.production.o
 _SP1BRGH 19C 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SP1BRGL 19B 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -1057,18 +1132,20 @@ ___lmul@product 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.pro
 __size_of_EUSART_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _light_sensor D1 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
 ___lmul@multiplicand 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-_turn_selectors 37C 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+_turn_selectors 224 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _lcd_screen_var C5 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
 ___aldiv@counter 28 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+LCDPutChar@ch 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 putch@txData 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __end_of_main FC2 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
-__end_of_open 564 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
-__end_of_read 2F8 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
-__end_of_stoa E24 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
+__end_of_open 40C 0 CODE 0 text21 dist/default/production\sprint2.X.production.o
+__end_of_read 1A0 0 CODE 0 text11 dist/default/production\sprint2.X.production.o
+__end_of_stoa E10 0 CODE 0 text16 dist/default/production\sprint2.X.production.o
 printf@fmt 45 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-__end_of_fputc 6DC 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
+__end_of_fputc 6CC 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
+_PORTD F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RXPPS E24 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _T4CON 417 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1076,34 +1153,36 @@ _TRISB 8D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISD 8F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _TRISE 90 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_putch 268 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
+__end_of_putch 110 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _demo1 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _demo2 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _demo3 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _flags 6A 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
-_fputc 65E 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
-_putch 25C 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
+_fputc 64E 0 CODE 0 text18 dist/default/production\sprint2.X.production.o
+_putch 104 0 CODE 0 text19 dist/default/production\sprint2.X.production.o
 _width 66 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _eusartRxLastError 6E 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
-_WDT_Initialize 230 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
+_WDT_Initialize D8 0 CODE 0 text29 dist/default/production\sprint2.X.production.o
 __size_of_map 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
 __size_of_EUSART_SetErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_OSCILLATOR_Initialize 2A6 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
+__end_of_OSCILLATOR_Initialize 14E 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
 __initialization FC2 0 CODE 0 cinit dist/default/production\sprint2.X.production.o
 __pbssBANK0 64 0 BANK0 1 bssBANK0 dist/default/production\sprint2.X.production.o
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
-__end_of_set_color A14 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
+__end_of_set_color A00 0 CODE 0 text1 dist/default/production\sprint2.X.production.o
 __size_of_set_color 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 open@opening_value 76 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 initialize_lcd_screen@lcd_screen_var 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-__end_of_turn_selectors 3A4 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+__end_of_turn_selectors 24C 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
+LCDWriteNibble@ch 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+LCDWriteNibble@rs 70 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 main@sensor_counter 62 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 main@light_value 5B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_OSCILLATOR_Initialize 298 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
+_OSCILLATOR_Initialize 140 0 CODE 0 text33 dist/default/production\sprint2.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1130,53 +1209,58 @@ _OSCILLATOR_Initialize 298 0 CODE 0 text33 dist/default/production\sprint2.X.pro
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7E1 FC2 1F 2
-text1 0 488 910 82 2
-text2 0 13A 274 6 2
-text3 0 153 2A6 7 2
-text4 0 134 268 6 2
-text5 0 1BE 37C 14 2
-text6 0 41E 83C 6A 2
-text7 0 3B7 76E 67 2
-text8 0 2FC 5F8 33 2
-text9 0 50A A14 90 2
-text10 0 1E8 3D0 16 2
-text11 0 173 2E6 9 2
-text12 0 16A 2D4 9 2
-text13 0 1AC 358 12 2
-text14 0 2D4 5A8 28 2
-text15 0 59A B34 AC 2
-text16 0 646 C8C CC 2
-text17 0 261 4C2 19 2
-text18 0 32F 65E 3F 2
-text19 0 12E 25C 6 2
-text20 0 186 30C A 2
-text21 0 296 52C 1C 2
-text22 0 27A 4F4 1C 2
-text23 0 1FE 3FC 18 2
-text24 0 248 490 19 2
-text25 0 22F 45E 19 2
-text26 0 19B 336 11 2
-text27 0 216 42C 19 2
-text28 0 1D2 3A4 16 2
-text29 0 118 230 4 2
-text30 0 17C 2F8 A 2
-text31 0 190 320 B 2
-text32 0 36E 6DC 49 2
-text33 0 14C 298 7 2
-text34 0 2B2 564 22 2
-text35 0 128 250 6 2
-text36 0 122 244 6 2
-text37 0 11C 238 6 2
-text38 0 161 2C2 9 2
-maintext 0 712 E24 CF 2
+text1 0 47E 8FC 82 2
+text2 0 8E 11C 6 2
+text3 0 A7 14E 7 2
+text4 0 88 110 6 2
+text5 0 112 224 14 2
+text6 0 414 828 6A 2
+text7 0 3AD 75A 67 2
+text8 0 2F4 5E8 33 2
+text9 0 500 A00 90 2
+text10 0 13C 278 16 2
+text11 0 C7 18E 9 2
+text12 0 BE 17C 9 2
+text13 0 100 200 12 2
+text14 0 2CC 598 28 2
+text15 0 590 B20 AC 2
+text16 0 63C C78 CC 2
+text17 0 1B5 36A 19 2
+text18 0 327 64E 3F 2
+text19 0 82 104 6 2
+text20 0 DA 1B4 A 2
+text21 0 1EA 3D4 1C 2
+text22 0 1CE 39C 1C 2
+text23 0 152 2A4 18 2
+text24 0 19C 338 19 2
+text25 0 183 306 19 2
+text26 0 EF 1DE 11 2
+text27 0 16A 2D4 19 2
+text28 0 126 24C 16 2
+text29 0 6C D8 4 2
+text30 0 D0 1A0 A 2
+text31 0 E4 1C8 B 2
+text32 0 366 6CC 47 2
+text33 0 A0 140 7 2
+text34 0 284 508 22 2
+text35 0 7C F8 6 2
+text36 0 76 EC 6 2
+text37 0 70 E0 6 2
+text38 0 B5 16A 9 2
+text39 0 262 4C4 22 2
+text40 0 223 446 1F 2
+text41 0 2A6 54C 26 2
+text42 0 206 40C 1D 2
+text43 0 242 484 20 2
+maintext 0 708 E10 D9 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 4F 1
-inittext 0 146 28C 6 2
-stringtext1 0 800 1000 71 2
+inittext 0 9A 134 6 2
+stringtext1 0 800 1000 76 2
 reset_vec 0 0 0 4 2
 bssBANK1 1 A0 A0 48 1
-idataBANK1 0 15A 2B4 7 2
-clrtext 0 140 280 6 2
+idataBANK1 0 AE 15C 7 2
+clrtext 0 94 128 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

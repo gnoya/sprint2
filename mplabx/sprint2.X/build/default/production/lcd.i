@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "lcd.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,89 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 44 "main.c"
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 44 "main.c" 2
-
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 1 3
-
-
-
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 2 3
-
-
-
-
-
-
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\features.h" 1 3
-# 10 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 2 3
-# 25 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 3
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 122 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 411 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 25 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 2 3
-
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-# 65 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 3
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-
-
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 45 "main.c" 2
-
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "lcd.c" 2
+# 43 "lcd.c"
 # 1 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -102,10 +21,29 @@ extern double __fpnormalize(double);
 
 
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 1 3
+
+
+
+# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
+
+# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\features.h" 1 3
+# 10 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 3
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
 # 18 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int wchar_t;
+# 122 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned size_t;
+# 168 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 204 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __uint24 uint24_t;
 # 21 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdlib.h" 2 3
 
 
@@ -9593,8 +9531,12 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 43 "lcd.c" 2
 
+# 1 "./lcd.h" 1
+# 46 "./lcd.h"
+# 1 "./mcc_generated_files/mcc.h" 1
+# 50 "./mcc_generated_files/mcc.h"
 # 1 "./mcc_generated_files/device_config.h" 1
 # 50 "./mcc_generated_files/mcc.h" 2
 
@@ -9692,6 +9634,8 @@ typedef uint32_t uint_fast32_t;
 # 144 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 2 3
 # 52 "./mcc_generated_files/mcc.h" 2
 
+# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
+# 53 "./mcc_generated_files/mcc.h" 2
 
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\conio.h" 1 3
 
@@ -9966,58 +9910,7 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 98 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 46 "main.c" 2
-
-# 1 "./sensor_adapter.h" 1
-
-
-
-
-
-
-
-typedef struct sensor
-{
-  char *name;
-  _Bool (*open)(void);
-  int (*read)(void);
-} sensor;
-# 47 "main.c" 2
-
-# 1 "./light_sensor.h" 1
-# 29 "./light_sensor.h"
-void initialize_light(sensor *sensor);
-# 48 "main.c" 2
-
-# 1 "./temp_sensor.h" 1
-# 29 "./temp_sensor.h"
-void initialize_temp(sensor *sensor);
-# 49 "main.c" 2
-
-# 1 "./lcd_screen.h" 1
-# 29 "./lcd_screen.h"
-typedef struct lcd_screen
-{
-  void (*demo1)(void);
-  void (*demo2)(void);
-  void (*demo3)(void);
-} lcd_screen;
-
-void initialize_lcd_screen(lcd_screen *lcd_screen_var);
-# 50 "main.c" 2
-
-# 1 "./led_adapter.h" 1
-# 29 "./led_adapter.h"
-typedef struct led
-{
-  void (*set_brightness)(int brightness);
-  void (*set_color)(int temperature);
-} led;
-
-void initialize_led(led *led);
-# 51 "main.c" 2
-
-# 1 "./lcd.h" 1
+# 46 "./lcd.h" 2
 # 120 "./lcd.h"
 void LCD_Initialize(void);
 # 138 "./lcd.h"
@@ -10030,61 +9923,123 @@ void LCDPutStr(const char *);
 void LCDWriteNibble(uint8_t ch,uint8_t rs);
 # 214 "./lcd.h"
 void LCDGoto(uint8_t pos, uint8_t ln);
-# 52 "main.c" 2
+# 44 "lcd.c" 2
 
 
-
-
-
-sensor light_sensor;
-sensor temp_sensor;
-lcd_screen lcd_screen_var;
-led led_var;
-
-void read_sensors(void)
+void LCD_Initialize()
 {
+
+    PORTD = 0;
+
+    TRISD = 0x00;
+
+
+    PORTDbits.RD7 = 1;
+
+
+    _delay((unsigned long)((15)*(1000000/4000.0)));
+
+
+    LCDPutCmd(0x32);
+
+
+    LCDPutCmd(0x28);
+
+
+    LCDPutCmd(0x0C);
+
+    LCDPutCmd(0x01);
+
+
+    LCDPutCmd(0x06);
+
 }
 
-void main(void)
+
+void LCDWriteNibble(uint8_t ch,uint8_t rs)
 {
-  SYSTEM_Initialize();
-  LCD_Initialize();
 
-  char *sensor_names[3] = {};
-  char **names_pointer = sensor_names;
-  int sensor_counter = 0;
+    ch = (ch >> 4);
 
 
-  initialize_light(&light_sensor);
-  initialize_temp(&temp_sensor);
-  initialize_lcd_screen(&lcd_screen_var);
-  initialize_led(&led_var);
+    ch = (ch & 0x0F);
 
 
-  if (temp_sensor.open())
-  {
-    printf("Temperature sensor is available\r\n");
-    names_pointer[sensor_counter++] = temp_sensor.name;
-  }
-
-  if (light_sensor.open())
-  {
-    printf("Light sensor is available\r\n");
-    names_pointer[sensor_counter++] = light_sensor.name;
-  }
+    PORTD = (PORTD & 0xF0);
 
 
-  int i;
-  for (i = 0; i < sensor_counter; i++)
-    printf("%s \r\n", names_pointer[i]);
-# 107 "main.c"
-  LCDPutStr("hola");
-  while (1)
-  {
-    int light_value = light_sensor.read();
-    int temp_value = temp_sensor.read();
+    PORTD = (PORTD | ch);
 
-    led_var.set_brightness(light_value);
-    led_var.set_color(temp_value);
-  }
+
+    PORTDbits.RD5 = rs;
+
+
+    PORTDbits.RD6 = 0;
+
+
+    PORTDbits.RD4 = 1;
+
+
+    PORTDbits.RD4 = 0;
+}
+
+void LCDPutChar(uint8_t ch)
+{
+    _delay((unsigned long)((5)*(1000000/4000.0)));
+
+
+    LCDWriteNibble(ch,1);
+
+
+    ch = (ch << 4);
+
+
+    LCDWriteNibble(ch,1);
+}
+
+
+void LCDPutCmd(uint8_t ch)
+{
+    _delay((unsigned long)((5)*(1000000/4000.0)));
+
+
+    LCDWriteNibble(ch,0);
+
+
+    ch = (ch << 4);
+
+    _delay((unsigned long)((1)*(1000000/4000.0)));
+
+
+    LCDWriteNibble(ch,0);
+}
+
+
+void LCDPutStr(const char *str)
+{
+    uint8_t i=0;
+
+
+    while (str[i])
+    {
+
+        LCDPutChar(str[i++]);
+    }
+
+}
+
+void LCDGoto(uint8_t pos,uint8_t ln)
+{
+
+    if ((ln > (2 -1)) || (pos > (16 -1)))
+    {
+
+        return;
+    }
+
+
+    LCDPutCmd((ln == 1) ? (0xC0 | pos) : (0x80 | pos));
+
+
+    _delay((unsigned long)((5)*(1000000/4000.0)));
 }

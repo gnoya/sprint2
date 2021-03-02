@@ -20,6 +20,7 @@
       <itemPath>temp_sensor.h</itemPath>
       <itemPath>lcd_screen.h</itemPath>
       <itemPath>led_adapter.h</itemPath>
+      <itemPath>lcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -45,6 +46,7 @@
       <itemPath>temp_sensor.c</itemPath>
       <itemPath>lcd_screen.c</itemPath>
       <itemPath>led_adapter.c</itemPath>
+      <itemPath>lcd.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
