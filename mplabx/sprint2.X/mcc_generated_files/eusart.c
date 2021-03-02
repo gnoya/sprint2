@@ -90,7 +90,7 @@ void EUSART_Initialize(void)
     eusartRxLastError.status = 0;
 
 }
-
+/*
 bool EUSART_is_tx_ready(void)
 {
     return (bool)(PIR1bits.TXIF && TX1STAbits.TXEN);
@@ -128,7 +128,7 @@ uint8_t EUSART_Read(void)
 
     return RC1REG;
 }
-
+*/
 void EUSART_Write(uint8_t txData)
 {
     while(0 == PIR1bits.TXIF)
@@ -137,11 +137,11 @@ void EUSART_Write(uint8_t txData)
 
     TX1REG = txData;    // Write the data byte to the USART.
 }
-
+/*
 char getch(void)
 {
     return EUSART_Read();
-}
+}*/
 
 void putch(char txData)
 {

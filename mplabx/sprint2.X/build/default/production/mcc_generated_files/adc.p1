@@ -15,8 +15,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2109
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2109: extern volatile unsigned char ADCON0 __attribute__((address(0x09D)));
 [v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
-"88 mcc_generated_files/adc.c
-[; ;mcc_generated_files/adc.c: 88: void ADC_SelectChannel(adc_channel_t channel)
+"115 mcc_generated_files/adc.c
+[; ;mcc_generated_files/adc.c: 115: adc_result_t ADC_GetConversion(adc_channel_t channel)
 [c E5569 0 1 28 29 30 31 .. ]
 [n E5569 . SENSOR_TEMP SENSOR_LIGHT channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
 "2115 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
@@ -999,76 +999,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/adc.c: 86: }
 [e :UE 781 ]
 }
-"88
-[; ;mcc_generated_files/adc.c: 88: void ADC_SelectChannel(adc_channel_t channel)
-[v _ADC_SelectChannel `(v ~T0 @X0 1 ef1`E5569 ]
-"89
-[; ;mcc_generated_files/adc.c: 89: {
-{
-[e :U _ADC_SelectChannel ]
-"88
-[; ;mcc_generated_files/adc.c: 88: void ADC_SelectChannel(adc_channel_t channel)
-[v _channel `E5569 ~T0 @X0 1 r1 ]
-"89
-[; ;mcc_generated_files/adc.c: 89: {
-[f ]
-"91
-[; ;mcc_generated_files/adc.c: 91:     ADCON0bits.CHS = channel;
-[e = . . _ADCON0bits 0 2 -> _channel `uc ]
-"93
-[; ;mcc_generated_files/adc.c: 93:     ADCON0bits.ADON = 1;
-[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-"94
-[; ;mcc_generated_files/adc.c: 94: }
-[e :UE 782 ]
-}
-"96
-[; ;mcc_generated_files/adc.c: 96: void ADC_StartConversion(void)
-[v _ADC_StartConversion `(v ~T0 @X0 1 ef ]
-"97
-[; ;mcc_generated_files/adc.c: 97: {
-{
-[e :U _ADC_StartConversion ]
-[f ]
-"99
-[; ;mcc_generated_files/adc.c: 99:     ADCON0bits.GO_nDONE = 1;
-[e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
-"100
-[; ;mcc_generated_files/adc.c: 100: }
-[e :UE 783 ]
-}
-"103
-[; ;mcc_generated_files/adc.c: 103: _Bool ADC_IsConversionDone(void)
-[v _ADC_IsConversionDone `(a ~T0 @X0 1 ef ]
-"104
-[; ;mcc_generated_files/adc.c: 104: {
-{
-[e :U _ADC_IsConversionDone ]
-[f ]
-"106
-[; ;mcc_generated_files/adc.c: 106:    return ((_Bool)(!ADCON0bits.GO_nDONE));
-[e ) -> -> ! != -> . . _ADCON0bits 0 1 `i -> 0 `i `i `a ]
-[e $UE 784  ]
-"107
-[; ;mcc_generated_files/adc.c: 107: }
-[e :UE 784 ]
-}
-"109
-[; ;mcc_generated_files/adc.c: 109: adc_result_t ADC_GetConversionResult(void)
-[v _ADC_GetConversionResult `(us ~T0 @X0 1 ef ]
-"110
-[; ;mcc_generated_files/adc.c: 110: {
-{
-[e :U _ADC_GetConversionResult ]
-[f ]
-"112
-[; ;mcc_generated_files/adc.c: 112:     return ((adc_result_t)((ADRESH << 8) + ADRESL));
-[e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
-[e $UE 785  ]
-"113
-[; ;mcc_generated_files/adc.c: 113: }
-[e :UE 785 ]
-}
 "115
 [; ;mcc_generated_files/adc.c: 115: adc_result_t ADC_GetConversion(adc_channel_t channel)
 [v _ADC_GetConversion `(us ~T0 @X0 1 ef1`E5569 ]
@@ -1096,39 +1026,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
 "130
 [; ;mcc_generated_files/adc.c: 130:     while (ADCON0bits.GO_nDONE)
-[e $U 787  ]
-[e :U 788 ]
+[e $U 783  ]
+[e :U 784 ]
 "131
 [; ;mcc_generated_files/adc.c: 131:     {
 {
 "132
 [; ;mcc_generated_files/adc.c: 132:     }
 }
-[e :U 787 ]
+[e :U 783 ]
 "130
 [; ;mcc_generated_files/adc.c: 130:     while (ADCON0bits.GO_nDONE)
-[e $ != -> . . _ADCON0bits 0 1 `i -> 0 `i 788  ]
-[e :U 789 ]
+[e $ != -> . . _ADCON0bits 0 1 `i -> 0 `i 784  ]
+[e :U 785 ]
 "135
 [; ;mcc_generated_files/adc.c: 135:     return ((adc_result_t)((ADRESH << 8) + ADRESL));
 [e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
-[e $UE 786  ]
+[e $UE 782  ]
 "136
 [; ;mcc_generated_files/adc.c: 136: }
-[e :UE 786 ]
-}
-"138
-[; ;mcc_generated_files/adc.c: 138: void ADC_TemperatureAcquisitionDelay(void)
-[v _ADC_TemperatureAcquisitionDelay `(v ~T0 @X0 1 ef ]
-"139
-[; ;mcc_generated_files/adc.c: 139: {
-{
-[e :U _ADC_TemperatureAcquisitionDelay ]
-[f ]
-"140
-[; ;mcc_generated_files/adc.c: 140:     _delay((unsigned long)((200)*(1000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 1000000 `l `d .4000000.0 `ul ]
-"141
-[; ;mcc_generated_files/adc.c: 141: }
-[e :UE 790 ]
+[e :UE 782 ]
 }

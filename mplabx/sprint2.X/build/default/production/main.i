@@ -10102,7 +10102,6 @@ sensor light_sensor;
 sensor temp_sensor;
 led_adapter led;
 menu_controller menu;
-extern _Bool show;
 
 void main(void)
 {
@@ -10152,11 +10151,14 @@ void main(void)
 
   while (1)
   {
+
     int light_value = light_sensor.read();
     int temp_value = temp_sensor.read();
 
+
     led.set_brightness(light_value);
     led.set_color(temp_value);
+
 
     menu.show_menu();
   }

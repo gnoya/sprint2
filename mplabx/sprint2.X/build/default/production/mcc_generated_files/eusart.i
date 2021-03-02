@@ -9838,45 +9838,7 @@ void EUSART_Initialize(void)
     eusartRxLastError.status = 0;
 
 }
-
-_Bool EUSART_is_tx_ready(void)
-{
-    return (_Bool)(PIR1bits.TXIF && TX1STAbits.TXEN);
-}
-
-_Bool EUSART_is_rx_ready(void)
-{
-    return (_Bool)(PIR1bits.RCIF);
-}
-
-_Bool EUSART_is_tx_done(void)
-{
-    return TX1STAbits.TRMT;
-}
-
-eusart_status_t EUSART_get_last_status(void){
-    return eusartRxLastError;
-}
-
-uint8_t EUSART_Read(void)
-{
-    while(!PIR1bits.RCIF)
-    {
-    }
-
-    eusartRxLastError.status = 0;
-
-    if(1 == RC1STAbits.OERR)
-    {
-
-
-        RC1STAbits.CREN = 0;
-        RC1STAbits.CREN = 1;
-    }
-
-    return RC1REG;
-}
-
+# 132 "mcc_generated_files/eusart.c"
 void EUSART_Write(uint8_t txData)
 {
     while(0 == PIR1bits.TXIF)
@@ -9886,10 +9848,10 @@ void EUSART_Write(uint8_t txData)
     TX1REG = txData;
 }
 
-char getch(void)
-{
-    return EUSART_Read();
-}
+
+
+
+
 
 void putch(char txData)
 {

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\sprint2.X.production.sym \
   --cmf=dist/default/production\sprint2.X.production.cmf -z -Q16LF1717 \
-  -oC:\Users\GABRIE~1\AppData\Local\Temp\s5ug.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\GABRIE~1\AppData\Local\Temp\sh04.3 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/sprint2.X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=020C7h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o \
+  C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o \
   dist/default/production\sprint2.X.production.o 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 16LF1717
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
+C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
                 end_init                             13       13        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -591,7 +591,7 @@ UNUSED ADDRESS RANGES
 ?_pad                                          cstackBANK0  00027
 ?_printf                                       cstackBANK0  00068
 ?_read                                         cstackCOMMON 00075
-?_read@temp_sensor$F908                        cstackCOMMON 00075
+?_read@temp_sensor$F823                        cstackCOMMON 00075
 ?_stoa                                         cstackBANK0  00020
 ?_strlen                                       cstackCOMMON 00071
 ?_vfpfcnvrt                                    cstackBANK0  0004E
@@ -670,7 +670,7 @@ _LATD                                          (abs)        0010F
 _LATE                                          (abs)        00110
 _LCDClear                                      text5        00A2D
 _LCDGoto                                       text8        00B1F
-_LCDGoto$1041                                  cstackCOMMON 00079
+_LCDGoto$956                                   cstackCOMMON 00079
 _LCDPutChar                                    text7        00A7F
 _LCDPutCmd                                     text57       00A9C
 _LCDPutStr                                     text6        00B46
@@ -698,7 +698,6 @@ _PWM3DCL                                       (abs)        00617
 _PWM3_Initialize                               text45       008EE
 _PWM3_LoadDutyValue                            text18       00981
 _RB0PPS                                        (abs)        00E98
-_RC1REG                                        (abs)        00199
 _RC1STA                                        (abs)        0019D
 _RC1STAbits                                    (abs)        0019D
 _RC6PPS                                        (abs)        00EA6
@@ -712,7 +711,6 @@ _SP1BRGH                                       (abs)        0019C
 _SP1BRGL                                       (abs)        0019B
 _SYSTEM_Initialize                             text42       0096B
 _T4CON                                         (abs)        00417
-_T4CONbits                                     (abs)        00417
 _TMR4                                          (abs)        00415
 _TMR4_Initialize                               text44       008DA
 _TRISA                                         (abs)        0008C
@@ -722,7 +720,6 @@ _TRISD                                         (abs)        0008F
 _TRISE                                         (abs)        00090
 _TX1REG                                        (abs)        0019A
 _TX1STA                                        (abs)        0019E
-_TX1STAbits                                    (abs)        0019E
 _WDTCON                                        (abs)        00097
 _WDT_Initialize                                text43       0086A
 _WPUA                                          (abs)        0020C
@@ -1068,12 +1065,12 @@ __end_of_initialize_temp                       text38       009FA
 __end_of_main                                  maintext     003C0
 __end_of_map                                   text15       00E6C
 __end_of_open                                  text35       00A7F
-__end_of_open@temp_sensor$F905                 text36       00A63
+__end_of_open@temp_sensor$F820                 text36       00A63
 __end_of_pad                                   text26       00D9E
 __end_of_printf                                text21       00957
 __end_of_putch                                 text30       00898
 __end_of_read                                  text19       008DA
-__end_of_read@temp_sensor$F908                 text20       008D1
+__end_of_read@temp_sensor$F823                 text20       008D1
 __end_of_set_brightness                        text14       007FA
 __end_of_set_color                             text9        00EEE
 __end_of_show_main_menu                        text4        007B9
@@ -1249,12 +1246,12 @@ __size_of_initialize_temp                      (abs)        00000
 __size_of_main                                 (abs)        00000
 __size_of_map                                  (abs)        00000
 __size_of_open                                 (abs)        00000
-__size_of_open@temp_sensor$F905                (abs)        00000
+__size_of_open@temp_sensor$F820                (abs)        00000
 __size_of_pad                                  (abs)        00000
 __size_of_printf                               (abs)        00000
 __size_of_putch                                (abs)        00000
 __size_of_read                                 (abs)        00000
-__size_of_read@temp_sensor$F908                (abs)        00000
+__size_of_read@temp_sensor$F823                (abs)        00000
 __size_of_set_brightness                       (abs)        00000
 __size_of_set_color                            (abs)        00000
 __size_of_show_main_menu                       (abs)        00000
@@ -1272,7 +1269,7 @@ __size_of_vfprintf                             (abs)        00000
 _abs                                           text32       00A13
 _dbuf                                          bssBANK2     00120
 _dtoa                                          text25       00039
-_dtoa$1498                                     cstackBANK0  0003B
+_dtoa$1413                                     cstackBANK0  0003B
 _duty_cycle                                    bssBANK1     000AB
 _eusartRxLastError                             bssBANK1     000B3
 _flags                                         bssBANK1     000A9
@@ -1294,13 +1291,13 @@ _menu_current                                  bssBANK1     000AF
 _menu_index                                    bssBANK1     000AD
 _nout                                          bssBANK1     000A3
 _open                                          text35       00A63
-_open@temp_sensor$F905                         text36       00A47
+_open@temp_sensor$F820                         text36       00A47
 _pad                                           text26       00D42
 _prec                                          bssBANK1     000A7
 _printf                                        text21       00945
 _putch                                         text30       00892
 _read                                          text19       008D1
-_read@temp_sensor$F908                         text20       008C8
+_read@temp_sensor$F823                         text20       008C8
 _set_brightness                                text14       007B9
 _set_color                                     text9        00E6C
 _show                                          dataCOMMON   0007C
@@ -1361,8 +1358,8 @@ map@out_min                                    cstackBANK0  0003C
 map@x                                          cstackBANK0  00032
 open@is_connected                              cstackCOMMON 00079
 open@opening_value                             cstackCOMMON 00077
-open@temp_sensor$F905@is_connected             cstackCOMMON 00079
-open@temp_sensor$F905@opening_value            cstackCOMMON 00077
+open@temp_sensor$F820@is_connected             cstackCOMMON 00079
+open@temp_sensor$F820@opening_value            cstackCOMMON 00077
 pad@buf                                        cstackBANK0  00027
 pad@fp                                         cstackBANK0  0002F
 pad@i                                          cstackBANK0  0002B
@@ -1407,7 +1404,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 69 in file "main.c"
+		line 68 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1446,10 +1443,10 @@ Total ram usage:       16 bytes
 		_initialize_menu
 		_initialize_temp
 		_open
-		_open@temp_sensor$F905
+		_open@temp_sensor$F820
 		_printf
 		_read
-		_read@temp_sensor$F908
+		_read@temp_sensor$F823
 		_set_brightness
 		_set_color
 		_show_menu
@@ -2078,7 +2075,7 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _read@temp_sensor$F908 *****************
+ *************** function _read@temp_sensor$F823 *****************
  Defined at:
 		line 26 in file "temp_sensor.c"
  Parameters:    Size  Location     Type
@@ -2647,7 +2644,7 @@ Total ram usage:        5 bytes
  This function uses a non-reentrant model
 
 
- *************** function _open@temp_sensor$F905 *****************
+ *************** function _open@temp_sensor$F820 *****************
  Defined at:
 		line 16 in file "temp_sensor.c"
  Parameters:    Size  Location     Type
@@ -2707,8 +2704,8 @@ Total ram usage:        4 bytes
  This function is called by:
 		_open
 		_read
-		_open@temp_sensor$F905
-		_read@temp_sensor$F908
+		_open@temp_sensor$F820
+		_read@temp_sensor$F823
  This function uses a non-reentrant model
 
 
@@ -3875,9 +3872,9 @@ main.c
 main.c estimated size: 265
 
 temp_sensor.c
+		_read@temp_sensor$F823		CODE           	08C8	0000	9
 		_initialize_temp		CODE           	09E1	0000	25
-		_open@temp_sensor$F905		CODE           	0A47	0000	28
-		_read@temp_sensor$F908		CODE           	08C8	0000	9
+		_open@temp_sensor$F820		CODE           	0A47	0000	28
 
 temp_sensor.c estimated size: 62
 

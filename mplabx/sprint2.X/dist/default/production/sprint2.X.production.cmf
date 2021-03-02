@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
+$C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 13 13 2 2
 config CONFIG 4 8007 8007 2 2
@@ -217,36 +217,36 @@ STRING 11E2-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\sprint2.X.production.o
-15 cinit CODE >9112:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-15 cinit CODE >9115:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-15 cinit CODE >9198:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-18 cinit CODE >9199:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-19 cinit CODE >9203:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-1A cinit CODE >9204:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-1B cinit CODE >9205:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-1C cinit CODE >9206:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-1D cinit CODE >9207:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-1E cinit CODE >9208:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-1F cinit CODE >9209:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-20 cinit CODE >9210:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-21 cinit CODE >9211:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-22 cinit CODE >9212:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-25 cinit CODE >9229:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-26 cinit CODE >9230:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-27 cinit CODE >9231:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-28 cinit CODE >9232:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-29 cinit CODE >9233:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-2A cinit CODE >9234:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-2D cinit CODE >9238:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-2E cinit CODE >9239:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-2F cinit CODE >9240:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-30 cinit CODE >9241:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-31 cinit CODE >9242:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-32 cinit CODE >9243:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-35 cinit CODE >9249:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-35 cinit CODE >9251:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-36 cinit CODE >9252:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-37 cinit CODE >9253:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
+15 cinit CODE >9106:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+15 cinit CODE >9109:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+15 cinit CODE >9192:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+18 cinit CODE >9193:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+19 cinit CODE >9197:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+1A cinit CODE >9198:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+1B cinit CODE >9199:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+1C cinit CODE >9200:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+1D cinit CODE >9201:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+1E cinit CODE >9202:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+1F cinit CODE >9203:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+20 cinit CODE >9204:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+21 cinit CODE >9205:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+22 cinit CODE >9206:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+25 cinit CODE >9223:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+26 cinit CODE >9224:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+27 cinit CODE >9225:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+28 cinit CODE >9226:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+29 cinit CODE >9227:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+2A cinit CODE >9228:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+2D cinit CODE >9232:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+2E cinit CODE >9233:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+2F cinit CODE >9234:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+30 cinit CODE >9235:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+31 cinit CODE >9236:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+32 cinit CODE >9237:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+35 cinit CODE >9243:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+35 cinit CODE >9245:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+36 cinit CODE >9246:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+37 cinit CODE >9247:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
 4 intentry CODE >52:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/interrupt_manager.c
 E intentry CODE >57:C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/interrupt_manager.c
@@ -887,52 +887,52 @@ B82 text1 CODE >204:C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 B83 text1 CODE >205:C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 B94 text1 CODE >207:C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 B95 text1 CODE >208:C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
-2B7 maintext CODE >69:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2B7 maintext CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2BA maintext CODE >72:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2BD maintext CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2C8 maintext CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2CC maintext CODE >76:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2CE maintext CODE >79:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2D2 maintext CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2D6 maintext CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2DA maintext CODE >82:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2DE maintext CODE >85:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2EC maintext CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-2F4 maintext CODE >88:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-300 maintext CODE >91:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-30E maintext CODE >93:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-316 maintext CODE >94:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-325 maintext CODE >99:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-329 maintext CODE >100:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-350 maintext CODE >103:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-351 maintext CODE >104:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-352 maintext CODE >107:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-35A maintext CODE >108:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-362 maintext CODE >109:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-36A maintext CODE >111:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-371 maintext CODE >112:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2B7 maintext CODE >68:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2B7 maintext CODE >70:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2BA maintext CODE >71:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2BD maintext CODE >73:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2C8 maintext CODE >74:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2CC maintext CODE >75:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2CE maintext CODE >78:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2D2 maintext CODE >79:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2D6 maintext CODE >80:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2DA maintext CODE >81:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2DE maintext CODE >84:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2EC maintext CODE >86:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+2F4 maintext CODE >87:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+300 maintext CODE >90:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+30E maintext CODE >92:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+316 maintext CODE >93:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+325 maintext CODE >98:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+329 maintext CODE >99:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+350 maintext CODE >102:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+351 maintext CODE >103:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+352 maintext CODE >106:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+35A maintext CODE >107:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+362 maintext CODE >108:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+36A maintext CODE >110:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+371 maintext CODE >111:C:\SE1\sprint2\mplabx\sprint2.X\main.c
 37A maintext CODE >117:C:\SE1\sprint2\mplabx\sprint2.X\main.c
 388 maintext CODE >118:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-396 maintext CODE >120:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-3A3 maintext CODE >121:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-3B4 maintext CODE >123:C:\SE1\sprint2\mplabx\sprint2.X\main.c
-8A4 clrtext CODE >9218:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-8A4 clrtext CODE >9219:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-8A5 clrtext CODE >9220:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-8A5 clrtext CODE >9221:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-8A6 clrtext CODE >9222:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-8A7 clrtext CODE >9223:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-8A8 clrtext CODE >9224:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-8A9 clrtext CODE >9225:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FA inittext CODE >9187:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FA inittext CODE >9188:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FB inittext CODE >9189:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FB inittext CODE >9190:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FC inittext CODE >9191:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FD inittext CODE >9192:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FE inittext CODE >9193:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
-7FF inittext CODE >9194:C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.s
+396 maintext CODE >121:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+3A3 maintext CODE >122:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+3B4 maintext CODE >125:C:\SE1\sprint2\mplabx\sprint2.X\main.c
+8A4 clrtext CODE >9212:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+8A4 clrtext CODE >9213:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+8A5 clrtext CODE >9214:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+8A5 clrtext CODE >9215:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+8A6 clrtext CODE >9216:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+8A7 clrtext CODE >9217:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+8A8 clrtext CODE >9218:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+8A9 clrtext CODE >9219:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FA inittext CODE >9181:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FA inittext CODE >9182:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FB inittext CODE >9183:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FB inittext CODE >9184:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FC inittext CODE >9185:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FD inittext CODE >9186:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FE inittext CODE >9187:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
+7FF inittext CODE >9188:C:\Users\GABRIE~1\AppData\Local\Temp\sh04.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -964,7 +964,6 @@ _PWM3DCL 617 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _index_add 19DE 0 CODE 0 text69 dist/default/production\sprint2.X.production.o
 _index_sub 11F2 0 CODE 0 text66 dist/default/production\sprint2.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_LCDGoto$1041 79 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __size_of_show_main_menu 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __end_of_PIN_MANAGER_IOC 1390 0 CODE 0 text60 dist/default/production\sprint2.X.production.o
 LCDGoto@ln 78 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
@@ -987,7 +986,7 @@ _WPUB 20D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUD 20F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _WPUE 210 0 ABS 0 - dist/default/production\sprint2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
+___sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
 _dbuf 120 0 BANK2 1 bssBANK2 dist/default/production\sprint2.X.production.o
 _dtoa 72 0 CODE 0 text25 dist/default/production\sprint2.X.production.o
 _main 56E 0 CODE 0 maintext dist/default/production\sprint2.X.production.o
@@ -1005,7 +1004,7 @@ map@x 32 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 pad@i 2B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 pad@p 28 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 pad@w 2D 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-start 26 0 CODE 0 init C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
+start 26 0 CODE 0 init C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
 ___aomod@counter 72 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _EUSART_Write 11C8 0 CODE 0 text31 dist/default/production\sprint2.X.production.o
 _set_brightness F72 0 CODE 0 text14 dist/default/production\sprint2.X.production.o
@@ -1039,7 +1038,6 @@ __Hstringtext27 0 0 ABS 0 stringtext27 -
 __Hstringtext28 0 0 ABS 0 stringtext28 -
 __Hstringtext29 0 0 ABS 0 stringtext29 -
 __Hstringtext30 0 0 ABS 0 stringtext30 -
-open@temp_sensor$F905@opening_value 77 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 pad@fp 2F 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __end_of_EUSART_SetFramingErrorHandler 10F4 0 CODE 0 text53 dist/default/production\sprint2.X.production.o
 __end_of_EUSART_SetOverrunErrorHandler 1100 0 CODE 0 text52 dist/default/production\sprint2.X.production.o
@@ -1047,6 +1045,7 @@ __end_of_EUSART_SetOverrunErrorHandler 1100 0 CODE 0 text52 dist/default/product
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _IOCAF7_InterruptHandler EA 0 BANK1 1 nvBANK1 dist/default/production\sprint2.X.production.o
 __size_of_LCDGoto 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+_LCDGoto$956 79 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 IOCAF6_SetInterruptHandler@InterruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _LCDClear 145A 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
 __LidataBANK2 0 0 ABS 0 idataBANK2 -
@@ -1066,12 +1065,12 @@ __HdataCOMMON 0 0 ABS 0 dataCOMMON -
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __end_of_LCDClear 148E 0 CODE 0 text5 dist/default/production\sprint2.X.production.o
 __size_of_IOCAF5_SetInterruptHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
 __end_of_LCD_Initialize 15FA 0 CODE 0 text56 dist/default/production\sprint2.X.production.o
 _temp_sensor C4 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
 __end_of_LCDPutChar 1538 0 CODE 0 text7 dist/default/production\sprint2.X.production.o
@@ -1118,7 +1117,7 @@ _IOCAF5_SetInterruptHandler 1100 0 CODE 0 text49 dist/default/production\sprint2
 set_brightness@brightness 54 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_IOCAF7_DefaultInterruptHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_open@temp_sensor$F905 14C6 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
+__end_of_open@temp_sensor$F820 14C6 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
 ?_printf 68 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 _ADC_GetConversion 132E 0 CODE 0 text37 dist/default/production\sprint2.X.production.o
 __LnvBANK1 0 0 ABS 0 nvBANK1 -
@@ -1133,8 +1132,8 @@ _INLVLC 38E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLD 38F 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _INLVLE 390 0 ABS 0 - dist/default/production\sprint2.X.production.o
 ?_strlen 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
-___stacklo 20C7 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
+___stackhi 23EF 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
+___stacklo 20C7 0 ABS 0 - C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
 __end_of_LCDGoto 168C 0 CODE 0 text8 dist/default/production\sprint2.X.production.o
 __end_of_LCDPutCmd 1576 0 CODE 0 text57 dist/default/production\sprint2.X.production.o
 __end_of_LCDPutStr 16DC 0 CODE 0 text6 dist/default/production\sprint2.X.production.o
@@ -1148,7 +1147,7 @@ __size_of_LCDPutStr 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 __size_of_fputc 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_fputs 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_open@temp_sensor$F905 148E 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
+_open@temp_sensor$F820 148E 0 CODE 0 text36 dist/default/production\sprint2.X.production.o
 __size_of_putch 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PIN_MANAGER_Initialize 1B3C 0 CODE 0 text46 dist/default/production\sprint2.X.production.o
 __Lstringtext10 0 0 ABS 0 stringtext10 -
@@ -1192,7 +1191,6 @@ _initialize_temp 13C2 0 CODE 0 text38 dist/default/production\sprint2.X.producti
 _IOCAF5_DefaultInterruptHandler 10D0 0 CODE 0 text68 dist/default/production\sprint2.X.production.o
 initialize_temp@sensor_var 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 _RB0PPS E98 0 ABS 0 - dist/default/production\sprint2.X.production.o
-_RC1REG 199 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RC1STA 19D 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _RC6PPS EA6 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_EUSART_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1200,7 +1198,7 @@ __size_of_PIN_MANAGER_IOC 0 0 ABS 0 - dist/default/production\sprint2.X.producti
 __size_of_EUSART_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __end_of_SYSTEM_Initialize 1302 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
 __size_of_turn_red 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
-__end_of_read@temp_sensor$F908 11A2 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
+__end_of_read@temp_sensor$F823 11A2 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
 clear_ram0 1148 0 CODE 0 clrtext dist/default/production\sprint2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 __pcstackBANK1 D4 0 BANK1 1 cstackBANK1 dist/default/production\sprint2.X.production.o
@@ -1212,9 +1210,10 @@ __end_of_TMR4_Initialize 11C8 0 CODE 0 text44 dist/default/production\sprint2.X.
 _WDTCON 97 0 ABS 0 - dist/default/production\sprint2.X.production.o
 fputc@fp 75 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 fputs@fp 7B 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
+___int_sp 0 0 STACK 2 stack C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
 __end_of_initialize_led 128A 0 CODE 0 text41 dist/default/production\sprint2.X.production.o
 __end_of_PWM3_Initialize 11F2 0 CODE 0 text45 dist/default/production\sprint2.X.production.o
+open@temp_sensor$F820@opening_value 77 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -1228,7 +1227,7 @@ __Hbank9 0 0 ABS 0 bank9 -
 initialize_menu@menu 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __Hcinit 72 0 CODE 0 cinit -
 __end_of_strlen 1426 0 CODE 0 text27 dist/default/production\sprint2.X.production.o
-_read@temp_sensor$F908 1190 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
+_read@temp_sensor$F823 1190 0 CODE 0 text20 dist/default/production\sprint2.X.production.o
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -1418,13 +1417,12 @@ __end_of_turn_red 1148 0 CODE 0 text10 dist/default/production\sprint2.X.product
 __size_of_PWM3_LoadDutyValue 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _PWM3_Initialize 11DC 0 CODE 0 text45 dist/default/production\sprint2.X.production.o
 __end_of_initialize_light 13C2 0 CODE 0 text40 dist/default/production\sprint2.X.production.o
-open@temp_sensor$F905@is_connected 79 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 ___aodiv@sign 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __size_of_initialize_menu 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_initialize_temp 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _SYSTEM_Initialize 12D6 0 CODE 0 text42 dist/default/production\sprint2.X.production.o
-_dtoa$1498 3B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
+_dtoa$1413 3B 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 _IOCAF5_ISR 120E 0 CODE 0 text67 dist/default/production\sprint2.X.production.o
 _IOCAF6_ISR 122C 0 CODE 0 text64 dist/default/production\sprint2.X.production.o
 _IOCAF7_ISR 124A 0 CODE 0 text61 dist/default/production\sprint2.X.production.o
@@ -1436,8 +1434,8 @@ _IOCAF6_SetInterruptHandler 110C 0 CODE 0 text48 dist/default/production\sprint2
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 8 0 CODE 0 intentry -
 _duty_cycle AB 0 BANK1 1 bssBANK1 dist/default/production\sprint2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\GABRIE~1\AppData\Local\Temp\s5ug.o
-?_read@temp_sensor$F908 75 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\GABRIE~1\AppData\Local\Temp\sh04.o
+?_read@temp_sensor$F823 75 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 strlen@a 74 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 strlen@s 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __size_of_LCD_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
@@ -1461,6 +1459,7 @@ _ADC_Initialize 117E 0 CODE 0 text55 dist/default/production\sprint2.X.productio
 _IOCAFbits 393 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _IOCANbits 392 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _IOCAPbits 391 0 ABS 0 - dist/default/production\sprint2.X.production.o
+open@temp_sensor$F820@is_connected 79 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 ?_ADC_GetConversion 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 EUSART_SetFramingErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 LCDPutStr@i 7A 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
@@ -1593,7 +1592,7 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__size_of_open@temp_sensor$F905 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of_open@temp_sensor$F820 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __size_of_PWM3_Initialize 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __end_of_ADC_Initialize 1190 0 CODE 0 text55 dist/default/production\sprint2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
@@ -1623,7 +1622,6 @@ fputc@c 73 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.
 fputs@c 23 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 fputs@i 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 fputs@s 26 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
-_TX1STAbits 19E 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lstrings 0 0 ABS 0 strings -
 ?___aldiv 24 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
 ?___aodiv 20 0 BANK0 1 cstackBANK0 dist/default/production\sprint2.X.production.o
@@ -1659,7 +1657,6 @@ __end_of_IOCAF6_DefaultInterruptHandler 10D4 0 CODE 0 text65 dist/default/produc
 _vfprintf 177E 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_T4CONbits 417 0 ABS 0 - dist/default/production\sprint2.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
@@ -1670,7 +1667,7 @@ __Hstringtext6 0 0 ABS 0 stringtext6 -
 __Hstringtext7 0 0 ABS 0 stringtext7 -
 __Hstringtext8 0 0 ABS 0 stringtext8 -
 __Hstringtext9 0 0 ABS 0 stringtext9 -
-__size_of_read@temp_sensor$F908 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
+__size_of_read@temp_sensor$F823 0 0 ABS 0 - dist/default/production\sprint2.X.production.o
 _show_mode_menu D04 0 CODE 0 text3 dist/default/production\sprint2.X.production.o
 initialize_led@led 71 0 COMMON 1 cstackCOMMON dist/default/production\sprint2.X.production.o
 __end_of_vfprintf 17E0 0 CODE 0 text22 dist/default/production\sprint2.X.production.o
