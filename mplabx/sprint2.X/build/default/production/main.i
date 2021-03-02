@@ -10023,6 +10023,12 @@ void initialize_temp(sensor *sensor);
 
 # 1 "./led_adapter.h" 1
 # 29 "./led_adapter.h"
+typedef struct led_adapter
+{
+  void (*set_brightness)(int brightness);
+  void (*set_color)(int temperature);
+} led_adapter;
+
 static void turn_blue();
 static void turn_green();
 static void turn_red();
@@ -10031,11 +10037,7 @@ static void set_brightness(int brightness);
 static void set_color(int temperature);
 static void turn_selectors(_Bool selector1, _Bool selector2);
 
-typedef struct led_adapter
-{
-  void (*set_brightness)(int brightness);
-  void (*set_color)(int temperature);
-} led_adapter;
+static long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 void initialize_led(led_adapter *led);
 # 50 "main.c" 2
@@ -10058,31 +10060,32 @@ void initialize_led(led_adapter *led);
 # 51 "main.c" 2
 
 # 1 "./menu_controller.h" 1
-# 28 "./menu_controller.h"
-_Bool show = 1;
-int menu_current = 0;
-int menu_index = 0;
-
-void index_add(void);
-void index_sub(void);
-void index_current(void);
-void show_index(void);
-void lcd_menu(void);
-void lcd_menu_main(void);
-void lcd_menu_mode(void);
-void lcd_menu_sensors(void);
-
+# 29 "./menu_controller.h"
 typedef struct menu_controller
 {
   void (*index_add)(void);
   void (*index_sub)(void);
   void (*index_current)(void);
   void (*show_index)(void);
-  void (*lcd_menu)(void);
-  void (*lcd_menu_main)(void);
-  void (*lcd_menu_mode)(void);
-  void (*lcd_menu_sensors)(void);
+  void (*show_menu)(void);
+  void (*show_main_menu)(void);
+  void (*show_mode_menu)(void);
+  void (*show_sensors_menu)(void);
 } menu_controller;
+
+_Bool show = 1;
+int menu_current = 0;
+int menu_index = 0;
+
+static void index_add(void);
+static void index_sub(void);
+static void index_current(void);
+static void show_index(void);
+
+static void show_menu(void);
+static void show_main_menu(void);
+static void show_mode_menu(void);
+static void show_sensors_menu(void);
 
 void initialize_menu(menu_controller *menu);
 # 52 "main.c" 2
@@ -10153,7 +10156,7 @@ void main(void)
     if (show)
     {
       menu.show_index();
-      menu.lcd_menu();
+      menu.show_menu();
       show = 0;
     }
   }

@@ -25,18 +25,6 @@
  * Comments:
  * Revision history: 
  */
-bool show = 1;
-int menu_current = 0;
-int menu_index = 0;
-
-void index_add(void);
-void index_sub(void);
-void index_current(void);
-void show_index(void);
-void lcd_menu(void);
-void lcd_menu_main(void);
-void lcd_menu_mode(void);
-void lcd_menu_sensors(void);
 
 typedef struct menu_controller
 {
@@ -44,10 +32,24 @@ typedef struct menu_controller
   void (*index_sub)(void);
   void (*index_current)(void);
   void (*show_index)(void);
-  void (*lcd_menu)(void);
-  void (*lcd_menu_main)(void);
-  void (*lcd_menu_mode)(void);
-  void (*lcd_menu_sensors)(void);
+  void (*show_menu)(void);
+  void (*show_main_menu)(void);
+  void (*show_mode_menu)(void);
+  void (*show_sensors_menu)(void);
 } menu_controller;
+
+bool show = 1;
+int menu_current = 0;
+int menu_index = 0;
+
+static void index_add(void);
+static void index_sub(void);
+static void index_current(void);
+static void show_index(void);
+
+static void show_menu(void);
+static void show_main_menu(void);
+static void show_mode_menu(void);
+static void show_sensors_menu(void);
 
 void initialize_menu(menu_controller *menu);

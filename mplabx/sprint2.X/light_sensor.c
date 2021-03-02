@@ -10,10 +10,12 @@
 #include "sensor_adapter.h"
 #include "mcc_generated_files/mcc.h"
 
+// ----------------------- Declaring static (private) functions ----------------------- //
 static bool open();
 static int read();
 static void close();
 
+// ----------------------- Static (private) functions ----------------------- //
 static bool open()
 {
   // Reading the sensor to check if the value is 0
@@ -30,6 +32,7 @@ static int read()
   return (int)ADC_GetConversion(SENSOR_LIGHT);
 }
 
+// ----------------------- Public functions ----------------------- //
 void initialize_light(sensor *sensor_var)
 {
   sensor_var->name = "Light";

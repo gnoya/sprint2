@@ -5,24 +5,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./sensor_adapter.h: 9: {
 [s S786 `*uc 1 `*F6157 1 `*F6159 1 ]
 [n S786 sensor name open read ]
-[v F6177 `(v ~T0 @X0 0 tf1`i ]
-[v F6180 `(v ~T0 @X0 0 tf1`i ]
-"38 ./led_adapter.h
-[; ;./led_adapter.h: 38: {
-[s S787 `*F6177 1 `*F6180 1 ]
+[v F6167 `(v ~T0 @X0 0 tf1`i ]
+[v F6170 `(v ~T0 @X0 0 tf1`i ]
+"30 ./led_adapter.h
+[; ;./led_adapter.h: 30: {
+[s S787 `*F6167 1 `*F6170 1 ]
 [n S787 led_adapter set_brightness set_color ]
-[v F6212 `(v ~T0 @X0 0 tf ]
-[v F6214 `(v ~T0 @X0 0 tf ]
-[v F6216 `(v ~T0 @X0 0 tf ]
-[v F6218 `(v ~T0 @X0 0 tf ]
-[v F6220 `(v ~T0 @X0 0 tf ]
-[v F6222 `(v ~T0 @X0 0 tf ]
-[v F6224 `(v ~T0 @X0 0 tf ]
-[v F6226 `(v ~T0 @X0 0 tf ]
-"42 ./menu_controller.h
-[; ;./menu_controller.h: 42: {
-[s S788 `*F6212 1 `*F6214 1 `*F6216 1 `*F6218 1 `*F6220 1 `*F6222 1 `*F6224 1 `*F6226 1 ]
-[n S788 menu_controller index_add index_sub index_current show_index lcd_menu lcd_menu_main lcd_menu_mode lcd_menu_sensors ]
+[v F6207 `(v ~T0 @X0 0 tf ]
+[v F6209 `(v ~T0 @X0 0 tf ]
+[v F6211 `(v ~T0 @X0 0 tf ]
+[v F6213 `(v ~T0 @X0 0 tf ]
+[v F6215 `(v ~T0 @X0 0 tf ]
+[v F6217 `(v ~T0 @X0 0 tf ]
+[v F6219 `(v ~T0 @X0 0 tf ]
+[v F6221 `(v ~T0 @X0 0 tf ]
+"30 ./menu_controller.h
+[; ;./menu_controller.h: 30: {
+[s S788 `*F6207 1 `*F6209 1 `*F6211 1 `*F6213 1 `*F6215 1 `*F6217 1 `*F6219 1 `*F6221 1 ]
+[n S788 menu_controller index_add index_sub index_current show_index show_menu show_main_menu show_mode_menu show_sensors_menu ]
 [p mainexit ]
 "74 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
@@ -36,11 +36,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29 ./temp_sensor.h
 [; ;./temp_sensor.h: 29: void initialize_temp(sensor *sensor);
 [v _initialize_temp `(v ~T0 @X0 0 ef1`*S786 ]
-"43 ./led_adapter.h
-[; ;./led_adapter.h: 43: void initialize_led(led_adapter *led);
+"45 ./led_adapter.h
+[; ;./led_adapter.h: 45: void initialize_led(led_adapter *led);
 [v _initialize_led `(v ~T0 @X0 0 ef1`*S787 ]
-"53 ./menu_controller.h
-[; ;./menu_controller.h: 53: void initialize_menu(menu_controller *menu);
+"55 ./menu_controller.h
+[; ;./menu_controller.h: 55: void initialize_menu(menu_controller *menu);
 [v _initialize_menu `(v ~T0 @X0 0 ef1`*S788 ]
 "111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
@@ -1008,20 +1008,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"28 ./menu_controller.h
-[; ;./menu_controller.h: 28: _Bool show = 1;
+"41 ./menu_controller.h
+[; ;./menu_controller.h: 41: _Bool show = 1;
 [v _show `a ~T0 @X0 1 e ]
 [i _show
 -> -> 1 `i `a
 ]
-"29
-[; ;./menu_controller.h: 29: int menu_current = 0;
+"42
+[; ;./menu_controller.h: 42: int menu_current = 0;
 [v _menu_current `i ~T0 @X0 1 e ]
 [i _menu_current
 -> 0 `i
 ]
-"30
-[; ;./menu_controller.h: 30: int menu_index = 0;
+"43
+[; ;./menu_controller.h: 43: int menu_index = 0;
 [v _menu_index `i ~T0 @X0 1 e ]
 [i _menu_index
 -> 0 `i
@@ -1053,15 +1053,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "66
 [; ;main.c: 66:   LCD_Initialize();
 [e ( _LCD_Initialize ..  ]
-[v F6236 `*uc ~T0 @X0 -> 3 `i s ]
-[i F6236
+[v F6242 `*uc ~T0 @X0 -> 3 `i s ]
+[i F6242
 :U ..
 ..
 ]
 "68
 [; ;main.c: 68:   char *sensor_names[3] = {};
 [v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
-[e = _sensor_names F6236 ]
+[e = _sensor_names F6242 ]
 "69
 [; ;main.c: 69:   char **names_pointer = sensor_names;
 [v _names_pointer `**uc ~T0 @X0 1 a ]
@@ -1182,7 +1182,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 118:       menu.show_index();
 [e ( *U . _menu 3 ..  ]
 "119
-[; ;main.c: 119:       menu.lcd_menu();
+[; ;main.c: 119:       menu.show_menu();
 [e ( *U . _menu 4 ..  ]
 "120
 [; ;main.c: 120:       show = 0;

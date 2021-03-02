@@ -116,7 +116,7 @@ void main(void)
     if (show)
     {
       menu.show_index();
-      menu.lcd_menu();
+      menu.show_menu();
       show = 0;
     }
   }

@@ -10,9 +10,6 @@
 #include "led_adapter.h"
 #include "mcc_generated_files/mcc.h"
 
-// ----------------- Defining static (private) functions ----------------- //
-static long map(int x, long in_min, long in_max, long out_min, long out_max);
-
 uint16_t duty_cycle = 0;
 
 // ----------------- Static (private) functions ----------------- //

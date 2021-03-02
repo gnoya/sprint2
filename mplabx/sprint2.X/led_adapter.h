@@ -26,6 +26,12 @@
  * Revision history: 
  */
 
+typedef struct led_adapter
+{
+  void (*set_brightness)(int brightness);
+  void (*set_color)(int temperature);
+} led_adapter;
+
 static void turn_blue();
 static void turn_green();
 static void turn_red();
@@ -34,10 +40,6 @@ static void set_brightness(int brightness);
 static void set_color(int temperature);
 static void turn_selectors(bool selector1, bool selector2);
 
-typedef struct led_adapter
-{
-  void (*set_brightness)(int brightness);
-  void (*set_color)(int temperature);
-} led_adapter;
+static long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 void initialize_led(led_adapter *led);

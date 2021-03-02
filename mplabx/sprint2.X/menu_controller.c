@@ -11,10 +11,10 @@
 #include "menu_controller.h"
 #include "lcd.h"
 
-void index_add(void)
+// ----------------------- Static (private) functions ----------------------- //
+static void index_add(void)
 {
-
-  menu_index = menu_index + 1;
+  menu_index++;
   if (menu_current == 0 && menu_index > 4)
     menu_index = 4; // Main Menu
   if (menu_current == 1 && menu_index > 4)
@@ -24,18 +24,16 @@ void index_add(void)
   show = 1;
 }
 
-void index_sub(void)
+static void index_sub(void)
 {
-
-  menu_index = menu_index - 1;
+  menu_index--;
   if (menu_index < 0)
     menu_index = 0;
   show = 1;
 }
 
-void index_current(void)
+static void index_current(void)
 {
-
   if (menu_current == 1 && menu_index == 4)
   {
     menu_current = 0;
@@ -57,25 +55,24 @@ void index_current(void)
   show = 1;
 }
 
-void show_index(void)
+static void show_index(void)
 {
-
   printf("menu_index: %d \n\r", menu_index);
   printf("menu_current: %d \n\r", menu_current);
 }
 
-void lcd_menu(void)
+static void show_menu(void)
 {
   switch (menu_current)
   {
   case 0:
-    lcd_menu_main();
+    show_main_menu();
     break;
   case 1:
-    lcd_menu_mode();
+    show_mode_menu();
     break;
   case 2:
-    lcd_menu_sensors();
+    show_sensors_menu();
     break;
   default:
     menu_current = 0;
@@ -83,7 +80,7 @@ void lcd_menu(void)
   }
 }
 
-void lcd_menu_main(void)
+static void show_main_menu(void)
 {
   switch (menu_index)
   {
@@ -124,7 +121,7 @@ void lcd_menu_main(void)
   }
 }
 
-void lcd_menu_mode(void)
+static void show_mode_menu(void)
 {
   switch (menu_index)
   {
@@ -167,7 +164,7 @@ void lcd_menu_mode(void)
   }
 }
 
-void lcd_menu_sensors(void)
+static void show_sensors_menu(void)
 {
   switch (menu_index)
   {
@@ -203,14 +200,15 @@ void lcd_menu_sensors(void)
   }
 }
 
+// ----------------------- Public functions ----------------------- //
 void initialize_menu(menu_controller *menu)
 {
   menu->index_add = index_add;
   menu->index_sub = index_sub;
   menu->index_current = index_current;
   menu->show_index = show_index;
-  menu->lcd_menu = lcd_menu;
-  menu->lcd_menu_main = lcd_menu_main;
-  menu->lcd_menu_mode = lcd_menu_mode;
-  menu->lcd_menu_sensors = lcd_menu_sensors;
+  menu->show_menu = show_menu;
+  menu->show_main_menu = show_main_menu;
+  menu->show_mode_menu = show_mode_menu;
+  menu->show_sensors_menu = show_sensors_menu;
 }

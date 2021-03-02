@@ -178,6 +178,12 @@ char *tempnam(const char *, const char *);
 
 # 1 "./led_adapter.h" 1
 # 29 "./led_adapter.h"
+typedef struct led_adapter
+{
+  void (*set_brightness)(int brightness);
+  void (*set_color)(int temperature);
+} led_adapter;
+
 static void turn_blue();
 static void turn_green();
 static void turn_red();
@@ -186,11 +192,7 @@ static void set_brightness(int brightness);
 static void set_color(int temperature);
 static void turn_selectors(_Bool selector1, _Bool selector2);
 
-typedef struct led_adapter
-{
-  void (*set_brightness)(int brightness);
-  void (*set_color)(int temperature);
-} led_adapter;
+static long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 void initialize_led(led_adapter *led);
 # 10 "led_adapter.c" 2
@@ -9963,9 +9965,6 @@ void OSCILLATOR_Initialize(void);
 void WDT_Initialize(void);
 # 11 "led_adapter.c" 2
 
-
-
-static long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 uint16_t duty_cycle = 0;
 

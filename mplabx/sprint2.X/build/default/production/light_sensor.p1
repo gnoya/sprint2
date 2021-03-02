@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"20 light_sensor.c
-[; ;light_sensor.c: 20:   int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
+"22 light_sensor.c
+[; ;light_sensor.c: 22:   int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
 [c E5945 0 1 28 29 30 31 .. ]
 [n E5945 . SENSOR_TEMP SENSOR_LIGHT channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
 "290 ./mcc_generated_files/adc.h
@@ -941,70 +941,70 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"17 light_sensor.c
-[; ;light_sensor.c: 17: static _Bool open()
+"19 light_sensor.c
+[; ;light_sensor.c: 19: static _Bool open()
 [v _open `(a ~T0 @X0 1 sf ]
-"18
-[; ;light_sensor.c: 18: {
+"20
+[; ;light_sensor.c: 20: {
 {
 [e :U _open ]
 [f ]
-"20
-[; ;light_sensor.c: 20:   int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
+"22
+[; ;light_sensor.c: 22:   int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
 [v _opening_value `i ~T0 @X0 1 a ]
 [e = _opening_value -> ( _ADC_GetConversion (1 . `E5945 1 `i ]
-"23
-[; ;light_sensor.c: 23:   _Bool is_connected = opening_value > 0;
+"25
+[; ;light_sensor.c: 25:   _Bool is_connected = opening_value > 0;
 [v _is_connected `a ~T0 @X0 1 a ]
 [e = _is_connected -> -> > _opening_value -> 0 `i `i `a ]
-"24
-[; ;light_sensor.c: 24:   return is_connected;
+"26
+[; ;light_sensor.c: 26:   return is_connected;
 [e ) _is_connected ]
 [e $UE 786  ]
-"25
-[; ;light_sensor.c: 25: }
+"27
+[; ;light_sensor.c: 27: }
 [e :UE 786 ]
 }
-"27
-[; ;light_sensor.c: 27: static int read()
+"29
+[; ;light_sensor.c: 29: static int read()
 [v _read `(i ~T0 @X0 1 sf ]
-"28
-[; ;light_sensor.c: 28: {
+"30
+[; ;light_sensor.c: 30: {
 {
 [e :U _read ]
 [f ]
-"30
-[; ;light_sensor.c: 30:   return (int)ADC_GetConversion(SENSOR_LIGHT);
+"32
+[; ;light_sensor.c: 32:   return (int)ADC_GetConversion(SENSOR_LIGHT);
 [e ) -> ( _ADC_GetConversion (1 . `E5945 1 `i ]
 [e $UE 787  ]
-"31
-[; ;light_sensor.c: 31: }
+"33
+[; ;light_sensor.c: 33: }
 [e :UE 787 ]
 }
-"33
-[; ;light_sensor.c: 33: void initialize_light(sensor *sensor_var)
+"36
+[; ;light_sensor.c: 36: void initialize_light(sensor *sensor_var)
 [v _initialize_light `(v ~T0 @X0 1 ef1`*S3 ]
-"34
-[; ;light_sensor.c: 34: {
+"37
+[; ;light_sensor.c: 37: {
 {
 [e :U _initialize_light ]
-"33
-[; ;light_sensor.c: 33: void initialize_light(sensor *sensor_var)
-[v _sensor_var `*S3 ~T0 @X0 1 r1 ]
-"34
-[; ;light_sensor.c: 34: {
-[f ]
-"35
-[; ;light_sensor.c: 35:   sensor_var->name = "Light";
-[e = . *U _sensor_var 0 :s 1C ]
 "36
-[; ;light_sensor.c: 36:   sensor_var->open = open;
-[e = . *U _sensor_var 1 -> &U _open `*F6004 ]
+[; ;light_sensor.c: 36: void initialize_light(sensor *sensor_var)
+[v _sensor_var `*S3 ~T0 @X0 1 r1 ]
 "37
-[; ;light_sensor.c: 37:   sensor_var->read = read;
-[e = . *U _sensor_var 2 -> &U _read `*F6008 ]
+[; ;light_sensor.c: 37: {
+[f ]
 "38
-[; ;light_sensor.c: 38: }
+[; ;light_sensor.c: 38:   sensor_var->name = "Light";
+[e = . *U _sensor_var 0 :s 1C ]
+"39
+[; ;light_sensor.c: 39:   sensor_var->open = open;
+[e = . *U _sensor_var 1 -> &U _open `*F6004 ]
+"40
+[; ;light_sensor.c: 40:   sensor_var->read = read;
+[e = . *U _sensor_var 2 -> &U _read `*F6008 ]
+"41
+[; ;light_sensor.c: 41: }
 [e :UE 788 ]
 }
 [a 1C 76 105 103 104 116 0 ]

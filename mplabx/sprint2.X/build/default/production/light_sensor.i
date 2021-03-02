@@ -9961,9 +9961,11 @@ void WDT_Initialize(void);
 # 11 "light_sensor.c" 2
 
 
+
 static _Bool open();
 static int read();
 static void close();
+
 
 static _Bool open()
 {
@@ -9980,6 +9982,7 @@ static int read()
 
   return (int)ADC_GetConversion(SENSOR_LIGHT);
 }
+
 
 void initialize_light(sensor *sensor_var)
 {
