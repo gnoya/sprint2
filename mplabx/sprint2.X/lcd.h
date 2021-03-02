@@ -38,47 +38,47 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 */
 
 #ifndef _LCD_XC_H
-#define	_LCD_XC_H
+#define _LCD_XC_H
 
 /**
   Section: Included Files
 */
 #include "mcc_generated_files/mcc.h"
 
-#ifdef	__cplusplus
-extern "C" {
+#ifdef __cplusplus
+extern "C"
+{
 #endif
 
 /**
  Section: Macro Definitions
 */
 // set up the timing for the LCD delays
-#define LCD_delay           5     // ~5mS
-#define LCD_Startup         15    // ~15mS
+#define LCD_delay 5    // ~5mS
+#define LCD_Startup 15 // ~15mS
 
 // Command set for Hitachi 44780U LCD display controller
-#define LCD_CLEAR           0x01
-#define LCD_HOME            0x02
-#define LCD_CURSOR_BACK     0x10
-#define LCD_CURSOR_FWD      0x14
-#define LCD_PAN_LEFT        0x18
-#define LCD_PAN_RIGHT       0x1C
-#define LCD_CURSOR_OFF      0x0C
-#define LCD_CURSOR_ON       0x0E
-#define LCD_CURSOR_BLINK    0x0F
-#define LCD_CURSOR_LINE2    0xC0
+#define LCD_CLEAR 0x01
+#define LCD_HOME 0x02
+#define LCD_CURSOR_BACK 0x10
+#define LCD_CURSOR_FWD 0x14
+#define LCD_PAN_LEFT 0x18
+#define LCD_PAN_RIGHT 0x1C
+#define LCD_CURSOR_OFF 0x0C
+#define LCD_CURSOR_ON 0x0E
+#define LCD_CURSOR_BLINK 0x0F
+#define LCD_CURSOR_LINE2 0xC0
 
 // display controller setup commands from page 46 of Hitachi datasheet
-#define FUNCTION_SET        0x28                         // 4 bit interface, 2 lines, 5x8 font
-#define ENTRY_MODE          0x06                         // increment mode
-#define DISPLAY_SETUP       0x0C                         // display on, cursor off, blink offd
+#define FUNCTION_SET 0x28  // 4 bit interface, 2 lines, 5x8 font
+#define ENTRY_MODE 0x06    // increment mode
+#define DISPLAY_SETUP 0x0C // display on, cursor off, blink offd
 
-#define LCDLine1()          LCDPutCmd(LCD_HOME)          // legacy support
-#define LCDLine2()          LCDPutCmd(LCD_CURSOR_LINE2)  // legacy support
-#define shift_cursor()      LCDPutCmd(LCD_CURSOR_FWD)    // legacy support
-#define cursor_on()         LCDPutCmd(LCD_CURSOR_ON)     // legacy support
-#define DisplayClr()        LCDPutCmd(LCD_CLEAR)         // Legacy support
-
+#define LCDLine1() LCDPutCmd(LCD_HOME)           // legacy support
+#define LCDLine2() LCDPutCmd(LCD_CURSOR_LINE2)   // legacy support
+#define shift_cursor() LCDPutCmd(LCD_CURSOR_FWD) // legacy support
+#define cursor_on() LCDPutCmd(LCD_CURSOR_ON)     // legacy support
+#define DisplayClr() LCDPutCmd(LCD_CLEAR)        // Legacy support
 
 //----------------------------------------------------------------------
 // Definitions specific to the PICDEM 2 Plus
@@ -86,21 +86,21 @@ extern "C" {
 //----------------------------------------------------------------------
 
 // single bit for selecting command register or data register
-#define instr        0
-#define data         1
+#define instr 0
+#define data 1
 
 // These #defines create the pin connections to the LCD in case they are changed on a future demo board
-#define LCD_PORT     PORTD
-#define LCD_PWR      PORTDbits.RD7                   // LCD power pin
-#define LCD_EN       PORTDbits.RD4                     // LCD enable
-#define LCD_RW       PORTDbits.RD6                      // LCD read/write line
-#define LCD_RS       PORTDbits.RD5                     // LCD register select line
+#define LCD_PORT PORTD
+#define LCD_PWR PORTDbits.RD7 // LCD power pin
+#define LCD_EN PORTDbits.RD4  // LCD enable
+#define LCD_RW PORTDbits.RD6  // LCD read/write line
+#define LCD_RS PORTDbits.RD5  // LCD register select line
 
-#define NB_LINES    2                                   // Number of display lines
-#define NB_COL      16                                  // Number of characters per line
+#define NB_LINES 2 // Number of display lines
+#define NB_COL 16  // Number of characters per line
 
-// Function prototypes
-/**
+  // Function prototypes
+  /**
   @Summary
     initialize the LCD module
 
@@ -117,9 +117,9 @@ extern "C" {
   @Returns
     None
 */
-void LCD_Initialize(void);
- 
- /**
+  void LCD_Initialize(void);
+
+  /**
   @Summary
     Writes character to LCD at current cursor position
 
@@ -135,9 +135,9 @@ void LCD_Initialize(void);
   @Returns
     None
 */
-void LCDPutChar(uint8_t ch);
+  void LCDPutChar(uint8_t ch);
 
-/**
+  /**
   @Summary
     send an ASCII command to the LCD in instruction mode
 
@@ -153,9 +153,9 @@ void LCDPutChar(uint8_t ch);
   @Returns
     None
 */
-void LCDPutCmd(uint8_t ch);
+  void LCDPutCmd(uint8_t ch);
 
-/**
+  /**
   @Summary
     display a string
 
@@ -171,9 +171,9 @@ void LCDPutCmd(uint8_t ch);
   @Returns
     None
 */
-void LCDPutStr(const char *);                         
+  void LCDPutStr(const char *);
 
-/**
+  /**
   @Summary
     Fuction to write a nibble
 
@@ -189,9 +189,9 @@ void LCDPutStr(const char *);
   @Returns
     None
 */
-void LCDWriteNibble(uint8_t ch,uint8_t rs);
+  void LCDWriteNibble(uint8_t ch, uint8_t rs);
 
-/**
+  /**
   @Summary
     Initialization routine that takes inputs from the EUSART GUI.
 
@@ -211,10 +211,28 @@ void LCDWriteNibble(uint8_t ch,uint8_t rs);
       0 <= pos <= 15
       0 <= ln <= 1
 */
-void LCDGoto(uint8_t pos, uint8_t ln);
-    
-#ifdef	__cplusplus
+  void LCDGoto(uint8_t pos, uint8_t ln);
+
+  /**
+  @Summary
+    Clears the screen
+
+  @Description
+    This function clears the screen
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+  void LCDClear(void);
+
+#ifdef __cplusplus
 }
 #endif
 
-#endif	/* _LCD_XC_H */
+#endif /* _LCD_XC_H */

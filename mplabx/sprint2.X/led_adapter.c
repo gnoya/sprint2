@@ -10,17 +10,12 @@
 #include "led_adapter.h"
 #include "mcc_generated_files/mcc.h"
 
-static void turn_blue();
-static void turn_green();
-static void turn_red();
-
-static void set_brightness(int brightness);
-static void set_color(int temperature);
-static void turn_selectors(bool selector1, bool selector2);
+// ----------------- Defining static (private) functions ----------------- //
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 uint16_t duty_cycle = 0;
 
+// ----------------- Static (private) functions ----------------- //
 static long map(int x, long in_min, long in_max, long out_min, long out_max)
 {
   return ((long)x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -64,11 +59,8 @@ static void turn_red()
 
 static void set_brightness(int brightness)
 {
-  // Keep the brightness in the linear zone
-  brightness = (int)map(brightness, 10, 1000, 372, 901);
-
   // Map between a duty cycle of 0 to 100
-  int mapped_value = (int)map(brightness, 372, 901, 0, 100);
+  int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
 
   // It is (100 - mapped_value) because there is a NOT gate in the Demux
   duty_cycle = (uint16_t)(100 - mapped_value);
@@ -97,7 +89,8 @@ static void set_color(int temperature)
   }
 }
 
-void initialize_led(led *led)
+// ----------------------- Public functions ----------------------- //
+void initialize_led(led_adapter *led)
 {
   led->set_brightness = set_brightness;
   led->set_color = set_color;

@@ -47,22 +47,18 @@
 #include "sensor_adapter.h"
 #include "light_sensor.h"
 #include "temp_sensor.h"
-#include "lcd_screen.h"
 #include "led_adapter.h"
 #include "lcd.h"
-#include "menu.h"
+#include "menu_controller.h"
 
 /*
                          Main application
  */
 sensor light_sensor;
 sensor temp_sensor;
-//lcd_screen lcd_screen_var;
-led led_var;
-
-void read_sensors(void)
-{
-}
+led_adapter led;
+menu_controller menu;
+extern bool show;
 
 void main(void)
 {
@@ -76,8 +72,8 @@ void main(void)
   // ------------------- Initializing structs ----------------- //
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
-  //initialize_lcd_screen(&lcd_screen_var);
-  initialize_led(&led_var);
+  initialize_led(&led);
+  initialize_menu(&menu);
 
   // --------------------- Opening sensors ------------------- //
   if (temp_sensor.open())
@@ -92,38 +88,36 @@ void main(void)
     names_pointer[sensor_counter++] = light_sensor.name;
   }
 
-  // --------------------- Printing available sensors ------------------- //
+  // ------------------- Printing available sensors ---------------- //
   int i;
   for (i = 0; i < sensor_counter; i++)
     printf("%s \r\n", names_pointer[i]);
 
-  // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-  // Use the following macros to:
+  // -------------------- Enabling Interrupts ---------------------- //
+  INTERRUPT_GlobalInterruptEnable();
+  INTERRUPT_PeripheralInterruptEnable();
 
-  // Enable the Global Interrupts
-   INTERRUPT_GlobalInterruptEnable();
+  // -------------- Setting button's Interrupt Handlers -------------- //
+  IOCAF5_SetInterruptHandler(menu.index_add);
+  IOCAF6_SetInterruptHandler(menu.index_sub);
+  IOCAF7_SetInterruptHandler(menu.index_current);
 
-  // Enable the Peripheral Interrupts
-   INTERRUPT_PeripheralInterruptEnable();
-  IOCAF5_SetInterruptHandler(index_add);
-  IOCAF6_SetInterruptHandler(index_sub);
-  IOCAF7_SetInterruptHandler(index_current);
-  
-  LCDPutStr("¡hola!");
-  __delay_ms(100);
-  show = 1;
+  LCDPutStr("Bienvenido!");
+  __delay_ms(200);
+
+  // ------------------------- Main loop ------------------------- //
   while (1)
   {
     int light_value = light_sensor.read();
     int temp_value = temp_sensor.read();
 
-    led_var.set_brightness(light_value);
-    led_var.set_color(temp_value);
-    if(show)
+    led.set_brightness(light_value);
+    led.set_color(temp_value);
+    if (show)
     {
-        show_index();
-        lcd_menu();
-        show = 0;
+      menu.show_index();
+      menu.lcd_menu();
+      show = 0;
     }
   }
 }

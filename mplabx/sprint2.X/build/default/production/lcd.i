@@ -9939,134 +9939,139 @@ void OSCILLATOR_Initialize(void);
 void WDT_Initialize(void);
 # 46 "./lcd.h" 2
 # 120 "./lcd.h"
-void LCD_Initialize(void);
+  void LCD_Initialize(void);
 # 138 "./lcd.h"
-void LCDPutChar(uint8_t ch);
+  void LCDPutChar(uint8_t ch);
 # 156 "./lcd.h"
-void LCDPutCmd(uint8_t ch);
+  void LCDPutCmd(uint8_t ch);
 # 174 "./lcd.h"
-void LCDPutStr(const char *);
+  void LCDPutStr(const char *);
 # 192 "./lcd.h"
-void LCDWriteNibble(uint8_t ch,uint8_t rs);
+  void LCDWriteNibble(uint8_t ch, uint8_t rs);
 # 214 "./lcd.h"
-void LCDGoto(uint8_t pos, uint8_t ln);
+  void LCDGoto(uint8_t pos, uint8_t ln);
+# 232 "./lcd.h"
+  void LCDClear(void);
 # 44 "lcd.c" 2
 
 
 void LCD_Initialize()
 {
 
-    PORTD = 0;
+  PORTD = 0;
 
-    TRISD = 0x00;
-
-
-    PORTDbits.RD7 = 1;
+  TRISD = 0x00;
 
 
-    _delay((unsigned long)((15)*(1000000/4000.0)));
+  PORTDbits.RD7 = 1;
 
 
-    LCDPutCmd(0x32);
+  _delay((unsigned long)((15)*(1000000/4000.0)));
 
 
-    LCDPutCmd(0x28);
+  LCDPutCmd(0x32);
 
 
-    LCDPutCmd(0x0C);
-
-    LCDPutCmd(0x01);
+  LCDPutCmd(0x28);
 
 
-    LCDPutCmd(0x06);
+  LCDPutCmd(0x0C);
 
+  LCDPutCmd(0x01);
+
+
+  LCDPutCmd(0x06);
 }
 
-
-void LCDWriteNibble(uint8_t ch,uint8_t rs)
+void LCDWriteNibble(uint8_t ch, uint8_t rs)
 {
 
-    ch = (ch >> 4);
+  ch = (ch >> 4);
 
 
-    ch = (ch & 0x0F);
+  ch = (ch & 0x0F);
 
 
-    PORTD = (PORTD & 0xF0);
+  PORTD = (PORTD & 0xF0);
 
 
-    PORTD = (PORTD | ch);
+  PORTD = (PORTD | ch);
 
 
-    PORTDbits.RD5 = rs;
+  PORTDbits.RD5 = rs;
 
 
-    PORTDbits.RD6 = 0;
+  PORTDbits.RD6 = 0;
 
 
-    PORTDbits.RD4 = 1;
+  PORTDbits.RD4 = 1;
 
 
-    PORTDbits.RD4 = 0;
+  PORTDbits.RD4 = 0;
 }
 
 void LCDPutChar(uint8_t ch)
 {
-    _delay((unsigned long)((5)*(1000000/4000.0)));
+  _delay((unsigned long)((5)*(1000000/4000.0)));
 
 
-    LCDWriteNibble(ch,1);
+  LCDWriteNibble(ch, 1);
 
 
-    ch = (ch << 4);
+  ch = (ch << 4);
 
 
-    LCDWriteNibble(ch,1);
+  LCDWriteNibble(ch, 1);
 }
-
 
 void LCDPutCmd(uint8_t ch)
 {
-    _delay((unsigned long)((5)*(1000000/4000.0)));
+  _delay((unsigned long)((5)*(1000000/4000.0)));
 
 
-    LCDWriteNibble(ch,0);
+  LCDWriteNibble(ch, 0);
 
 
-    ch = (ch << 4);
+  ch = (ch << 4);
 
-    _delay((unsigned long)((1)*(1000000/4000.0)));
+  _delay((unsigned long)((1)*(1000000/4000.0)));
 
 
-    LCDWriteNibble(ch,0);
+  LCDWriteNibble(ch, 0);
 }
-
 
 void LCDPutStr(const char *str)
 {
-    uint8_t i=0;
+  uint8_t i = 0;
 
 
-    while (str[i])
-    {
+  while (str[i])
+  {
 
-        LCDPutChar(str[i++]);
-    }
-
+    LCDPutChar(str[i++]);
+  }
 }
 
-void LCDGoto(uint8_t pos,uint8_t ln)
+void LCDGoto(uint8_t pos, uint8_t ln)
 {
 
-    if ((ln > (2 -1)) || (pos > (16 -1)))
-    {
+  if ((ln > (2 - 1)) || (pos > (16 - 1)))
+  {
 
-        return;
-    }
-
-
-    LCDPutCmd((ln == 1) ? (0xC0 | pos) : (0x80 | pos));
+    return;
+  }
 
 
-    _delay((unsigned long)((5)*(1000000/4000.0)));
+  LCDPutCmd((ln == 1) ? (0xC0 | pos) : (0x80 | pos));
+
+
+  _delay((unsigned long)((5)*(1000000/4000.0)));
+}
+
+void LCDClear(void)
+{
+  LCDGoto(0, 0);
+  LCDPutStr("                ");
+  LCDGoto(0, 1);
+  LCDPutStr("                ");
 }

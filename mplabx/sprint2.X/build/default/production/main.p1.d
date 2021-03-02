@@ -11,7 +11,6 @@ mcc_generated_files/eusart.h  \
 sensor_adapter.h  \
 light_sensor.h  \
 temp_sensor.h  \
-lcd_screen.h  \
 led_adapter.h  \
 lcd.h  \
-menu.h 
+menu_controller.h 

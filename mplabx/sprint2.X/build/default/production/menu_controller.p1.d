@@ -1,5 +1,5 @@
-build/default/production/menu.p1:  \
-menu.c  \
+build/default/production/menu_controller.p1:  \
+menu_controller.c  \
 mcc_generated_files/mcc.h  \
 mcc_generated_files/device_config.h  \
 mcc_generated_files/pin_manager.h  \
@@ -8,5 +8,5 @@ mcc_generated_files/pwm3.h  \
 mcc_generated_files/tmr4.h  \
 mcc_generated_files/adc.h  \
 mcc_generated_files/eusart.h  \
-lcd.h  \
-lcd_screen.h 
+menu_controller.h  \
+lcd.h 

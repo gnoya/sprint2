@@ -1,4 +1,4 @@
-# 1 "lcd_screen.c"
+# 1 "menu_controller.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "lcd_screen.c" 2
+# 1 "menu_controller.c" 2
 
 
 
@@ -171,13 +171,11 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 8 "lcd_screen.c" 2
+# 8 "menu_controller.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 9 "lcd_screen.c" 2
+# 9 "menu_controller.c" 2
 
-# 1 "./lcd.h" 1
-# 46 "./lcd.h"
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
@@ -9944,41 +9942,256 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 99 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 46 "./lcd.h" 2
-# 120 "./lcd.h"
-void LCD_Initialize(void);
-# 138 "./lcd.h"
-void LCDPutChar(uint8_t ch);
-# 156 "./lcd.h"
-void LCDPutCmd(uint8_t ch);
-# 174 "./lcd.h"
-void LCDPutStr(const char *);
-# 192 "./lcd.h"
-void LCDWriteNibble(uint8_t ch,uint8_t rs);
-# 214 "./lcd.h"
-void LCDGoto(uint8_t pos, uint8_t ln);
-# 10 "lcd_screen.c" 2
+# 10 "menu_controller.c" 2
 
-# 1 "./menu.h" 1
-# 28 "./menu.h"
-extern _Bool show;
-int menu_current;
-int menu_index;
+# 1 "./menu_controller.h" 1
+# 28 "./menu_controller.h"
+_Bool show = 1;
+int menu_current = 0;
+int menu_index = 0;
 
 void index_add(void);
 void index_sub(void);
 void index_current(void);
 void show_index(void);
-void lcd_menu (void);
+void lcd_menu(void);
 void lcd_menu_main(void);
 void lcd_menu_mode(void);
 void lcd_menu_sensors(void);
-# 11 "lcd_screen.c" 2
-# 21 "lcd_screen.c"
-void lcd_clear(void)
+
+typedef struct menu_controller
 {
-  LCDGoto(0,0);
-  LCDPutStr("                ");
-  LCDGoto(0,1);
-  LCDPutStr("                ");
+  void (*index_add)(void);
+  void (*index_sub)(void);
+  void (*index_current)(void);
+  void (*show_index)(void);
+  void (*lcd_menu)(void);
+  void (*lcd_menu_main)(void);
+  void (*lcd_menu_mode)(void);
+  void (*lcd_menu_sensors)(void);
+} menu_controller;
+
+void initialize_menu(menu_controller *menu);
+# 11 "menu_controller.c" 2
+
+# 1 "./lcd.h" 1
+# 120 "./lcd.h"
+  void LCD_Initialize(void);
+# 138 "./lcd.h"
+  void LCDPutChar(uint8_t ch);
+# 156 "./lcd.h"
+  void LCDPutCmd(uint8_t ch);
+# 174 "./lcd.h"
+  void LCDPutStr(const char *);
+# 192 "./lcd.h"
+  void LCDWriteNibble(uint8_t ch, uint8_t rs);
+# 214 "./lcd.h"
+  void LCDGoto(uint8_t pos, uint8_t ln);
+# 232 "./lcd.h"
+  void LCDClear(void);
+# 12 "menu_controller.c" 2
+
+
+void index_add(void)
+{
+
+  menu_index = menu_index + 1;
+  if (menu_current == 0 && menu_index > 4)
+    menu_index = 4;
+  if (menu_current == 1 && menu_index > 4)
+    menu_index = 4;
+  if (menu_current == 2 && menu_index > 3)
+    menu_index = 3;
+  show = 1;
+}
+
+void index_sub(void)
+{
+
+  menu_index = menu_index - 1;
+  if (menu_index < 0)
+    menu_index = 0;
+  show = 1;
+}
+
+void index_current(void)
+{
+
+  if (menu_current == 1 && menu_index == 4)
+  {
+    menu_current = 0;
+    menu_index = 0;
+    show = 1;
+    return;
+  }
+  if (menu_current == 2 && menu_index == 3)
+  {
+    menu_current = 0;
+    menu_index = 0;
+    show = 1;
+    return;
+  }
+  if (menu_current != 0 || (menu_current == 0 && menu_index > 1))
+    return;
+  menu_current = menu_index + 1;
+  menu_index = 0;
+  show = 1;
+}
+
+void show_index(void)
+{
+
+  printf("menu_index: %d \n\r", menu_index);
+  printf("menu_current: %d \n\r", menu_current);
+}
+
+void lcd_menu(void)
+{
+  switch (menu_current)
+  {
+  case 0:
+    lcd_menu_main();
+    break;
+  case 1:
+    lcd_menu_mode();
+    break;
+  case 2:
+    lcd_menu_sensors();
+    break;
+  default:
+    menu_current = 0;
+    break;
+  }
+}
+
+void lcd_menu_main(void)
+{
+  switch (menu_index)
+  {
+  case 0:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("  Modo de uso  >");
+    break;
+  case 1:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<   Sensores   >");
+    break;
+  case 2:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("< Temporizador >");
+    LCDGoto(0, 1);
+    LCDPutStr("     Apagado    ");
+    break;
+  case 3:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<   Hora de    >");
+    LCDGoto(0, 1);
+    LCDPutStr("    Encendido   ");
+    break;
+  case 4:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<   Hora de ");
+    LCDGoto(0, 1);
+    LCDPutStr("    Apagado   ");
+    break;
+  default:
+    menu_index = 1;
+    break;
+  }
+}
+
+void lcd_menu_mode(void)
+{
+  switch (menu_index)
+  {
+  case 0:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("Automatico por >");
+    LCDGoto(0, 1);
+    LCDPutStr("    Sensores   ");
+    break;
+  case 1:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<  Intensidad  >");
+    LCDGoto(0, 1);
+    LCDPutStr("     Baja     ");
+    break;
+  case 2:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<  Intensidad  >");
+    LCDGoto(0, 1);
+    LCDPutStr("     Media     ");
+    break;
+  case 3:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<  Intensidad  >");
+    LCDGoto(0, 1);
+    LCDPutStr("     Alta     ");
+    break;
+  case 4:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<   Regresar   ");
+    break;
+  default:
+    menu_index = 1;
+    break;
+  }
+}
+
+void lcd_menu_sensors(void)
+{
+  switch (menu_index)
+  {
+  case 0:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("  Sensor de    >");
+    LCDGoto(0, 1);
+    LCDPutStr("  Temperatura    ");
+    break;
+  case 1:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<  Sensor de   >");
+    LCDGoto(0, 1);
+    LCDPutStr("    Luminocidad  ");
+    break;
+  case 2:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<  Sensor de   >");
+    LCDGoto(0, 1);
+    LCDPutStr("     Sonido     ");
+    break;
+  case 3:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<   Regresar   ");
+    break;
+  default:
+    menu_index = 1;
+    break;
+  }
+}
+
+void initialize_menu(menu_controller *menu)
+{
+  menu->index_add = index_add;
+  menu->index_sub = index_sub;
+  menu->index_current = index_current;
+  menu->show_index = show_index;
+  menu->lcd_menu = lcd_menu;
+  menu->lcd_menu_main = lcd_menu_main;
+  menu->lcd_menu_mode = lcd_menu_mode;
+  menu->lcd_menu_sensors = lcd_menu_sensors;
 }

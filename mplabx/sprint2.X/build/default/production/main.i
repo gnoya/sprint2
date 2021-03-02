@@ -10021,62 +10021,71 @@ void initialize_light(sensor *sensor);
 void initialize_temp(sensor *sensor);
 # 49 "main.c" 2
 
-# 1 "./lcd_screen.h" 1
-# 29 "./lcd_screen.h"
-typedef struct lcd_screen
-{
-
-
-
-
-
-
-} lcd_screen;
-
-void lcd_clear(void);
-# 50 "main.c" 2
-
 # 1 "./led_adapter.h" 1
 # 29 "./led_adapter.h"
-typedef struct led
+static void turn_blue();
+static void turn_green();
+static void turn_red();
+
+static void set_brightness(int brightness);
+static void set_color(int temperature);
+static void turn_selectors(_Bool selector1, _Bool selector2);
+
+typedef struct led_adapter
 {
   void (*set_brightness)(int brightness);
   void (*set_color)(int temperature);
-} led;
+} led_adapter;
 
-void initialize_led(led *led);
-# 51 "main.c" 2
+void initialize_led(led_adapter *led);
+# 50 "main.c" 2
 
 # 1 "./lcd.h" 1
 # 120 "./lcd.h"
-void LCD_Initialize(void);
+  void LCD_Initialize(void);
 # 138 "./lcd.h"
-void LCDPutChar(uint8_t ch);
+  void LCDPutChar(uint8_t ch);
 # 156 "./lcd.h"
-void LCDPutCmd(uint8_t ch);
+  void LCDPutCmd(uint8_t ch);
 # 174 "./lcd.h"
-void LCDPutStr(const char *);
+  void LCDPutStr(const char *);
 # 192 "./lcd.h"
-void LCDWriteNibble(uint8_t ch,uint8_t rs);
+  void LCDWriteNibble(uint8_t ch, uint8_t rs);
 # 214 "./lcd.h"
-void LCDGoto(uint8_t pos, uint8_t ln);
-# 52 "main.c" 2
+  void LCDGoto(uint8_t pos, uint8_t ln);
+# 232 "./lcd.h"
+  void LCDClear(void);
+# 51 "main.c" 2
 
-# 1 "./menu.h" 1
-# 28 "./menu.h"
-extern _Bool show;
-int menu_current;
-int menu_index;
+# 1 "./menu_controller.h" 1
+# 28 "./menu_controller.h"
+_Bool show = 1;
+int menu_current = 0;
+int menu_index = 0;
 
 void index_add(void);
 void index_sub(void);
 void index_current(void);
 void show_index(void);
-void lcd_menu (void);
+void lcd_menu(void);
 void lcd_menu_main(void);
 void lcd_menu_mode(void);
 void lcd_menu_sensors(void);
-# 53 "main.c" 2
+
+typedef struct menu_controller
+{
+  void (*index_add)(void);
+  void (*index_sub)(void);
+  void (*index_current)(void);
+  void (*show_index)(void);
+  void (*lcd_menu)(void);
+  void (*lcd_menu_main)(void);
+  void (*lcd_menu_mode)(void);
+  void (*lcd_menu_sensors)(void);
+} menu_controller;
+
+void initialize_menu(menu_controller *menu);
+# 52 "main.c" 2
 
 
 
@@ -10084,12 +10093,9 @@ void lcd_menu_sensors(void);
 
 sensor light_sensor;
 sensor temp_sensor;
-
-led led_var;
-
-void read_sensors(void)
-{
-}
+led_adapter led;
+menu_controller menu;
+extern _Bool show;
 
 void main(void)
 {
@@ -10103,8 +10109,8 @@ void main(void)
 
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
-
-  initialize_led(&led_var);
+  initialize_led(&led);
+  initialize_menu(&menu);
 
 
   if (temp_sensor.open())
@@ -10125,32 +10131,30 @@ void main(void)
     printf("%s \r\n", names_pointer[i]);
 
 
+  (INTCONbits.GIE = 1);
+  (INTCONbits.PEIE = 1);
 
 
+  IOCAF5_SetInterruptHandler(menu.index_add);
+  IOCAF6_SetInterruptHandler(menu.index_sub);
+  IOCAF7_SetInterruptHandler(menu.index_current);
 
-   (INTCONbits.GIE = 1);
+  LCDPutStr("Bienvenido!");
+  _delay((unsigned long)((200)*(1000000/4000.0)));
 
 
-   (INTCONbits.PEIE = 1);
-  IOCAF5_SetInterruptHandler(index_add);
-  IOCAF6_SetInterruptHandler(index_sub);
-  IOCAF7_SetInterruptHandler(index_current);
-
-  LCDPutStr("¡hola!");
-  _delay((unsigned long)((100)*(1000000/4000.0)));
-  show = 1;
   while (1)
   {
     int light_value = light_sensor.read();
     int temp_value = temp_sensor.read();
 
-    led_var.set_brightness(light_value);
-    led_var.set_color(temp_value);
-    if(show)
+    led.set_brightness(light_value);
+    led.set_color(temp_value);
+    if (show)
     {
-        show_index();
-        lcd_menu();
-        show = 0;
+      menu.show_index();
+      menu.lcd_menu();
+      show = 0;
     }
   }
 }

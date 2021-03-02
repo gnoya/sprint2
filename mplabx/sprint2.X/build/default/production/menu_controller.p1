@@ -1,24 +1,36 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"23 menu.c
-[; ;menu.c: 23: void lcd_menu_main(void);
+"37 ./menu_controller.h
+[; ;./menu_controller.h: 37: void lcd_menu_main(void);
 [v _lcd_menu_main `(v ~T0 @X0 0 ef ]
-"24
-[; ;menu.c: 24: void lcd_menu_mode(void);
+"38
+[; ;./menu_controller.h: 38: void lcd_menu_mode(void);
 [v _lcd_menu_mode `(v ~T0 @X0 0 ef ]
-"25
-[; ;menu.c: 25: void lcd_menu_sensors(void);
+"39
+[; ;./menu_controller.h: 39: void lcd_menu_sensors(void);
 [v _lcd_menu_sensors `(v ~T0 @X0 0 ef ]
-"39 ./lcd_screen.h
-[; ;./lcd_screen.h: 39: void lcd_clear(void);
-[v _lcd_clear `(v ~T0 @X0 0 ef ]
-"214 ./lcd.h
-[; ;./lcd.h: 214: void LCDGoto(uint8_t pos, uint8_t ln);
+"232 ./lcd.h
+[; ;./lcd.h: 232:   void LCDClear(void);
+[v _LCDClear `(v ~T0 @X0 0 ef ]
+"214
+[; ;./lcd.h: 214:   void LCDGoto(uint8_t pos, uint8_t ln);
 [v _LCDGoto `(v ~T0 @X0 0 ef2`uc`uc ]
 "174
-[; ;./lcd.h: 174: void LCDPutStr(const char *);
+[; ;./lcd.h: 174:   void LCDPutStr(const char *);
 [v _LCDPutStr `(v ~T0 @X0 0 ef1`*Cuc ]
+[v F6000 `(v ~T0 @X0 0 tf ]
+[v F6002 `(v ~T0 @X0 0 tf ]
+[v F6004 `(v ~T0 @X0 0 tf ]
+[v F6006 `(v ~T0 @X0 0 tf ]
+[v F6008 `(v ~T0 @X0 0 tf ]
+[v F6010 `(v ~T0 @X0 0 tf ]
+[v F6012 `(v ~T0 @X0 0 tf ]
+[v F6014 `(v ~T0 @X0 0 tf ]
+"42 ./menu_controller.h
+[; ;./menu_controller.h: 42: {
+[s S785 `*F6000 1 `*F6002 1 `*F6004 1 `*F6006 1 `*F6008 1 `*F6010 1 `*F6012 1 `*F6014 1 ]
+[n S785 menu_controller index_add index_sub index_current show_index lcd_menu lcd_menu_main lcd_menu_mode lcd_menu_sensors ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -946,212 +958,230 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"15 menu.c
-[; ;menu.c: 15: int menu_current = 0;
+"28 ./menu_controller.h
+[; ;./menu_controller.h: 28: _Bool show = 1;
+[v _show `a ~T0 @X0 1 e ]
+[i _show
+-> -> 1 `i `a
+]
+"29
+[; ;./menu_controller.h: 29: int menu_current = 0;
 [v _menu_current `i ~T0 @X0 1 e ]
 [i _menu_current
 -> 0 `i
 ]
-"16
-[; ;menu.c: 16: int menu_index = 0;
+"30
+[; ;./menu_controller.h: 30: int menu_index = 0;
 [v _menu_index `i ~T0 @X0 1 e ]
 [i _menu_index
 -> 0 `i
 ]
-"17
-[; ;menu.c: 17: _Bool show = 0;
-[v _show `a ~T0 @X0 1 e ]
-[i _show
--> -> 0 `i `a
-]
-"27
-[; ;menu.c: 27: void index_add(void) {
+"14 menu_controller.c
+[; ;menu_controller.c: 14: void index_add(void)
 [v _index_add `(v ~T0 @X0 1 ef ]
+"15
+[; ;menu_controller.c: 15: {
 {
 [e :U _index_add ]
 [f ]
-"29
-[; ;menu.c: 29:     menu_index = menu_index + 1;
+"17
+[; ;menu_controller.c: 17:   menu_index = menu_index + 1;
 [e = _menu_index + _menu_index -> 1 `i ]
-"30
-[; ;menu.c: 30:     if(menu_current == 0 && menu_index >4) menu_index = 4;
+"18
+[; ;menu_controller.c: 18:   if (menu_current == 0 && menu_index > 4)
 [e $ ! && == _menu_current -> 0 `i > _menu_index -> 4 `i 787  ]
+"19
+[; ;menu_controller.c: 19:     menu_index = 4;
 [e = _menu_index -> 4 `i ]
 [e :U 787 ]
-"31
-[; ;menu.c: 31:     if(menu_current == 1 && menu_index >4) menu_index = 4;
+"20
+[; ;menu_controller.c: 20:   if (menu_current == 1 && menu_index > 4)
 [e $ ! && == _menu_current -> 1 `i > _menu_index -> 4 `i 788  ]
+"21
+[; ;menu_controller.c: 21:     menu_index = 4;
 [e = _menu_index -> 4 `i ]
 [e :U 788 ]
-"32
-[; ;menu.c: 32:     if(menu_current == 2 && menu_index >3) menu_index = 3;
+"22
+[; ;menu_controller.c: 22:   if (menu_current == 2 && menu_index > 3)
 [e $ ! && == _menu_current -> 2 `i > _menu_index -> 3 `i 789  ]
+"23
+[; ;menu_controller.c: 23:     menu_index = 3;
 [e = _menu_index -> 3 `i ]
 [e :U 789 ]
-"33
-[; ;menu.c: 33:     show = 1;
+"24
+[; ;menu_controller.c: 24:   show = 1;
 [e = _show -> -> 1 `i `a ]
-"35
-[; ;menu.c: 35: }
+"25
+[; ;menu_controller.c: 25: }
 [e :UE 786 ]
 }
-"37
-[; ;menu.c: 37: void index_sub(void) {
+"27
+[; ;menu_controller.c: 27: void index_sub(void)
 [v _index_sub `(v ~T0 @X0 1 ef ]
+"28
+[; ;menu_controller.c: 28: {
 {
 [e :U _index_sub ]
 [f ]
-"39
-[; ;menu.c: 39:     menu_index = menu_index - 1;
+"30
+[; ;menu_controller.c: 30:   menu_index = menu_index - 1;
 [e = _menu_index - _menu_index -> 1 `i ]
-"40
-[; ;menu.c: 40:     if (menu_index < 0) menu_index = 0;
+"31
+[; ;menu_controller.c: 31:   if (menu_index < 0)
 [e $ ! < _menu_index -> 0 `i 791  ]
+"32
+[; ;menu_controller.c: 32:     menu_index = 0;
 [e = _menu_index -> 0 `i ]
 [e :U 791 ]
-"41
-[; ;menu.c: 41:     show = 1;
+"33
+[; ;menu_controller.c: 33:   show = 1;
 [e = _show -> -> 1 `i `a ]
-"43
-[; ;menu.c: 43: }
+"34
+[; ;menu_controller.c: 34: }
 [e :UE 790 ]
 }
-"45
-[; ;menu.c: 45: void index_current(void) {
+"36
+[; ;menu_controller.c: 36: void index_current(void)
 [v _index_current `(v ~T0 @X0 1 ef ]
+"37
+[; ;menu_controller.c: 37: {
 {
 [e :U _index_current ]
 [f ]
-"47
-[; ;menu.c: 47:     if (menu_current == 1 && menu_index == 4 )
+"39
+[; ;menu_controller.c: 39:   if (menu_current == 1 && menu_index == 4)
 [e $ ! && == _menu_current -> 1 `i == _menu_index -> 4 `i 793  ]
-"48
-[; ;menu.c: 48:     {
+"40
+[; ;menu_controller.c: 40:   {
 {
-"49
-[; ;menu.c: 49:         menu_current = 0;
+"41
+[; ;menu_controller.c: 41:     menu_current = 0;
 [e = _menu_current -> 0 `i ]
-"50
-[; ;menu.c: 50:         menu_index = 0;
+"42
+[; ;menu_controller.c: 42:     menu_index = 0;
 [e = _menu_index -> 0 `i ]
-"51
-[; ;menu.c: 51:         show = 1;
+"43
+[; ;menu_controller.c: 43:     show = 1;
 [e = _show -> -> 1 `i `a ]
-"52
-[; ;menu.c: 52:         return;
+"44
+[; ;menu_controller.c: 44:     return;
 [e $UE 792  ]
-"53
-[; ;menu.c: 53:     }
+"45
+[; ;menu_controller.c: 45:   }
 }
 [e :U 793 ]
-"54
-[; ;menu.c: 54:     if (menu_current == 2 && menu_index == 3 )
+"46
+[; ;menu_controller.c: 46:   if (menu_current == 2 && menu_index == 3)
 [e $ ! && == _menu_current -> 2 `i == _menu_index -> 3 `i 794  ]
-"55
-[; ;menu.c: 55:     {
+"47
+[; ;menu_controller.c: 47:   {
 {
-"56
-[; ;menu.c: 56:         menu_current = 0;
+"48
+[; ;menu_controller.c: 48:     menu_current = 0;
 [e = _menu_current -> 0 `i ]
-"57
-[; ;menu.c: 57:         menu_index = 0;
+"49
+[; ;menu_controller.c: 49:     menu_index = 0;
 [e = _menu_index -> 0 `i ]
-"58
-[; ;menu.c: 58:         show = 1;
+"50
+[; ;menu_controller.c: 50:     show = 1;
 [e = _show -> -> 1 `i `a ]
-"59
-[; ;menu.c: 59:         return;
+"51
+[; ;menu_controller.c: 51:     return;
 [e $UE 792  ]
-"60
-[; ;menu.c: 60:     }
+"52
+[; ;menu_controller.c: 52:   }
 }
 [e :U 794 ]
-"61
-[; ;menu.c: 61:     if (menu_current != 0 || (menu_current == 0 && menu_index > 1)) return;
+"53
+[; ;menu_controller.c: 53:   if (menu_current != 0 || (menu_current == 0 && menu_index > 1))
 [e $ ! || != _menu_current -> 0 `i && == _menu_current -> 0 `i > _menu_index -> 1 `i 795  ]
+"54
+[; ;menu_controller.c: 54:     return;
 [e $UE 792  ]
 [e :U 795 ]
-"62
-[; ;menu.c: 62:     menu_current = menu_index+1;
+"55
+[; ;menu_controller.c: 55:   menu_current = menu_index + 1;
 [e = _menu_current + _menu_index -> 1 `i ]
-"63
-[; ;menu.c: 63:     menu_index = 0;
+"56
+[; ;menu_controller.c: 56:   menu_index = 0;
 [e = _menu_index -> 0 `i ]
-"64
-[; ;menu.c: 64:     show = 1;
+"57
+[; ;menu_controller.c: 57:   show = 1;
 [e = _show -> -> 1 `i `a ]
-"66
-[; ;menu.c: 66: }
+"58
+[; ;menu_controller.c: 58: }
 [e :UE 792 ]
 }
-"68
-[; ;menu.c: 68: void show_index(void){
+"60
+[; ;menu_controller.c: 60: void show_index(void)
 [v _show_index `(v ~T0 @X0 1 ef ]
+"61
+[; ;menu_controller.c: 61: {
 {
 [e :U _show_index ]
 [f ]
-"70
-[; ;menu.c: 70:     printf("menu_index: %d \n\r", menu_index);
+"63
+[; ;menu_controller.c: 63:   printf("menu_index: %d \n\r", menu_index);
 [e ( _printf , (. :s 1C _menu_index ]
-"71
-[; ;menu.c: 71:     printf("menu_current: %d \n\r", menu_current);
+"64
+[; ;menu_controller.c: 64:   printf("menu_current: %d \n\r", menu_current);
 [e ( _printf , (. :s 2C _menu_current ]
-"72
-[; ;menu.c: 72: }
+"65
+[; ;menu_controller.c: 65: }
 [e :UE 796 ]
 }
-"74
-[; ;menu.c: 74: void lcd_menu(void)
+"67
+[; ;menu_controller.c: 67: void lcd_menu(void)
 [v _lcd_menu `(v ~T0 @X0 1 ef ]
-"75
-[; ;menu.c: 75: {
+"68
+[; ;menu_controller.c: 68: {
 {
 [e :U _lcd_menu ]
 [f ]
-"76
-[; ;menu.c: 76:     switch(menu_current)
+"69
+[; ;menu_controller.c: 69:   switch (menu_current)
 [e $U 799  ]
-"77
-[; ;menu.c: 77:     {
+"70
+[; ;menu_controller.c: 70:   {
 {
-"78
-[; ;menu.c: 78:         case 0:
+"71
+[; ;menu_controller.c: 71:   case 0:
 [e :U 800 ]
-"79
-[; ;menu.c: 79:             lcd_menu_main();
+"72
+[; ;menu_controller.c: 72:     lcd_menu_main();
 [e ( _lcd_menu_main ..  ]
-"80
-[; ;menu.c: 80:         break;
+"73
+[; ;menu_controller.c: 73:     break;
 [e $U 798  ]
-"81
-[; ;menu.c: 81:         case 1:
+"74
+[; ;menu_controller.c: 74:   case 1:
 [e :U 801 ]
-"82
-[; ;menu.c: 82:             lcd_menu_mode();
+"75
+[; ;menu_controller.c: 75:     lcd_menu_mode();
 [e ( _lcd_menu_mode ..  ]
-"83
-[; ;menu.c: 83:         break;
+"76
+[; ;menu_controller.c: 76:     break;
 [e $U 798  ]
-"84
-[; ;menu.c: 84:         case 2:
+"77
+[; ;menu_controller.c: 77:   case 2:
 [e :U 802 ]
-"85
-[; ;menu.c: 85:             lcd_menu_sensors();
+"78
+[; ;menu_controller.c: 78:     lcd_menu_sensors();
 [e ( _lcd_menu_sensors ..  ]
-"86
-[; ;menu.c: 86:         break;
+"79
+[; ;menu_controller.c: 79:     break;
 [e $U 798  ]
-"87
-[; ;menu.c: 87:         default:
+"80
+[; ;menu_controller.c: 80:   default:
 [e :U 803 ]
-"88
-[; ;menu.c: 88:             menu_current = 0;
+"81
+[; ;menu_controller.c: 81:     menu_current = 0;
 [e = _menu_current -> 0 `i ]
-"89
-[; ;menu.c: 89:         break;
+"82
+[; ;menu_controller.c: 82:     break;
 [e $U 798  ]
-"90
-[; ;menu.c: 90:     }
+"83
+[; ;menu_controller.c: 83:   }
 }
 [e $U 798  ]
 [e :U 799 ]
@@ -1160,128 +1190,128 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 802
  803 ]
 [e :U 798 ]
-"91
-[; ;menu.c: 91: }
+"84
+[; ;menu_controller.c: 84: }
 [e :UE 797 ]
 }
-"93
-[; ;menu.c: 93: void lcd_menu_main(void)
+"86
+[; ;menu_controller.c: 86: void lcd_menu_main(void)
 [v _lcd_menu_main `(v ~T0 @X0 1 ef ]
-"94
-[; ;menu.c: 94: {
+"87
+[; ;menu_controller.c: 87: {
 {
 [e :U _lcd_menu_main ]
 [f ]
-"95
-[; ;menu.c: 95:     switch(menu_index)
+"88
+[; ;menu_controller.c: 88:   switch (menu_index)
 [e $U 806  ]
-"96
-[; ;menu.c: 96:     {
+"89
+[; ;menu_controller.c: 89:   {
 {
-"97
-[; ;menu.c: 97:         case 0:
+"90
+[; ;menu_controller.c: 90:   case 0:
 [e :U 807 ]
-"98
-[; ;menu.c: 98:             lcd_clear();
-[e ( _lcd_clear ..  ]
-"99
-[; ;menu.c: 99:             LCDGoto(0,0);
+"91
+[; ;menu_controller.c: 91:     LCDClear();
+[e ( _LCDClear ..  ]
+"92
+[; ;menu_controller.c: 92:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"100
-[; ;menu.c: 100:             LCDPutStr("  Modo de uso  >");
+"93
+[; ;menu_controller.c: 93:     LCDPutStr("  Modo de uso  >");
 [e ( _LCDPutStr (1 :s 3C ]
-"101
-[; ;menu.c: 101:         break;
+"94
+[; ;menu_controller.c: 94:     break;
 [e $U 805  ]
-"102
-[; ;menu.c: 102:         case 1:
+"95
+[; ;menu_controller.c: 95:   case 1:
 [e :U 808 ]
-"103
-[; ;menu.c: 103:             lcd_clear();
-[e ( _lcd_clear ..  ]
-"104
-[; ;menu.c: 104:             LCDGoto(0,0);
+"96
+[; ;menu_controller.c: 96:     LCDClear();
+[e ( _LCDClear ..  ]
+"97
+[; ;menu_controller.c: 97:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"105
-[; ;menu.c: 105:             LCDPutStr("<   Sensores   >");
+"98
+[; ;menu_controller.c: 98:     LCDPutStr("<   Sensores   >");
 [e ( _LCDPutStr (1 :s 4C ]
+"99
+[; ;menu_controller.c: 99:     break;
+[e $U 805  ]
+"100
+[; ;menu_controller.c: 100:   case 2:
+[e :U 809 ]
+"101
+[; ;menu_controller.c: 101:     LCDClear();
+[e ( _LCDClear ..  ]
+"102
+[; ;menu_controller.c: 102:     LCDGoto(0, 0);
+[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"103
+[; ;menu_controller.c: 103:     LCDPutStr("< Temporizador >");
+[e ( _LCDPutStr (1 :s 5C ]
+"104
+[; ;menu_controller.c: 104:     LCDGoto(0, 1);
+[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"105
+[; ;menu_controller.c: 105:     LCDPutStr("     Apagado    ");
+[e ( _LCDPutStr (1 :s 6C ]
 "106
-[; ;menu.c: 106:         break;
+[; ;menu_controller.c: 106:     break;
 [e $U 805  ]
 "107
-[; ;menu.c: 107:         case 2:
-[e :U 809 ]
+[; ;menu_controller.c: 107:   case 3:
+[e :U 810 ]
 "108
-[; ;menu.c: 108:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 108:     LCDClear();
+[e ( _LCDClear ..  ]
 "109
-[; ;menu.c: 109:             LCDGoto(0,0);
+[; ;menu_controller.c: 109:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "110
-[; ;menu.c: 110:             LCDPutStr("< Temporizador >");
-[e ( _LCDPutStr (1 :s 5C ]
+[; ;menu_controller.c: 110:     LCDPutStr("<   Hora de    >");
+[e ( _LCDPutStr (1 :s 7C ]
 "111
-[; ;menu.c: 111:             LCDGoto(0,1);
+[; ;menu_controller.c: 111:     LCDGoto(0, 1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "112
-[; ;menu.c: 112:             LCDPutStr("     Apagado    ");
-[e ( _LCDPutStr (1 :s 6C ]
+[; ;menu_controller.c: 112:     LCDPutStr("    Encendido   ");
+[e ( _LCDPutStr (1 :s 8C ]
 "113
-[; ;menu.c: 113:         break;
+[; ;menu_controller.c: 113:     break;
 [e $U 805  ]
 "114
-[; ;menu.c: 114:         case 3:
-[e :U 810 ]
+[; ;menu_controller.c: 114:   case 4:
+[e :U 811 ]
 "115
-[; ;menu.c: 115:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 115:     LCDClear();
+[e ( _LCDClear ..  ]
 "116
-[; ;menu.c: 116:             LCDGoto(0,0);
+[; ;menu_controller.c: 116:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "117
-[; ;menu.c: 117:             LCDPutStr("<   Hora de    >");
-[e ( _LCDPutStr (1 :s 7C ]
+[; ;menu_controller.c: 117:     LCDPutStr("<   Hora de ");
+[e ( _LCDPutStr (1 :s 9C ]
 "118
-[; ;menu.c: 118:             LCDGoto(0,1);
+[; ;menu_controller.c: 118:     LCDGoto(0, 1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "119
-[; ;menu.c: 119:             LCDPutStr("    Encendido   ");
-[e ( _LCDPutStr (1 :s 8C ]
+[; ;menu_controller.c: 119:     LCDPutStr("    Apagado   ");
+[e ( _LCDPutStr (1 :s 10C ]
 "120
-[; ;menu.c: 120:         break;
+[; ;menu_controller.c: 120:     break;
 [e $U 805  ]
 "121
-[; ;menu.c: 121:         case 4:
-[e :U 811 ]
-"122
-[; ;menu.c: 122:             lcd_clear();
-[e ( _lcd_clear ..  ]
-"123
-[; ;menu.c: 123:             LCDGoto(0,0);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"124
-[; ;menu.c: 124:             LCDPutStr("<   Hora de ");
-[e ( _LCDPutStr (1 :s 9C ]
-"125
-[; ;menu.c: 125:             LCDGoto(0,1);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"126
-[; ;menu.c: 126:             LCDPutStr("    Apagado   ");
-[e ( _LCDPutStr (1 :s 10C ]
-"127
-[; ;menu.c: 127:         break;
-[e $U 805  ]
-"128
-[; ;menu.c: 128:         default:
+[; ;menu_controller.c: 121:   default:
 [e :U 812 ]
-"129
-[; ;menu.c: 129:             menu_index = 1;
+"122
+[; ;menu_controller.c: 122:     menu_index = 1;
 [e = _menu_index -> 1 `i ]
-"130
-[; ;menu.c: 130:         break;
+"123
+[; ;menu_controller.c: 123:     break;
 [e $U 805  ]
-"131
-[; ;menu.c: 131:     }
+"124
+[; ;menu_controller.c: 124:   }
 }
 [e $U 805  ]
 [e :U 806 ]
@@ -1292,134 +1322,134 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 4 `i 811
  812 ]
 [e :U 805 ]
-"132
-[; ;menu.c: 132: }
+"125
+[; ;menu_controller.c: 125: }
 [e :UE 804 ]
 }
-"134
-[; ;menu.c: 134: void lcd_menu_mode(void)
+"127
+[; ;menu_controller.c: 127: void lcd_menu_mode(void)
 [v _lcd_menu_mode `(v ~T0 @X0 1 ef ]
-"135
-[; ;menu.c: 135: {
+"128
+[; ;menu_controller.c: 128: {
 {
 [e :U _lcd_menu_mode ]
 [f ]
-"136
-[; ;menu.c: 136:     switch(menu_index)
+"129
+[; ;menu_controller.c: 129:   switch (menu_index)
 [e $U 815  ]
-"137
-[; ;menu.c: 137:     {
+"130
+[; ;menu_controller.c: 130:   {
 {
-"138
-[; ;menu.c: 138:         case 0:
+"131
+[; ;menu_controller.c: 131:   case 0:
 [e :U 816 ]
+"132
+[; ;menu_controller.c: 132:     LCDClear();
+[e ( _LCDClear ..  ]
+"133
+[; ;menu_controller.c: 133:     LCDGoto(0, 0);
+[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"134
+[; ;menu_controller.c: 134:     LCDPutStr("Automatico por >");
+[e ( _LCDPutStr (1 :s 11C ]
+"135
+[; ;menu_controller.c: 135:     LCDGoto(0, 1);
+[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"136
+[; ;menu_controller.c: 136:     LCDPutStr("    Sensores   ");
+[e ( _LCDPutStr (1 :s 12C ]
+"137
+[; ;menu_controller.c: 137:     break;
+[e $U 814  ]
+"138
+[; ;menu_controller.c: 138:   case 1:
+[e :U 817 ]
 "139
-[; ;menu.c: 139:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 139:     LCDClear();
+[e ( _LCDClear ..  ]
 "140
-[; ;menu.c: 140:             LCDGoto(0,0);
+[; ;menu_controller.c: 140:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "141
-[; ;menu.c: 141:             LCDPutStr("Automatico por >");
-[e ( _LCDPutStr (1 :s 11C ]
+[; ;menu_controller.c: 141:     LCDPutStr("<  Intensidad  >");
+[e ( _LCDPutStr (1 :s 13C ]
 "142
-[; ;menu.c: 142:             LCDGoto(0,1);
+[; ;menu_controller.c: 142:     LCDGoto(0, 1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "143
-[; ;menu.c: 143:             LCDPutStr("    Sensores   ");
-[e ( _LCDPutStr (1 :s 12C ]
+[; ;menu_controller.c: 143:     LCDPutStr("     Baja     ");
+[e ( _LCDPutStr (1 :s 14C ]
 "144
-[; ;menu.c: 144:         break;
+[; ;menu_controller.c: 144:     break;
 [e $U 814  ]
 "145
-[; ;menu.c: 145:         case 1:
-[e :U 817 ]
+[; ;menu_controller.c: 145:   case 2:
+[e :U 818 ]
 "146
-[; ;menu.c: 146:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 146:     LCDClear();
+[e ( _LCDClear ..  ]
 "147
-[; ;menu.c: 147:             LCDGoto(0,0);
+[; ;menu_controller.c: 147:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "148
-[; ;menu.c: 148:             LCDPutStr("<  Intensidad  >");
-[e ( _LCDPutStr (1 :s 13C ]
+[; ;menu_controller.c: 148:     LCDPutStr("<  Intensidad  >");
+[e ( _LCDPutStr (1 :s 15C ]
 "149
-[; ;menu.c: 149:             LCDGoto(0,1);
+[; ;menu_controller.c: 149:     LCDGoto(0, 1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "150
-[; ;menu.c: 150:             LCDPutStr("     Baja     ");
-[e ( _LCDPutStr (1 :s 14C ]
+[; ;menu_controller.c: 150:     LCDPutStr("     Media     ");
+[e ( _LCDPutStr (1 :s 16C ]
 "151
-[; ;menu.c: 151:         break;
+[; ;menu_controller.c: 151:     break;
 [e $U 814  ]
 "152
-[; ;menu.c: 152:         case 2:
-[e :U 818 ]
+[; ;menu_controller.c: 152:   case 3:
+[e :U 819 ]
 "153
-[; ;menu.c: 153:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 153:     LCDClear();
+[e ( _LCDClear ..  ]
 "154
-[; ;menu.c: 154:             LCDGoto(0,0);
+[; ;menu_controller.c: 154:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "155
-[; ;menu.c: 155:             LCDPutStr("<  Intensidad  >");
-[e ( _LCDPutStr (1 :s 15C ]
+[; ;menu_controller.c: 155:     LCDPutStr("<  Intensidad  >");
+[e ( _LCDPutStr (1 :s 17C ]
 "156
-[; ;menu.c: 156:             LCDGoto(0,1);
+[; ;menu_controller.c: 156:     LCDGoto(0, 1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "157
-[; ;menu.c: 157:             LCDPutStr("     Media     ");
-[e ( _LCDPutStr (1 :s 16C ]
+[; ;menu_controller.c: 157:     LCDPutStr("     Alta     ");
+[e ( _LCDPutStr (1 :s 18C ]
 "158
-[; ;menu.c: 158:         break;
+[; ;menu_controller.c: 158:     break;
 [e $U 814  ]
 "159
-[; ;menu.c: 159:         case 3:
-[e :U 819 ]
+[; ;menu_controller.c: 159:   case 4:
+[e :U 820 ]
 "160
-[; ;menu.c: 160:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 160:     LCDClear();
+[e ( _LCDClear ..  ]
 "161
-[; ;menu.c: 161:             LCDGoto(0,0);
+[; ;menu_controller.c: 161:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "162
-[; ;menu.c: 162:             LCDPutStr("<  Intensidad  >");
-[e ( _LCDPutStr (1 :s 17C ]
-"163
-[; ;menu.c: 163:             LCDGoto(0,1);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"164
-[; ;menu.c: 164:             LCDPutStr("     Alta     ");
-[e ( _LCDPutStr (1 :s 18C ]
-"165
-[; ;menu.c: 165:         break;
-[e $U 814  ]
-"166
-[; ;menu.c: 166:         case 4:
-[e :U 820 ]
-"167
-[; ;menu.c: 167:             lcd_clear();
-[e ( _lcd_clear ..  ]
-"168
-[; ;menu.c: 168:             LCDGoto(0,0);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"169
-[; ;menu.c: 169:             LCDPutStr("<   Regresar   ");
+[; ;menu_controller.c: 162:     LCDPutStr("<   Regresar   ");
 [e ( _LCDPutStr (1 :s 19C ]
-"170
-[; ;menu.c: 170:         break;
+"163
+[; ;menu_controller.c: 163:     break;
 [e $U 814  ]
-"171
-[; ;menu.c: 171:         default:
+"164
+[; ;menu_controller.c: 164:   default:
 [e :U 821 ]
-"172
-[; ;menu.c: 172:             menu_index = 1;
+"165
+[; ;menu_controller.c: 165:     menu_index = 1;
 [e = _menu_index -> 1 `i ]
-"173
-[; ;menu.c: 173:         break;
+"166
+[; ;menu_controller.c: 166:     break;
 [e $U 814  ]
-"174
-[; ;menu.c: 174:     }
+"167
+[; ;menu_controller.c: 167:   }
 }
 [e $U 814  ]
 [e :U 815 ]
@@ -1430,113 +1460,113 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 4 `i 820
  821 ]
 [e :U 814 ]
-"175
-[; ;menu.c: 175: }
+"168
+[; ;menu_controller.c: 168: }
 [e :UE 813 ]
 }
-"177
-[; ;menu.c: 177: void lcd_menu_sensors(void)
+"170
+[; ;menu_controller.c: 170: void lcd_menu_sensors(void)
 [v _lcd_menu_sensors `(v ~T0 @X0 1 ef ]
-"178
-[; ;menu.c: 178: {
+"171
+[; ;menu_controller.c: 171: {
 {
 [e :U _lcd_menu_sensors ]
 [f ]
-"179
-[; ;menu.c: 179:     switch(menu_index)
+"172
+[; ;menu_controller.c: 172:   switch (menu_index)
 [e $U 824  ]
-"180
-[; ;menu.c: 180:     {
+"173
+[; ;menu_controller.c: 173:   {
 {
-"181
-[; ;menu.c: 181:         case 0:
+"174
+[; ;menu_controller.c: 174:   case 0:
 [e :U 825 ]
+"175
+[; ;menu_controller.c: 175:     LCDClear();
+[e ( _LCDClear ..  ]
+"176
+[; ;menu_controller.c: 176:     LCDGoto(0, 0);
+[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+"177
+[; ;menu_controller.c: 177:     LCDPutStr("  Sensor de    >");
+[e ( _LCDPutStr (1 :s 20C ]
+"178
+[; ;menu_controller.c: 178:     LCDGoto(0, 1);
+[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
+"179
+[; ;menu_controller.c: 179:     LCDPutStr("  Temperatura    ");
+[e ( _LCDPutStr (1 :s 21C ]
+"180
+[; ;menu_controller.c: 180:     break;
+[e $U 823  ]
+"181
+[; ;menu_controller.c: 181:   case 1:
+[e :U 826 ]
 "182
-[; ;menu.c: 182:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 182:     LCDClear();
+[e ( _LCDClear ..  ]
 "183
-[; ;menu.c: 183:             LCDGoto(0,0);
+[; ;menu_controller.c: 183:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "184
-[; ;menu.c: 184:             LCDPutStr("  Sensor de    >");
-[e ( _LCDPutStr (1 :s 20C ]
+[; ;menu_controller.c: 184:     LCDPutStr("<  Sensor de   >");
+[e ( _LCDPutStr (1 :s 22C ]
 "185
-[; ;menu.c: 185:             LCDGoto(0,1);
+[; ;menu_controller.c: 185:     LCDGoto(0, 1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "186
-[; ;menu.c: 186:             LCDPutStr("  Temperatura    ");
-[e ( _LCDPutStr (1 :s 21C ]
+[; ;menu_controller.c: 186:     LCDPutStr("    Luminocidad  ");
+[e ( _LCDPutStr (1 :s 23C ]
 "187
-[; ;menu.c: 187:         break;
+[; ;menu_controller.c: 187:     break;
 [e $U 823  ]
 "188
-[; ;menu.c: 188:         case 1:
-[e :U 826 ]
+[; ;menu_controller.c: 188:   case 2:
+[e :U 827 ]
 "189
-[; ;menu.c: 189:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 189:     LCDClear();
+[e ( _LCDClear ..  ]
 "190
-[; ;menu.c: 190:             LCDGoto(0,0);
+[; ;menu_controller.c: 190:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "191
-[; ;menu.c: 191:             LCDPutStr("<  Sensor de   >");
-[e ( _LCDPutStr (1 :s 22C ]
+[; ;menu_controller.c: 191:     LCDPutStr("<  Sensor de   >");
+[e ( _LCDPutStr (1 :s 24C ]
 "192
-[; ;menu.c: 192:             LCDGoto(0,1);
+[; ;menu_controller.c: 192:     LCDGoto(0, 1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "193
-[; ;menu.c: 193:             LCDPutStr("    Luminocidad  ");
-[e ( _LCDPutStr (1 :s 23C ]
+[; ;menu_controller.c: 193:     LCDPutStr("     Sonido     ");
+[e ( _LCDPutStr (1 :s 25C ]
 "194
-[; ;menu.c: 194:         break;
+[; ;menu_controller.c: 194:     break;
 [e $U 823  ]
 "195
-[; ;menu.c: 195:         case 2:
-[e :U 827 ]
+[; ;menu_controller.c: 195:   case 3:
+[e :U 828 ]
 "196
-[; ;menu.c: 196:             lcd_clear();
-[e ( _lcd_clear ..  ]
+[; ;menu_controller.c: 196:     LCDClear();
+[e ( _LCDClear ..  ]
 "197
-[; ;menu.c: 197:             LCDGoto(0,0);
+[; ;menu_controller.c: 197:     LCDGoto(0, 0);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 "198
-[; ;menu.c: 198:             LCDPutStr("<  Sensor de   >");
-[e ( _LCDPutStr (1 :s 24C ]
-"199
-[; ;menu.c: 199:             LCDGoto(0,1);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"200
-[; ;menu.c: 200:             LCDPutStr("     Sonido     ");
-[e ( _LCDPutStr (1 :s 25C ]
-"201
-[; ;menu.c: 201:         break;
-[e $U 823  ]
-"202
-[; ;menu.c: 202:         case 3:
-[e :U 828 ]
-"203
-[; ;menu.c: 203:             lcd_clear();
-[e ( _lcd_clear ..  ]
-"204
-[; ;menu.c: 204:             LCDGoto(0,0);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"205
-[; ;menu.c: 205:             LCDPutStr("<   Regresar   ");
+[; ;menu_controller.c: 198:     LCDPutStr("<   Regresar   ");
 [e ( _LCDPutStr (1 :s 26C ]
-"206
-[; ;menu.c: 206:         break;
+"199
+[; ;menu_controller.c: 199:     break;
 [e $U 823  ]
-"207
-[; ;menu.c: 207:         default:
+"200
+[; ;menu_controller.c: 200:   default:
 [e :U 829 ]
-"208
-[; ;menu.c: 208:             menu_index = 1;
+"201
+[; ;menu_controller.c: 201:     menu_index = 1;
 [e = _menu_index -> 1 `i ]
-"209
-[; ;menu.c: 209:         break;
+"202
+[; ;menu_controller.c: 202:     break;
 [e $U 823  ]
-"210
-[; ;menu.c: 210:     }
+"203
+[; ;menu_controller.c: 203:   }
 }
 [e $U 823  ]
 [e :U 824 ]
@@ -1546,9 +1576,50 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 3 `i 828
  829 ]
 [e :U 823 ]
-"211
-[; ;menu.c: 211: }
+"204
+[; ;menu_controller.c: 204: }
 [e :UE 822 ]
+}
+"206
+[; ;menu_controller.c: 206: void initialize_menu(menu_controller *menu)
+[v _initialize_menu `(v ~T0 @X0 1 ef1`*S785 ]
+"207
+[; ;menu_controller.c: 207: {
+{
+[e :U _initialize_menu ]
+"206
+[; ;menu_controller.c: 206: void initialize_menu(menu_controller *menu)
+[v _menu `*S785 ~T0 @X0 1 r1 ]
+"207
+[; ;menu_controller.c: 207: {
+[f ]
+"208
+[; ;menu_controller.c: 208:   menu->index_add = index_add;
+[e = . *U _menu 0 &U _index_add ]
+"209
+[; ;menu_controller.c: 209:   menu->index_sub = index_sub;
+[e = . *U _menu 1 &U _index_sub ]
+"210
+[; ;menu_controller.c: 210:   menu->index_current = index_current;
+[e = . *U _menu 2 &U _index_current ]
+"211
+[; ;menu_controller.c: 211:   menu->show_index = show_index;
+[e = . *U _menu 3 &U _show_index ]
+"212
+[; ;menu_controller.c: 212:   menu->lcd_menu = lcd_menu;
+[e = . *U _menu 4 &U _lcd_menu ]
+"213
+[; ;menu_controller.c: 213:   menu->lcd_menu_main = lcd_menu_main;
+[e = . *U _menu 5 &U _lcd_menu_main ]
+"214
+[; ;menu_controller.c: 214:   menu->lcd_menu_mode = lcd_menu_mode;
+[e = . *U _menu 6 &U _lcd_menu_mode ]
+"215
+[; ;menu_controller.c: 215:   menu->lcd_menu_sensors = lcd_menu_sensors;
+[e = . *U _menu 7 &U _lcd_menu_sensors ]
+"216
+[; ;menu_controller.c: 216: }
+[e :UE 830 ]
 }
 [p f _printf 8388736 ]
 [a 11C 65 117 116 111 109 97 116 105 99 111 32 112 111 114 32 62 0 ]

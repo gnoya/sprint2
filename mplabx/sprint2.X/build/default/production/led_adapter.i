@@ -178,13 +178,21 @@ char *tempnam(const char *, const char *);
 
 # 1 "./led_adapter.h" 1
 # 29 "./led_adapter.h"
-typedef struct led
+static void turn_blue();
+static void turn_green();
+static void turn_red();
+
+static void set_brightness(int brightness);
+static void set_color(int temperature);
+static void turn_selectors(_Bool selector1, _Bool selector2);
+
+typedef struct led_adapter
 {
   void (*set_brightness)(int brightness);
   void (*set_color)(int temperature);
-} led;
+} led_adapter;
 
-void initialize_led(led *led);
+void initialize_led(led_adapter *led);
 # 10 "led_adapter.c" 2
 
 # 1 "./mcc_generated_files/mcc.h" 1
@@ -9956,16 +9964,11 @@ void WDT_Initialize(void);
 # 11 "led_adapter.c" 2
 
 
-static void turn_blue();
-static void turn_green();
-static void turn_red();
 
-static void set_brightness(int brightness);
-static void set_color(int temperature);
-static void turn_selectors(_Bool selector1, _Bool selector2);
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 uint16_t duty_cycle = 0;
+
 
 static long map(int x, long in_min, long in_max, long out_min, long out_max)
 {
@@ -10011,10 +10014,7 @@ static void turn_red()
 static void set_brightness(int brightness)
 {
 
-  brightness = (int)map(brightness, 10, 1000, 372, 901);
-
-
-  int mapped_value = (int)map(brightness, 372, 901, 0, 100);
+  int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
 
 
   duty_cycle = (uint16_t)(100 - mapped_value);
@@ -10043,7 +10043,8 @@ static void set_color(int temperature)
   }
 }
 
-void initialize_led(led *led)
+
+void initialize_led(led_adapter *led)
 {
   led->set_brightness = set_brightness;
   led->set_color = set_color;
