@@ -26,6 +26,13 @@
  * Revision history: 
  */
 
+/**
+  @Summary
+    This struct is used to control the flow of the menu
+
+  @Description
+    This struct is used to control the flow of the menu and submenus
+*/
 typedef struct menu_controller
 {
   void (*index_add)(void);
@@ -42,14 +49,171 @@ bool show = 1;
 int menu_current = 0;
 int menu_index = 0;
 
+/**
+  @Summary
+    Adds one to the variable menu_index
+
+  @Description
+    This function increments the value of the menu_index variable by 1, to scroll through the current menu options.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void index_add(void);
+
+/**
+  @Summary
+    Subtracts one from the variable menu_index
+
+  @Description
+    This function decrements the value of the menu_index variable by 1, to scroll through the current menu options.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void index_sub(void);
+
+/**
+  @Summary
+    Updates the current_menu variable with the value of the selected menu.
+
+  @Description
+    This function updates the menu_current variable with the value of the menu 
+ *  selected by the user, to show the corresponding submenu in the GUI.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void index_current(void);
+
+/**
+  @Summary
+    Prints on the serial console the values of the indexes menu_index and 
+ *  menu_current.
+
+  @Description
+    This function prints to the serial console the values of the 
+ *  menu_index and menu_current indexes used to navigate between the GUI menus.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void show_index(void);
 
+/**
+  @Summary
+    Selects the GUI menu to be displayed on the screen.
+
+  @Description
+    This function selects and displays in the GUI the menu corresponding to the 
+ *  value of menu_current.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void show_menu(void);
+
+/**
+  @Summary
+    Show the main menu in the GUI.
+
+  @Description
+    This function sets the main menu template and displays the option 
+ *  corresponding to the value of menu_index in the GUI.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void show_main_menu(void);
+
+/**
+  @Summary
+    Show the Operating Mode submenu in the GUI.
+
+  @Description
+    This function sets the Operating Mode submenu template and displays the option 
+ *  corresponding to the value of menu_index in the GUI.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void show_mode_menu(void);
+
+/**
+  @Summary
+    Show the Sensors submenu in the GUI.
+
+  @Description
+    This function sets the Sensors submenu template and displays the option 
+ *  corresponding to the value of menu_index in the GUI.
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void show_sensors_menu(void);
 
+/**
+  @Summary
+    Initializes the menu controller
+
+  @Description
+    This function assigns the static functions to the menu_controller variable
+
+  @Preconditions
+    None
+
+  @Param
+    menu_controller menu
+
+  @Returns
+    None
+*/
 void initialize_menu(menu_controller *menu);

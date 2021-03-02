@@ -177,13 +177,7 @@ char *tempnam(const char *, const char *);
 # 9 "light_sensor.c" 2
 
 # 1 "./sensor_adapter.h" 1
-
-
-
-
-
-
-
+# 15 "./sensor_adapter.h"
 typedef struct sensor
 {
   char *name;

@@ -9945,7 +9945,7 @@ void WDT_Initialize(void);
 # 10 "menu_controller.c" 2
 
 # 1 "./menu_controller.h" 1
-# 29 "./menu_controller.h"
+# 36 "./menu_controller.h"
 typedef struct menu_controller
 {
   void (*index_add)(void);
@@ -9961,17 +9961,23 @@ typedef struct menu_controller
 _Bool show = 1;
 int menu_current = 0;
 int menu_index = 0;
-
+# 68 "./menu_controller.h"
 static void index_add(void);
+# 86 "./menu_controller.h"
 static void index_sub(void);
+# 105 "./menu_controller.h"
 static void index_current(void);
+# 125 "./menu_controller.h"
 static void show_index(void);
-
+# 144 "./menu_controller.h"
 static void show_menu(void);
+# 163 "./menu_controller.h"
 static void show_main_menu(void);
+# 182 "./menu_controller.h"
 static void show_mode_menu(void);
+# 201 "./menu_controller.h"
 static void show_sensors_menu(void);
-
+# 219 "./menu_controller.h"
 void initialize_menu(menu_controller *menu);
 # 11 "menu_controller.c" 2
 
@@ -10041,25 +10047,6 @@ static void show_index(void)
 {
   printf("menu_index: %d \n\r", menu_index);
   printf("menu_current: %d \n\r", menu_current);
-}
-
-static void show_menu(void)
-{
-  switch (menu_current)
-  {
-  case 0:
-    show_main_menu();
-    break;
-  case 1:
-    show_mode_menu();
-    break;
-  case 2:
-    show_sensors_menu();
-    break;
-  default:
-    menu_current = 0;
-    break;
-  }
 }
 
 static void show_main_menu(void)
@@ -10180,6 +10167,32 @@ static void show_sensors_menu(void)
     menu_index = 1;
     break;
   }
+}
+
+static void show_menu(void)
+{
+  if (!show)
+  {
+    return;
+  }
+
+  switch (menu_current)
+  {
+  case 0:
+    show_main_menu();
+    break;
+  case 1:
+    show_mode_menu();
+    break;
+  case 2:
+    show_sensors_menu();
+    break;
+  default:
+    menu_current = 0;
+    break;
+  }
+
+  show = 0;
 }
 
 

@@ -177,23 +177,27 @@ char *tempnam(const char *, const char *);
 # 9 "led_adapter.c" 2
 
 # 1 "./led_adapter.h" 1
-# 29 "./led_adapter.h"
+# 36 "./led_adapter.h"
 typedef struct led_adapter
 {
   void (*set_brightness)(int brightness);
   void (*set_color)(int temperature);
 } led_adapter;
-
+# 58 "./led_adapter.h"
 static void turn_blue();
+# 76 "./led_adapter.h"
 static void turn_green();
+# 94 "./led_adapter.h"
 static void turn_red();
-
+# 112 "./led_adapter.h"
 static void set_brightness(int brightness);
+# 130 "./led_adapter.h"
 static void set_color(int temperature);
+# 149 "./led_adapter.h"
 static void turn_selectors(_Bool selector1, _Bool selector2);
-
+# 168 "./led_adapter.h"
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
-
+# 186 "./led_adapter.h"
 void initialize_led(led_adapter *led);
 # 10 "led_adapter.c" 2
 

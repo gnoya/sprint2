@@ -26,4 +26,20 @@
  * Revision history: 
  */
 
+/**
+  @Summary
+    Initializes the temperature sensor
+
+  @Description
+    This function assigns the static functions to the temperature sensor variable
+
+  @Preconditions
+    None
+
+  @Param
+    sensor *sensor
+
+  @Returns
+    None
+*/
 void initialize_temp(sensor *sensor);

@@ -26,4 +26,21 @@
  * Revision history: 
  */
 
+/**
+  @Summary
+    Initializes the light sensor
+
+  @Description
+    This function assigns the static functions to the light sensor variable
+
+  @Preconditions
+    None
+
+  @Param
+    sensor *sensor
+
+  @Returns
+    None
+*/
+
 void initialize_light(sensor *sensor);

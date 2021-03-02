@@ -41,6 +41,12 @@
     SOFTWARE.
 */
 
+/*
+  This project was developed by the Group 2 in the Embbeded Systems 1 course from USB.
+  This project aims to develop a lighting system using sensors.
+  Version: 1.0
+*/
+
 #include <stdbool.h>
 #include <string.h>
 #include "mcc_generated_files/mcc.h"
@@ -58,7 +64,6 @@ sensor light_sensor;
 sensor temp_sensor;
 led_adapter led;
 menu_controller menu;
-extern bool show;
 
 void main(void)
 {
@@ -108,17 +113,16 @@ void main(void)
   // ------------------------- Main loop ------------------------- //
   while (1)
   {
+    // -------------------- Reading sensors -------------------- //
     int light_value = light_sensor.read();
     int temp_value = temp_sensor.read();
 
+    // -------------------- Changing LEDs --------------------- //
     led.set_brightness(light_value);
     led.set_color(temp_value);
-    if (show)
-    {
-      menu.show_index();
-      menu.show_menu();
-      show = 0;
-    }
+
+    // -------------------- Showing menu --------------------- //
+    menu.show_menu();
   }
 }
 /**

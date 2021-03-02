@@ -61,25 +61,6 @@ static void show_index(void)
   printf("menu_current: %d \n\r", menu_current);
 }
 
-static void show_menu(void)
-{
-  switch (menu_current)
-  {
-  case 0:
-    show_main_menu();
-    break;
-  case 1:
-    show_mode_menu();
-    break;
-  case 2:
-    show_sensors_menu();
-    break;
-  default:
-    menu_current = 0;
-    break;
-  }
-}
-
 static void show_main_menu(void)
 {
   switch (menu_index)
@@ -198,6 +179,32 @@ static void show_sensors_menu(void)
     menu_index = 1;
     break;
   }
+}
+
+static void show_menu(void)
+{
+  if (!show)
+  {
+    return;
+  }
+
+  switch (menu_current)
+  {
+  case 0:
+    show_main_menu();
+    break;
+  case 1:
+    show_mode_menu();
+    break;
+  case 2:
+    show_sensors_menu();
+    break;
+  default:
+    menu_current = 0;
+    break;
+  }
+
+  show = 0;
 }
 
 // ----------------------- Public functions ----------------------- //

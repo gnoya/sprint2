@@ -7,9 +7,9 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 44 "main.c"
+# 50 "main.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 44 "main.c" 2
+# 50 "main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 1 3
 
@@ -85,7 +85,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 45 "main.c" 2
+# 51 "main.c" 2
 
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
@@ -9993,54 +9993,52 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 99 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 46 "main.c" 2
+# 52 "main.c" 2
 
 # 1 "./sensor_adapter.h" 1
-
-
-
-
-
-
-
+# 15 "./sensor_adapter.h"
 typedef struct sensor
 {
   char *name;
   _Bool (*open)(void);
   int (*read)(void);
 } sensor;
-# 47 "main.c" 2
+# 53 "main.c" 2
 
 # 1 "./light_sensor.h" 1
-# 29 "./light_sensor.h"
+# 46 "./light_sensor.h"
 void initialize_light(sensor *sensor);
-# 48 "main.c" 2
+# 54 "main.c" 2
 
 # 1 "./temp_sensor.h" 1
-# 29 "./temp_sensor.h"
+# 45 "./temp_sensor.h"
 void initialize_temp(sensor *sensor);
-# 49 "main.c" 2
+# 55 "main.c" 2
 
 # 1 "./led_adapter.h" 1
-# 29 "./led_adapter.h"
+# 36 "./led_adapter.h"
 typedef struct led_adapter
 {
   void (*set_brightness)(int brightness);
   void (*set_color)(int temperature);
 } led_adapter;
-
+# 58 "./led_adapter.h"
 static void turn_blue();
+# 76 "./led_adapter.h"
 static void turn_green();
+# 94 "./led_adapter.h"
 static void turn_red();
-
+# 112 "./led_adapter.h"
 static void set_brightness(int brightness);
+# 130 "./led_adapter.h"
 static void set_color(int temperature);
+# 149 "./led_adapter.h"
 static void turn_selectors(_Bool selector1, _Bool selector2);
-
+# 168 "./led_adapter.h"
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
-
+# 186 "./led_adapter.h"
 void initialize_led(led_adapter *led);
-# 50 "main.c" 2
+# 56 "main.c" 2
 
 # 1 "./lcd.h" 1
 # 120 "./lcd.h"
@@ -10057,10 +10055,10 @@ void initialize_led(led_adapter *led);
   void LCDGoto(uint8_t pos, uint8_t ln);
 # 232 "./lcd.h"
   void LCDClear(void);
-# 51 "main.c" 2
+# 57 "main.c" 2
 
 # 1 "./menu_controller.h" 1
-# 29 "./menu_controller.h"
+# 36 "./menu_controller.h"
 typedef struct menu_controller
 {
   void (*index_add)(void);
@@ -10076,19 +10074,25 @@ typedef struct menu_controller
 _Bool show = 1;
 int menu_current = 0;
 int menu_index = 0;
-
+# 68 "./menu_controller.h"
 static void index_add(void);
+# 86 "./menu_controller.h"
 static void index_sub(void);
+# 105 "./menu_controller.h"
 static void index_current(void);
+# 125 "./menu_controller.h"
 static void show_index(void);
-
+# 144 "./menu_controller.h"
 static void show_menu(void);
+# 163 "./menu_controller.h"
 static void show_main_menu(void);
+# 182 "./menu_controller.h"
 static void show_mode_menu(void);
+# 201 "./menu_controller.h"
 static void show_sensors_menu(void);
-
+# 219 "./menu_controller.h"
 void initialize_menu(menu_controller *menu);
-# 52 "main.c" 2
+# 58 "main.c" 2
 
 
 
@@ -10153,11 +10157,7 @@ void main(void)
 
     led.set_brightness(light_value);
     led.set_color(temp_value);
-    if (show)
-    {
-      menu.show_index();
-      menu.show_menu();
-      show = 0;
-    }
+
+    menu.show_menu();
   }
 }
