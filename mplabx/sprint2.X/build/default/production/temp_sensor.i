@@ -9977,7 +9977,9 @@ static int read()
   if (is_connected && temp_sensor_enabled)
   {
 
-    return (int)ADC_GetConversion(SENSOR_TEMP);
+    int measure = (int)ADC_GetConversion(SENSOR_TEMP);
+
+    return measure;
   }
   return 0;
 }

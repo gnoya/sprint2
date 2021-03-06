@@ -47,9 +47,10 @@ typedef struct menu_controller
   void (*show_sensors_menu)(void);
 } menu_controller;
 
+// --------- Public variables --------- //
 bool show = 1;
-int menu_current = 0;
-int menu_index = 0;
+bool temp_sensor_enabled = true;
+bool light_sensor_enabled = true;
 
 /**
   @Summary

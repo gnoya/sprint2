@@ -75,7 +75,7 @@ void TMR4_Initialize(void)
     // T4CKPS 1:64; T4OUTPS 1:1; TMR4ON on; 
     T4CON = 0x07;
 }
-/*
+
 void TMR4_StartTimer(void)
 {
     // Start the Timer by writing to TMRxON bit
@@ -119,8 +119,6 @@ bool TMR4_HasOverflowOccured(void)
     }
     return status;
 }
- */
-
 /**
   End of File
 */

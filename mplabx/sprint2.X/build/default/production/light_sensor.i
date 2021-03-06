@@ -9979,7 +9979,9 @@ static int read()
   if (is_connected && light_sensor_enabled)
   {
 
-    return (int)ADC_GetConversion(SENSOR_LIGHT);
+    int measure = (int)ADC_GetConversion(SENSOR_LIGHT);
+
+    return measure;
   }
   return 0;
 }

@@ -10011,26 +10011,27 @@ typedef struct menu_controller
   void (*show_sensors_menu)(void);
 } menu_controller;
 
+
 _Bool show = 1;
-int menu_current = 0;
-int menu_index = 0;
-# 70 "./menu_controller.h"
+_Bool temp_sensor_enabled = 1;
+_Bool light_sensor_enabled = 1;
+# 71 "./menu_controller.h"
 static void index_add(void);
-# 88 "./menu_controller.h"
+# 89 "./menu_controller.h"
 static void index_sub(void);
-# 107 "./menu_controller.h"
+# 108 "./menu_controller.h"
 static void index_enter(void);
-# 127 "./menu_controller.h"
+# 128 "./menu_controller.h"
 static void show_index(void);
-# 146 "./menu_controller.h"
+# 147 "./menu_controller.h"
 static void show_menu(void);
-# 165 "./menu_controller.h"
+# 166 "./menu_controller.h"
 static void show_main_menu(void);
-# 184 "./menu_controller.h"
+# 185 "./menu_controller.h"
 static void show_mode_menu(void);
-# 203 "./menu_controller.h"
+# 204 "./menu_controller.h"
 static void show_sensors_menu(void);
-# 221 "./menu_controller.h"
+# 222 "./menu_controller.h"
 void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 53 "main.c" 2
 
@@ -10105,6 +10106,9 @@ sensor temp_sensor;
 led_adapter led;
 menu_controller menu;
 
+extern _Bool temp_sensor_enabled;
+extern _Bool light_sensor_enabled;
+
 void main(void)
 {
   SYSTEM_Initialize();
@@ -10127,7 +10131,8 @@ void main(void)
 
   initialize_led(&led);
   initialize_menu(&menu, sensors_opened);
-# 109 "main.c"
+
+
   (INTCONbits.GIE = 1);
   (INTCONbits.PEIE = 1);
 
@@ -10135,6 +10140,7 @@ void main(void)
   IOCAF5_SetInterruptHandler(menu.index_add);
   IOCAF6_SetInterruptHandler(menu.index_sub);
   IOCAF7_SetInterruptHandler(menu.index_enter);
+
 
   LCDPutStr("Bienvenido!");
   _delay((unsigned long)((200)*(1000000/4000.0)));

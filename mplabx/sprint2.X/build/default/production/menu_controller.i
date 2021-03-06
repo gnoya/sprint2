@@ -9960,26 +9960,27 @@ typedef struct menu_controller
   void (*show_sensors_menu)(void);
 } menu_controller;
 
+
 _Bool show = 1;
-int menu_current = 0;
-int menu_index = 0;
-# 70 "./menu_controller.h"
+_Bool temp_sensor_enabled = 1;
+_Bool light_sensor_enabled = 1;
+# 71 "./menu_controller.h"
 static void index_add(void);
-# 88 "./menu_controller.h"
+# 89 "./menu_controller.h"
 static void index_sub(void);
-# 107 "./menu_controller.h"
+# 108 "./menu_controller.h"
 static void index_enter(void);
-# 127 "./menu_controller.h"
+# 128 "./menu_controller.h"
 static void show_index(void);
-# 146 "./menu_controller.h"
+# 147 "./menu_controller.h"
 static void show_menu(void);
-# 165 "./menu_controller.h"
+# 166 "./menu_controller.h"
 static void show_main_menu(void);
-# 184 "./menu_controller.h"
+# 185 "./menu_controller.h"
 static void show_mode_menu(void);
-# 203 "./menu_controller.h"
+# 204 "./menu_controller.h"
 static void show_sensors_menu(void);
-# 221 "./menu_controller.h"
+# 222 "./menu_controller.h"
 void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 11 "menu_controller.c" 2
 
@@ -9999,15 +10000,11 @@ void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 232 "./lcd.h"
   void LCDClear(void);
 # 12 "menu_controller.c" 2
-
-
+# 21 "menu_controller.c"
 static _Bool temp_sensor_opened = 0;
 static _Bool light_sensor_opened = 0;
-
-_Bool temp_sensor_enabled = 1;
-_Bool light_sensor_enabled = 1;
-
-
+static int menu_current = 0;
+static int menu_index = 0;
 
 
 static void index_add(void)
@@ -10015,33 +10012,44 @@ static void index_add(void)
   menu_index++;
   if (menu_current == 0 && menu_index > 4)
     menu_index = 4;
-  if (menu_current == 1 && menu_index > 4)
-    menu_index = 4;
-  if (menu_current == 2 && menu_index > 3)
-    menu_index = 3;
+  if (menu_current == 1 && menu_index > 2)
+    menu_index = 2;
   show = 1;
 }
 
 
 static void index_sub(void)
 {
-  menu_index--;
+  if (menu_current == 1)
+  {
+    if (menu_index == 2)
+    {
+      if (light_sensor_opened)
+        menu_index--;
+      else if (temp_sensor_opened)
+        menu_index -= 2;
+    }
+    else
+    {
+      menu_index--;
+    }
+  }
+  else
+  {
+    menu_index--;
+  }
+
   if (menu_index < 0)
     menu_index = 0;
+
   show = 1;
 }
 
 
 static void index_enter(void)
 {
-  if (menu_current == 1 && menu_index == 4)
-  {
-    menu_current = 0;
-    menu_index = 0;
-    show = 1;
-    return;
-  }
-  if (menu_current == 2 && menu_index == 2)
+
+  if (menu_current == 1 && menu_index == 2)
   {
     menu_current = 0;
     menu_index = 0;
@@ -10050,7 +10058,7 @@ static void index_enter(void)
   }
 
 
-  if (menu_current == 2 && menu_index == 0)
+  if (menu_current == 1 && menu_index == 0)
   {
     temp_sensor_enabled = !temp_sensor_enabled;
     show = 1;
@@ -10058,7 +10066,7 @@ static void index_enter(void)
   }
 
 
-  if (menu_current == 2 && menu_index == 1)
+  if (menu_current == 1 && menu_index == 1)
   {
     light_sensor_enabled = !light_sensor_enabled;
     show = 1;
@@ -10085,28 +10093,23 @@ static void show_main_menu(void)
   case 0:
     LCDClear();
     LCDGoto(0, 0);
-    LCDPutStr("  Modo de uso  >");
+    LCDPutStr("    Sensores   >");
     break;
   case 1:
     LCDClear();
     LCDGoto(0, 0);
-    LCDPutStr("<   Sensores   >");
-    break;
-  case 2:
-    LCDClear();
-    LCDGoto(0, 0);
     LCDPutStr("< Temporizador >");
     LCDGoto(0, 1);
-    LCDPutStr("     Apagado    ");
+    LCDPutStr("    Apagado     ");
     break;
-  case 3:
+  case 2:
     LCDClear();
     LCDGoto(0, 0);
     LCDPutStr("<   Hora de    >");
     LCDGoto(0, 1);
     LCDPutStr("    Encendido   ");
     break;
-  case 4:
+  case 3:
     LCDClear();
     LCDGoto(0, 0);
     LCDPutStr("<   Hora de ");
@@ -10119,59 +10122,20 @@ static void show_main_menu(void)
   }
 }
 
-static void show_mode_menu(void)
-{
-  switch (menu_index)
-  {
-  case 0:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("Automatico por >");
-    LCDGoto(0, 1);
-    LCDPutStr("    Sensores   ");
-    break;
-  case 1:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("<  Intensidad  >");
-    LCDGoto(0, 1);
-    LCDPutStr("     Baja     ");
-    break;
-  case 2:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("<  Intensidad  >");
-    LCDGoto(0, 1);
-    LCDPutStr("     Media     ");
-    break;
-  case 3:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("<  Intensidad  >");
-    LCDGoto(0, 1);
-    LCDPutStr("     Alta     ");
-    break;
-  case 4:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("<   Regresar   ");
-    break;
-  default:
-    menu_index = 1;
-    break;
-  }
-}
-
 static void show_sensors_menu(void)
 {
+  printf("menu_index: %d \n\r", menu_index);
+  printf("menu_current: %d \n\r", menu_current);
+
   switch (menu_index)
   {
   case 0:
+
     if (temp_sensor_opened)
     {
       LCDClear();
       LCDGoto(0, 0);
-      LCDPutStr("< Temperatura >");
+      LCDPutStr("<  Temperatura >");
       LCDGoto(0, 1);
       if (temp_sensor_enabled)
       {
@@ -10183,17 +10147,20 @@ static void show_sensors_menu(void)
       }
       break;
     }
-    menu_index++;
+    else
+      menu_index++;
+
   case 1:
+
     if (light_sensor_opened)
     {
       LCDClear();
       LCDGoto(0, 0);
-      LCDPutStr("<  Luminocidad   >");
+      LCDPutStr("<  Luminosidad >");
       LCDGoto(0, 1);
       if (light_sensor_enabled)
       {
-        LCDPutStr("  Habilitado    ");
+        LCDPutStr("   Habilitado   ");
       }
       else
       {
@@ -10201,7 +10168,9 @@ static void show_sensors_menu(void)
       }
       break;
     }
-    menu_index++;
+    else
+      menu_index++;
+
   case 2:
     LCDClear();
     LCDGoto(0, 0);
@@ -10226,16 +10195,12 @@ static void show_menu(void)
     show_main_menu();
     break;
   case 1:
-    show_mode_menu();
-    break;
-  case 2:
     show_sensors_menu();
     break;
   default:
     menu_current = 0;
     break;
   }
-
   show = 0;
 }
 
@@ -10248,8 +10213,7 @@ void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
   menu->show_index = show_index;
   menu->show_menu = show_menu;
   menu->show_main_menu = show_main_menu;
-  menu->show_mode_menu = show_mode_menu;
   menu->show_sensors_menu = show_sensors_menu;
-  light_sensor_opened = sensors_opened[0];
-  temp_sensor_opened = sensors_opened[1];
+  temp_sensor_opened = sensors_opened[0];
+  light_sensor_opened = sensors_opened[1];
 }

@@ -19,6 +19,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8749
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8749: extern volatile unsigned char T4CON __attribute__((address(0x417)));
 [v _T4CON `Vuc ~T0 @X0 0 e@1047 ]
+"8755
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8755:     struct {
+[s S395 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S395 . T4CKPS TMR4ON T4OUTPS ]
+"8760
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8760:     struct {
+[s S396 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S396 . T4CKPS0 T4CKPS1 . T4OUTPS0 T4OUTPS1 T4OUTPS2 T4OUTPS3 ]
+"8754
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8754: typedef union {
+[u S394 `S395 1 `S396 1 ]
+[n S394 . . . ]
+"8770
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8770: extern volatile T4CONbits_t T4CONbits __attribute__((address(0x417)));
+[v _T4CONbits `VS394 ~T0 @X0 0 e@1047 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -969,4 +984,129 @@ Version 4.0 HI-TECH Software Intermediate Code
 "77
 [; ;mcc_generated_files/tmr4.c: 77: }
 [e :UE 780 ]
+}
+"79
+[; ;mcc_generated_files/tmr4.c: 79: void TMR4_StartTimer(void)
+[v _TMR4_StartTimer `(v ~T0 @X0 1 ef ]
+"80
+[; ;mcc_generated_files/tmr4.c: 80: {
+{
+[e :U _TMR4_StartTimer ]
+[f ]
+"82
+[; ;mcc_generated_files/tmr4.c: 82:     T4CONbits.TMR4ON = 1;
+[e = . . _T4CONbits 0 1 -> -> 1 `i `uc ]
+"83
+[; ;mcc_generated_files/tmr4.c: 83: }
+[e :UE 781 ]
+}
+"85
+[; ;mcc_generated_files/tmr4.c: 85: void TMR4_StopTimer(void)
+[v _TMR4_StopTimer `(v ~T0 @X0 1 ef ]
+"86
+[; ;mcc_generated_files/tmr4.c: 86: {
+{
+[e :U _TMR4_StopTimer ]
+[f ]
+"88
+[; ;mcc_generated_files/tmr4.c: 88:     T4CONbits.TMR4ON = 0;
+[e = . . _T4CONbits 0 1 -> -> 0 `i `uc ]
+"89
+[; ;mcc_generated_files/tmr4.c: 89: }
+[e :UE 782 ]
+}
+"91
+[; ;mcc_generated_files/tmr4.c: 91: uint8_t TMR4_ReadTimer(void)
+[v _TMR4_ReadTimer `(uc ~T0 @X0 1 ef ]
+"92
+[; ;mcc_generated_files/tmr4.c: 92: {
+{
+[e :U _TMR4_ReadTimer ]
+[f ]
+"93
+[; ;mcc_generated_files/tmr4.c: 93:     uint8_t readVal;
+[v _readVal `uc ~T0 @X0 1 a ]
+"95
+[; ;mcc_generated_files/tmr4.c: 95:     readVal = TMR4;
+[e = _readVal _TMR4 ]
+"97
+[; ;mcc_generated_files/tmr4.c: 97:     return readVal;
+[e ) _readVal ]
+[e $UE 783  ]
+"98
+[; ;mcc_generated_files/tmr4.c: 98: }
+[e :UE 783 ]
+}
+"100
+[; ;mcc_generated_files/tmr4.c: 100: void TMR4_WriteTimer(uint8_t timerVal)
+[v _TMR4_WriteTimer `(v ~T0 @X0 1 ef1`uc ]
+"101
+[; ;mcc_generated_files/tmr4.c: 101: {
+{
+[e :U _TMR4_WriteTimer ]
+"100
+[; ;mcc_generated_files/tmr4.c: 100: void TMR4_WriteTimer(uint8_t timerVal)
+[v _timerVal `uc ~T0 @X0 1 r1 ]
+"101
+[; ;mcc_generated_files/tmr4.c: 101: {
+[f ]
+"103
+[; ;mcc_generated_files/tmr4.c: 103:     TMR4 = timerVal;
+[e = _TMR4 _timerVal ]
+"104
+[; ;mcc_generated_files/tmr4.c: 104: }
+[e :UE 784 ]
+}
+"106
+[; ;mcc_generated_files/tmr4.c: 106: void TMR4_LoadPeriodRegister(uint8_t periodVal)
+[v _TMR4_LoadPeriodRegister `(v ~T0 @X0 1 ef1`uc ]
+"107
+[; ;mcc_generated_files/tmr4.c: 107: {
+{
+[e :U _TMR4_LoadPeriodRegister ]
+"106
+[; ;mcc_generated_files/tmr4.c: 106: void TMR4_LoadPeriodRegister(uint8_t periodVal)
+[v _periodVal `uc ~T0 @X0 1 r1 ]
+"107
+[; ;mcc_generated_files/tmr4.c: 107: {
+[f ]
+"108
+[; ;mcc_generated_files/tmr4.c: 108:    PR4 = periodVal;
+[e = _PR4 _periodVal ]
+"109
+[; ;mcc_generated_files/tmr4.c: 109: }
+[e :UE 785 ]
+}
+"111
+[; ;mcc_generated_files/tmr4.c: 111: _Bool TMR4_HasOverflowOccured(void)
+[v _TMR4_HasOverflowOccured `(a ~T0 @X0 1 ef ]
+"112
+[; ;mcc_generated_files/tmr4.c: 112: {
+{
+[e :U _TMR4_HasOverflowOccured ]
+[f ]
+"114
+[; ;mcc_generated_files/tmr4.c: 114:     _Bool status = PIR2bits.TMR4IF;
+[v _status `a ~T0 @X0 1 a ]
+[e = _status -> . . _PIR2bits 0 1 `a ]
+"115
+[; ;mcc_generated_files/tmr4.c: 115:     if(status)
+[e $ ! != -> _status `i -> 0 `i 787  ]
+"116
+[; ;mcc_generated_files/tmr4.c: 116:     {
+{
+"118
+[; ;mcc_generated_files/tmr4.c: 118:         PIR2bits.TMR4IF = 0;
+[e = . . _PIR2bits 0 1 -> -> 0 `i `uc ]
+"119
+[; ;mcc_generated_files/tmr4.c: 119:     }
+}
+[e :U 787 ]
+"120
+[; ;mcc_generated_files/tmr4.c: 120:     return status;
+[e ) _status ]
+[e $UE 786  ]
+"121
+[; ;mcc_generated_files/tmr4.c: 121: }
+[e :UE 786 ]
 }

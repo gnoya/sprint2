@@ -35,7 +35,7 @@ static int read()
   {
     // 10 to 1000
     int measure = (int)ADC_GetConversion(SENSOR_LIGHT);
-    printf("Measure of the light sensor: %d \r\n", measure);
+    // printf("Measure of the light sensor: %d \r\n", measure);
     return measure;
   }
   return 0;

@@ -65,6 +65,9 @@ sensor temp_sensor;
 led_adapter led;
 menu_controller menu;
 
+extern bool temp_sensor_enabled;
+extern bool light_sensor_enabled;
+
 void main(void)
 {
   SYSTEM_Initialize();
