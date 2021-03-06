@@ -1,19 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"19 temp_sensor.c
-[; ;temp_sensor.c: 19:   int opening_value = (int)ADC_GetConversion(SENSOR_TEMP);
+"23 temp_sensor.c
+[; ;temp_sensor.c: 23:   int opening_value = (int)ADC_GetConversion(SENSOR_TEMP);
 [c E5945 0 1 28 29 30 31 .. ]
 [n E5945 . SENSOR_TEMP SENSOR_LIGHT channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
 "290 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 290: adc_result_t ADC_GetConversion(adc_channel_t channel);
 [v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E5945 ]
+"13 temp_sensor.c
+[; ;temp_sensor.c: 13: extern _Bool temp_sensor_enabled;
+[v _temp_sensor_enabled `a ~T0 @X0 0 e ]
 [v F326 `(a ~T0 @X0 0 tf ]
 [v F328 `(i ~T0 @X0 0 tf ]
 "16 ./sensor_adapter.h
 [; ;./sensor_adapter.h: 16: {
 [s S3 `*uc 1 `*F326 1 `*F328 1 ]
 [n S3 sensor name open read ]
-[v F6003 `(a ~T0 @X0 0 tf ]
-[v F6007 `(i ~T0 @X0 0 tf ]
+[v F6004 `(a ~T0 @X0 0 tf ]
+[v F6008 `(i ~T0 @X0 0 tf ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -941,70 +944,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"16 temp_sensor.c
-[; ;temp_sensor.c: 16: static _Bool open()
+"18 temp_sensor.c
+[; ;temp_sensor.c: 18: static _Bool is_connected = 0;
+[v _is_connected `a ~T0 @X0 1 s ]
+[i _is_connected
+-> -> 0 `i `a
+]
+"20
+[; ;temp_sensor.c: 20: static _Bool open()
 [v _open `(a ~T0 @X0 1 sf ]
-"17
-[; ;temp_sensor.c: 17: {
+"21
+[; ;temp_sensor.c: 21: {
 {
 [e :U _open ]
 [f ]
-"19
-[; ;temp_sensor.c: 19:   int opening_value = (int)ADC_GetConversion(SENSOR_TEMP);
+"23
+[; ;temp_sensor.c: 23:   int opening_value = (int)ADC_GetConversion(SENSOR_TEMP);
 [v _opening_value `i ~T0 @X0 1 a ]
 [e = _opening_value -> ( _ADC_GetConversion (1 . `E5945 0 `i ]
-"22
-[; ;temp_sensor.c: 22:   _Bool is_connected = opening_value > 0;
-[v _is_connected `a ~T0 @X0 1 a ]
+"26
+[; ;temp_sensor.c: 26:   is_connected = opening_value > 0;
 [e = _is_connected -> -> > _opening_value -> 0 `i `i `a ]
-"23
-[; ;temp_sensor.c: 23:   return is_connected;
+"27
+[; ;temp_sensor.c: 27:   return is_connected;
 [e ) _is_connected ]
 [e $UE 786  ]
-"24
-[; ;temp_sensor.c: 24: }
+"28
+[; ;temp_sensor.c: 28: }
 [e :UE 786 ]
 }
-"26
-[; ;temp_sensor.c: 26: static int read()
+"30
+[; ;temp_sensor.c: 30: static int read()
 [v _read `(i ~T0 @X0 1 sf ]
-"27
-[; ;temp_sensor.c: 27: {
+"31
+[; ;temp_sensor.c: 31: {
 {
 [e :U _read ]
 [f ]
-"29
-[; ;temp_sensor.c: 29:   return (int)ADC_GetConversion(SENSOR_TEMP);
+"32
+[; ;temp_sensor.c: 32:   if (is_connected && temp_sensor_enabled)
+[e $ ! && != -> _is_connected `i -> 0 `i != -> _temp_sensor_enabled `i -> 0 `i 788  ]
+"33
+[; ;temp_sensor.c: 33:   {
+{
+"35
+[; ;temp_sensor.c: 35:     return (int)ADC_GetConversion(SENSOR_TEMP);
 [e ) -> ( _ADC_GetConversion (1 . `E5945 0 `i ]
 [e $UE 787  ]
-"30
-[; ;temp_sensor.c: 30: }
+"36
+[; ;temp_sensor.c: 36:   }
+}
+[e :U 788 ]
+"37
+[; ;temp_sensor.c: 37:   return 0;
+[e ) -> 0 `i ]
+[e $UE 787  ]
+"38
+[; ;temp_sensor.c: 38: }
 [e :UE 787 ]
 }
-"32
-[; ;temp_sensor.c: 32: void initialize_temp(sensor *sensor_var)
+"40
+[; ;temp_sensor.c: 40: void initialize_temp(sensor *sensor_var)
 [v _initialize_temp `(v ~T0 @X0 1 ef1`*S3 ]
-"33
-[; ;temp_sensor.c: 33: {
+"41
+[; ;temp_sensor.c: 41: {
 {
 [e :U _initialize_temp ]
-"32
-[; ;temp_sensor.c: 32: void initialize_temp(sensor *sensor_var)
+"40
+[; ;temp_sensor.c: 40: void initialize_temp(sensor *sensor_var)
 [v _sensor_var `*S3 ~T0 @X0 1 r1 ]
-"33
-[; ;temp_sensor.c: 33: {
+"41
+[; ;temp_sensor.c: 41: {
 [f ]
-"34
-[; ;temp_sensor.c: 34:   sensor_var->name = "Temperature";
+"42
+[; ;temp_sensor.c: 42:   sensor_var->name = "Temperature";
 [e = . *U _sensor_var 0 :s 1C ]
-"35
-[; ;temp_sensor.c: 35:   sensor_var->open = open;
-[e = . *U _sensor_var 1 -> &U _open `*F6003 ]
-"36
-[; ;temp_sensor.c: 36:   sensor_var->read = read;
-[e = . *U _sensor_var 2 -> &U _read `*F6007 ]
-"37
-[; ;temp_sensor.c: 37: }
-[e :UE 788 ]
+"43
+[; ;temp_sensor.c: 43:   sensor_var->open = open;
+[e = . *U _sensor_var 1 -> &U _open `*F6004 ]
+"44
+[; ;temp_sensor.c: 44:   sensor_var->read = read;
+[e = . *U _sensor_var 2 -> &U _read `*F6008 ]
+"45
+[; ;temp_sensor.c: 45: }
+[e :UE 789 ]
 }
 [a 1C 84 101 109 112 101 114 97 116 117 114 101 0 ]

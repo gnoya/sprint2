@@ -35,9 +35,11 @@
 */
 typedef struct menu_controller
 {
+  bool light_sensor_opened;
+  bool temp_sensor_opened;
   void (*index_add)(void);
   void (*index_sub)(void);
-  void (*index_current)(void);
+  void (*index_enter)(void);
   void (*show_index)(void);
   void (*show_menu)(void);
   void (*show_main_menu)(void);
@@ -102,7 +104,7 @@ static void index_sub(void);
   @Returns
     None
 */
-static void index_current(void);
+static void index_enter(void);
 
 /**
   @Summary
@@ -211,9 +213,9 @@ static void show_sensors_menu(void);
     None
 
   @Param
-    menu_controller menu
+    menu_controller menu, bool sensors_opened[]
 
   @Returns
     None
 */
-void initialize_menu(menu_controller *menu);
+void initialize_menu(menu_controller *menu, bool sensors_opened[]);

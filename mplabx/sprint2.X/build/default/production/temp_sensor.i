@@ -9955,8 +9955,12 @@ void WDT_Initialize(void);
 # 11 "temp_sensor.c" 2
 
 
+extern _Bool temp_sensor_enabled;
+
+
 static _Bool open();
 static int read();
+static _Bool is_connected = 0;
 
 static _Bool open()
 {
@@ -9964,14 +9968,18 @@ static _Bool open()
   int opening_value = (int)ADC_GetConversion(SENSOR_TEMP);
 
 
-  _Bool is_connected = opening_value > 0;
+  is_connected = opening_value > 0;
   return is_connected;
 }
 
 static int read()
 {
+  if (is_connected && temp_sensor_enabled)
+  {
 
-  return (int)ADC_GetConversion(SENSOR_TEMP);
+    return (int)ADC_GetConversion(SENSOR_TEMP);
+  }
+  return 0;
 }
 
 void initialize_temp(sensor *sensor_var)

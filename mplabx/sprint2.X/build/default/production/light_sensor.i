@@ -9955,10 +9955,13 @@ void WDT_Initialize(void);
 # 11 "light_sensor.c" 2
 
 
+extern _Bool light_sensor_enabled;
+
 
 static _Bool open();
 static int read();
 static void close();
+static _Bool is_connected = 0;
 
 
 static _Bool open()
@@ -9967,14 +9970,18 @@ static _Bool open()
   int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
 
 
-  _Bool is_connected = opening_value > 0;
+  is_connected = opening_value > 0;
   return is_connected;
 }
 
 static int read()
 {
+  if (is_connected && light_sensor_enabled)
+  {
 
-  return (int)ADC_GetConversion(SENSOR_LIGHT);
+    return (int)ADC_GetConversion(SENSOR_LIGHT);
+  }
+  return 0;
 }
 
 

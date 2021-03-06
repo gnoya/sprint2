@@ -11,6 +11,7 @@
 #include "mcc_generated_files/mcc.h"
 
 uint16_t duty_cycle = 0;
+#define DEFAULT_DUTY_CYCLE 0
 
 // ----------------- Static (private) functions ----------------- //
 static long map(int x, long in_min, long in_max, long out_min, long out_max)
@@ -56,6 +57,13 @@ static void turn_red()
 
 static void set_brightness(int brightness)
 {
+  // This means that the sensor is disconnected or disabled
+  if (brightness == 0)
+  {
+    PWM3_LoadDutyValue(DEFAULT_DUTY_CYCLE);
+    return;
+  }
+
   // Map between a duty cycle of 0 to 100
   int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
 
@@ -68,6 +76,13 @@ static void set_brightness(int brightness)
 
 static void set_color(int temperature)
 {
+  // This means that the sensor is disconnected or disabled
+  if (temperature == 0)
+  {
+    turn_red();
+    return;
+  }
+
   // Map the temperature between 0 and 60 (arbitrary values)
   int color = (int)map(temperature, 19, 358, 0, 60);
 

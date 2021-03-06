@@ -50,12 +50,12 @@
 #include <stdbool.h>
 #include <string.h>
 #include "mcc_generated_files/mcc.h"
+#include "menu_controller.h"
 #include "sensor_adapter.h"
 #include "light_sensor.h"
 #include "temp_sensor.h"
 #include "led_adapter.h"
 #include "lcd.h"
-#include "menu_controller.h"
 
 /*
                          Main application
@@ -74,52 +74,43 @@ void main(void)
   char **names_pointer = sensor_names;
   int sensor_counter = 0;
 
-  // ------------------- Initializing structs ----------------- //
+  // ------------------- Initializing sensors ----------------- //
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
-  initialize_led(&led);
-  initialize_menu(&menu);
 
   // --------------------- Opening sensors ------------------- //
-  if (temp_sensor.open())
-  {
-    printf("Temperature sensor is available\r\n");
-    names_pointer[sensor_counter++] = temp_sensor.name;
-  }
+  bool temp_sensor_opened = temp_sensor.open();
+  bool light_sensor_opened = light_sensor.open();
 
-  if (light_sensor.open())
-  {
-    printf("Light sensor is available\r\n");
-    names_pointer[sensor_counter++] = light_sensor.name;
-  }
+  bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
 
-  // ------------------- Printing available sensors ---------------- //
-  int i;
-  for (i = 0; i < sensor_counter; i++)
-    printf("%s \r\n", names_pointer[i]);
+  // --------------- Initializing led and menu --------------- //
+  initialize_led(&led);
+  initialize_menu(&menu, sensors_opened);
 
-  // -------------------- Enabling Interrupts ---------------------- //
+  // ------------------ Enabling Interrupts -------------------- //
   INTERRUPT_GlobalInterruptEnable();
   INTERRUPT_PeripheralInterruptEnable();
 
-  // -------------- Setting button's Interrupt Handlers -------------- //
+  // ------------ Setting button's Interrupt Handlers ------------ //
   IOCAF5_SetInterruptHandler(menu.index_add);
   IOCAF6_SetInterruptHandler(menu.index_sub);
-  IOCAF7_SetInterruptHandler(menu.index_current);
+  IOCAF7_SetInterruptHandler(menu.index_enter);
 
+  // ----------- Writing a welcome message in the LCD ----------- //
   LCDPutStr("Bienvenido!");
   __delay_ms(200);
 
-  // ------------------------- Main loop ------------------------- //
+  // ------------------------ Main loop ----------------------- //
   while (1)
   {
     // -------------------- Reading sensors -------------------- //
-    int light_value = light_sensor.read();
     int temp_value = temp_sensor.read();
+    int light_value = light_sensor.read();
 
     // -------------------- Changing LEDs --------------------- //
-    led.set_brightness(light_value);
     led.set_color(temp_value);
+    led.set_brightness(light_value);
 
     // -------------------- Showing menu --------------------- //
     menu.show_menu();

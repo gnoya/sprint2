@@ -10,8 +10,12 @@
 #include "sensor_adapter.h"
 #include "mcc_generated_files/mcc.h"
 
+extern bool temp_sensor_enabled;
+
+// ----------------------- Declaring static (private) functions ----------------------- //
 static bool open();
 static int read();
+static bool is_connected = false;
 
 static bool open()
 {
@@ -19,14 +23,20 @@ static bool open()
   int opening_value = (int)ADC_GetConversion(SENSOR_TEMP);
 
   // If the value is greater than 0, the sensor is connected
-  bool is_connected = opening_value > 0;
+  is_connected = opening_value > 0;
   return is_connected;
 }
 
 static int read()
 {
-  // 19 to 358
-  return (int)ADC_GetConversion(SENSOR_TEMP);
+  if (is_connected && temp_sensor_enabled)
+  {
+    // 19 to 358
+    int measure = (int)ADC_GetConversion(SENSOR_TEMP);
+    printf("Measure of the temperature sensor: %d \r\n", measure);
+    return measure;
+  }
+  return 0;
 }
 
 void initialize_temp(sensor *sensor_var)

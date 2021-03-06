@@ -9973,6 +9973,7 @@ void WDT_Initialize(void);
 uint16_t duty_cycle = 0;
 
 
+
 static long map(int x, long in_min, long in_max, long out_min, long out_max)
 {
   return ((long)x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -10017,6 +10018,13 @@ static void turn_red()
 static void set_brightness(int brightness)
 {
 
+  if (brightness == 0)
+  {
+    PWM3_LoadDutyValue(0);
+    return;
+  }
+
+
   int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
 
 
@@ -10028,6 +10036,13 @@ static void set_brightness(int brightness)
 
 static void set_color(int temperature)
 {
+
+  if (temperature == 0)
+  {
+    turn_red();
+    return;
+  }
+
 
   int color = (int)map(temperature, 19, 358, 0, 60);
 

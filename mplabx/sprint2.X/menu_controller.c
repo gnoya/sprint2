@@ -11,6 +11,14 @@
 #include "menu_controller.h"
 #include "lcd.h"
 
+static bool temp_sensor_opened = false;
+static bool light_sensor_opened = false;
+
+bool temp_sensor_enabled = true;
+bool light_sensor_enabled = true;
+
+// TODO: delete modes menu
+
 // ----------------------- Static (private) functions ----------------------- //
 static void index_add(void)
 {
@@ -24,6 +32,7 @@ static void index_add(void)
   show = 1;
 }
 
+// TODO: add comments to this function
 static void index_sub(void)
 {
   menu_index--;
@@ -32,7 +41,8 @@ static void index_sub(void)
   show = 1;
 }
 
-static void index_current(void)
+// TODO: add comments to this function
+static void index_enter(void)
 {
   if (menu_current == 1 && menu_index == 4)
   {
@@ -41,13 +51,30 @@ static void index_current(void)
     show = 1;
     return;
   }
-  if (menu_current == 2 && menu_index == 3)
+  if (menu_current == 2 && menu_index == 2)
   {
     menu_current = 0;
     menu_index = 0;
     show = 1;
     return;
   }
+
+  // Temperature sensor
+  if (menu_current == 2 && menu_index == 0)
+  {
+    temp_sensor_enabled = !temp_sensor_enabled;
+    show = 1;
+    return;
+  }
+
+  // Light sensor
+  if (menu_current == 2 && menu_index == 1)
+  {
+    light_sensor_enabled = !light_sensor_enabled;
+    show = 1;
+    return;
+  }
+
   if (menu_current != 0 || (menu_current == 0 && menu_index > 1))
     return;
   menu_current = menu_index + 1;
@@ -150,27 +177,42 @@ static void show_sensors_menu(void)
   switch (menu_index)
   {
   case 0:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("  Sensor de    >");
-    LCDGoto(0, 1);
-    LCDPutStr("  Temperatura    ");
-    break;
+    if (temp_sensor_opened)
+    {
+      LCDClear();
+      LCDGoto(0, 0);
+      LCDPutStr("< Temperatura >");
+      LCDGoto(0, 1);
+      if (temp_sensor_enabled)
+      {
+        LCDPutStr("   Habilitado   ");
+      }
+      else
+      {
+        LCDPutStr("  Deshabilitado    ");
+      }
+      break;
+    }
+    menu_index++;
   case 1:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("<  Sensor de   >");
-    LCDGoto(0, 1);
-    LCDPutStr("    Luminocidad  ");
-    break;
+    if (light_sensor_opened)
+    {
+      LCDClear();
+      LCDGoto(0, 0);
+      LCDPutStr("<  Luminocidad   >");
+      LCDGoto(0, 1);
+      if (light_sensor_enabled)
+      {
+        LCDPutStr("  Habilitado    ");
+      }
+      else
+      {
+        LCDPutStr("  Deshabilitado    ");
+      }
+      break;
+    }
+    menu_index++;
   case 2:
-    LCDClear();
-    LCDGoto(0, 0);
-    LCDPutStr("<  Sensor de   >");
-    LCDGoto(0, 1);
-    LCDPutStr("     Sonido     ");
-    break;
-  case 3:
     LCDClear();
     LCDGoto(0, 0);
     LCDPutStr("<   Regresar   ");
@@ -208,14 +250,16 @@ static void show_menu(void)
 }
 
 // ----------------------- Public functions ----------------------- //
-void initialize_menu(menu_controller *menu)
+void initialize_menu(menu_controller *menu, bool sensors_opened[])
 {
   menu->index_add = index_add;
   menu->index_sub = index_sub;
-  menu->index_current = index_current;
+  menu->index_enter = index_enter;
   menu->show_index = show_index;
   menu->show_menu = show_menu;
   menu->show_main_menu = show_main_menu;
   menu->show_mode_menu = show_mode_menu;
   menu->show_sensors_menu = show_sensors_menu;
+  light_sensor_opened = sensors_opened[0];
+  temp_sensor_opened = sensors_opened[1];
 }

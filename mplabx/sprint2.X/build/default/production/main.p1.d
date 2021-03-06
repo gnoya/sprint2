@@ -8,9 +8,9 @@ mcc_generated_files/pwm3.h  \
 mcc_generated_files/tmr4.h  \
 mcc_generated_files/adc.h  \
 mcc_generated_files/eusart.h  \
+menu_controller.h  \
 sensor_adapter.h  \
 light_sensor.h  \
 temp_sensor.h  \
 led_adapter.h  \
-lcd.h  \
-menu_controller.h 
+lcd.h 

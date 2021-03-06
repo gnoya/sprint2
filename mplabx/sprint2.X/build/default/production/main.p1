@@ -1,28 +1,28 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F6157 `(a ~T0 @X0 0 tf ]
-[v F6159 `(i ~T0 @X0 0 tf ]
+[v F6191 `(a ~T0 @X0 0 tf ]
+[v F6193 `(i ~T0 @X0 0 tf ]
 "16 ./sensor_adapter.h
 [; ;./sensor_adapter.h: 16: {
-[s S786 `*uc 1 `*F6157 1 `*F6159 1 ]
-[n S786 sensor name open read ]
-[v F6167 `(v ~T0 @X0 0 tf1`i ]
-[v F6170 `(v ~T0 @X0 0 tf1`i ]
+[s S787 `*uc 1 `*F6191 1 `*F6193 1 ]
+[n S787 sensor name open read ]
+[v F6201 `(v ~T0 @X0 0 tf1`i ]
+[v F6204 `(v ~T0 @X0 0 tf1`i ]
 "37 ./led_adapter.h
 [; ;./led_adapter.h: 37: {
-[s S787 `*F6167 1 `*F6170 1 ]
-[n S787 led_adapter set_brightness set_color ]
-[v F6207 `(v ~T0 @X0 0 tf ]
-[v F6209 `(v ~T0 @X0 0 tf ]
-[v F6211 `(v ~T0 @X0 0 tf ]
-[v F6213 `(v ~T0 @X0 0 tf ]
-[v F6215 `(v ~T0 @X0 0 tf ]
-[v F6217 `(v ~T0 @X0 0 tf ]
-[v F6219 `(v ~T0 @X0 0 tf ]
-[v F6221 `(v ~T0 @X0 0 tf ]
+[s S788 `*F6201 1 `*F6204 1 ]
+[n S788 led_adapter set_brightness set_color ]
+[v F6158 `(v ~T0 @X0 0 tf ]
+[v F6160 `(v ~T0 @X0 0 tf ]
+[v F6162 `(v ~T0 @X0 0 tf ]
+[v F6164 `(v ~T0 @X0 0 tf ]
+[v F6166 `(v ~T0 @X0 0 tf ]
+[v F6168 `(v ~T0 @X0 0 tf ]
+[v F6170 `(v ~T0 @X0 0 tf ]
+[v F6172 `(v ~T0 @X0 0 tf ]
 "37 ./menu_controller.h
 [; ;./menu_controller.h: 37: {
-[s S788 `*F6207 1 `*F6209 1 `*F6211 1 `*F6213 1 `*F6215 1 `*F6217 1 `*F6219 1 `*F6221 1 ]
-[n S788 menu_controller index_add index_sub index_current show_index show_menu show_main_menu show_mode_menu show_sensors_menu ]
+[s S786 `a 1 `a 1 `*F6158 1 `*F6160 1 `*F6162 1 `*F6164 1 `*F6166 1 `*F6168 1 `*F6170 1 `*F6172 1 ]
+[n S786 menu_controller light_sensor_opened temp_sensor_opened index_add index_sub index_enter show_index show_menu show_main_menu show_mode_menu show_sensors_menu ]
 [p mainexit ]
 "74 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
@@ -32,18 +32,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _LCD_Initialize `(v ~T0 @X0 0 ef ]
 "46 ./light_sensor.h
 [; ;./light_sensor.h: 46: void initialize_light(sensor *sensor);
-[v _initialize_light `(v ~T0 @X0 0 ef1`*S786 ]
+[v _initialize_light `(v ~T0 @X0 0 ef1`*S787 ]
 "45 ./temp_sensor.h
 [; ;./temp_sensor.h: 45: void initialize_temp(sensor *sensor);
-[v _initialize_temp `(v ~T0 @X0 0 ef1`*S786 ]
+[v _initialize_temp `(v ~T0 @X0 0 ef1`*S787 ]
 "186 ./led_adapter.h
 [; ;./led_adapter.h: 186: void initialize_led(led_adapter *led);
-[v _initialize_led `(v ~T0 @X0 0 ef1`*S787 ]
-"219 ./menu_controller.h
-[; ;./menu_controller.h: 219: void initialize_menu(menu_controller *menu);
-[v _initialize_menu `(v ~T0 @X0 0 ef1`*S788 ]
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+[v _initialize_led `(v ~T0 @X0 0 ef1`*S788 ]
+"221 ./menu_controller.h
+[; ;./menu_controller.h: 221: void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
+[v _initialize_menu `(v ~T0 @X0 0 ef2`*S786`*a ]
 "357 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 357:     struct {
 [s S32 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -1005,36 +1003,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"48 ./menu_controller.h
-[; ;./menu_controller.h: 48: _Bool show = 1;
+"50 ./menu_controller.h
+[; ;./menu_controller.h: 50: _Bool show = 1;
 [v _show `a ~T0 @X0 1 e ]
 [i _show
 -> -> 1 `i `a
 ]
-"49
-[; ;./menu_controller.h: 49: int menu_current = 0;
+"51
+[; ;./menu_controller.h: 51: int menu_current = 0;
 [v _menu_current `i ~T0 @X0 1 e ]
 [i _menu_current
 -> 0 `i
 ]
-"50
-[; ;./menu_controller.h: 50: int menu_index = 0;
+"52
+[; ;./menu_controller.h: 52: int menu_index = 0;
 [v _menu_index `i ~T0 @X0 1 e ]
 [i _menu_index
 -> 0 `i
 ]
 "63 main.c
 [; ;main.c: 63: sensor light_sensor;
-[v _light_sensor `S786 ~T0 @X0 1 e ]
+[v _light_sensor `S787 ~T0 @X0 1 e ]
 "64
 [; ;main.c: 64: sensor temp_sensor;
-[v _temp_sensor `S786 ~T0 @X0 1 e ]
+[v _temp_sensor `S787 ~T0 @X0 1 e ]
 "65
 [; ;main.c: 65: led_adapter led;
-[v _led `S787 ~T0 @X0 1 e ]
+[v _led `S788 ~T0 @X0 1 e ]
 "66
 [; ;main.c: 66: menu_controller menu;
-[v _menu `S788 ~T0 @X0 1 e ]
+[v _menu `S786 ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "68
 [; ;main.c: 68: void main(void)
@@ -1050,15 +1048,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "71
 [; ;main.c: 71:   LCD_Initialize();
 [e ( _LCD_Initialize ..  ]
-[v F6241 `*uc ~T0 @X0 -> 3 `i s ]
-[i F6241
+[v F6244 `*uc ~T0 @X0 -> 3 `i s ]
+[i F6244
 :U ..
 ..
 ]
 "73
 [; ;main.c: 73:   char *sensor_names[3] = {};
 [v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
-[e = _sensor_names F6241 ]
+[e = _sensor_names F6244 ]
 "74
 [; ;main.c: 74:   char **names_pointer = sensor_names;
 [v _names_pointer `**uc ~T0 @X0 1 a ]
@@ -1073,117 +1071,84 @@ Version 4.0 HI-TECH Software Intermediate Code
 "79
 [; ;main.c: 79:   initialize_temp(&temp_sensor);
 [e ( _initialize_temp (1 &U _temp_sensor ]
-"80
-[; ;main.c: 80:   initialize_led(&led);
-[e ( _initialize_led (1 &U _led ]
-"81
-[; ;main.c: 81:   initialize_menu(&menu);
-[e ( _initialize_menu (1 &U _menu ]
-"84
-[; ;main.c: 84:   if (temp_sensor.open())
-[e $ ! != -> ( *U . _temp_sensor 1 ..  `i -> 0 `i 790  ]
+"82
+[; ;main.c: 82:   _Bool temp_sensor_opened = temp_sensor.open();
+[v _temp_sensor_opened `a ~T0 @X0 1 a ]
+[e = _temp_sensor_opened ( *U . _temp_sensor 1 ..  ]
+"83
+[; ;main.c: 83:   _Bool light_sensor_opened = light_sensor.open();
+[v _light_sensor_opened `a ~T0 @X0 1 a ]
+[e = _light_sensor_opened ( *U . _light_sensor 1 ..  ]
+[v F6252 `a ~T0 @X0 -> 2 `i s ]
+[i F6252
+:U ..
 "85
-[; ;main.c: 85:   {
-{
-"86
-[; ;main.c: 86:     printf("Temperature sensor is available\r\n");
-[e ( _printf :s 1C ]
-"87
-[; ;main.c: 87:     names_pointer[sensor_counter++] = temp_sensor.name;
-[e = *U + _names_pointer * -> ++ _sensor_counter -> 1 `i `x -> -> # *U _names_pointer `i `x . _temp_sensor 0 ]
+[; ;main.c: 85:   _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
+-> -> 0 `i `a
+-> -> 0 `i `a
+..
+]
+[v _sensors_opened `a ~T0 @X0 -> 2 `i a ]
+[e = _sensors_opened F6252 ]
+[e ; = *U + &U _sensors_opened * -> -> -> 0 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _temp_sensor_opened = *U + &U _sensors_opened * -> -> -> 1 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _light_sensor_opened ]
 "88
-[; ;main.c: 88:   }
-}
-[e :U 790 ]
-"90
-[; ;main.c: 90:   if (light_sensor.open())
-[e $ ! != -> ( *U . _light_sensor 1 ..  `i -> 0 `i 791  ]
-"91
-[; ;main.c: 91:   {
-{
-"92
-[; ;main.c: 92:     printf("Light sensor is available\r\n");
-[e ( _printf :s 2C ]
-"93
-[; ;main.c: 93:     names_pointer[sensor_counter++] = light_sensor.name;
-[e = *U + _names_pointer * -> ++ _sensor_counter -> 1 `i `x -> -> # *U _names_pointer `i `x . _light_sensor 0 ]
-"94
-[; ;main.c: 94:   }
-}
-[e :U 791 ]
-"97
-[; ;main.c: 97:   int i;
-[v _i `i ~T0 @X0 1 a ]
-"98
-[; ;main.c: 98:   for (i = 0; i < sensor_counter; i++)
-{
-[e = _i -> 0 `i ]
-[e $U 795  ]
-[e :U 792 ]
-"99
-[; ;main.c: 99:     printf("%s \r\n", names_pointer[i]);
-[e ( _printf , (. :s 3C *U + _names_pointer * -> _i `x -> -> # *U _names_pointer `i `x ]
-[e ++ _i -> 1 `i ]
-[e :U 795 ]
-[e $ < _i _sensor_counter 792  ]
-[e :U 793 ]
-}
-"102
-[; ;main.c: 102:   (INTCONbits.GIE = 1);
+[; ;main.c: 88:   initialize_led(&led);
+[e ( _initialize_led (1 &U _led ]
+"89
+[; ;main.c: 89:   initialize_menu(&menu, sensors_opened);
+[e ( _initialize_menu (2 , &U _menu &U _sensors_opened ]
+"109
+[; ;main.c: 109:   (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"103
-[; ;main.c: 103:   (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"106
-[; ;main.c: 106:   IOCAF5_SetInterruptHandler(menu.index_add);
-[e ( _IOCAF5_SetInterruptHandler (1 . _menu 0 ]
-"107
-[; ;main.c: 107:   IOCAF6_SetInterruptHandler(menu.index_sub);
-[e ( _IOCAF6_SetInterruptHandler (1 . _menu 1 ]
-"108
-[; ;main.c: 108:   IOCAF7_SetInterruptHandler(menu.index_current);
-[e ( _IOCAF7_SetInterruptHandler (1 . _menu 2 ]
 "110
-[; ;main.c: 110:   LCDPutStr("Bienvenido!");
-[e ( _LCDPutStr (1 :s 4C ]
-"111
-[; ;main.c: 111:   _delay((unsigned long)((200)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;main.c: 110:   (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"113
+[; ;main.c: 113:   IOCAF5_SetInterruptHandler(menu.index_add);
+[e ( _IOCAF5_SetInterruptHandler (1 . _menu 2 ]
 "114
-[; ;main.c: 114:   while (1)
-[e :U 797 ]
+[; ;main.c: 114:   IOCAF6_SetInterruptHandler(menu.index_sub);
+[e ( _IOCAF6_SetInterruptHandler (1 . _menu 3 ]
 "115
-[; ;main.c: 115:   {
-{
+[; ;main.c: 115:   IOCAF7_SetInterruptHandler(menu.index_enter);
+[e ( _IOCAF7_SetInterruptHandler (1 . _menu 4 ]
 "117
-[; ;main.c: 117:     int light_value = light_sensor.read();
-[v _light_value `i ~T0 @X0 1 a ]
-[e = _light_value ( *U . _light_sensor 2 ..  ]
+[; ;main.c: 117:   LCDPutStr("Bienvenido!");
+[e ( _LCDPutStr (1 :s 1C ]
 "118
-[; ;main.c: 118:     int temp_value = temp_sensor.read();
+[; ;main.c: 118:   _delay((unsigned long)((200)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"121
+[; ;main.c: 121:   while (1)
+[e :U 791 ]
+"122
+[; ;main.c: 122:   {
+{
+"124
+[; ;main.c: 124:     int temp_value = temp_sensor.read();
 [v _temp_value `i ~T0 @X0 1 a ]
 [e = _temp_value ( *U . _temp_sensor 2 ..  ]
-"121
-[; ;main.c: 121:     led.set_brightness(light_value);
-[e ( *U . _led 0 (1 _light_value ]
-"122
-[; ;main.c: 122:     led.set_color(temp_value);
-[e ( *U . _led 1 (1 _temp_value ]
 "125
-[; ;main.c: 125:     menu.show_menu();
-[e ( *U . _menu 4 ..  ]
-"126
-[; ;main.c: 126:   }
+[; ;main.c: 125:     int light_value = light_sensor.read();
+[v _light_value `i ~T0 @X0 1 a ]
+[e = _light_value ( *U . _light_sensor 2 ..  ]
+"128
+[; ;main.c: 128:     led.set_color(temp_value);
+[e ( *U . _led 1 (1 _temp_value ]
+"129
+[; ;main.c: 129:     led.set_brightness(light_value);
+[e ( *U . _led 0 (1 _light_value ]
+"132
+[; ;main.c: 132:     menu.show_menu();
+[e ( *U . _menu 6 ..  ]
+"133
+[; ;main.c: 133:   }
 }
-[e :U 796 ]
-[e $U 797  ]
-[e :U 798 ]
-"127
-[; ;main.c: 127: }
+[e :U 790 ]
+[e $U 791  ]
+[e :U 792 ]
+"134
+[; ;main.c: 134: }
 [e :UE 789 ]
 }
-[p f _printf 8650752 ]
-[a 4C 66 105 101 110 118 101 110 105 100 111 33 0 ]
-[a 2C 76 105 103 104 116 32 115 101 110 115 111 114 32 105 115 32 97 118 97 105 108 97 98 108 101 13 10 0 ]
-[a 1C 84 101 109 112 101 114 97 116 117 114 101 32 115 101 110 115 111 114 32 105 115 32 97 118 97 105 108 97 98 108 101 13 10 0 ]
-[a 3C 37 115 32 13 10 0 ]
+[a 1C 66 105 101 110 118 101 110 105 100 111 33 0 ]

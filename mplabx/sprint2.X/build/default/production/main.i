@@ -9995,6 +9995,45 @@ void OSCILLATOR_Initialize(void);
 void WDT_Initialize(void);
 # 52 "main.c" 2
 
+# 1 "./menu_controller.h" 1
+# 36 "./menu_controller.h"
+typedef struct menu_controller
+{
+  _Bool light_sensor_opened;
+  _Bool temp_sensor_opened;
+  void (*index_add)(void);
+  void (*index_sub)(void);
+  void (*index_enter)(void);
+  void (*show_index)(void);
+  void (*show_menu)(void);
+  void (*show_main_menu)(void);
+  void (*show_mode_menu)(void);
+  void (*show_sensors_menu)(void);
+} menu_controller;
+
+_Bool show = 1;
+int menu_current = 0;
+int menu_index = 0;
+# 70 "./menu_controller.h"
+static void index_add(void);
+# 88 "./menu_controller.h"
+static void index_sub(void);
+# 107 "./menu_controller.h"
+static void index_enter(void);
+# 127 "./menu_controller.h"
+static void show_index(void);
+# 146 "./menu_controller.h"
+static void show_menu(void);
+# 165 "./menu_controller.h"
+static void show_main_menu(void);
+# 184 "./menu_controller.h"
+static void show_mode_menu(void);
+# 203 "./menu_controller.h"
+static void show_sensors_menu(void);
+# 221 "./menu_controller.h"
+void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
+# 53 "main.c" 2
+
 # 1 "./sensor_adapter.h" 1
 # 15 "./sensor_adapter.h"
 typedef struct sensor
@@ -10003,17 +10042,17 @@ typedef struct sensor
   _Bool (*open)(void);
   int (*read)(void);
 } sensor;
-# 53 "main.c" 2
+# 54 "main.c" 2
 
 # 1 "./light_sensor.h" 1
 # 46 "./light_sensor.h"
 void initialize_light(sensor *sensor);
-# 54 "main.c" 2
+# 55 "main.c" 2
 
 # 1 "./temp_sensor.h" 1
 # 45 "./temp_sensor.h"
 void initialize_temp(sensor *sensor);
-# 55 "main.c" 2
+# 56 "main.c" 2
 
 # 1 "./led_adapter.h" 1
 # 36 "./led_adapter.h"
@@ -10038,7 +10077,7 @@ static void turn_selectors(_Bool selector1, _Bool selector2);
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
 # 186 "./led_adapter.h"
 void initialize_led(led_adapter *led);
-# 56 "main.c" 2
+# 57 "main.c" 2
 
 # 1 "./lcd.h" 1
 # 120 "./lcd.h"
@@ -10055,43 +10094,6 @@ void initialize_led(led_adapter *led);
   void LCDGoto(uint8_t pos, uint8_t ln);
 # 232 "./lcd.h"
   void LCDClear(void);
-# 57 "main.c" 2
-
-# 1 "./menu_controller.h" 1
-# 36 "./menu_controller.h"
-typedef struct menu_controller
-{
-  void (*index_add)(void);
-  void (*index_sub)(void);
-  void (*index_current)(void);
-  void (*show_index)(void);
-  void (*show_menu)(void);
-  void (*show_main_menu)(void);
-  void (*show_mode_menu)(void);
-  void (*show_sensors_menu)(void);
-} menu_controller;
-
-_Bool show = 1;
-int menu_current = 0;
-int menu_index = 0;
-# 68 "./menu_controller.h"
-static void index_add(void);
-# 86 "./menu_controller.h"
-static void index_sub(void);
-# 105 "./menu_controller.h"
-static void index_current(void);
-# 125 "./menu_controller.h"
-static void show_index(void);
-# 144 "./menu_controller.h"
-static void show_menu(void);
-# 163 "./menu_controller.h"
-static void show_main_menu(void);
-# 182 "./menu_controller.h"
-static void show_mode_menu(void);
-# 201 "./menu_controller.h"
-static void show_sensors_menu(void);
-# 219 "./menu_controller.h"
-void initialize_menu(menu_controller *menu);
 # 58 "main.c" 2
 
 
@@ -10115,35 +10117,24 @@ void main(void)
 
   initialize_light(&light_sensor);
   initialize_temp(&temp_sensor);
+
+
+  _Bool temp_sensor_opened = temp_sensor.open();
+  _Bool light_sensor_opened = light_sensor.open();
+
+  _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
+
+
   initialize_led(&led);
-  initialize_menu(&menu);
-
-
-  if (temp_sensor.open())
-  {
-    printf("Temperature sensor is available\r\n");
-    names_pointer[sensor_counter++] = temp_sensor.name;
-  }
-
-  if (light_sensor.open())
-  {
-    printf("Light sensor is available\r\n");
-    names_pointer[sensor_counter++] = light_sensor.name;
-  }
-
-
-  int i;
-  for (i = 0; i < sensor_counter; i++)
-    printf("%s \r\n", names_pointer[i]);
-
-
+  initialize_menu(&menu, sensors_opened);
+# 109 "main.c"
   (INTCONbits.GIE = 1);
   (INTCONbits.PEIE = 1);
 
 
   IOCAF5_SetInterruptHandler(menu.index_add);
   IOCAF6_SetInterruptHandler(menu.index_sub);
-  IOCAF7_SetInterruptHandler(menu.index_current);
+  IOCAF7_SetInterruptHandler(menu.index_enter);
 
   LCDPutStr("Bienvenido!");
   _delay((unsigned long)((200)*(1000000/4000.0)));
@@ -10152,12 +10143,12 @@ void main(void)
   while (1)
   {
 
-    int light_value = light_sensor.read();
     int temp_value = temp_sensor.read();
+    int light_value = light_sensor.read();
 
 
-    led.set_brightness(light_value);
     led.set_color(temp_value);
+    led.set_brightness(light_value);
 
 
     menu.show_menu();
