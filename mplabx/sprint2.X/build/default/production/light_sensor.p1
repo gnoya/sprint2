@@ -1,11 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "25 light_sensor.c
 [; ;light_sensor.c: 25:   int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
-[c E6034 0 1 28 29 30 31 .. ]
-[n E6034 . SENSOR_TEMP SENSOR_LIGHT channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
+[c E6036 0 1 28 29 30 31 .. ]
+[n E6036 . SENSOR_TEMP SENSOR_LIGHT channel_DAC2_Output channel_Temp channel_DAC1_Output channel_FVRBuffer1  ]
 "290 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 290: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E6034 ]
+[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E6036 ]
 "13 light_sensor.c
 [; ;light_sensor.c: 13: extern _Bool light_sensor_enabled;
 [v _light_sensor_enabled `a ~T0 @X0 0 e ]
@@ -15,8 +15,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./sensor_adapter.h: 16: {
 [s S3 `*uc 1 `*F326 1 `*F328 1 ]
 [n S3 sensor name open read ]
-[v F6122 `(a ~T0 @X0 0 tf ]
-[v F6126 `(i ~T0 @X0 0 tf ]
+[v F6124 `(a ~T0 @X0 0 tf ]
+[v F6128 `(i ~T0 @X0 0 tf ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -961,7 +961,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "25
 [; ;light_sensor.c: 25:   int opening_value = (int)ADC_GetConversion(SENSOR_LIGHT);
 [v _opening_value `i ~T0 @X0 1 a ]
-[e = _opening_value -> ( _ADC_GetConversion (1 . `E6034 1 `i ]
+[e = _opening_value -> ( _ADC_GetConversion (1 . `E6036 1 `i ]
 "28
 [; ;light_sensor.c: 28:   is_connected = opening_value > 0;
 [e = _is_connected -> -> > _opening_value -> 0 `i `i `a ]
@@ -990,7 +990,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37
 [; ;light_sensor.c: 37:     int measure = (int)ADC_GetConversion(SENSOR_LIGHT);
 [v _measure `i ~T0 @X0 1 a ]
-[e = _measure -> ( _ADC_GetConversion (1 . `E6034 1 `i ]
+[e = _measure -> ( _ADC_GetConversion (1 . `E6036 1 `i ]
 "39
 [; ;light_sensor.c: 39:     return measure;
 [e ) _measure ]
@@ -1025,10 +1025,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . *U _sensor_var 0 :s 1C ]
 "48
 [; ;light_sensor.c: 48:   sensor_var->open = open;
-[e = . *U _sensor_var 1 -> &U _open `*F6122 ]
+[e = . *U _sensor_var 1 -> &U _open `*F6124 ]
 "49
 [; ;light_sensor.c: 49:   sensor_var->read = read;
-[e = . *U _sensor_var 2 -> &U _read `*F6126 ]
+[e = . *U _sensor_var 2 -> &U _read `*F6128 ]
 "50
 [; ;light_sensor.c: 50: }
 [e :UE 789 ]

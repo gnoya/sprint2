@@ -103,7 +103,7 @@ void main(void)
   IOCAF7_SetInterruptHandler(menu.index_enter);
   
   //--------------Setting Timer Interrupt Handlers ---------------//
-    TMR6_SetInterruptHandler(rtc_sleep_ISR);
+  TMR2_SetInterruptHandler(rtc_sleep_ISR);
 
   // ----------- Writing a welcome message in the LCD ----------- //
   LCDPutStr("Bienvenido!");
@@ -129,6 +129,7 @@ void main(void)
 
     // -------------------- Showing menu --------------------- //
     menu.show_menu();
+    rtc_sleep(30);
   }
 }
 /**

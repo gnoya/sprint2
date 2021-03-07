@@ -31,12 +31,12 @@
 #include "i2c_simple_master.h"
 
 /****************************************************************/
-static i2c_operations_t wr1RegCompleteHandler(void *p)
+/*static i2c_operations_t wr1RegCompleteHandler(void *p)
 {
     I2C_SetBuffer(p,1);
     I2C_SetDataCompleteCallback(NULL,NULL);
     return I2C_CONTINUE;
-}
+}*/
 
 /**
  *  \ingroup doc_driver_i2c_code
@@ -48,7 +48,7 @@ static i2c_operations_t wr1RegCompleteHandler(void *p)
  *  
  *  \return None
  */
-void i2c_write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data)
+/*void i2c_write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data)
 {
     while(!I2C_Open(address)); // sit here until we get the bus..
     I2C_SetDataCompleteCallback(wr1RegCompleteHandler,&data);
@@ -56,7 +56,7 @@ void i2c_write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data)
     I2C_SetAddressNackCallback(NULL,NULL); //NACK polling?
     I2C_MasterWrite();
     while(I2C_BUSY == I2C_Close()); // sit here until finished.
-}
+}*/
 
 /**
  *  \ingroup doc_driver_i2c_code
@@ -78,12 +78,12 @@ void i2c_writeNBytes(i2c_address_t address, void* data, size_t len)
 }
 
 /****************************************************************/
-static i2c_operations_t rd1RegCompleteHandler(void *p)
+/*static i2c_operations_t rd1RegCompleteHandler(void *p)
 {
     I2C_SetBuffer(p,1);
     I2C_SetDataCompleteCallback(NULL,NULL);
     return I2C_RESTART_READ;
-}
+}*/
 
 /**
  *  \ingroup doc_driver_i2c_code
@@ -94,7 +94,7 @@ static i2c_operations_t rd1RegCompleteHandler(void *p)
  *  
  *  \return [out] The read data byte
  */
-uint8_t i2c_read1ByteRegister(i2c_address_t address, uint8_t reg)
+/*uint8_t i2c_read1ByteRegister(i2c_address_t address, uint8_t reg)
 {
     uint8_t    d2=42;
     i2c_error_t e;
@@ -113,15 +113,15 @@ uint8_t i2c_read1ByteRegister(i2c_address_t address, uint8_t reg)
     
 
     return d2;
-}
+}*/
 
 /****************************************************************/
-static i2c_operations_t rd2RegCompleteHandler(void *p)
+/*static i2c_operations_t rd2RegCompleteHandler(void *p)
 {
     I2C_SetBuffer(p,2);
     I2C_SetDataCompleteCallback(NULL,NULL);
     return I2C_RESTART_READ;
-}
+}*/
 
 /**
  *  \ingroup doc_driver_i2c_code
@@ -132,7 +132,7 @@ static i2c_operations_t rd2RegCompleteHandler(void *p)
  *  
  *  \return [out] The read 2 bytes of data
  */
-uint16_t i2c_read2ByteRegister(i2c_address_t address, uint8_t reg)
+/*uint16_t i2c_read2ByteRegister(i2c_address_t address, uint8_t reg)
 {
     // result is little endian
     uint16_t    result;
@@ -146,14 +146,14 @@ uint16_t i2c_read2ByteRegister(i2c_address_t address, uint8_t reg)
     
     return (result << 8 | result >> 8);
 }
-
+*/
 /****************************************************************/
-static i2c_operations_t wr2RegCompleteHandler(void *p)
+/*static i2c_operations_t wr2RegCompleteHandler(void *p)
 {
     I2C_SetBuffer(p,2);
     I2C_SetDataCompleteCallback(NULL,NULL);
     return I2C_CONTINUE;
-}
+}*/
 
 /**
  *  \ingroup doc_driver_i2c_code
@@ -165,7 +165,7 @@ static i2c_operations_t wr2RegCompleteHandler(void *p)
  *  
  *  \return None
  */
-void i2c_write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data)
+/*void i2c_write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data)
 {
     while(!I2C_Open(address)); // sit here until we get the bus..
     I2C_SetDataCompleteCallback(wr2RegCompleteHandler,&data);
@@ -173,7 +173,7 @@ void i2c_write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data)
     I2C_SetAddressNackCallback(NULL,NULL); //NACK polling?
     I2C_MasterWrite();
     while(I2C_BUSY == I2C_Close()); // sit here until finished.
-}
+}*/
 
 /****************************************************************/
 typedef struct
@@ -182,12 +182,12 @@ typedef struct
     char *data;
 }buf_t;
 
-static i2c_operations_t rdBlkRegCompleteHandler(void *p)
+/*static i2c_operations_t rdBlkRegCompleteHandler(void *p)
 {
     I2C_SetBuffer(((buf_t *)p)->data,((buf_t*)p)->len);
     I2C_SetDataCompleteCallback(NULL,NULL);
     return I2C_RESTART_READ;
-}
+}*/
 
 /**
  *  \ingroup doc_driver_i2c_code
@@ -200,7 +200,7 @@ static i2c_operations_t rdBlkRegCompleteHandler(void *p)
  *  
  *  \return None
  */
-void i2c_readDataBlock(i2c_address_t address, uint8_t reg, void *data, size_t len)
+/*void i2c_readDataBlock(i2c_address_t address, uint8_t reg, void *data, size_t len)
 {
     // result is little endian
     buf_t    d;
@@ -213,7 +213,7 @@ void i2c_readDataBlock(i2c_address_t address, uint8_t reg, void *data, size_t le
     I2C_SetAddressNackCallback(NULL,NULL); //NACK polling?
     I2C_MasterWrite();
     while(I2C_BUSY == I2C_Close()); // sit here until finished.
-}
+}*/
 
 /**
  *  \ingroup doc_driver_i2c_code

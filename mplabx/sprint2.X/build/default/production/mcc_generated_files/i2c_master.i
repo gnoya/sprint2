@@ -10036,14 +10036,7 @@ i2c_error_t I2C_MasterWrite(void)
 {
     return I2C_MasterOperation(0);
 }
-
-void I2C_SetTimeOut(uint8_t timeOutValue)
-{
-    I2C_MasterDisableIrq();
-    I2C_Status.time_out_value = timeOutValue;
-    I2C_MasterEnableIrq();
-}
-
+# 263 "mcc_generated_files/i2c_master.c"
 void I2C_SetBuffer(void *buffer, size_t bufferSize)
 {
     if(I2C_Status.bufferFree)
@@ -10053,32 +10046,12 @@ void I2C_SetBuffer(void *buffer, size_t bufferSize)
         I2C_Status.bufferFree = 0;
     }
 }
-
-void I2C_SetDataCompleteCallback(i2c_callback_t cb, void *ptr)
-{
-    I2C_SetCallback(I2C_DATA_COMPLETE, cb, ptr);
-}
-
-void I2C_SetWriteCollisionCallback(i2c_callback_t cb, void *ptr)
-{
-    I2C_SetCallback(I2C_WRITE_COLLISION, cb, ptr);
-}
-
+# 283 "mcc_generated_files/i2c_master.c"
 void I2C_SetAddressNackCallback(i2c_callback_t cb, void *ptr)
 {
     I2C_SetCallback(I2C_ADDR_NACK, cb, ptr);
 }
-
-void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr)
-{
-    I2C_SetCallback(I2C_DATA_NACK, cb, ptr);
-}
-
-void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr)
-{
-    I2C_SetCallback(I2C_TIMEOUT, cb, ptr);
-}
-
+# 298 "mcc_generated_files/i2c_master.c"
 static void I2C_SetCallback(i2c_callbackIndex_t idx, i2c_callback_t cb, void *ptr)
 {
     if(cb)
@@ -10206,31 +10179,7 @@ static i2c_fsm_states_t I2C_DO_TX_EMPTY(void)
             return I2C_DO_SEND_STOP();
     }
 }
-
-static i2c_fsm_states_t I2C_DO_RX_EMPTY(void)
-{
-    I2C_Status.bufferFree = 1;
-    switch(I2C_Status.callbackTable[I2C_DATA_COMPLETE](I2C_Status.callbackPayload[I2C_DATA_COMPLETE]))
-    {
-        case I2C_RESTART_WRITE:
-            I2C_MasterEnableRestart();
-            return I2C_SEND_RESTART_WRITE;
-        case I2C_RESTART_READ:
-            I2C_MasterEnableRestart();
-            return I2C_SEND_RESTART_READ;
-        case I2C_CONTINUE:
-
-            return I2C_RX;
-        default:
-        case I2C_STOP:
-            if(I2C_Status.state != I2C_SEND_RESTART_READ)
-            {
-                I2C_MasterDisableRestart();
-            }
-            return I2C_RESET;
-    }
-}
-
+# 450 "mcc_generated_files/i2c_master.c"
 static i2c_fsm_states_t I2C_DO_SEND_RESTART_READ(void)
 {
     I2C_MasterEnableRestart();
@@ -10295,11 +10244,11 @@ static i2c_fsm_states_t I2C_DO_ADDRESS_NACK(void)
     }
 }
 
-void I2C_BusCollisionIsr(void)
-{
-    I2C_MasterClearBusCollision();
-    I2C_Status.state = I2C_RESET;
-}
+
+
+
+
+
 
 i2c_operations_t I2C_CallbackReturnStop(void *funPtr)
 {
@@ -10310,20 +10259,7 @@ i2c_operations_t I2C_CallbackReturnReset(void *funPtr)
 {
     return I2C_RESET_LINK;
 }
-
-i2c_operations_t I2C_CallbackRestartWrite(void *funPtr)
-{
-    return I2C_RESTART_WRITE;
-}
-
-i2c_operations_t I2C_CallbackRestartRead(void *funPtr)
-{
-    return I2C_RESTART_READ;
-}
-
-
-
-
+# 543 "mcc_generated_files/i2c_master.c"
 static __attribute__((inline)) _Bool I2C_MasterOpen(void)
 {
     if(!SSP1CON1bits.SSPEN)
@@ -10359,10 +10295,10 @@ static __attribute__((inline)) void I2C_MasterEnableRestart(void)
     SSP1CON2bits.RSEN = 1;
 }
 
-static __attribute__((inline)) void I2C_MasterDisableRestart(void)
-{
-    SSP1CON2bits.RSEN = 0;
-}
+
+
+
+
 
 static __attribute__((inline)) void I2C_MasterStartRx(void)
 {
@@ -10395,27 +10331,7 @@ static __attribute__((inline)) void I2C_MasterSendNack(void)
     SSP1CON2bits.ACKDT = 1;
     SSP1CON2bits.ACKEN = 1;
 }
-
-static __attribute__((inline)) void I2C_MasterClearBusCollision(void)
-{
-    PIR2bits.BCL1IF = 0;
-}
-
-static __attribute__((inline)) _Bool I2C_MasterIsRxBufFull(void)
-{
-    return SSP1STATbits.BF;
-}
-
-static __attribute__((inline)) void I2C_MasterEnableIrq(void)
-{
-    PIE1bits.SSP1IE = 1;
-}
-
-static __attribute__((inline)) _Bool I2C_MasterIsIrqEnabled(void)
-{
-    return PIE1bits.SSP1IE;
-}
-
+# 635 "mcc_generated_files/i2c_master.c"
 static __attribute__((inline)) void I2C_MasterDisableIrq(void)
 {
     PIE1bits.SSP1IE = 0;

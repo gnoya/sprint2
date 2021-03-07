@@ -1,15 +1,21 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "42 ./mcc_generated_files/drivers/i2c_simple_master.h
 [; ;./mcc_generated_files/drivers/i2c_simple_master.h: 42: void i2c_writeNBytes(i2c_address_t address, void* data, size_t len);
 [v _i2c_writeNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
 "44
 [; ;./mcc_generated_files/drivers/i2c_simple_master.h: 44: void i2c_readNBytes(i2c_address_t address, void *data, size_t len);
 [v _i2c_readNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
-"165 ./mcc_generated_files/tmr6.h
-[; ;./mcc_generated_files/tmr6.h: 165: void TMR6_StopTimer(void);
-[v _TMR6_StopTimer `(v ~T0 @X0 0 ef ]
+"382 ./mcc_generated_files/tmr2.h
+[; ;./mcc_generated_files/tmr2.h: 382: void TMR2_InterruptEnable(void);
+[v _TMR2_InterruptEnable `(v ~T0 @X0 0 ef ]
+"383
+[; ;./mcc_generated_files/tmr2.h: 383: void TMR2_InterruptDisable(void);
+[v _TMR2_InterruptDisable `(v ~T0 @X0 0 ef ]
+"31 ./rtc.h
+[; ;./rtc.h: 31: void rtc_wakeup(int h, int m);
+[v _rtc_wakeup `(v ~T0 @X0 0 ef2`i`i ]
+"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "12 rtc.c
 [; ;rtc.c: 12: static uint8_t time_sleep = 0;
 [v _time_sleep `uc ~T0 @X0 1 s ]
@@ -22,133 +28,150 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _timer_on
 -> -> 0 `i `a
 ]
-"15
-[; ;rtc.c: 15: void rtc_time(void)
-[v _rtc_time `(v ~T0 @X0 1 ef ]
+"14
+[; ;rtc.c: 14: static uint8_t time[8];
+[v _time `uc ~T0 @X0 -> 8 `i s ]
 "16
-[; ;rtc.c: 16: {
+[; ;rtc.c: 16: void rtc_time(void)
+[v _rtc_time `(v ~T0 @X0 1 ef ]
+"17
+[; ;rtc.c: 17: {
 {
 [e :U _rtc_time ]
 [f ]
-"18
-[; ;rtc.c: 18:   printf("Entro a RTC \r\n");
-[e ( _printf :s 1C ]
-[v F478 `uc ~T0 @X0 -> -> 1 `i `ux s ]
-[i F478
-:U ..
-"19
-[; ;rtc.c: 19:   uint8_t sendData[1] = {0x06};
--> -> 6 `i `uc
-..
-]
-[v _sendData `uc ~T0 @X0 -> -> 1 `i `ux a ]
-[e = _sendData F478 ]
 "20
-[; ;rtc.c: 20:   uint8_t receiveData[7];
-[v _receiveData `uc ~T0 @X0 -> 7 `i a ]
-"21
-[; ;rtc.c: 21:   i2c_writeNBytes(0xd1,sendData,sizeof(sendData));
-[e ( _i2c_writeNBytes (3 , , -> -> 209 `i `uc -> &U _sendData `*v -> # _sendData `ui ]
+[; ;rtc.c: 20:   uint8_t sendData = 0x00;
+[v _sendData `uc ~T0 @X0 1 a ]
+[e = _sendData -> -> 0 `i `uc ]
 "22
-[; ;rtc.c: 22:   i2c_readNBytes(0x68,receiveData,sizeof(receiveData));
-[e ( _i2c_readNBytes (3 , , -> -> 104 `i `uc -> &U _receiveData `*v -> # _receiveData `ui ]
+[; ;rtc.c: 22:   i2c_writeNBytes(0x68,sendData,sizeof(sendData));
+[e ( _i2c_writeNBytes (3 , , -> -> 104 `i `uc -> _sendData `*v -> # _sendData `ui ]
 "23
-[; ;rtc.c: 23:   printf("Receive Data 0: %x \r\n", receiveData[0]);
-[e ( _printf , (. :s 2C -> *U + &U _receiveData * -> -> -> 0 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
-"24
-[; ;rtc.c: 24:   printf("Receive Data 1: %x \r\n", receiveData[1]);
-[e ( _printf , (. :s 3C -> *U + &U _receiveData * -> -> -> 1 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
-"25
-[; ;rtc.c: 25:   printf("Receive Data 2: %x \r\n", receiveData[2]);
-[e ( _printf , (. :s 4C -> *U + &U _receiveData * -> -> -> 2 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
-"26
-[; ;rtc.c: 26:   printf("Receive Data 3: %x \r\n", receiveData[3]);
-[e ( _printf , (. :s 5C -> *U + &U _receiveData * -> -> -> 3 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
-"27
-[; ;rtc.c: 27:   printf("Receive Data 4: %x \r\n", receiveData[4]);
-[e ( _printf , (. :s 6C -> *U + &U _receiveData * -> -> -> 4 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
-"28
-[; ;rtc.c: 28:   printf("Receive Data 5: %x \r\n", receiveData[5]);
-[e ( _printf , (. :s 7C -> *U + &U _receiveData * -> -> -> 5 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
-"29
-[; ;rtc.c: 29:   printf("Receive Data 6: %x \r\n", receiveData[6]);
-[e ( _printf , (. :s 8C -> *U + &U _receiveData * -> -> -> 6 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
-"30
-[; ;rtc.c: 30: }
+[; ;rtc.c: 23:   i2c_readNBytes(0x68,time,sizeof(time));
+[e ( _i2c_readNBytes (3 , , -> -> 104 `i `uc -> &U _time `*v -> # _time `ui ]
+"31
+[; ;rtc.c: 31: }
 [e :UE 3 ]
 }
-"33
-[; ;rtc.c: 33: void rtc_sleep(int time)
-[v _rtc_sleep `(v ~T0 @X0 1 ef1`i ]
 "34
-[; ;rtc.c: 34: {
+[; ;rtc.c: 34: void rtc_sleep(int time)
+[v _rtc_sleep `(v ~T0 @X0 1 ef1`i ]
+"35
+[; ;rtc.c: 35: {
 {
 [e :U _rtc_sleep ]
-"33
-[; ;rtc.c: 33: void rtc_sleep(int time)
-[v _time `i ~T0 @X0 1 r1 ]
 "34
-[; ;rtc.c: 34: {
-[f ]
+[; ;rtc.c: 34: void rtc_sleep(int time)
+[v _time `i ~T0 @X0 1 r1 ]
 "35
-[; ;rtc.c: 35:     if(timer_on)
-[e $ ! != -> _timer_on `i -> 0 `i 5  ]
+[; ;rtc.c: 35: {
+[f ]
 "36
-[; ;rtc.c: 36:         printf("time: %d \r\n",time);
-[e ( _printf , (. :s 9C _time ]
-[e :U 5 ]
+[; ;rtc.c: 36:     if(timer_on == 0)
+[e $ ! == -> _timer_on `i -> 0 `i 5  ]
 "37
-[; ;rtc.c: 37:         printf("time_sleep: %d \r\n",time);
-[e ( _printf , (. :s 10C _time ]
-"38
-[; ;rtc.c: 38:         if (time_sleep >= time){
-[e $ ! >= -> _time_sleep `i _time 6  ]
+[; ;rtc.c: 37:     {
 {
 "39
-[; ;rtc.c: 39:             printf("Entro al if, apagando... \r\n");
-[e ( _printf :s 11C ]
+[; ;rtc.c: 39:         TMR2_InterruptEnable();
+[e ( _TMR2_InterruptEnable ..  ]
 "40
-[; ;rtc.c: 40:             TMR6_StopTimer();
-[e ( _TMR6_StopTimer ..  ]
+[; ;rtc.c: 40:         timer_on = 1;
+[e = _timer_on -> -> 1 `i `a ]
 "41
-[; ;rtc.c: 41:         }
+[; ;rtc.c: 41:     }
+}
+[e :U 5 ]
+"42
+[; ;rtc.c: 42:     if(time_sleep >= time)
+[e $ ! >= -> _time_sleep `i _time 6  ]
+"43
+[; ;rtc.c: 43:     {
+{
+"45
+[; ;rtc.c: 45:         TMR2_InterruptDisable();
+[e ( _TMR2_InterruptDisable ..  ]
+"46
+[; ;rtc.c: 46:         rtc_wakeup(0x14,0x06);
+[e ( _rtc_wakeup (2 , -> 20 `i -> 6 `i ]
+"47
+[; ;rtc.c: 47:         time_sleep = 0;
+[e = _time_sleep -> -> 0 `i `uc ]
+"48
+[; ;rtc.c: 48:     }
 }
 [e :U 6 ]
-"42
-[; ;rtc.c: 42: }
+"49
+[; ;rtc.c: 49: }
 [e :UE 4 ]
 }
-"45
-[; ;rtc.c: 45: void rtc_sleep_ISR(void)
+"51
+[; ;rtc.c: 51: void rtc_wakeup(int h,int m)
+[v _rtc_wakeup `(v ~T0 @X0 1 ef2`i`i ]
+"52
+[; ;rtc.c: 52: {
+{
+[e :U _rtc_wakeup ]
+"51
+[; ;rtc.c: 51: void rtc_wakeup(int h,int m)
+[v _h `i ~T0 @X0 1 r1 ]
+[v _m `i ~T0 @X0 1 r2 ]
+"52
+[; ;rtc.c: 52: {
+[f ]
+"53
+[; ;rtc.c: 53:     rtc_time();
+[e ( _rtc_time ..  ]
+"57
+[; ;rtc.c: 57:     if ((time[1] == m) && (time[2] == h)) printf("WakeeUP!!");
+[e $ ! && == -> *U + &U _time * -> -> -> 1 `i `ui `ux -> -> # *U &U _time `ui `ux `i _m == -> *U + &U _time * -> -> -> 2 `i `ui `ux -> -> # *U &U _time `ui `ux `i _h 8  ]
+[e ( _printf :s 1C ]
+[e :U 8 ]
+"58
+[; ;rtc.c: 58: }
+[e :UE 7 ]
+}
+"60
+[; ;rtc.c: 60: void rtc_shutdown(int h, int m)
+[v _rtc_shutdown `(v ~T0 @X0 1 ef2`i`i ]
+"61
+[; ;rtc.c: 61: {
+{
+[e :U _rtc_shutdown ]
+"60
+[; ;rtc.c: 60: void rtc_shutdown(int h, int m)
+[v _h `i ~T0 @X0 1 r1 ]
+[v _m `i ~T0 @X0 1 r2 ]
+"61
+[; ;rtc.c: 61: {
+[f ]
+"62
+[; ;rtc.c: 62:     rtc_time();
+[e ( _rtc_time ..  ]
+"63
+[; ;rtc.c: 63:     if ((time[1] == m) && (time[2] == h)) printf("Shutdow!!");
+[e $ ! && == -> *U + &U _time * -> -> -> 1 `i `ui `ux -> -> # *U &U _time `ui `ux `i _m == -> *U + &U _time * -> -> -> 2 `i `ui `ux -> -> # *U &U _time `ui `ux `i _h 10  ]
+[e ( _printf :s 2C ]
+[e :U 10 ]
+"64
+[; ;rtc.c: 64: }
+[e :UE 9 ]
+}
+"67
+[; ;rtc.c: 67: void rtc_sleep_ISR(void)
 [v _rtc_sleep_ISR `(v ~T0 @X0 1 ef ]
-"46
-[; ;rtc.c: 46: {
+"68
+[; ;rtc.c: 68: {
 {
 [e :U _rtc_sleep_ISR ]
 [f ]
-"47
-[; ;rtc.c: 47:     time_sleep += 30;
+"69
+[; ;rtc.c: 69:     time_sleep += 30;
 [e =+ _time_sleep -> -> 30 `i `uc ]
-"48
-[; ;rtc.c: 48:     timer_on = !timer_on;
-[e = _timer_on -> -> ! != -> _timer_on `i -> 0 `i `i `a ]
-"49
-[; ;rtc.c: 49:     printf("time_sleep: %d \r\n", time_sleep);
-[e ( _printf , (. :s 12C -> _time_sleep `i ]
-"50
-[; ;rtc.c: 50: }
-[e :UE 7 ]
+"70
+[; ;rtc.c: 70: }
+[e :UE 11 ]
 }
-[p f _printf 12583040 ]
-[a 8C 82 101 99 101 105 118 101 32 68 97 116 97 32 54 58 32 37 120 32 13 10 0 ]
-[a 7C 82 101 99 101 105 118 101 32 68 97 116 97 32 53 58 32 37 120 32 13 10 0 ]
-[a 6C 82 101 99 101 105 118 101 32 68 97 116 97 32 52 58 32 37 120 32 13 10 0 ]
-[a 5C 82 101 99 101 105 118 101 32 68 97 116 97 32 51 58 32 37 120 32 13 10 0 ]
-[a 4C 82 101 99 101 105 118 101 32 68 97 116 97 32 50 58 32 37 120 32 13 10 0 ]
-[a 3C 82 101 99 101 105 118 101 32 68 97 116 97 32 49 58 32 37 120 32 13 10 0 ]
-[a 2C 82 101 99 101 105 118 101 32 68 97 116 97 32 48 58 32 37 120 32 13 10 0 ]
-[a 10C 116 105 109 101 95 115 108 101 101 112 58 32 37 100 32 13 10 0 ]
-[a 12C 116 105 109 101 95 115 108 101 101 112 58 32 37 100 32 13 10 0 ]
-[a 9C 116 105 109 101 58 32 37 100 32 13 10 0 ]
-[a 1C 69 110 116 114 111 32 97 32 82 84 67 32 13 10 0 ]
-[a 11C 69 110 116 114 111 32 97 108 32 105 102 44 32 97 112 97 103 97 110 100 111 46 46 46 32 13 10 0 ]
+[p f _printf 8388608 ]
+[a 2C 83 104 117 116 100 111 119 33 33 0 ]
+[a 1C 87 97 107 101 101 85 80 33 33 0 ]

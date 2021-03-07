@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/tmr6.c"
+# 1 "mcc_generated_files/tmr2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/tmr6.c" 2
-# 51 "mcc_generated_files/tmr6.c"
+# 1 "mcc_generated_files/tmr2.c" 2
+# 51 "mcc_generated_files/tmr2.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9531,10 +9531,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 2 3
-# 51 "mcc_generated_files/tmr6.c" 2
+# 51 "mcc_generated_files/tmr2.c" 2
 
-# 1 "mcc_generated_files/tmr6.h" 1
-# 54 "mcc_generated_files/tmr6.h"
+# 1 "mcc_generated_files/tmr2.h" 1
+# 54 "mcc_generated_files/tmr2.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9620,133 +9620,152 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 2 3
-# 54 "mcc_generated_files/tmr6.h" 2
+# 54 "mcc_generated_files/tmr2.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 55 "mcc_generated_files/tmr6.h" 2
-# 104 "mcc_generated_files/tmr6.h"
-void TMR6_Initialize(void);
-# 133 "mcc_generated_files/tmr6.h"
-void TMR6_StartTimer(void);
-# 165 "mcc_generated_files/tmr6.h"
-void TMR6_StopTimer(void);
-# 200 "mcc_generated_files/tmr6.h"
-uint8_t TMR6_ReadTimer(void);
-# 239 "mcc_generated_files/tmr6.h"
-void TMR6_WriteTimer(uint8_t timerVal);
-# 291 "mcc_generated_files/tmr6.h"
-void TMR6_LoadPeriodRegister(uint8_t periodVal);
-# 309 "mcc_generated_files/tmr6.h"
-void TMR6_ISR(void);
-# 327 "mcc_generated_files/tmr6.h"
- void TMR6_CallBack(void);
-# 344 "mcc_generated_files/tmr6.h"
- void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "mcc_generated_files/tmr6.h"
-extern void (*TMR6_InterruptHandler)(void);
-# 380 "mcc_generated_files/tmr6.h"
-void TMR6_DefaultInterruptHandler(void);
-# 52 "mcc_generated_files/tmr6.c" 2
+# 55 "mcc_generated_files/tmr2.h" 2
+# 104 "mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 133 "mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 165 "mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 200 "mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 239 "mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 291 "mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 309 "mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 327 "mcc_generated_files/tmr2.h"
+ void TMR2_CallBack(void);
+# 344 "mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 380 "mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+
+void TMR2_InterruptEnable(void);
+void TMR2_InterruptDisable(void);
+# 52 "mcc_generated_files/tmr2.c" 2
 
 
 
 
 
 
-void (*TMR6_InterruptHandler)(void);
+void (*TMR2_InterruptHandler)(void);
 
 
 
 
 
-void TMR6_Initialize(void)
+void TMR2_Initialize(void)
 {
 
 
 
-    PR6 = 0x79;
+    PR2 = 0xF3;
 
 
-    TMR6 = 0x00;
+    TMR2 = 0x00;
 
 
-    PIR2bits.TMR6IF = 0;
+    PIR1bits.TMR2IF = 0;
 
 
-    PIE2bits.TMR6IE = 1;
+    PIE1bits.TMR2IE = 1;
 
 
-    TMR6_SetInterruptHandler(TMR6_DefaultInterruptHandler);
+    TMR2_SetInterruptHandler(TMR2_DefaultInterruptHandler);
 
 
-    T6CON = 0x7F;
+    T2CON = 0x7F;
 }
 
-void TMR6_StartTimer(void)
+void TMR2_StartTimer(void)
 {
 
-    T6CONbits.TMR6ON = 1;
+    T2CONbits.TMR2ON = 1;
 }
 
-void TMR6_StopTimer(void)
+void TMR2_StopTimer(void)
 {
 
-    T6CONbits.TMR6ON = 0;
+    T2CONbits.TMR2ON = 0;
 }
 
-uint8_t TMR6_ReadTimer(void)
+uint8_t TMR2_ReadTimer(void)
 {
     uint8_t readVal;
 
-    readVal = TMR6;
+    readVal = TMR2;
 
     return readVal;
 }
 
-void TMR6_WriteTimer(uint8_t timerVal)
+void TMR2_WriteTimer(uint8_t timerVal)
 {
 
-    TMR6 = timerVal;
+    TMR2 = timerVal;
 }
 
-void TMR6_LoadPeriodRegister(uint8_t periodVal)
+void TMR2_LoadPeriodRegister(uint8_t periodVal)
 {
-   PR6 = periodVal;
+   PR2 = periodVal;
 }
 
-void TMR6_ISR(void)
+void TMR2_ISR(void)
 {
     static volatile unsigned int CountCallBack = 0;
 
 
-    PIR2bits.TMR6IF = 0;
+    PIR1bits.TMR2IF = 0;
 
 
-    if (++CountCallBack >= 61)
+    if (++CountCallBack >= 15)
     {
 
-        TMR6_CallBack();
+        TMR2_CallBack();
 
 
         CountCallBack = 0;
     }
 }
 
-void TMR6_CallBack(void)
+void TMR2_CallBack(void)
 {
 
 
-    if(TMR6_InterruptHandler)
+    if(TMR2_InterruptHandler)
     {
-        TMR6_InterruptHandler();
+        TMR2_InterruptHandler();
     }
 }
 
-void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
-    TMR6_InterruptHandler = InterruptHandler;
+void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
+    TMR2_InterruptHandler = InterruptHandler;
 }
 
-void TMR6_DefaultInterruptHandler(void){
+void TMR2_DefaultInterruptHandler(void){
 
 
+}
+
+void TMR2_InterruptEnable(void){
+
+    PIR1bits.TMR2IF = 0;
+
+
+    PIE1bits.TMR2IE = 1;
+}
+
+void TMR2_InterruptDisable(void){
+
+    PIR1bits.TMR2IF = 0;
+
+
+    PIE1bits.TMR2IE = 0;
 }

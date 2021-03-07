@@ -100,11 +100,11 @@ static void index_enter(void)
   show = 1;
 }
 
-static void show_index(void)
+/*static void show_index(void)
 {
   printf("menu_index: %d \n\r", menu_index);
   printf("menu_current: %d \n\r", menu_current);
-}
+}*/
 
 static void show_main_menu(void)
 {
@@ -230,7 +230,7 @@ void initialize_menu(menu_controller *menu, bool sensors_opened[])
   menu->index_add = index_add;
   menu->index_sub = index_sub;
   menu->index_enter = index_enter;
-  menu->show_index = show_index;
+//  menu->show_index = show_index;
   menu->show_menu = show_menu;
   menu->show_main_menu = show_main_menu;
   menu->show_sensors_menu = show_sensors_menu;

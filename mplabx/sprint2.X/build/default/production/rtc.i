@@ -17,6 +17,8 @@
 # 29 "./rtc.h"
 void rtc_time(void);
 void rtc_sleep(int time);
+void rtc_wakeup(int h, int m);
+void rtc_shutdown(int h, int m);
 void rtc_sleep_ISR(void);
 # 7 "rtc.c" 2
 
@@ -348,68 +350,91 @@ void i2c_readDataBlock(i2c_address_t address, uint8_t reg, void *data, size_t le
 void i2c_readNBytes(i2c_address_t address, void *data, size_t len);
 # 9 "rtc.c" 2
 
-# 1 "./mcc_generated_files/tmr6.h" 1
-# 104 "./mcc_generated_files/tmr6.h"
-void TMR6_Initialize(void);
-# 133 "./mcc_generated_files/tmr6.h"
-void TMR6_StartTimer(void);
-# 165 "./mcc_generated_files/tmr6.h"
-void TMR6_StopTimer(void);
-# 200 "./mcc_generated_files/tmr6.h"
-uint8_t TMR6_ReadTimer(void);
-# 239 "./mcc_generated_files/tmr6.h"
-void TMR6_WriteTimer(uint8_t timerVal);
-# 291 "./mcc_generated_files/tmr6.h"
-void TMR6_LoadPeriodRegister(uint8_t periodVal);
-# 309 "./mcc_generated_files/tmr6.h"
-void TMR6_ISR(void);
-# 327 "./mcc_generated_files/tmr6.h"
- void TMR6_CallBack(void);
-# 344 "./mcc_generated_files/tmr6.h"
- void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "./mcc_generated_files/tmr6.h"
-extern void (*TMR6_InterruptHandler)(void);
-# 380 "./mcc_generated_files/tmr6.h"
-void TMR6_DefaultInterruptHandler(void);
+# 1 "./mcc_generated_files/tmr2.h" 1
+# 104 "./mcc_generated_files/tmr2.h"
+void TMR2_Initialize(void);
+# 133 "./mcc_generated_files/tmr2.h"
+void TMR2_StartTimer(void);
+# 165 "./mcc_generated_files/tmr2.h"
+void TMR2_StopTimer(void);
+# 200 "./mcc_generated_files/tmr2.h"
+uint8_t TMR2_ReadTimer(void);
+# 239 "./mcc_generated_files/tmr2.h"
+void TMR2_WriteTimer(uint8_t timerVal);
+# 291 "./mcc_generated_files/tmr2.h"
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+# 309 "./mcc_generated_files/tmr2.h"
+void TMR2_ISR(void);
+# 327 "./mcc_generated_files/tmr2.h"
+ void TMR2_CallBack(void);
+# 344 "./mcc_generated_files/tmr2.h"
+ void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "./mcc_generated_files/tmr2.h"
+extern void (*TMR2_InterruptHandler)(void);
+# 380 "./mcc_generated_files/tmr2.h"
+void TMR2_DefaultInterruptHandler(void);
+
+void TMR2_InterruptEnable(void);
+void TMR2_InterruptDisable(void);
 # 10 "rtc.c" 2
 
 
 static uint8_t time_sleep = 0;
 static _Bool timer_on = 0;
+static uint8_t time[8];
 
 void rtc_time(void)
 {
 
-  printf("Entro a RTC \r\n");
-  uint8_t sendData[1] = {0x06};
-  uint8_t receiveData[7];
-  i2c_writeNBytes(0xd1,sendData,sizeof(sendData));
-  i2c_readNBytes(0x68,receiveData,sizeof(receiveData));
-  printf("Receive Data 0: %x \r\n", receiveData[0]);
-  printf("Receive Data 1: %x \r\n", receiveData[1]);
-  printf("Receive Data 2: %x \r\n", receiveData[2]);
-  printf("Receive Data 3: %x \r\n", receiveData[3]);
-  printf("Receive Data 4: %x \r\n", receiveData[4]);
-  printf("Receive Data 5: %x \r\n", receiveData[5]);
-  printf("Receive Data 6: %x \r\n", receiveData[6]);
+
+  uint8_t sendData = 0x00;
+
+  i2c_writeNBytes(0x68,sendData,sizeof(sendData));
+  i2c_readNBytes(0x68,time,sizeof(time));
+
+
+
+
+
+
+
 }
 
 
 void rtc_sleep(int time)
 {
-    if(timer_on)
-        printf("time: %d \r\n",time);
-        printf("time_sleep: %d \r\n",time);
-        if (time_sleep >= time){
-            printf("Entro al if, apagando... \r\n");
-            TMR6_StopTimer();
-        }
+    if(timer_on == 0)
+    {
+
+        TMR2_InterruptEnable();
+        timer_on = 1;
+    }
+    if(time_sleep >= time)
+    {
+
+        TMR2_InterruptDisable();
+        rtc_wakeup(0x14,0x06);
+        time_sleep = 0;
+    }
+}
+
+void rtc_wakeup(int h,int m)
+{
+    rtc_time();
+
+
+
+    if ((time[1] == m) && (time[2] == h)) printf("WakeeUP!!");
+}
+
+void rtc_shutdown(int h, int m)
+{
+    rtc_time();
+    if ((time[1] == m) && (time[2] == h)) printf("Shutdow!!");
 }
 
 
 void rtc_sleep_ISR(void)
 {
     time_sleep += 30;
-    timer_on = !timer_on;
-    printf("time_sleep: %d \r\n", time_sleep);
 }

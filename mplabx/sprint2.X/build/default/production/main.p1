@@ -1,17 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F6307 `(a ~T0 @X0 0 tf ]
-[v F6309 `(i ~T0 @X0 0 tf ]
+[v F6309 `(a ~T0 @X0 0 tf ]
+[v F6311 `(i ~T0 @X0 0 tf ]
 "16 ./sensor_adapter.h
 [; ;./sensor_adapter.h: 16: {
-[s S787 `*uc 1 `*F6307 1 `*F6309 1 ]
+[s S787 `*uc 1 `*F6309 1 `*F6311 1 ]
 [n S787 sensor name open read ]
-[v F6317 `(v ~T0 @X0 0 tf1`i ]
-[v F6320 `(v ~T0 @X0 0 tf1`i ]
+[v F6319 `(v ~T0 @X0 0 tf1`i ]
+[v F6322 `(v ~T0 @X0 0 tf1`i ]
 "37 ./led_adapter.h
 [; ;./led_adapter.h: 37: {
-[s S788 `*F6317 1 `*F6320 1 ]
+[s S788 `*F6319 1 `*F6322 1 ]
 [n S788 led_adapter set_brightness set_color ]
-[v F6274 `(v ~T0 @X0 0 tf ]
 [v F6276 `(v ~T0 @X0 0 tf ]
 [v F6278 `(v ~T0 @X0 0 tf ]
 [v F6280 `(v ~T0 @X0 0 tf ]
@@ -19,9 +18,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F6284 `(v ~T0 @X0 0 tf ]
 [v F6286 `(v ~T0 @X0 0 tf ]
 [v F6288 `(v ~T0 @X0 0 tf ]
+[v F6290 `(v ~T0 @X0 0 tf ]
 "37 ./menu_controller.h
 [; ;./menu_controller.h: 37: {
-[s S786 `a 1 `a 1 `*F6274 1 `*F6276 1 `*F6278 1 `*F6280 1 `*F6282 1 `*F6284 1 `*F6286 1 `*F6288 1 ]
+[s S786 `a 1 `a 1 `*F6276 1 `*F6278 1 `*F6280 1 `*F6282 1 `*F6284 1 `*F6286 1 `*F6288 1 `*F6290 1 ]
 [n S786 menu_controller light_sensor_opened temp_sensor_opened index_add index_sub index_enter show_index show_menu show_main_menu show_mode_menu show_sensors_menu ]
 [p mainexit ]
 "77 ./mcc_generated_files/mcc.h
@@ -69,12 +69,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "672
 [; ;./mcc_generated_files/pin_manager.h: 672: void IOCAF7_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCAF7_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F5719 ]
-[v F6171 `(v ~T0 @X0 0 tf ]
-"344 ./mcc_generated_files/tmr6.h
-[; ;./mcc_generated_files/tmr6.h: 344:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6171 ]
-"31 ./rtc.h
-[; ;./rtc.h: 31: void rtc_sleep_ISR(void);
+[v F6180 `(v ~T0 @X0 0 tf ]
+"344 ./mcc_generated_files/tmr2.h
+[; ;./mcc_generated_files/tmr2.h: 344:  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6180 ]
+"33 ./rtc.h
+[; ;./rtc.h: 33: void rtc_sleep_ISR(void);
 [v _rtc_sleep_ISR `(v ~T0 @X0 0 ef ]
 "174 ./lcd.h
 [; ;./lcd.h: 174:   void LCDPutStr(const char *);
@@ -97,6 +97,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29 ./rtc.h
 [; ;./rtc.h: 29: void rtc_time(void);
 [v _rtc_time `(v ~T0 @X0 0 ef ]
+"30
+[; ;./rtc.h: 30: void rtc_sleep(int time);
+[v _rtc_sleep `(v ~T0 @X0 0 ef1`i ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1069,15 +1072,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [; ;main.c: 76:   LCD_Initialize();
 [e ( _LCD_Initialize ..  ]
-[v F6372 `*uc ~T0 @X0 -> 3 `i s ]
-[i F6372
+[v F6380 `*uc ~T0 @X0 -> 3 `i s ]
+[i F6380
 :U ..
 ..
 ]
 "78
 [; ;main.c: 78:   char *sensor_names[3] = {};
 [v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
-[e = _sensor_names F6372 ]
+[e = _sensor_names F6380 ]
 "79
 [; ;main.c: 79:   char **names_pointer = sensor_names;
 [v _names_pointer `**uc ~T0 @X0 1 a ]
@@ -1100,8 +1103,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 88:   _Bool light_sensor_opened = light_sensor.open();
 [v _light_sensor_opened `a ~T0 @X0 1 a ]
 [e = _light_sensor_opened ( *U . _light_sensor 1 ..  ]
-[v F6380 `a ~T0 @X0 -> 2 `i s ]
-[i F6380
+[v F6388 `a ~T0 @X0 -> 2 `i s ]
+[i F6388
 :U ..
 "90
 [; ;main.c: 90:   _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
@@ -1110,7 +1113,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _sensors_opened `a ~T0 @X0 -> 2 `i a ]
-[e = _sensors_opened F6380 ]
+[e = _sensors_opened F6388 ]
 [e ; = *U + &U _sensors_opened * -> -> -> 0 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _temp_sensor_opened = *U + &U _sensors_opened * -> -> -> 1 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _light_sensor_opened ]
 "93
 [; ;main.c: 93:   initialize_led(&led);
@@ -1134,8 +1137,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 103:   IOCAF7_SetInterruptHandler(menu.index_enter);
 [e ( _IOCAF7_SetInterruptHandler (1 . _menu 4 ]
 "106
-[; ;main.c: 106:     TMR6_SetInterruptHandler(rtc_sleep_ISR);
-[e ( _TMR6_SetInterruptHandler (1 &U _rtc_sleep_ISR ]
+[; ;main.c: 106:   TMR2_SetInterruptHandler(rtc_sleep_ISR);
+[e ( _TMR2_SetInterruptHandler (1 &U _rtc_sleep_ISR ]
 "109
 [; ;main.c: 109:   LCDPutStr("Bienvenido!");
 [e ( _LCDPutStr (1 :s 1C ]
@@ -1175,13 +1178,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 131:     menu.show_menu();
 [e ( *U . _menu 6 ..  ]
 "132
-[; ;main.c: 132:   }
+[; ;main.c: 132:     rtc_sleep(30);
+[e ( _rtc_sleep (1 -> 30 `i ]
+"133
+[; ;main.c: 133:   }
 }
 [e :U 790 ]
 [e $U 791  ]
 [e :U 792 ]
-"133
-[; ;main.c: 133: }
+"134
+[; ;main.c: 134: }
 [e :UE 789 ]
 }
 [p f _printf 8388736 ]

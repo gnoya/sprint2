@@ -28,6 +28,8 @@
 
 void rtc_time(void);
 void rtc_sleep(int time);
+void rtc_wakeup(int h, int m);
+void rtc_shutdown(int h, int m);
 void rtc_sleep_ISR(void);
 
 /**
