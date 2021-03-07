@@ -76,9 +76,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
 [v __delay `JF5688 ~T0 @X0 0 e ]
 [p i __delay ]
-"42 ./mcc_generated_files/drivers/i2c_simple_master.h
-[; ;./mcc_generated_files/drivers/i2c_simple_master.h: 42: void i2c_writeNBytes(i2c_address_t address, void* data, size_t len);
-[v _i2c_writeNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
+"22 ./eeprom.h
+[; ;./eeprom.h: 22: void eeprom_read (_Bool *temp_sensor_enabled, _Bool *light_sensor_enabled);
+[v _eeprom_read `(v ~T0 @X0 0 ef2`*a`*a ]
+"69 main.c
+[; ;main.c: 69: extern _Bool temp_sensor_enabled;
+[v _temp_sensor_enabled `a ~T0 @X0 0 e ]
+"70
+[; ;main.c: 70: extern _Bool light_sensor_enabled;
+[v _light_sensor_enabled `a ~T0 @X0 0 e ]
+"111 D:\Programas\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "54 D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1024,163 +1032,142 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _light_sensor_enabled
 -> -> 1 `i `a
 ]
-"63 main.c
-[; ;main.c: 63: sensor light_sensor;
+"64 main.c
+[; ;main.c: 64: sensor light_sensor;
 [v _light_sensor `S787 ~T0 @X0 1 e ]
-"64
-[; ;main.c: 64: sensor temp_sensor;
-[v _temp_sensor `S787 ~T0 @X0 1 e ]
 "65
-[; ;main.c: 65: led_adapter led;
-[v _led `S788 ~T0 @X0 1 e ]
+[; ;main.c: 65: sensor temp_sensor;
+[v _temp_sensor `S787 ~T0 @X0 1 e ]
 "66
-[; ;main.c: 66: menu_controller menu;
+[; ;main.c: 66: led_adapter led;
+[v _led `S788 ~T0 @X0 1 e ]
+"67
+[; ;main.c: 67: menu_controller menu;
 [v _menu `S786 ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"71
-[; ;main.c: 71: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
 "72
-[; ;main.c: 72: {
+[; ;main.c: 72: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"73
+[; ;main.c: 73: {
 {
 [e :U _main ]
 [f ]
-"73
-[; ;main.c: 73:   SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
 "74
-[; ;main.c: 74:   LCD_Initialize();
+[; ;main.c: 74:   SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"75
+[; ;main.c: 75:   LCD_Initialize();
 [e ( _LCD_Initialize ..  ]
-[v F6345 `*uc ~T0 @X0 -> 3 `i s ]
-[i F6345
+[v F6351 `*uc ~T0 @X0 -> 3 `i s ]
+[i F6351
 :U ..
 ..
 ]
-"76
-[; ;main.c: 76:   char *sensor_names[3] = {};
-[v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
-[e = _sensor_names F6345 ]
 "77
-[; ;main.c: 77:   char **names_pointer = sensor_names;
+[; ;main.c: 77:   char *sensor_names[3] = {};
+[v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
+[e = _sensor_names F6351 ]
+"78
+[; ;main.c: 78:   char **names_pointer = sensor_names;
 [v _names_pointer `**uc ~T0 @X0 1 a ]
 [e = _names_pointer &U _sensor_names ]
-"78
-[; ;main.c: 78:   int sensor_counter = 0;
+"79
+[; ;main.c: 79:   int sensor_counter = 0;
 [v _sensor_counter `i ~T0 @X0 1 a ]
 [e = _sensor_counter -> 0 `i ]
-"81
-[; ;main.c: 81:   initialize_light(&light_sensor);
-[e ( _initialize_light (1 &U _light_sensor ]
 "82
-[; ;main.c: 82:   initialize_temp(&temp_sensor);
+[; ;main.c: 82:   initialize_light(&light_sensor);
+[e ( _initialize_light (1 &U _light_sensor ]
+"83
+[; ;main.c: 83:   initialize_temp(&temp_sensor);
 [e ( _initialize_temp (1 &U _temp_sensor ]
-"85
-[; ;main.c: 85:   _Bool temp_sensor_opened = temp_sensor.open();
+"86
+[; ;main.c: 86:   _Bool temp_sensor_opened = temp_sensor.open();
 [v _temp_sensor_opened `a ~T0 @X0 1 a ]
 [e = _temp_sensor_opened ( *U . _temp_sensor 1 ..  ]
-"86
-[; ;main.c: 86:   _Bool light_sensor_opened = light_sensor.open();
+"87
+[; ;main.c: 87:   _Bool light_sensor_opened = light_sensor.open();
 [v _light_sensor_opened `a ~T0 @X0 1 a ]
 [e = _light_sensor_opened ( *U . _light_sensor 1 ..  ]
-[v F6353 `a ~T0 @X0 -> 2 `i s ]
-[i F6353
+[v F6359 `a ~T0 @X0 -> 2 `i s ]
+[i F6359
 :U ..
-"88
-[; ;main.c: 88:   _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
+"89
+[; ;main.c: 89:   _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
 -> -> 0 `i `a
 -> -> 0 `i `a
 ..
 ]
 [v _sensors_opened `a ~T0 @X0 -> 2 `i a ]
-[e = _sensors_opened F6353 ]
+[e = _sensors_opened F6359 ]
 [e ; = *U + &U _sensors_opened * -> -> -> 0 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _temp_sensor_opened = *U + &U _sensors_opened * -> -> -> 1 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _light_sensor_opened ]
-"91
-[; ;main.c: 91:   initialize_led(&led);
-[e ( _initialize_led (1 &U _led ]
 "92
-[; ;main.c: 92:   initialize_menu(&menu, sensors_opened);
+[; ;main.c: 92:   initialize_led(&led);
+[e ( _initialize_led (1 &U _led ]
+"93
+[; ;main.c: 93:   initialize_menu(&menu, sensors_opened);
 [e ( _initialize_menu (2 , &U _menu &U _sensors_opened ]
-"95
-[; ;main.c: 95:   (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "96
-[; ;main.c: 96:   (INTCONbits.PEIE = 1);
+[; ;main.c: 96:   (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"97
+[; ;main.c: 97:   (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"99
-[; ;main.c: 99:   IOCAF5_SetInterruptHandler(menu.index_add);
-[e ( _IOCAF5_SetInterruptHandler (1 . _menu 2 ]
 "100
-[; ;main.c: 100:   IOCAF6_SetInterruptHandler(menu.index_sub);
-[e ( _IOCAF6_SetInterruptHandler (1 . _menu 3 ]
+[; ;main.c: 100:   IOCAF5_SetInterruptHandler(menu.index_add);
+[e ( _IOCAF5_SetInterruptHandler (1 . _menu 2 ]
 "101
-[; ;main.c: 101:   IOCAF7_SetInterruptHandler(menu.index_enter);
+[; ;main.c: 101:   IOCAF6_SetInterruptHandler(menu.index_sub);
+[e ( _IOCAF6_SetInterruptHandler (1 . _menu 3 ]
+"102
+[; ;main.c: 102:   IOCAF7_SetInterruptHandler(menu.index_enter);
 [e ( _IOCAF7_SetInterruptHandler (1 . _menu 4 ]
-"104
-[; ;main.c: 104:   LCDPutStr("Bienvenido!");
-[e ( _LCDPutStr (1 :s 1C ]
 "105
-[; ;main.c: 105:   _delay((unsigned long)((200)*(1000000/4000.0)));
+[; ;main.c: 105:   LCDPutStr("Bienvenido!");
+[e ( _LCDPutStr (1 :s 1C ]
+"106
+[; ;main.c: 106:   _delay((unsigned long)((200)*(1000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-[v F6358 `uc ~T0 @X0 -> 17 `i s ]
-[i F6358
-:U ..
 "108
-[; ;main.c: 108:   uint8_t sendData[17] = {0x00,0x00,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF};
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 161 `i `uc
--> -> 162 `i `uc
--> -> 163 `i `uc
--> -> 164 `i `uc
--> -> 165 `i `uc
--> -> 166 `i `uc
--> -> 167 `i `uc
--> -> 168 `i `uc
--> -> 169 `i `uc
--> -> 170 `i `uc
--> -> 171 `i `uc
--> -> 172 `i `uc
--> -> 173 `i `uc
--> -> 174 `i `uc
--> -> 175 `i `uc
-..
-]
-[v _sendData `uc ~T0 @X0 -> 17 `i a ]
-[e = _sendData F6358 ]
-"109
-[; ;main.c: 109:   i2c_writeNBytes(0x00,sendData,sizeof(sendData));
-[e ( _i2c_writeNBytes (3 , , -> -> 0 `i `uc -> &U _sendData `*v -> # _sendData `ui ]
-"112
-[; ;main.c: 112:   while (1)
-[e :U 791 ]
+[; ;main.c: 108:   eeprom_read(&temp_sensor_enabled,&light_sensor_enabled);
+[e ( _eeprom_read (2 , &U _temp_sensor_enabled &U _light_sensor_enabled ]
+"110
+[; ;main.c: 110:   printf("%d",temp_sensor_enabled);
+[e ( _printf , (. :s 2C -> _temp_sensor_enabled `i ]
 "113
-[; ;main.c: 113:   {
+[; ;main.c: 113:   while (1)
+[e :U 791 ]
+"114
+[; ;main.c: 114:   {
 {
-"115
-[; ;main.c: 115:     int temp_value = temp_sensor.read();
+"116
+[; ;main.c: 116:     int temp_value = temp_sensor.read();
 [v _temp_value `i ~T0 @X0 1 a ]
 [e = _temp_value ( *U . _temp_sensor 2 ..  ]
-"116
-[; ;main.c: 116:     int light_value = light_sensor.read();
+"117
+[; ;main.c: 117:     int light_value = light_sensor.read();
 [v _light_value `i ~T0 @X0 1 a ]
 [e = _light_value ( *U . _light_sensor 2 ..  ]
-"119
-[; ;main.c: 119:     led.set_color(temp_value);
-[e ( *U . _led 1 (1 _temp_value ]
 "120
-[; ;main.c: 120:     led.set_brightness(light_value);
+[; ;main.c: 120:     led.set_color(temp_value);
+[e ( *U . _led 1 (1 _temp_value ]
+"121
+[; ;main.c: 121:     led.set_brightness(light_value);
 [e ( *U . _led 0 (1 _light_value ]
-"123
-[; ;main.c: 123:     menu.show_menu();
-[e ( *U . _menu 6 ..  ]
 "124
-[; ;main.c: 124:   }
+[; ;main.c: 124:     menu.show_menu();
+[e ( *U . _menu 6 ..  ]
+"125
+[; ;main.c: 125:   }
 }
 [e :U 790 ]
 [e $U 791  ]
 [e :U 792 ]
-"125
-[; ;main.c: 125: }
+"126
+[; ;main.c: 126: }
 [e :UE 789 ]
 }
+[p f _printf 8388736 ]
+[a 2C 37 100 0 ]
 [a 1C 66 105 101 110 118 101 110 105 100 111 33 0 ]

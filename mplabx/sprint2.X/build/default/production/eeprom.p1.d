@@ -1,5 +1,6 @@
-build/default/production/menu_controller.p1:  \
-menu_controller.c  \
+build/default/production/eeprom.p1:  \
+eeprom.c  \
+eeprom.h  \
 mcc_generated_files/mcc.h  \
 mcc_generated_files/device_config.h  \
 mcc_generated_files/pin_manager.h  \
@@ -9,7 +10,4 @@ mcc_generated_files/pwm3.h  \
 mcc_generated_files/tmr4.h  \
 mcc_generated_files/adc.h  \
 mcc_generated_files/eusart.h  \
-mcc_generated_files/drivers/i2c_simple_master.h  \
-menu_controller.h  \
-lcd.h  \
-eeprom.h 
+mcc_generated_files/drivers/i2c_simple_master.h 

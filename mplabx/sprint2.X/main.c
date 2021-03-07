@@ -56,6 +56,7 @@
 #include "temp_sensor.h"
 #include "led_adapter.h"
 #include "lcd.h"
+#include "eeprom.h"
 
 /*
                          Main application
@@ -104,9 +105,9 @@ void main(void)
   LCDPutStr("Bienvenido!");
   __delay_ms(200);
   
-  // ----------- i2c example -----------------------------------//
-  uint8_t sendData[17] = {0x00,0x00,0xA1,0xA2,0xA3,0xA4,0xA5,0xA6,0xA7,0xA8,0xA9,0xAA,0xAB,0xAC,0xAD,0xAE,0xAF}; 
-  i2c_writeNBytes(0x00,sendData,sizeof(sendData));
+  eeprom_read(&temp_sensor_enabled,&light_sensor_enabled);
+  
+  printf("%d",temp_sensor_enabled);
 
   // ------------------------ Main loop ----------------------- //
   while (1)

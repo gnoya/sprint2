@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "eeprom.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,17 +6,19 @@
 # 1 "<built-in>" 2
 # 1 "D:/Programas/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 50 "main.c"
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 50 "main.c" 2
+# 1 "eeprom.c" 2
 
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 1 3
+
+
+
+
+
+# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 1 3
 
 
 
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 2 3
+# 4 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 2 3
 
 
 
@@ -24,68 +26,160 @@
 
 
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\features.h" 1 3
-# 10 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 2 3
-# 25 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 3
+# 10 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 2 3
+# 24 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 3
 # 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
 # 122 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
+# 137 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
 # 168 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __int24 int24_t;
 # 204 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __uint24 uint24_t;
-# 411 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 25 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 2 3
+# 246 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
 
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-# 65 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\string.h" 3
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
 
 
 
 
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 51 "main.c" 2
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 7 "eeprom.c" 2
+
+# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
+# 8 "eeprom.c" 2
+
+# 1 "./eeprom.h" 1
+# 22 "./eeprom.h"
+void eeprom_read (_Bool *temp_sensor_enabled, _Bool *light_sensor_enabled);
+void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
+# 9 "eeprom.c" 2
 
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
@@ -9754,150 +9848,7 @@ extern void cputs(const char *);
 # 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/i2c_master.h" 1
-# 54 "./mcc_generated_files/i2c_master.h"
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 3
-# 1 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "D:\\Programas\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-#pragma printf_check(printf) const
-#pragma printf_check(vprintf) const
-#pragma printf_check(sprintf) const
-#pragma printf_check(snprintf) const
-#pragma printf_check(vsprintf) const
-#pragma printf_check(vsnprintf) const
-
-int printf(const char *restrict, ...);
-int fprintf(FILE *restrict, const char *restrict, ...);
-int sprintf(char *restrict, const char *restrict, ...);
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-int scanf(const char *restrict, ...);
-int fscanf(FILE *restrict, const char *restrict, ...);
-int sscanf(const char *restrict, const char *restrict, ...);
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 54 "./mcc_generated_files/i2c_master.h" 2
-
-
-
-
+# 58 "./mcc_generated_files/i2c_master.h"
 typedef enum {
     I2C_NOERR,
     I2C_BUSY,
@@ -10074,180 +10025,46 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 101 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 52 "main.c" 2
+# 10 "eeprom.c" 2
 
-# 1 "./menu_controller.h" 1
-# 36 "./menu_controller.h"
-typedef struct menu_controller
+
+
+
+void eeprom_read (_Bool *temp_sensor_enabled, _Bool *light_sensor_enabled)
 {
-  _Bool light_sensor_opened;
-  _Bool temp_sensor_opened;
-  void (*index_add)(void);
-  void (*index_sub)(void);
-  void (*index_enter)(void);
-  void (*show_index)(void);
-  void (*show_menu)(void);
-  void (*show_main_menu)(void);
-  void (*show_mode_menu)(void);
-  void (*show_sensors_menu)(void);
-} menu_controller;
+  uint8_t receiveData[2];
+  uint8_t address[2] = {0x00,0x00};
+  i2c_writeNBytes(0x50,address,2);
+  i2c_readNBytes(0x50,receiveData,sizeof(receiveData));
 
-
-_Bool show = 1;
-_Bool temp_sensor_enabled = 1;
-_Bool light_sensor_enabled = 1;
-# 71 "./menu_controller.h"
-static void index_add(void);
-# 89 "./menu_controller.h"
-static void index_sub(void);
-# 108 "./menu_controller.h"
-static void index_enter(void);
-# 128 "./menu_controller.h"
-static void show_index(void);
-# 147 "./menu_controller.h"
-static void show_menu(void);
-# 166 "./menu_controller.h"
-static void show_main_menu(void);
-# 185 "./menu_controller.h"
-static void show_mode_menu(void);
-# 204 "./menu_controller.h"
-static void show_sensors_menu(void);
-# 222 "./menu_controller.h"
-void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
-# 53 "main.c" 2
-
-# 1 "./sensor_adapter.h" 1
-# 15 "./sensor_adapter.h"
-typedef struct sensor
-{
-  char *name;
-  _Bool (*open)(void);
-  int (*read)(void);
-} sensor;
-# 54 "main.c" 2
-
-# 1 "./light_sensor.h" 1
-# 46 "./light_sensor.h"
-void initialize_light(sensor *sensor);
-# 55 "main.c" 2
-
-# 1 "./temp_sensor.h" 1
-# 45 "./temp_sensor.h"
-void initialize_temp(sensor *sensor);
-# 56 "main.c" 2
-
-# 1 "./led_adapter.h" 1
-# 36 "./led_adapter.h"
-typedef struct led_adapter
-{
-  void (*set_brightness)(int brightness);
-  void (*set_color)(int temperature);
-} led_adapter;
-# 58 "./led_adapter.h"
-static void turn_blue();
-# 76 "./led_adapter.h"
-static void turn_green();
-# 94 "./led_adapter.h"
-static void turn_red();
-# 112 "./led_adapter.h"
-static void set_brightness(int brightness);
-# 130 "./led_adapter.h"
-static void set_color(int temperature);
-# 149 "./led_adapter.h"
-static void turn_selectors(_Bool selector1, _Bool selector2);
-# 168 "./led_adapter.h"
-static long map(int x, long in_min, long in_max, long out_min, long out_max);
-# 186 "./led_adapter.h"
-void initialize_led(led_adapter *led);
-# 57 "main.c" 2
-
-# 1 "./lcd.h" 1
-# 120 "./lcd.h"
-  void LCD_Initialize(void);
-# 138 "./lcd.h"
-  void LCDPutChar(uint8_t ch);
-# 156 "./lcd.h"
-  void LCDPutCmd(uint8_t ch);
-# 174 "./lcd.h"
-  void LCDPutStr(const char *);
-# 192 "./lcd.h"
-  void LCDWriteNibble(uint8_t ch, uint8_t rs);
-# 214 "./lcd.h"
-  void LCDGoto(uint8_t pos, uint8_t ln);
-# 232 "./lcd.h"
-  void LCDClear(void);
-# 58 "main.c" 2
-
-# 1 "./eeprom.h" 1
-# 22 "./eeprom.h"
-void eeprom_read (_Bool *temp_sensor_enabled, _Bool *light_sensor_enabled);
-void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
-# 59 "main.c" 2
-
-
-
-
-
-sensor light_sensor;
-sensor temp_sensor;
-led_adapter led;
-menu_controller menu;
-
-extern _Bool temp_sensor_enabled;
-extern _Bool light_sensor_enabled;
-
-void main(void)
-{
-  SYSTEM_Initialize();
-  LCD_Initialize();
-
-  char *sensor_names[3] = {};
-  char **names_pointer = sensor_names;
-  int sensor_counter = 0;
-
-
-  initialize_light(&light_sensor);
-  initialize_temp(&temp_sensor);
-
-
-  _Bool temp_sensor_opened = temp_sensor.open();
-  _Bool light_sensor_opened = light_sensor.open();
-
-  _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
-
-
-  initialize_led(&led);
-  initialize_menu(&menu, sensors_opened);
-
-
-  (INTCONbits.GIE = 1);
-  (INTCONbits.PEIE = 1);
-
-
-  IOCAF5_SetInterruptHandler(menu.index_add);
-  IOCAF6_SetInterruptHandler(menu.index_sub);
-  IOCAF7_SetInterruptHandler(menu.index_enter);
-
-
-  LCDPutStr("Bienvenido!");
-  _delay((unsigned long)((200)*(1000000/4000.0)));
-
-  eeprom_read(&temp_sensor_enabled,&light_sensor_enabled);
-
-  printf("%d",temp_sensor_enabled);
-
-
-  while (1)
-  {
-
-    int temp_value = temp_sensor.read();
-    int light_value = light_sensor.read();
-
-
-    led.set_color(temp_value);
-    led.set_brightness(light_value);
-
-
-    menu.show_menu();
+  if (receiveData[0] == 0x00){
+      *temp_sensor_enabled = 0;
   }
+  else {
+      *temp_sensor_enabled = 1;
+  }
+
+  if (receiveData[1] == 0x00){
+      *light_sensor_enabled = 0;
+  }
+  else {
+      *light_sensor_enabled = 1;
+  }
+}
+
+
+void eeprom_write(_Bool temp_sensor_enabled,_Bool light_sensor_enabled)
+{
+
+    uint8_t sendData[4] = {0x00,0x00,0x00,0x00};
+
+    if (temp_sensor_enabled){
+        sendData[2]=0x01;
+    }
+    if (light_sensor_enabled){
+        sendData[3]=0x01;
+    }
+
+     i2c_writeNBytes(0x50,sendData,sizeof(sendData));
+     _delay((unsigned long)((20)*(1000000/4000.0)));
 }

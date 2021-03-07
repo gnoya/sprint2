@@ -15,4 +15,5 @@ sensor_adapter.h  \
 light_sensor.h  \
 temp_sensor.h  \
 led_adapter.h  \
-lcd.h 
+lcd.h  \
+eeprom.h 

@@ -10,6 +10,7 @@
 #include "mcc_generated_files/mcc.h"
 #include "menu_controller.h"
 #include "lcd.h"
+#include "eeprom.h"
 
 #define MAIN_MENU 0
 #define MAIN_BACK_INDEX 4
@@ -79,6 +80,7 @@ static void index_enter(void)
   {
     temp_sensor_enabled = !temp_sensor_enabled;
     show = 1;
+    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
     return;
   }
 
@@ -87,6 +89,7 @@ static void index_enter(void)
   {
     light_sensor_enabled = !light_sensor_enabled;
     show = 1;
+    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
     return;
   }
 

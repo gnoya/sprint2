@@ -10078,7 +10078,13 @@ void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 232 "./lcd.h"
   void LCDClear(void);
 # 12 "menu_controller.c" 2
-# 21 "menu_controller.c"
+
+# 1 "./eeprom.h" 1
+# 22 "./eeprom.h"
+void eeprom_read (_Bool *temp_sensor_enabled, _Bool *light_sensor_enabled);
+void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
+# 13 "menu_controller.c" 2
+# 22 "menu_controller.c"
 static _Bool temp_sensor_opened = 0;
 static _Bool light_sensor_opened = 0;
 static int menu_current = 0;
@@ -10140,6 +10146,7 @@ static void index_enter(void)
   {
     temp_sensor_enabled = !temp_sensor_enabled;
     show = 1;
+    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
     return;
   }
 
@@ -10148,6 +10155,7 @@ static void index_enter(void)
   {
     light_sensor_enabled = !light_sensor_enabled;
     show = 1;
+    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
     return;
   }
 
