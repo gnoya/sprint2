@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/drivers/i2c_simple_master.c"
+# 1 "rtc.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,22 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/drivers/i2c_simple_master.c" 2
-# 30 "mcc_generated_files/drivers/i2c_simple_master.c"
-# 1 "mcc_generated_files/drivers/.././i2c_master.h" 1
-# 54 "mcc_generated_files/drivers/.././i2c_master.h"
+# 1 "rtc.c" 2
+
+
+
+
+
+
+# 1 "./rtc.h" 1
+# 29 "./rtc.h"
+void rtc_time(void);
+void rtc_sleep(int time);
+void rtc_sleep_ISR(void);
+# 7 "rtc.c" 2
+
+# 1 "./mcc_generated_files/i2c_master.h" 1
+# 54 "./mcc_generated_files/i2c_master.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 1 3
 
 
@@ -167,7 +179,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 54 "mcc_generated_files/drivers/.././i2c_master.h" 2
+# 54 "./mcc_generated_files/i2c_master.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 3
@@ -254,10 +266,10 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdint.h" 2 3
-# 55 "mcc_generated_files/drivers/.././i2c_master.h" 2
+# 55 "./mcc_generated_files/i2c_master.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 56 "mcc_generated_files/drivers/.././i2c_master.h" 2
+# 56 "./mcc_generated_files/i2c_master.h" 2
 
 
 typedef enum {
@@ -292,11 +304,11 @@ i2c_operations_t I2C_CallbackRestartRead(void *funPtr);
 
 
 void I2C_Initialize(void);
-# 101 "mcc_generated_files/drivers/.././i2c_master.h"
+# 101 "./mcc_generated_files/i2c_master.h"
 i2c_error_t I2C_Open(i2c_address_t address);
-# 111 "mcc_generated_files/drivers/.././i2c_master.h"
+# 111 "./mcc_generated_files/i2c_master.h"
 i2c_error_t I2C_Close(void);
-# 123 "mcc_generated_files/drivers/.././i2c_master.h"
+# 123 "./mcc_generated_files/i2c_master.h"
 i2c_error_t I2C_MasterOperation(_Bool read);
 
 
@@ -308,24 +320,24 @@ i2c_error_t I2C_MasterWrite(void);
 
 
 i2c_error_t I2C_MasterRead(void);
-# 142 "mcc_generated_files/drivers/.././i2c_master.h"
+# 142 "./mcc_generated_files/i2c_master.h"
 void I2C_SetTimeout(uint8_t timeOut);
-# 152 "mcc_generated_files/drivers/.././i2c_master.h"
+# 152 "./mcc_generated_files/i2c_master.h"
 void I2C_SetBuffer(void *buffer, size_t bufferSize);
-# 164 "mcc_generated_files/drivers/.././i2c_master.h"
+# 164 "./mcc_generated_files/i2c_master.h"
 void I2C_SetDataCompleteCallback(i2c_callback_t cb, void *ptr);
-# 174 "mcc_generated_files/drivers/.././i2c_master.h"
+# 174 "./mcc_generated_files/i2c_master.h"
 void I2C_SetWriteCollisionCallback(i2c_callback_t cb, void *ptr);
-# 184 "mcc_generated_files/drivers/.././i2c_master.h"
+# 184 "./mcc_generated_files/i2c_master.h"
 void I2C_SetAddressNackCallback(i2c_callback_t cb, void *ptr);
-# 194 "mcc_generated_files/drivers/.././i2c_master.h"
+# 194 "./mcc_generated_files/i2c_master.h"
 void I2C_SetDataNackCallback(i2c_callback_t cb, void *ptr);
-# 204 "mcc_generated_files/drivers/.././i2c_master.h"
+# 204 "./mcc_generated_files/i2c_master.h"
 void I2C_SetTimeoutCallback(i2c_callback_t cb, void *ptr);
-# 30 "mcc_generated_files/drivers/i2c_simple_master.c" 2
+# 8 "rtc.c" 2
 
-# 1 "mcc_generated_files/drivers/i2c_simple_master.h" 1
-# 37 "mcc_generated_files/drivers/i2c_simple_master.h"
+# 1 "./mcc_generated_files/drivers/i2c_simple_master.h" 1
+# 37 "./mcc_generated_files/drivers/i2c_simple_master.h"
 uint8_t i2c_read1ByteRegister(i2c_address_t address, uint8_t reg);
 uint16_t i2c_read2ByteRegister(i2c_address_t address, uint8_t reg);
 void i2c_write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data);
@@ -334,139 +346,70 @@ void i2c_write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data);
 void i2c_writeNBytes(i2c_address_t address, void* data, size_t len);
 void i2c_readDataBlock(i2c_address_t address, uint8_t reg, void *data, size_t len);
 void i2c_readNBytes(i2c_address_t address, void *data, size_t len);
-# 31 "mcc_generated_files/drivers/i2c_simple_master.c" 2
+# 9 "rtc.c" 2
+
+# 1 "./mcc_generated_files/tmr6.h" 1
+# 104 "./mcc_generated_files/tmr6.h"
+void TMR6_Initialize(void);
+# 133 "./mcc_generated_files/tmr6.h"
+void TMR6_StartTimer(void);
+# 165 "./mcc_generated_files/tmr6.h"
+void TMR6_StopTimer(void);
+# 200 "./mcc_generated_files/tmr6.h"
+uint8_t TMR6_ReadTimer(void);
+# 239 "./mcc_generated_files/tmr6.h"
+void TMR6_WriteTimer(uint8_t timerVal);
+# 291 "./mcc_generated_files/tmr6.h"
+void TMR6_LoadPeriodRegister(uint8_t periodVal);
+# 309 "./mcc_generated_files/tmr6.h"
+void TMR6_ISR(void);
+# 327 "./mcc_generated_files/tmr6.h"
+ void TMR6_CallBack(void);
+# 344 "./mcc_generated_files/tmr6.h"
+ void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "./mcc_generated_files/tmr6.h"
+extern void (*TMR6_InterruptHandler)(void);
+# 380 "./mcc_generated_files/tmr6.h"
+void TMR6_DefaultInterruptHandler(void);
+# 10 "rtc.c" 2
 
 
+static uint8_t time_sleep = 0;
+static _Bool timer_on = 0;
 
-static i2c_operations_t wr1RegCompleteHandler(void *p)
+void rtc_time(void)
 {
-    I2C_SetBuffer(p,1);
-    I2C_SetDataCompleteCallback(((void*)0),((void*)0));
-    return I2C_CONTINUE;
-}
-# 51 "mcc_generated_files/drivers/i2c_simple_master.c"
-void i2c_write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data)
-{
-    while(!I2C_Open(address));
-    I2C_SetDataCompleteCallback(wr1RegCompleteHandler,&data);
-    I2C_SetBuffer(&reg,1);
-    I2C_SetAddressNackCallback(((void*)0),((void*)0));
-    I2C_MasterWrite();
-    while(I2C_BUSY == I2C_Close());
-}
-# 71 "mcc_generated_files/drivers/i2c_simple_master.c"
-void i2c_writeNBytes(i2c_address_t address, void* data, size_t len)
-{
-    while(!I2C_Open(address));
-    I2C_SetBuffer(data,len);
-    I2C_SetAddressNackCallback(((void*)0),((void*)0));
-    I2C_MasterWrite();
-    while(I2C_BUSY == I2C_Close());
-}
 
-
-static i2c_operations_t rd1RegCompleteHandler(void *p)
-{
-    I2C_SetBuffer(p,1);
-    I2C_SetDataCompleteCallback(((void*)0),((void*)0));
-    return I2C_RESTART_READ;
-}
-# 97 "mcc_generated_files/drivers/i2c_simple_master.c"
-uint8_t i2c_read1ByteRegister(i2c_address_t address, uint8_t reg)
-{
-    uint8_t d2=42;
-    i2c_error_t e;
-    int x;
-
-    for(x = 2; x != 0; x--)
-    {
-        while(!I2C_Open(address));
-        I2C_SetDataCompleteCallback(rd1RegCompleteHandler,&d2);
-        I2C_SetBuffer(&reg,1);
-        I2C_SetAddressNackCallback(((void*)0),((void*)0));
-        I2C_MasterWrite();
-        while(I2C_BUSY == (e = I2C_Close()));
-        if(e==I2C_NOERR) break;
-    }
-
-
-    return d2;
+  printf("Entro a RTC \r\n");
+  uint8_t sendData[1] = {0x06};
+  uint8_t receiveData[7];
+  i2c_writeNBytes(0xd1,sendData,sizeof(sendData));
+  i2c_readNBytes(0x68,receiveData,sizeof(receiveData));
+  printf("Receive Data 0: %x \r\n", receiveData[0]);
+  printf("Receive Data 1: %x \r\n", receiveData[1]);
+  printf("Receive Data 2: %x \r\n", receiveData[2]);
+  printf("Receive Data 3: %x \r\n", receiveData[3]);
+  printf("Receive Data 4: %x \r\n", receiveData[4]);
+  printf("Receive Data 5: %x \r\n", receiveData[5]);
+  printf("Receive Data 6: %x \r\n", receiveData[6]);
 }
 
 
-static i2c_operations_t rd2RegCompleteHandler(void *p)
+void rtc_sleep(int time)
 {
-    I2C_SetBuffer(p,2);
-    I2C_SetDataCompleteCallback(((void*)0),((void*)0));
-    return I2C_RESTART_READ;
-}
-# 135 "mcc_generated_files/drivers/i2c_simple_master.c"
-uint16_t i2c_read2ByteRegister(i2c_address_t address, uint8_t reg)
-{
-
-    uint16_t result;
-
-    while(!I2C_Open(address));
-    I2C_SetDataCompleteCallback(rd2RegCompleteHandler,&result);
-    I2C_SetBuffer(&reg,1);
-    I2C_SetAddressNackCallback(((void*)0),((void*)0));
-    I2C_MasterWrite();
-    while(I2C_BUSY == I2C_Close());
-
-    return (result << 8 | result >> 8);
+    if(timer_on)
+        printf("time: %d \r\n",time);
+        printf("time_sleep: %d \r\n",time);
+        if (time_sleep >= time){
+            printf("Entro al if, apagando... \r\n");
+            TMR6_StopTimer();
+        }
 }
 
 
-static i2c_operations_t wr2RegCompleteHandler(void *p)
+void rtc_sleep_ISR(void)
 {
-    I2C_SetBuffer(p,2);
-    I2C_SetDataCompleteCallback(((void*)0),((void*)0));
-    return I2C_CONTINUE;
-}
-# 168 "mcc_generated_files/drivers/i2c_simple_master.c"
-void i2c_write2ByteRegister(i2c_address_t address, uint8_t reg, uint16_t data)
-{
-    while(!I2C_Open(address));
-    I2C_SetDataCompleteCallback(wr2RegCompleteHandler,&data);
-    I2C_SetBuffer(&reg,1);
-    I2C_SetAddressNackCallback(((void*)0),((void*)0));
-    I2C_MasterWrite();
-    while(I2C_BUSY == I2C_Close());
-}
-
-
-typedef struct
-{
-    size_t len;
-    char *data;
-}buf_t;
-
-static i2c_operations_t rdBlkRegCompleteHandler(void *p)
-{
-    I2C_SetBuffer(((buf_t *)p)->data,((buf_t*)p)->len);
-    I2C_SetDataCompleteCallback(((void*)0),((void*)0));
-    return I2C_RESTART_READ;
-}
-# 203 "mcc_generated_files/drivers/i2c_simple_master.c"
-void i2c_readDataBlock(i2c_address_t address, uint8_t reg, void *data, size_t len)
-{
-
-    buf_t d;
-    d.data = data;
-    d.len = len;
-
-    while(!I2C_Open(address));
-    I2C_SetDataCompleteCallback(rdBlkRegCompleteHandler,&d);
-    I2C_SetBuffer(&reg,1);
-    I2C_SetAddressNackCallback(((void*)0),((void*)0));
-    I2C_MasterWrite();
-    while(I2C_BUSY == I2C_Close());
-}
-# 228 "mcc_generated_files/drivers/i2c_simple_master.c"
-void i2c_readNBytes(i2c_address_t address, void *data, size_t len)
-{
-    while(!I2C_Open(address));
-    I2C_SetBuffer(data,len);
-    I2C_MasterRead();
-    while(I2C_BUSY == I2C_Close());
+    time_sleep += 30;
+    timer_on = !timer_on;
+    printf("time_sleep: %d \r\n", time_sleep);
 }

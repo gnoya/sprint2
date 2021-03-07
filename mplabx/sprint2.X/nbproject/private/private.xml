@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/sensor_adapter.c</file>
-            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/menu_controller.c</file>
-            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/temp_sensor.c</file>
-            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/main.c</file>
-            <file>file:/C:/SE1/sprint2/mplabx/sprint2.X/nbproject/Makefile-impl.mk</file>
+            <file>file:/C:/Users/SantiniG/Desktop/sp2/sprint2/mplabx/sprint2.X/main.c</file>
+            <file>file:/C:/Users/SantiniG/Desktop/sp2/sprint2/mplabx/sprint2.X/rtc.c</file>
+            <file>file:/C:/Users/SantiniG/Desktop/sp2/sprint2/mplabx/sprint2.X/rtc.h</file>
         </group>
     </open-files>
 </project-private>

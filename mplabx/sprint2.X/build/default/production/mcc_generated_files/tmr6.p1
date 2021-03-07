@@ -1,24 +1,64 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"2358 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2358:     struct {
-[s S120 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S120 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"2357
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2357: typedef union {
-[u S119 `S120 1 ]
-[n S119 . . ]
-"2369
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 2369: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
-[v _LATBbits `VS119 ~T0 @X0 0 e@269 ]
-"129 ./mcc_generated_files/pwm3.h
-[; ;./mcc_generated_files/pwm3.h: 129:  void PWM3_LoadDutyValue(uint16_t dutyValue);
-[v _PWM3_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
-[v F325 `(v ~T0 @X0 0 tf1`i ]
-[v F328 `(v ~T0 @X0 0 tf1`i ]
-"37 ./led_adapter.h
-[; ;./led_adapter.h: 37: {
-[s S3 `*F325 1 `*F328 1 ]
-[n S3 led_adapter set_brightness set_color ]
+[v F5582 `(v ~T0 @X0 0 tf ]
+"8840 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8840: extern volatile unsigned char PR6 __attribute__((address(0x41D)));
+[v _PR6 `Vuc ~T0 @X0 0 e@1053 ]
+"8820
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8820: extern volatile unsigned char TMR6 __attribute__((address(0x41C)));
+[v _TMR6 `Vuc ~T0 @X0 0 e@1052 ]
+"783
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 783:     struct {
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S46 . CCP2IF TMR4IF TMR6IF BCL1IF . C1IF C2IF OSFIF ]
+"782
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 782: typedef union {
+[u S45 `S46 1 ]
+[n S45 . . ]
+"794
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 794: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x012)));
+[v _PIR2bits `VS45 ~T0 @X0 0 e@18 ]
+"1564
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 1564:     struct {
+[s S81 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S81 . CCP2IE TMR4IE TMR6IE BCL1IE . C1IE C2IE OSFIE ]
+"1563
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 1563: typedef union {
+[u S80 `S81 1 ]
+[n S80 . . ]
+"1575
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 1575: extern volatile PIE2bits_t PIE2bits __attribute__((address(0x092)));
+[v _PIE2bits `VS80 ~T0 @X0 0 e@146 ]
+[v F5575 `(v ~T0 @X0 0 tf ]
+"344 mcc_generated_files/tmr6.h
+[; ;mcc_generated_files/tmr6.h: 344:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F5575 ]
+"380
+[; ;mcc_generated_files/tmr6.h: 380: void TMR6_DefaultInterruptHandler(void);
+[v _TMR6_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
+"8860 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8860: extern volatile unsigned char T6CON __attribute__((address(0x41E)));
+[v _T6CON `Vuc ~T0 @X0 0 e@1054 ]
+"8866
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8866:     struct {
+[s S402 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S402 . T6CKPS TMR6ON T6OUTPS ]
+"8871
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8871:     struct {
+[s S403 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S403 . T6CKPS0 T6CKPS1 . T6OUTPS0 T6OUTPS1 T6OUTPS2 T6OUTPS3 ]
+"8865
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8865: typedef union {
+[u S401 `S402 1 `S403 1 ]
+[n S401 . . . ]
+"8881
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 8881: extern volatile T6CONbits_t T6CONbits __attribute__((address(0x41E)));
+[v _T6CONbits `VS401 ~T0 @X0 0 e@1054 ]
+"327 mcc_generated_files/tmr6.h
+[; ;mcc_generated_files/tmr6.h: 327:  void TMR6_CallBack(void);
+[v _TMR6_CallBack `(v ~T0 @X0 0 ef ]
+[v F5596 `(v ~T0 @X0 0 tf ]
+[v F5598 `(v ~T0 @X0 0 tf ]
+[v F5600 `(v ~T0 @X0 0 tf ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -946,311 +986,214 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"13 led_adapter.c
-[; ;led_adapter.c: 13: uint16_t duty_cycle = 0;
-[v _duty_cycle `us ~T0 @X0 1 e ]
-[i _duty_cycle
--> -> 0 `i `us
-]
-"17
-[; ;led_adapter.c: 17: static long map(int x, long in_min, long in_max, long out_min, long out_max)
-[v _map `(l ~T0 @X0 1 sf5`i`l`l`l`l ]
-"18
-[; ;led_adapter.c: 18: {
+"58 mcc_generated_files/tmr6.c
+[; ;mcc_generated_files/tmr6.c: 58: void (*TMR6_InterruptHandler)(void);
+[v _TMR6_InterruptHandler `*F5582 ~T0 @X0 1 e ]
+"64
+[; ;mcc_generated_files/tmr6.c: 64: void TMR6_Initialize(void)
+[v _TMR6_Initialize `(v ~T0 @X0 1 ef ]
+"65
+[; ;mcc_generated_files/tmr6.c: 65: {
 {
-[e :U _map ]
-"17
-[; ;led_adapter.c: 17: static long map(int x, long in_min, long in_max, long out_min, long out_max)
-[v _x `i ~T0 @X0 1 r1 ]
-[v _in_min `l ~T0 @X0 1 r2 ]
-[v _in_max `l ~T0 @X0 1 r3 ]
-[v _out_min `l ~T0 @X0 1 r4 ]
-[v _out_max `l ~T0 @X0 1 r5 ]
-"18
-[; ;led_adapter.c: 18: {
+[e :U _TMR6_Initialize ]
 [f ]
-"19
-[; ;led_adapter.c: 19:   return ((long)x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-[e ) + / * - -> _x `l _in_min - _out_max _out_min - _in_max _in_min _out_min ]
-[e $UE 786  ]
-"20
-[; ;led_adapter.c: 20: }
+"69
+[; ;mcc_generated_files/tmr6.c: 69:     PR6 = 0x79;
+[e = _PR6 -> -> 121 `i `uc ]
+"72
+[; ;mcc_generated_files/tmr6.c: 72:     TMR6 = 0x00;
+[e = _TMR6 -> -> 0 `i `uc ]
+"75
+[; ;mcc_generated_files/tmr6.c: 75:     PIR2bits.TMR6IF = 0;
+[e = . . _PIR2bits 0 2 -> -> 0 `i `uc ]
+"78
+[; ;mcc_generated_files/tmr6.c: 78:     PIE2bits.TMR6IE = 1;
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+"81
+[; ;mcc_generated_files/tmr6.c: 81:     TMR6_SetInterruptHandler(TMR6_DefaultInterruptHandler);
+[e ( _TMR6_SetInterruptHandler (1 &U _TMR6_DefaultInterruptHandler ]
+"84
+[; ;mcc_generated_files/tmr6.c: 84:     T6CON = 0x7F;
+[e = _T6CON -> -> 127 `i `uc ]
+"85
+[; ;mcc_generated_files/tmr6.c: 85: }
+[e :UE 780 ]
+}
+"87
+[; ;mcc_generated_files/tmr6.c: 87: void TMR6_StartTimer(void)
+[v _TMR6_StartTimer `(v ~T0 @X0 1 ef ]
+"88
+[; ;mcc_generated_files/tmr6.c: 88: {
+{
+[e :U _TMR6_StartTimer ]
+[f ]
+"90
+[; ;mcc_generated_files/tmr6.c: 90:     T6CONbits.TMR6ON = 1;
+[e = . . _T6CONbits 0 1 -> -> 1 `i `uc ]
+"91
+[; ;mcc_generated_files/tmr6.c: 91: }
+[e :UE 781 ]
+}
+"93
+[; ;mcc_generated_files/tmr6.c: 93: void TMR6_StopTimer(void)
+[v _TMR6_StopTimer `(v ~T0 @X0 1 ef ]
+"94
+[; ;mcc_generated_files/tmr6.c: 94: {
+{
+[e :U _TMR6_StopTimer ]
+[f ]
+"96
+[; ;mcc_generated_files/tmr6.c: 96:     T6CONbits.TMR6ON = 0;
+[e = . . _T6CONbits 0 1 -> -> 0 `i `uc ]
+"97
+[; ;mcc_generated_files/tmr6.c: 97: }
+[e :UE 782 ]
+}
+"99
+[; ;mcc_generated_files/tmr6.c: 99: uint8_t TMR6_ReadTimer(void)
+[v _TMR6_ReadTimer `(uc ~T0 @X0 1 ef ]
+"100
+[; ;mcc_generated_files/tmr6.c: 100: {
+{
+[e :U _TMR6_ReadTimer ]
+[f ]
+"101
+[; ;mcc_generated_files/tmr6.c: 101:     uint8_t readVal;
+[v _readVal `uc ~T0 @X0 1 a ]
+"103
+[; ;mcc_generated_files/tmr6.c: 103:     readVal = TMR6;
+[e = _readVal _TMR6 ]
+"105
+[; ;mcc_generated_files/tmr6.c: 105:     return readVal;
+[e ) _readVal ]
+[e $UE 783  ]
+"106
+[; ;mcc_generated_files/tmr6.c: 106: }
+[e :UE 783 ]
+}
+"108
+[; ;mcc_generated_files/tmr6.c: 108: void TMR6_WriteTimer(uint8_t timerVal)
+[v _TMR6_WriteTimer `(v ~T0 @X0 1 ef1`uc ]
+"109
+[; ;mcc_generated_files/tmr6.c: 109: {
+{
+[e :U _TMR6_WriteTimer ]
+"108
+[; ;mcc_generated_files/tmr6.c: 108: void TMR6_WriteTimer(uint8_t timerVal)
+[v _timerVal `uc ~T0 @X0 1 r1 ]
+"109
+[; ;mcc_generated_files/tmr6.c: 109: {
+[f ]
+"111
+[; ;mcc_generated_files/tmr6.c: 111:     TMR6 = timerVal;
+[e = _TMR6 _timerVal ]
+"112
+[; ;mcc_generated_files/tmr6.c: 112: }
+[e :UE 784 ]
+}
+"114
+[; ;mcc_generated_files/tmr6.c: 114: void TMR6_LoadPeriodRegister(uint8_t periodVal)
+[v _TMR6_LoadPeriodRegister `(v ~T0 @X0 1 ef1`uc ]
+"115
+[; ;mcc_generated_files/tmr6.c: 115: {
+{
+[e :U _TMR6_LoadPeriodRegister ]
+"114
+[; ;mcc_generated_files/tmr6.c: 114: void TMR6_LoadPeriodRegister(uint8_t periodVal)
+[v _periodVal `uc ~T0 @X0 1 r1 ]
+"115
+[; ;mcc_generated_files/tmr6.c: 115: {
+[f ]
+"116
+[; ;mcc_generated_files/tmr6.c: 116:    PR6 = periodVal;
+[e = _PR6 _periodVal ]
+"117
+[; ;mcc_generated_files/tmr6.c: 117: }
+[e :UE 785 ]
+}
+"119
+[; ;mcc_generated_files/tmr6.c: 119: void TMR6_ISR(void)
+[v _TMR6_ISR `(v ~T0 @X0 1 ef ]
+"120
+[; ;mcc_generated_files/tmr6.c: 120: {
+{
+[e :U _TMR6_ISR ]
+[f ]
+"121
+[; ;mcc_generated_files/tmr6.c: 121:     static volatile unsigned int CountCallBack = 0;
+[v F5594 `Vui ~T0 @X0 1 s CountCallBack ]
+[i F5594
+-> -> 0 `i `ui
+]
+"124
+[; ;mcc_generated_files/tmr6.c: 124:     PIR2bits.TMR6IF = 0;
+[e = . . _PIR2bits 0 2 -> -> 0 `i `uc ]
+"127
+[; ;mcc_generated_files/tmr6.c: 127:     if (++CountCallBack >= 61)
+[e $ ! >= =+ F5594 -> -> 1 `i `Vui -> -> 61 `i `ui 787  ]
+"128
+[; ;mcc_generated_files/tmr6.c: 128:     {
+{
+"130
+[; ;mcc_generated_files/tmr6.c: 130:         TMR6_CallBack();
+[e ( _TMR6_CallBack ..  ]
+"133
+[; ;mcc_generated_files/tmr6.c: 133:         CountCallBack = 0;
+[e = F5594 -> -> 0 `i `ui ]
+"134
+[; ;mcc_generated_files/tmr6.c: 134:     }
+}
+[e :U 787 ]
+"135
+[; ;mcc_generated_files/tmr6.c: 135: }
 [e :UE 786 ]
 }
-"22
-[; ;led_adapter.c: 22: static void turn_selectors(_Bool selector1, _Bool selector2)
-[v _turn_selectors `(v ~T0 @X0 1 sf2`a`a ]
-"23
-[; ;led_adapter.c: 23: {
+"137
+[; ;mcc_generated_files/tmr6.c: 137: void TMR6_CallBack(void)
+[v _TMR6_CallBack `(v ~T0 @X0 1 ef ]
+"138
+[; ;mcc_generated_files/tmr6.c: 138: {
 {
-[e :U _turn_selectors ]
-"22
-[; ;led_adapter.c: 22: static void turn_selectors(_Bool selector1, _Bool selector2)
-[v _selector1 `a ~T0 @X0 1 r1 ]
-[v _selector2 `a ~T0 @X0 1 r2 ]
-"23
-[; ;led_adapter.c: 23: {
+[e :U _TMR6_CallBack ]
 [f ]
-"24
-[; ;led_adapter.c: 24:   if (selector1)
-[e $ ! != -> _selector1 `i -> 0 `i 788  ]
-"25
-[; ;led_adapter.c: 25:   {
+"141
+[; ;mcc_generated_files/tmr6.c: 141:     if(TMR6_InterruptHandler)
+[e $ ! != _TMR6_InterruptHandler -> -> 0 `i `*F5596 789  ]
+"142
+[; ;mcc_generated_files/tmr6.c: 142:     {
 {
-"26
-[; ;led_adapter.c: 26:     do { LATBbits.LATB1 = 1; } while(0);
-[e :U 791 ]
+"143
+[; ;mcc_generated_files/tmr6.c: 143:         TMR6_InterruptHandler();
+[e ( *U _TMR6_InterruptHandler ..  ]
+"144
+[; ;mcc_generated_files/tmr6.c: 144:     }
+}
+[e :U 789 ]
+"145
+[; ;mcc_generated_files/tmr6.c: 145: }
+[e :UE 788 ]
+}
+"147
+[; ;mcc_generated_files/tmr6.c: 147: void TMR6_SetInterruptHandler(void (* InterruptHandler)(void)){
+[v _TMR6_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F5598 ]
 {
-[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
-}
-[e :U 790 ]
-"27
-[; ;led_adapter.c: 27:   }
-}
-[e $U 792  ]
-"28
-[; ;led_adapter.c: 28:   else
-[e :U 788 ]
-"29
-[; ;led_adapter.c: 29:   {
-{
-"30
-[; ;led_adapter.c: 30:     do { LATBbits.LATB1 = 0; } while(0);
-[e :U 795 ]
-{
-[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 794 ]
-"31
-[; ;led_adapter.c: 31:   }
-}
-[e :U 792 ]
-"33
-[; ;led_adapter.c: 33:   if (selector2)
-[e $ ! != -> _selector2 `i -> 0 `i 796  ]
-"34
-[; ;led_adapter.c: 34:   {
-{
-"35
-[; ;led_adapter.c: 35:     do { LATBbits.LATB2 = 1; } while(0);
-[e :U 799 ]
-{
-[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 798 ]
-"36
-[; ;led_adapter.c: 36:   }
-}
-[e $U 800  ]
-"37
-[; ;led_adapter.c: 37:   else
-[e :U 796 ]
-"38
-[; ;led_adapter.c: 38:   {
-{
-"39
-[; ;led_adapter.c: 39:     do { LATBbits.LATB2 = 0; } while(0);
-[e :U 803 ]
-{
-[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 802 ]
-"40
-[; ;led_adapter.c: 40:   }
-}
-[e :U 800 ]
-"41
-[; ;led_adapter.c: 41: }
-[e :UE 787 ]
-}
-"43
-[; ;led_adapter.c: 43: static void turn_blue()
-[v _turn_blue `(v ~T0 @X0 1 sf ]
-"44
-[; ;led_adapter.c: 44: {
-{
-[e :U _turn_blue ]
+[e :U _TMR6_SetInterruptHandler ]
+[v _InterruptHandler `*F5600 ~T0 @X0 1 r1 ]
 [f ]
-"45
-[; ;led_adapter.c: 45:   turn_selectors(1, 0);
-[e ( _turn_selectors (2 , -> -> 1 `i `a -> -> 0 `i `a ]
-"46
-[; ;led_adapter.c: 46: }
-[e :UE 804 ]
+"148
+[; ;mcc_generated_files/tmr6.c: 148:     TMR6_InterruptHandler = InterruptHandler;
+[e = _TMR6_InterruptHandler _InterruptHandler ]
+"149
+[; ;mcc_generated_files/tmr6.c: 149: }
+[e :UE 790 ]
 }
-"48
-[; ;led_adapter.c: 48: static void turn_green()
-[v _turn_green `(v ~T0 @X0 1 sf ]
-"49
-[; ;led_adapter.c: 49: {
+"151
+[; ;mcc_generated_files/tmr6.c: 151: void TMR6_DefaultInterruptHandler(void){
+[v _TMR6_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
-[e :U _turn_green ]
+[e :U _TMR6_DefaultInterruptHandler ]
 [f ]
-"50
-[; ;led_adapter.c: 50:   turn_selectors(0, 1);
-[e ( _turn_selectors (2 , -> -> 0 `i `a -> -> 1 `i `a ]
-"51
-[; ;led_adapter.c: 51: }
-[e :UE 805 ]
-}
-"53
-[; ;led_adapter.c: 53: static void turn_red()
-[v _turn_red `(v ~T0 @X0 1 sf ]
-"54
-[; ;led_adapter.c: 54: {
-{
-[e :U _turn_red ]
-[f ]
-"55
-[; ;led_adapter.c: 55:   turn_selectors(0, 0);
-[e ( _turn_selectors (2 , -> -> 0 `i `a -> -> 0 `i `a ]
-"56
-[; ;led_adapter.c: 56: }
-[e :UE 806 ]
-}
-"58
-[; ;led_adapter.c: 58: static void set_brightness(int brightness)
-[v _set_brightness `(v ~T0 @X0 1 sf1`i ]
-"59
-[; ;led_adapter.c: 59: {
-{
-[e :U _set_brightness ]
-"58
-[; ;led_adapter.c: 58: static void set_brightness(int brightness)
-[v _brightness `i ~T0 @X0 1 r1 ]
-"59
-[; ;led_adapter.c: 59: {
-[f ]
-"61
-[; ;led_adapter.c: 61:   if (brightness == 0)
-[e $ ! == _brightness -> 0 `i 808  ]
-"62
-[; ;led_adapter.c: 62:   {
-{
-"63
-[; ;led_adapter.c: 63:     PWM3_LoadDutyValue(0);
-[e ( _PWM3_LoadDutyValue (1 -> -> 0 `i `us ]
-"64
-[; ;led_adapter.c: 64:     return;
-[e $UE 807  ]
-"65
-[; ;led_adapter.c: 65:   }
-}
-[e :U 808 ]
-"68
-[; ;led_adapter.c: 68:   int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
-[v _mapped_value `i ~T0 @X0 1 a ]
-[e = _mapped_value -> ( _map (4 , , , , _brightness -> -> 10 `i `l -> -> 1000 `i `l -> -> 0 `i `l -> -> 100 `i `l `i ]
-"71
-[; ;led_adapter.c: 71:   duty_cycle = (uint16_t)(100 - mapped_value);
-[e = _duty_cycle -> - -> 100 `i _mapped_value `us ]
-"74
-[; ;led_adapter.c: 74:   PWM3_LoadDutyValue(duty_cycle);
-[e ( _PWM3_LoadDutyValue (1 _duty_cycle ]
-"75
-[; ;led_adapter.c: 75: }
-[e :UE 807 ]
-}
-"77
-[; ;led_adapter.c: 77: static void set_color(int temperature)
-[v _set_color `(v ~T0 @X0 1 sf1`i ]
-"78
-[; ;led_adapter.c: 78: {
-{
-[e :U _set_color ]
-"77
-[; ;led_adapter.c: 77: static void set_color(int temperature)
-[v _temperature `i ~T0 @X0 1 r1 ]
-"78
-[; ;led_adapter.c: 78: {
-[f ]
-"80
-[; ;led_adapter.c: 80:   if (temperature == 0)
-[e $ ! == _temperature -> 0 `i 810  ]
-"81
-[; ;led_adapter.c: 81:   {
-{
-"82
-[; ;led_adapter.c: 82:     turn_red();
-[e ( _turn_red ..  ]
-"83
-[; ;led_adapter.c: 83:     return;
-[e $UE 809  ]
-"84
-[; ;led_adapter.c: 84:   }
-}
-[e :U 810 ]
-"87
-[; ;led_adapter.c: 87:   int color = (int)map(temperature, 19, 358, 0, 60);
-[v _color `i ~T0 @X0 1 a ]
-[e = _color -> ( _map (4 , , , , _temperature -> -> 19 `i `l -> -> 358 `i `l -> -> 0 `i `l -> -> 60 `i `l `i ]
-"90
-[; ;led_adapter.c: 90:   if (color >= 0 && color < 20)
-[e $ ! && >= _color -> 0 `i < _color -> 20 `i 811  ]
-"91
-[; ;led_adapter.c: 91:   {
-{
-"92
-[; ;led_adapter.c: 92:     turn_blue();
-[e ( _turn_blue ..  ]
-"93
-[; ;led_adapter.c: 93:   }
-}
-[e $U 812  ]
-"94
-[; ;led_adapter.c: 94:   else if (color >= 20 && color < 40)
-[e :U 811 ]
-[e $ ! && >= _color -> 20 `i < _color -> 40 `i 813  ]
-"95
-[; ;led_adapter.c: 95:   {
-{
-"96
-[; ;led_adapter.c: 96:     turn_green();
-[e ( _turn_green ..  ]
-"97
-[; ;led_adapter.c: 97:   }
-}
-[e $U 814  ]
-"98
-[; ;led_adapter.c: 98:   else if (color >= 40 && color <= 60)
-[e :U 813 ]
-[e $ ! && >= _color -> 40 `i <= _color -> 60 `i 815  ]
-"99
-[; ;led_adapter.c: 99:   {
-{
-"100
-[; ;led_adapter.c: 100:     turn_red();
-[e ( _turn_red ..  ]
-"101
-[; ;led_adapter.c: 101:   }
-}
-[e :U 815 ]
-[e :U 814 ]
-[e :U 812 ]
-"102
-[; ;led_adapter.c: 102: }
-[e :UE 809 ]
-}
-"105
-[; ;led_adapter.c: 105: void initialize_led(led_adapter *led)
-[v _initialize_led `(v ~T0 @X0 1 ef1`*S3 ]
-"106
-[; ;led_adapter.c: 106: {
-{
-[e :U _initialize_led ]
-"105
-[; ;led_adapter.c: 105: void initialize_led(led_adapter *led)
-[v _led `*S3 ~T0 @X0 1 r1 ]
-"106
-[; ;led_adapter.c: 106: {
-[f ]
-"107
-[; ;led_adapter.c: 107:   led->set_brightness = set_brightness;
-[e = . *U _led 0 &U _set_brightness ]
-"108
-[; ;led_adapter.c: 108:   led->set_color = set_color;
-[e = . *U _led 1 &U _set_color ]
-"109
-[; ;led_adapter.c: 109: }
-[e :UE 816 ]
+"154
+[; ;mcc_generated_files/tmr6.c: 154: }
+[e :UE 791 ]
 }

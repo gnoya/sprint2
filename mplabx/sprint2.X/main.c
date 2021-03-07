@@ -57,6 +57,7 @@
 #include "led_adapter.h"
 #include "lcd.h"
 #include "eeprom.h"
+#include "rtc.h"
 
 /*
                          Main application
@@ -100,6 +101,9 @@ void main(void)
   IOCAF5_SetInterruptHandler(menu.index_add);
   IOCAF6_SetInterruptHandler(menu.index_sub);
   IOCAF7_SetInterruptHandler(menu.index_enter);
+  
+  //--------------Setting Timer Interrupt Handlers ---------------//
+    TMR6_SetInterruptHandler(rtc_sleep_ISR);
 
   // ----------- Writing a welcome message in the LCD ----------- //
   LCDPutStr("Bienvenido!");
@@ -108,6 +112,9 @@ void main(void)
   eeprom_read(&temp_sensor_enabled,&light_sensor_enabled);
   
   printf("%d",temp_sensor_enabled);
+  
+// ----------- i2c example -----------------------------------//
+  rtc_time();
 
   // ------------------------ Main loop ----------------------- //
   while (1)

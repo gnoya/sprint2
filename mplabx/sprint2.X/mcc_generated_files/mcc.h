@@ -54,8 +54,9 @@
 #include <conio.h>
 #include "interrupt_manager.h"
 #include "i2c_master.h"
-#include "pwm3.h"
+#include "tmr6.h"
 #include "tmr4.h"
+#include "pwm3.h"
 #include "adc.h"
 #include "eusart.h"
 #include "drivers/i2c_simple_master.h"

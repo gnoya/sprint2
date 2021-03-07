@@ -1,0 +1,154 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"42 ./mcc_generated_files/drivers/i2c_simple_master.h
+[; ;./mcc_generated_files/drivers/i2c_simple_master.h: 42: void i2c_writeNBytes(i2c_address_t address, void* data, size_t len);
+[v _i2c_writeNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
+"44
+[; ;./mcc_generated_files/drivers/i2c_simple_master.h: 44: void i2c_readNBytes(i2c_address_t address, void *data, size_t len);
+[v _i2c_readNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
+"165 ./mcc_generated_files/tmr6.h
+[; ;./mcc_generated_files/tmr6.h: 165: void TMR6_StopTimer(void);
+[v _TMR6_StopTimer `(v ~T0 @X0 0 ef ]
+"12 rtc.c
+[; ;rtc.c: 12: static uint8_t time_sleep = 0;
+[v _time_sleep `uc ~T0 @X0 1 s ]
+[i _time_sleep
+-> -> 0 `i `uc
+]
+"13
+[; ;rtc.c: 13: static _Bool timer_on = 0;
+[v _timer_on `a ~T0 @X0 1 s ]
+[i _timer_on
+-> -> 0 `i `a
+]
+"15
+[; ;rtc.c: 15: void rtc_time(void)
+[v _rtc_time `(v ~T0 @X0 1 ef ]
+"16
+[; ;rtc.c: 16: {
+{
+[e :U _rtc_time ]
+[f ]
+"18
+[; ;rtc.c: 18:   printf("Entro a RTC \r\n");
+[e ( _printf :s 1C ]
+[v F478 `uc ~T0 @X0 -> -> 1 `i `ux s ]
+[i F478
+:U ..
+"19
+[; ;rtc.c: 19:   uint8_t sendData[1] = {0x06};
+-> -> 6 `i `uc
+..
+]
+[v _sendData `uc ~T0 @X0 -> -> 1 `i `ux a ]
+[e = _sendData F478 ]
+"20
+[; ;rtc.c: 20:   uint8_t receiveData[7];
+[v _receiveData `uc ~T0 @X0 -> 7 `i a ]
+"21
+[; ;rtc.c: 21:   i2c_writeNBytes(0xd1,sendData,sizeof(sendData));
+[e ( _i2c_writeNBytes (3 , , -> -> 209 `i `uc -> &U _sendData `*v -> # _sendData `ui ]
+"22
+[; ;rtc.c: 22:   i2c_readNBytes(0x68,receiveData,sizeof(receiveData));
+[e ( _i2c_readNBytes (3 , , -> -> 104 `i `uc -> &U _receiveData `*v -> # _receiveData `ui ]
+"23
+[; ;rtc.c: 23:   printf("Receive Data 0: %x \r\n", receiveData[0]);
+[e ( _printf , (. :s 2C -> *U + &U _receiveData * -> -> -> 0 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
+"24
+[; ;rtc.c: 24:   printf("Receive Data 1: %x \r\n", receiveData[1]);
+[e ( _printf , (. :s 3C -> *U + &U _receiveData * -> -> -> 1 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
+"25
+[; ;rtc.c: 25:   printf("Receive Data 2: %x \r\n", receiveData[2]);
+[e ( _printf , (. :s 4C -> *U + &U _receiveData * -> -> -> 2 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
+"26
+[; ;rtc.c: 26:   printf("Receive Data 3: %x \r\n", receiveData[3]);
+[e ( _printf , (. :s 5C -> *U + &U _receiveData * -> -> -> 3 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
+"27
+[; ;rtc.c: 27:   printf("Receive Data 4: %x \r\n", receiveData[4]);
+[e ( _printf , (. :s 6C -> *U + &U _receiveData * -> -> -> 4 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
+"28
+[; ;rtc.c: 28:   printf("Receive Data 5: %x \r\n", receiveData[5]);
+[e ( _printf , (. :s 7C -> *U + &U _receiveData * -> -> -> 5 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
+"29
+[; ;rtc.c: 29:   printf("Receive Data 6: %x \r\n", receiveData[6]);
+[e ( _printf , (. :s 8C -> *U + &U _receiveData * -> -> -> 6 `i `ui `ux -> -> # *U &U _receiveData `ui `ux `i ]
+"30
+[; ;rtc.c: 30: }
+[e :UE 3 ]
+}
+"33
+[; ;rtc.c: 33: void rtc_sleep(int time)
+[v _rtc_sleep `(v ~T0 @X0 1 ef1`i ]
+"34
+[; ;rtc.c: 34: {
+{
+[e :U _rtc_sleep ]
+"33
+[; ;rtc.c: 33: void rtc_sleep(int time)
+[v _time `i ~T0 @X0 1 r1 ]
+"34
+[; ;rtc.c: 34: {
+[f ]
+"35
+[; ;rtc.c: 35:     if(timer_on)
+[e $ ! != -> _timer_on `i -> 0 `i 5  ]
+"36
+[; ;rtc.c: 36:         printf("time: %d \r\n",time);
+[e ( _printf , (. :s 9C _time ]
+[e :U 5 ]
+"37
+[; ;rtc.c: 37:         printf("time_sleep: %d \r\n",time);
+[e ( _printf , (. :s 10C _time ]
+"38
+[; ;rtc.c: 38:         if (time_sleep >= time){
+[e $ ! >= -> _time_sleep `i _time 6  ]
+{
+"39
+[; ;rtc.c: 39:             printf("Entro al if, apagando... \r\n");
+[e ( _printf :s 11C ]
+"40
+[; ;rtc.c: 40:             TMR6_StopTimer();
+[e ( _TMR6_StopTimer ..  ]
+"41
+[; ;rtc.c: 41:         }
+}
+[e :U 6 ]
+"42
+[; ;rtc.c: 42: }
+[e :UE 4 ]
+}
+"45
+[; ;rtc.c: 45: void rtc_sleep_ISR(void)
+[v _rtc_sleep_ISR `(v ~T0 @X0 1 ef ]
+"46
+[; ;rtc.c: 46: {
+{
+[e :U _rtc_sleep_ISR ]
+[f ]
+"47
+[; ;rtc.c: 47:     time_sleep += 30;
+[e =+ _time_sleep -> -> 30 `i `uc ]
+"48
+[; ;rtc.c: 48:     timer_on = !timer_on;
+[e = _timer_on -> -> ! != -> _timer_on `i -> 0 `i `i `a ]
+"49
+[; ;rtc.c: 49:     printf("time_sleep: %d \r\n", time_sleep);
+[e ( _printf , (. :s 12C -> _time_sleep `i ]
+"50
+[; ;rtc.c: 50: }
+[e :UE 7 ]
+}
+[p f _printf 12583040 ]
+[a 8C 82 101 99 101 105 118 101 32 68 97 116 97 32 54 58 32 37 120 32 13 10 0 ]
+[a 7C 82 101 99 101 105 118 101 32 68 97 116 97 32 53 58 32 37 120 32 13 10 0 ]
+[a 6C 82 101 99 101 105 118 101 32 68 97 116 97 32 52 58 32 37 120 32 13 10 0 ]
+[a 5C 82 101 99 101 105 118 101 32 68 97 116 97 32 51 58 32 37 120 32 13 10 0 ]
+[a 4C 82 101 99 101 105 118 101 32 68 97 116 97 32 50 58 32 37 120 32 13 10 0 ]
+[a 3C 82 101 99 101 105 118 101 32 68 97 116 97 32 49 58 32 37 120 32 13 10 0 ]
+[a 2C 82 101 99 101 105 118 101 32 68 97 116 97 32 48 58 32 37 120 32 13 10 0 ]
+[a 10C 116 105 109 101 95 115 108 101 101 112 58 32 37 100 32 13 10 0 ]
+[a 12C 116 105 109 101 95 115 108 101 101 112 58 32 37 100 32 13 10 0 ]
+[a 9C 116 105 109 101 58 32 37 100 32 13 10 0 ]
+[a 1C 69 110 116 114 111 32 97 32 82 84 67 32 13 10 0 ]
+[a 11C 69 110 116 114 111 32 97 108 32 105 102 44 32 97 112 97 103 97 110 100 111 46 46 46 32 13 10 0 ]
