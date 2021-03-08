@@ -64,13 +64,13 @@ static void set_brightness(int brightness)
     return;
   }
 
-  // Map between a duty cycle of 0 to 100
-  int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
+  // Map between a duty cycle of 0 to 255
+  int mapped_value = (int)map(brightness, 10, 1000, 0, 255);
 
   // It is (100 - mapped_value) because there is a NOT gate in the Demux
-  duty_cycle = (uint16_t)(100 - mapped_value);
+  duty_cycle = (uint16_t)(255 - mapped_value);
 
-  // Set the duty cycle. This function receives a value between 0 and 100
+  // Set the duty cycle. This function receives a value between 0 and 255
   PWM3_LoadDutyValue(duty_cycle);
 }
 
@@ -101,9 +101,17 @@ static void set_color(int temperature)
   }
 }
 
+// TODO: comentar
+static void turn_off(void)
+{
+  printf("Turning off led \r\n");
+  PWM3_LoadDutyValue(255);
+}
+
 // ----------------------- Public functions ----------------------- //
 void initialize_led(led_adapter *led)
 {
   led->set_brightness = set_brightness;
   led->set_color = set_color;
+  led->turn_off = turn_off;
 }

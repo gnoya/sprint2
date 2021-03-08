@@ -13,12 +13,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "129 ./mcc_generated_files/pwm3.h
 [; ;./mcc_generated_files/pwm3.h: 129:  void PWM3_LoadDutyValue(uint16_t dutyValue);
 [v _PWM3_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
+"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [v F325 `(v ~T0 @X0 0 tf1`i ]
 [v F328 `(v ~T0 @X0 0 tf1`i ]
+[v F331 `(v ~T0 @X0 0 tf ]
 "37 ./led_adapter.h
 [; ;./led_adapter.h: 37: {
-[s S3 `*F325 1 `*F328 1 ]
-[n S3 led_adapter set_brightness set_color ]
+[s S3 `*F325 1 `*F328 1 `*F331 1 ]
+[n S3 led_adapter set_brightness set_color turn_off ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1138,12 +1141,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 808 ]
 "68
-[; ;led_adapter.c: 68:   int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
+[; ;led_adapter.c: 68:   int mapped_value = (int)map(brightness, 10, 1000, 0, 255);
 [v _mapped_value `i ~T0 @X0 1 a ]
-[e = _mapped_value -> ( _map (4 , , , , _brightness -> -> 10 `i `l -> -> 1000 `i `l -> -> 0 `i `l -> -> 100 `i `l `i ]
+[e = _mapped_value -> ( _map (4 , , , , _brightness -> -> 10 `i `l -> -> 1000 `i `l -> -> 0 `i `l -> -> 255 `i `l `i ]
 "71
-[; ;led_adapter.c: 71:   duty_cycle = (uint16_t)(100 - mapped_value);
-[e = _duty_cycle -> - -> 100 `i _mapped_value `us ]
+[; ;led_adapter.c: 71:   duty_cycle = (uint16_t)(255 - mapped_value);
+[e = _duty_cycle -> - -> 255 `i _mapped_value `us ]
 "74
 [; ;led_adapter.c: 74:   PWM3_LoadDutyValue(duty_cycle);
 [e ( _PWM3_LoadDutyValue (1 _duty_cycle ]
@@ -1232,25 +1235,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 809 ]
 }
 "105
-[; ;led_adapter.c: 105: void initialize_led(led_adapter *led)
-[v _initialize_led `(v ~T0 @X0 1 ef1`*S3 ]
+[; ;led_adapter.c: 105: static void turn_off(void)
+[v _turn_off `(v ~T0 @X0 1 sf ]
 "106
 [; ;led_adapter.c: 106: {
 {
-[e :U _initialize_led ]
-"105
-[; ;led_adapter.c: 105: void initialize_led(led_adapter *led)
-[v _led `*S3 ~T0 @X0 1 r1 ]
-"106
-[; ;led_adapter.c: 106: {
+[e :U _turn_off ]
 [f ]
 "107
-[; ;led_adapter.c: 107:   led->set_brightness = set_brightness;
-[e = . *U _led 0 &U _set_brightness ]
+[; ;led_adapter.c: 107:   printf("Turning off led \r\n");
+[e ( _printf :s 1C ]
 "108
-[; ;led_adapter.c: 108:   led->set_color = set_color;
-[e = . *U _led 1 &U _set_color ]
+[; ;led_adapter.c: 108:   PWM3_LoadDutyValue(255);
+[e ( _PWM3_LoadDutyValue (1 -> -> 255 `i `us ]
 "109
 [; ;led_adapter.c: 109: }
 [e :UE 816 ]
 }
+"112
+[; ;led_adapter.c: 112: void initialize_led(led_adapter *led)
+[v _initialize_led `(v ~T0 @X0 1 ef1`*S3 ]
+"113
+[; ;led_adapter.c: 113: {
+{
+[e :U _initialize_led ]
+"112
+[; ;led_adapter.c: 112: void initialize_led(led_adapter *led)
+[v _led `*S3 ~T0 @X0 1 r1 ]
+"113
+[; ;led_adapter.c: 113: {
+[f ]
+"114
+[; ;led_adapter.c: 114:   led->set_brightness = set_brightness;
+[e = . *U _led 0 &U _set_brightness ]
+"115
+[; ;led_adapter.c: 115:   led->set_color = set_color;
+[e = . *U _led 1 &U _set_color ]
+"116
+[; ;led_adapter.c: 116:   led->turn_off = turn_off;
+[e = . *U _led 2 &U _turn_off ]
+"117
+[; ;led_adapter.c: 117: }
+[e :UE 817 ]
+}
+[p f _printf 8388608 ]
+[a 1C 84 117 114 110 105 110 103 32 111 102 102 32 108 101 100 32 13 10 0 ]

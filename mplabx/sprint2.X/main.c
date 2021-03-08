@@ -69,6 +69,7 @@ menu_controller menu;
 
 extern bool temp_sensor_enabled;
 extern bool light_sensor_enabled;
+bool is_pic_on = true;
 
 void main(void)
 {
@@ -101,35 +102,38 @@ void main(void)
   IOCAF5_SetInterruptHandler(menu.index_add);
   IOCAF6_SetInterruptHandler(menu.index_sub);
   IOCAF7_SetInterruptHandler(menu.index_enter);
-  
+
   //--------------Setting Timer Interrupt Handlers ---------------//
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
 
   // ----------- Writing a welcome message in the LCD ----------- //
   LCDPutStr("Bienvenido!");
   __delay_ms(200);
-  
-  eeprom_read(&temp_sensor_enabled,&light_sensor_enabled);
-  
-  printf("%d",temp_sensor_enabled);
-  
-// ----------- i2c example -----------------------------------//
-  rtc_time();
+
+  // -------------- Reading status from EEPROM ----------------- //
+  eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
 
   // ------------------------ Main loop ----------------------- //
   while (1)
   {
-    // -------------------- Reading sensors -------------------- //
-    int temp_value = temp_sensor.read();
-    int light_value = light_sensor.read();
+    if (is_pic_on)
+    {
+      // -------------------- Reading sensors -------------------- //
+      int temp_value = temp_sensor.read();
+      int light_value = light_sensor.read();
 
-    // -------------------- Changing LEDs --------------------- //
-    led.set_color(temp_value);
-    led.set_brightness(light_value);
+      // -------------------- Changing LEDs --------------------- //
+      led.set_color(temp_value);
+      led.set_brightness(light_value);
 
-    // -------------------- Showing menu --------------------- //
-    menu.show_menu();
-    rtc_sleep(30);
+      // -------------------- Showing menu --------------------- //
+      menu.show_menu();
+    }
+    else
+    {
+      printf("Mode off\r\n");
+      led.turn_off();
+    }
   }
 }
 /**

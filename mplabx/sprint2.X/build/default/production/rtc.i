@@ -382,6 +382,8 @@ void TMR2_InterruptDisable(void);
 static uint8_t time_sleep = 0;
 static _Bool timer_on = 0;
 static uint8_t time[8];
+extern _Bool is_pic_on;
+static int time_to_sleep;
 
 void rtc_time(void)
 {
@@ -389,8 +391,8 @@ void rtc_time(void)
 
   uint8_t sendData = 0x00;
 
-  i2c_writeNBytes(0x68,sendData,sizeof(sendData));
-  i2c_readNBytes(0x68,time,sizeof(time));
+  i2c_writeNBytes(0x68, sendData, sizeof(sendData));
+  i2c_readNBytes(0x68, time, sizeof(time));
 
 
 
@@ -399,42 +401,44 @@ void rtc_time(void)
 
 
 }
-
 
 void rtc_sleep(int time)
 {
-    if(timer_on == 0)
-    {
-
-        TMR2_InterruptEnable();
-        timer_on = 1;
-    }
-    if(time_sleep >= time)
-    {
-
-        TMR2_InterruptDisable();
-        rtc_wakeup(0x14,0x06);
-        time_sleep = 0;
-    }
+  time_to_sleep = time;
+  TMR2_InterruptEnable();
+  printf("Turning off in %d seconds", time);
 }
 
-void rtc_wakeup(int h,int m)
+void rtc_wakeup(int h, int m)
 {
-    rtc_time();
+  rtc_time();
 
 
 
-    if ((time[1] == m) && (time[2] == h)) printf("WakeeUP!!");
+  if ((time[1] == m) && (time[2] == h))
+    printf("WakeeUP!!");
 }
 
 void rtc_shutdown(int h, int m)
 {
-    rtc_time();
-    if ((time[1] == m) && (time[2] == h)) printf("Shutdow!!");
+  rtc_time();
+  if ((time[1] == m) && (time[2] == h))
+    printf("Shutdow!!");
 }
 
 
 void rtc_sleep_ISR(void)
 {
-    time_sleep += 30;
+  printf("Inside sleep ISR \r\n");
+  time_sleep += 5;
+
+  if (time_sleep >= time_to_sleep)
+  {
+    printf("Entro al if, apagando... \r\n");
+    TMR2_InterruptDisable();
+
+    time_sleep = 0;
+    time_to_sleep = 0;
+    is_pic_on = 0;
+  }
 }

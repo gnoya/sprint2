@@ -10140,7 +10140,10 @@ static void show_main_menu(void);
 static void show_mode_menu(void);
 # 204 "./menu_controller.h"
 static void show_sensors_menu(void);
-# 222 "./menu_controller.h"
+
+
+static void show_turn_off_timer_menu(void);
+# 225 "./menu_controller.h"
 void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 53 "main.c" 2
 
@@ -10170,22 +10173,26 @@ typedef struct led_adapter
 {
   void (*set_brightness)(int brightness);
   void (*set_color)(int temperature);
+  void (*turn_off)(void);
 } led_adapter;
-# 58 "./led_adapter.h"
+# 59 "./led_adapter.h"
 static void turn_blue();
-# 76 "./led_adapter.h"
+# 77 "./led_adapter.h"
 static void turn_green();
-# 94 "./led_adapter.h"
+# 95 "./led_adapter.h"
 static void turn_red();
-# 112 "./led_adapter.h"
+# 113 "./led_adapter.h"
 static void set_brightness(int brightness);
-# 130 "./led_adapter.h"
+# 131 "./led_adapter.h"
 static void set_color(int temperature);
-# 149 "./led_adapter.h"
+# 150 "./led_adapter.h"
 static void turn_selectors(_Bool selector1, _Bool selector2);
-# 168 "./led_adapter.h"
+
+
+static void turn_off(void);
+# 172 "./led_adapter.h"
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
-# 186 "./led_adapter.h"
+# 190 "./led_adapter.h"
 void initialize_led(led_adapter *led);
 # 57 "main.c" 2
 
@@ -10232,6 +10239,7 @@ menu_controller menu;
 
 extern _Bool temp_sensor_enabled;
 extern _Bool light_sensor_enabled;
+_Bool is_pic_on = 1;
 
 void main(void)
 {
@@ -10272,26 +10280,29 @@ void main(void)
   LCDPutStr("Bienvenido!");
   _delay((unsigned long)((200)*(1000000/4000.0)));
 
-  eeprom_read(&temp_sensor_enabled,&light_sensor_enabled);
 
-  printf("%d",temp_sensor_enabled);
-
-
-  rtc_time();
+  eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
 
 
   while (1)
   {
+    if (is_pic_on)
+    {
 
-    int temp_value = temp_sensor.read();
-    int light_value = light_sensor.read();
-
-
-    led.set_color(temp_value);
-    led.set_brightness(light_value);
+      int temp_value = temp_sensor.read();
+      int light_value = light_sensor.read();
 
 
-    menu.show_menu();
-    rtc_sleep(30);
+      led.set_color(temp_value);
+      led.set_brightness(light_value);
+
+
+      menu.show_menu();
+    }
+    else
+    {
+      printf("Mode off\r\n");
+      led.turn_off();
+    }
   }
 }

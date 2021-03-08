@@ -10086,7 +10086,10 @@ static void show_main_menu(void);
 static void show_mode_menu(void);
 # 204 "./menu_controller.h"
 static void show_sensors_menu(void);
-# 222 "./menu_controller.h"
+
+
+static void show_turn_off_timer_menu(void);
+# 225 "./menu_controller.h"
 void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 11 "menu_controller.c" 2
 
@@ -10112,11 +10115,22 @@ void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 void eeprom_read (_Bool *temp_sensor_enabled, _Bool *light_sensor_enabled);
 void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
 # 13 "menu_controller.c" 2
-# 22 "menu_controller.c"
+
+# 1 "./rtc.h" 1
+# 29 "./rtc.h"
+void rtc_time(void);
+void rtc_sleep(int time);
+void rtc_wakeup(int h, int m);
+void rtc_shutdown(int h, int m);
+void rtc_sleep_ISR(void);
+# 14 "menu_controller.c" 2
+# 26 "menu_controller.c"
 static _Bool temp_sensor_opened = 0;
 static _Bool light_sensor_opened = 0;
 static int menu_current = 0;
 static int menu_index = 0;
+
+extern _Bool is_pic_on;
 
 
 static void index_add(void)
@@ -10161,8 +10175,50 @@ static void index_sub(void)
 static void index_enter(void)
 {
 
+  is_pic_on = 1;
+
+
   if (menu_current == 1 && menu_index == 2)
   {
+    menu_current = 0;
+    menu_index = 0;
+    show = 1;
+    return;
+  }
+
+
+  if (menu_current == 2 && menu_index == 4)
+  {
+    menu_current = 0;
+    menu_index = 0;
+    show = 1;
+    return;
+  }
+
+
+  if (menu_current == 2 && menu_index != 4)
+  {
+    int seconds;
+    switch (menu_index)
+    {
+    case 0:
+      seconds = 5;
+      break;
+    case 1:
+      seconds = 10;
+      break;
+    case 2:
+      seconds = 15;
+      break;
+    case 3:
+      seconds = 20;
+      break;
+    default:
+      seconds = 20;
+      break;
+    }
+    printf("seconds: %d", seconds);
+    rtc_sleep(seconds);
     menu_current = 0;
     menu_index = 0;
     show = 1;
@@ -10174,7 +10230,7 @@ static void index_enter(void)
   {
     temp_sensor_enabled = !temp_sensor_enabled;
     show = 1;
-    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
+    eeprom_write(temp_sensor_enabled, light_sensor_enabled);
     return;
   }
 
@@ -10183,11 +10239,11 @@ static void index_enter(void)
   {
     light_sensor_enabled = !light_sensor_enabled;
     show = 1;
-    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
+    eeprom_write(temp_sensor_enabled, light_sensor_enabled);
     return;
   }
 
-  if (menu_current != 0 || (menu_current == 0 && menu_index > 1))
+  if (menu_current != 0 || (menu_current == 0 && menu_index > 2))
     return;
   menu_current = menu_index + 1;
   menu_index = 0;
@@ -10238,9 +10294,6 @@ static void show_main_menu(void)
 
 static void show_sensors_menu(void)
 {
-  printf("menu_index: %d \n\r", menu_index);
-  printf("menu_current: %d \n\r", menu_current);
-
   switch (menu_index)
   {
   case 0:
@@ -10296,6 +10349,49 @@ static void show_sensors_menu(void)
   }
 }
 
+static void show_turn_off_timer_menu(void)
+{
+  switch (menu_index)
+  {
+  case 0:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("      5      >");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 1:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<      10      >");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 2:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<      15      >");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 3:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<      20      ");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 4:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<   Regresar   ");
+    break;
+  default:
+    menu_index = 1;
+    break;
+  }
+}
+
 static void show_menu(void)
 {
   if (!show)
@@ -10310,6 +10406,9 @@ static void show_menu(void)
     break;
   case 1:
     show_sensors_menu();
+    break;
+  case 2:
+    show_turn_off_timer_menu();
     break;
   default:
     menu_current = 0;

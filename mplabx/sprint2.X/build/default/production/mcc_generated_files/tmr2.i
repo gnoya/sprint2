@@ -9667,72 +9667,72 @@ void TMR2_Initialize(void)
 
 
 
-    PR2 = 0xF3;
+  PR2 = 0xF3;
 
 
-    TMR2 = 0x00;
+  TMR2 = 0x00;
 
 
-    PIR1bits.TMR2IF = 0;
+  PIR1bits.TMR2IF = 0;
 
 
-    PIE1bits.TMR2IE = 1;
+  PIE1bits.TMR2IE = 1;
 
 
-    TMR2_SetInterruptHandler(TMR2_DefaultInterruptHandler);
+  TMR2_SetInterruptHandler(TMR2_DefaultInterruptHandler);
 
 
-    T2CON = 0x7F;
+  T2CON = 0x7F;
 }
 
 void TMR2_StartTimer(void)
 {
 
-    T2CONbits.TMR2ON = 1;
+  T2CONbits.TMR2ON = 1;
 }
 
 void TMR2_StopTimer(void)
 {
 
-    T2CONbits.TMR2ON = 0;
+  T2CONbits.TMR2ON = 0;
 }
 
 uint8_t TMR2_ReadTimer(void)
 {
-    uint8_t readVal;
+  uint8_t readVal;
 
-    readVal = TMR2;
+  readVal = TMR2;
 
-    return readVal;
+  return readVal;
 }
 
 void TMR2_WriteTimer(uint8_t timerVal)
 {
 
-    TMR2 = timerVal;
+  TMR2 = timerVal;
 }
 
 void TMR2_LoadPeriodRegister(uint8_t periodVal)
 {
-   PR2 = periodVal;
+  PR2 = periodVal;
 }
 
 void TMR2_ISR(void)
 {
-    static volatile unsigned int CountCallBack = 0;
+  static volatile unsigned int CountCallBack = 0;
 
 
-    PIR1bits.TMR2IF = 0;
+  PIR1bits.TMR2IF = 0;
 
 
-    if (++CountCallBack >= 15)
-    {
+  if (++CountCallBack >= 5)
+  {
 
-        TMR2_CallBack();
+    TMR2_CallBack();
 
 
-        CountCallBack = 0;
-    }
+    CountCallBack = 0;
+  }
 }
 
 void TMR2_CallBack(void)
@@ -9740,13 +9740,13 @@ void TMR2_CallBack(void)
 
 
     if(TMR2_InterruptHandler)
-    {
-        TMR2_InterruptHandler();
-    }
+  {
+    TMR2_InterruptHandler();
+  }
 }
 
 void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
-    TMR2_InterruptHandler = InterruptHandler;
+  TMR2_InterruptHandler = InterruptHandler;
 }
 
 void TMR2_DefaultInterruptHandler(void){
@@ -9754,18 +9754,20 @@ void TMR2_DefaultInterruptHandler(void){
 
 }
 
-void TMR2_InterruptEnable(void){
+void TMR2_InterruptEnable(void)
+{
 
-    PIR1bits.TMR2IF = 0;
+  PIR1bits.TMR2IF = 0;
 
 
-    PIE1bits.TMR2IE = 1;
+  PIE1bits.TMR2IE = 1;
 }
 
-void TMR2_InterruptDisable(void){
+void TMR2_InterruptDisable(void)
+{
 
-    PIR1bits.TMR2IF = 0;
+  PIR1bits.TMR2IF = 0;
 
 
-    PIE1bits.TMR2IE = 0;
+  PIE1bits.TMR2IE = 0;
 }

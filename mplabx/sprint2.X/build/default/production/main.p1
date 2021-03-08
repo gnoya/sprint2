@@ -1,16 +1,17 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F6309 `(a ~T0 @X0 0 tf ]
-[v F6311 `(i ~T0 @X0 0 tf ]
+[v F6310 `(a ~T0 @X0 0 tf ]
+[v F6312 `(i ~T0 @X0 0 tf ]
 "16 ./sensor_adapter.h
 [; ;./sensor_adapter.h: 16: {
-[s S787 `*uc 1 `*F6309 1 `*F6311 1 ]
+[s S787 `*uc 1 `*F6310 1 `*F6312 1 ]
 [n S787 sensor name open read ]
-[v F6319 `(v ~T0 @X0 0 tf1`i ]
-[v F6322 `(v ~T0 @X0 0 tf1`i ]
+[v F6320 `(v ~T0 @X0 0 tf1`i ]
+[v F6323 `(v ~T0 @X0 0 tf1`i ]
+[v F6326 `(v ~T0 @X0 0 tf ]
 "37 ./led_adapter.h
 [; ;./led_adapter.h: 37: {
-[s S788 `*F6319 1 `*F6322 1 ]
-[n S788 led_adapter set_brightness set_color ]
+[s S788 `*F6320 1 `*F6323 1 `*F6326 1 ]
+[n S788 led_adapter set_brightness set_color turn_off ]
 [v F6276 `(v ~T0 @X0 0 tf ]
 [v F6278 `(v ~T0 @X0 0 tf ]
 [v F6280 `(v ~T0 @X0 0 tf ]
@@ -36,11 +37,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45 ./temp_sensor.h
 [; ;./temp_sensor.h: 45: void initialize_temp(sensor *sensor);
 [v _initialize_temp `(v ~T0 @X0 0 ef1`*S787 ]
-"186 ./led_adapter.h
-[; ;./led_adapter.h: 186: void initialize_led(led_adapter *led);
+"190 ./led_adapter.h
+[; ;./led_adapter.h: 190: void initialize_led(led_adapter *led);
 [v _initialize_led `(v ~T0 @X0 0 ef1`*S788 ]
-"222 ./menu_controller.h
-[; ;./menu_controller.h: 222: void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
+"225 ./menu_controller.h
+[; ;./menu_controller.h: 225: void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 [v _initialize_menu `(v ~T0 @X0 0 ef2`*S786`*a ]
 "357 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 357:     struct {
@@ -94,12 +95,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _light_sensor_enabled `a ~T0 @X0 0 e ]
 "111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"29 ./rtc.h
-[; ;./rtc.h: 29: void rtc_time(void);
-[v _rtc_time `(v ~T0 @X0 0 ef ]
-"30
-[; ;./rtc.h: 30: void rtc_sleep(int time);
-[v _rtc_sleep `(v ~T0 @X0 0 ef1`i ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1057,139 +1052,162 @@ Version 4.0 HI-TECH Software Intermediate Code
 "68
 [; ;main.c: 68: menu_controller menu;
 [v _menu `S786 ~T0 @X0 1 e ]
+"72
+[; ;main.c: 72: _Bool is_pic_on = 1;
+[v _is_pic_on `a ~T0 @X0 1 e ]
+[i _is_pic_on
+-> -> 1 `i `a
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"73
-[; ;main.c: 73: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
 "74
-[; ;main.c: 74: {
+[; ;main.c: 74: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"75
+[; ;main.c: 75: {
 {
 [e :U _main ]
 [f ]
-"75
-[; ;main.c: 75:   SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
 "76
-[; ;main.c: 76:   LCD_Initialize();
+[; ;main.c: 76:   SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"77
+[; ;main.c: 77:   LCD_Initialize();
 [e ( _LCD_Initialize ..  ]
-[v F6380 `*uc ~T0 @X0 -> 3 `i s ]
-[i F6380
+[v F6385 `*uc ~T0 @X0 -> 3 `i s ]
+[i F6385
 :U ..
 ..
 ]
-"78
-[; ;main.c: 78:   char *sensor_names[3] = {};
-[v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
-[e = _sensor_names F6380 ]
 "79
-[; ;main.c: 79:   char **names_pointer = sensor_names;
+[; ;main.c: 79:   char *sensor_names[3] = {};
+[v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
+[e = _sensor_names F6385 ]
+"80
+[; ;main.c: 80:   char **names_pointer = sensor_names;
 [v _names_pointer `**uc ~T0 @X0 1 a ]
 [e = _names_pointer &U _sensor_names ]
-"80
-[; ;main.c: 80:   int sensor_counter = 0;
+"81
+[; ;main.c: 81:   int sensor_counter = 0;
 [v _sensor_counter `i ~T0 @X0 1 a ]
 [e = _sensor_counter -> 0 `i ]
-"83
-[; ;main.c: 83:   initialize_light(&light_sensor);
-[e ( _initialize_light (1 &U _light_sensor ]
 "84
-[; ;main.c: 84:   initialize_temp(&temp_sensor);
+[; ;main.c: 84:   initialize_light(&light_sensor);
+[e ( _initialize_light (1 &U _light_sensor ]
+"85
+[; ;main.c: 85:   initialize_temp(&temp_sensor);
 [e ( _initialize_temp (1 &U _temp_sensor ]
-"87
-[; ;main.c: 87:   _Bool temp_sensor_opened = temp_sensor.open();
+"88
+[; ;main.c: 88:   _Bool temp_sensor_opened = temp_sensor.open();
 [v _temp_sensor_opened `a ~T0 @X0 1 a ]
 [e = _temp_sensor_opened ( *U . _temp_sensor 1 ..  ]
-"88
-[; ;main.c: 88:   _Bool light_sensor_opened = light_sensor.open();
+"89
+[; ;main.c: 89:   _Bool light_sensor_opened = light_sensor.open();
 [v _light_sensor_opened `a ~T0 @X0 1 a ]
 [e = _light_sensor_opened ( *U . _light_sensor 1 ..  ]
-[v F6388 `a ~T0 @X0 -> 2 `i s ]
-[i F6388
+[v F6393 `a ~T0 @X0 -> 2 `i s ]
+[i F6393
 :U ..
-"90
-[; ;main.c: 90:   _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
+"91
+[; ;main.c: 91:   _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
 -> -> 0 `i `a
 -> -> 0 `i `a
 ..
 ]
 [v _sensors_opened `a ~T0 @X0 -> 2 `i a ]
-[e = _sensors_opened F6388 ]
+[e = _sensors_opened F6393 ]
 [e ; = *U + &U _sensors_opened * -> -> -> 0 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _temp_sensor_opened = *U + &U _sensors_opened * -> -> -> 1 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _light_sensor_opened ]
-"93
-[; ;main.c: 93:   initialize_led(&led);
-[e ( _initialize_led (1 &U _led ]
 "94
-[; ;main.c: 94:   initialize_menu(&menu, sensors_opened);
+[; ;main.c: 94:   initialize_led(&led);
+[e ( _initialize_led (1 &U _led ]
+"95
+[; ;main.c: 95:   initialize_menu(&menu, sensors_opened);
 [e ( _initialize_menu (2 , &U _menu &U _sensors_opened ]
-"97
-[; ;main.c: 97:   (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "98
-[; ;main.c: 98:   (INTCONbits.PEIE = 1);
+[; ;main.c: 98:   (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"99
+[; ;main.c: 99:   (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"101
-[; ;main.c: 101:   IOCAF5_SetInterruptHandler(menu.index_add);
-[e ( _IOCAF5_SetInterruptHandler (1 . _menu 2 ]
 "102
-[; ;main.c: 102:   IOCAF6_SetInterruptHandler(menu.index_sub);
-[e ( _IOCAF6_SetInterruptHandler (1 . _menu 3 ]
+[; ;main.c: 102:   IOCAF5_SetInterruptHandler(menu.index_add);
+[e ( _IOCAF5_SetInterruptHandler (1 . _menu 2 ]
 "103
-[; ;main.c: 103:   IOCAF7_SetInterruptHandler(menu.index_enter);
+[; ;main.c: 103:   IOCAF6_SetInterruptHandler(menu.index_sub);
+[e ( _IOCAF6_SetInterruptHandler (1 . _menu 3 ]
+"104
+[; ;main.c: 104:   IOCAF7_SetInterruptHandler(menu.index_enter);
 [e ( _IOCAF7_SetInterruptHandler (1 . _menu 4 ]
-"106
-[; ;main.c: 106:   TMR2_SetInterruptHandler(rtc_sleep_ISR);
+"107
+[; ;main.c: 107:   TMR2_SetInterruptHandler(rtc_sleep_ISR);
 [e ( _TMR2_SetInterruptHandler (1 &U _rtc_sleep_ISR ]
-"109
-[; ;main.c: 109:   LCDPutStr("Bienvenido!");
-[e ( _LCDPutStr (1 :s 1C ]
 "110
-[; ;main.c: 110:   _delay((unsigned long)((200)*(1000000/4000.0)));
+[; ;main.c: 110:   LCDPutStr("Bienvenido!");
+[e ( _LCDPutStr (1 :s 1C ]
+"111
+[; ;main.c: 111:   _delay((unsigned long)((200)*(1000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"112
-[; ;main.c: 112:   eeprom_read(&temp_sensor_enabled,&light_sensor_enabled);
-[e ( _eeprom_read (2 , &U _temp_sensor_enabled &U _light_sensor_enabled ]
 "114
-[; ;main.c: 114:   printf("%d",temp_sensor_enabled);
-[e ( _printf , (. :s 2C -> _temp_sensor_enabled `i ]
+[; ;main.c: 114:   eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
+[e ( _eeprom_read (2 , &U _temp_sensor_enabled &U _light_sensor_enabled ]
 "117
-[; ;main.c: 117:   rtc_time();
-[e ( _rtc_time ..  ]
-"120
-[; ;main.c: 120:   while (1)
+[; ;main.c: 117:   while (1)
 [e :U 791 ]
-"121
-[; ;main.c: 121:   {
+"118
+[; ;main.c: 118:   {
 {
-"123
-[; ;main.c: 123:     int temp_value = temp_sensor.read();
+"119
+[; ;main.c: 119:     if (is_pic_on)
+[e $ ! != -> _is_pic_on `i -> 0 `i 793  ]
+"120
+[; ;main.c: 120:     {
+{
+"122
+[; ;main.c: 122:       int temp_value = temp_sensor.read();
 [v _temp_value `i ~T0 @X0 1 a ]
 [e = _temp_value ( *U . _temp_sensor 2 ..  ]
-"124
-[; ;main.c: 124:     int light_value = light_sensor.read();
+"123
+[; ;main.c: 123:       int light_value = light_sensor.read();
 [v _light_value `i ~T0 @X0 1 a ]
 [e = _light_value ( *U . _light_sensor 2 ..  ]
-"127
-[; ;main.c: 127:     led.set_color(temp_value);
+"126
+[; ;main.c: 126:       led.set_color(temp_value);
 [e ( *U . _led 1 (1 _temp_value ]
-"128
-[; ;main.c: 128:     led.set_brightness(light_value);
+"127
+[; ;main.c: 127:       led.set_brightness(light_value);
 [e ( *U . _led 0 (1 _light_value ]
-"131
-[; ;main.c: 131:     menu.show_menu();
+"130
+[; ;main.c: 130:       menu.show_menu();
 [e ( *U . _menu 6 ..  ]
+"131
+[; ;main.c: 131:     }
+}
+[e $U 794  ]
 "132
-[; ;main.c: 132:     rtc_sleep(30);
-[e ( _rtc_sleep (1 -> 30 `i ]
+[; ;main.c: 132:     else
+[e :U 793 ]
 "133
-[; ;main.c: 133:   }
+[; ;main.c: 133:     {
+{
+"134
+[; ;main.c: 134:       printf("Mode off\r\n");
+[e ( _printf :s 2C ]
+"135
+[; ;main.c: 135:       led.turn_off();
+[e ( *U . _led 2 ..  ]
+"136
+[; ;main.c: 136:     }
+}
+[e :U 794 ]
+"137
+[; ;main.c: 137:   }
 }
 [e :U 790 ]
 [e $U 791  ]
 [e :U 792 ]
-"134
-[; ;main.c: 134: }
+"138
+[; ;main.c: 138: }
 [e :UE 789 ]
 }
-[p f _printf 8388736 ]
-[a 2C 37 100 0 ]
+[p f _printf 8388608 ]
 [a 1C 66 105 101 110 118 101 110 105 100 111 33 0 ]
+[a 2C 77 111 100 101 32 111 102 102 13 10 0 ]

@@ -37,6 +37,7 @@ typedef struct led_adapter
 {
   void (*set_brightness)(int brightness);
   void (*set_color)(int temperature);
+  void (*turn_off)(void);
 } led_adapter;
 
 /**
@@ -147,6 +148,9 @@ static void set_color(int temperature);
     None
 */
 static void turn_selectors(bool selector1, bool selector2);
+
+// TODO: comentar
+static void turn_off(void);
 
 /**
   @Summary

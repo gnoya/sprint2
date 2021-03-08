@@ -182,22 +182,26 @@ typedef struct led_adapter
 {
   void (*set_brightness)(int brightness);
   void (*set_color)(int temperature);
+  void (*turn_off)(void);
 } led_adapter;
-# 58 "./led_adapter.h"
+# 59 "./led_adapter.h"
 static void turn_blue();
-# 76 "./led_adapter.h"
+# 77 "./led_adapter.h"
 static void turn_green();
-# 94 "./led_adapter.h"
+# 95 "./led_adapter.h"
 static void turn_red();
-# 112 "./led_adapter.h"
+# 113 "./led_adapter.h"
 static void set_brightness(int brightness);
-# 130 "./led_adapter.h"
+# 131 "./led_adapter.h"
 static void set_color(int temperature);
-# 149 "./led_adapter.h"
+# 150 "./led_adapter.h"
 static void turn_selectors(_Bool selector1, _Bool selector2);
-# 168 "./led_adapter.h"
+
+
+static void turn_off(void);
+# 172 "./led_adapter.h"
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
-# 186 "./led_adapter.h"
+# 190 "./led_adapter.h"
 void initialize_led(led_adapter *led);
 # 10 "led_adapter.c" 2
 
@@ -10131,10 +10135,10 @@ static void set_brightness(int brightness)
   }
 
 
-  int mapped_value = (int)map(brightness, 10, 1000, 0, 100);
+  int mapped_value = (int)map(brightness, 10, 1000, 0, 255);
 
 
-  duty_cycle = (uint16_t)(100 - mapped_value);
+  duty_cycle = (uint16_t)(255 - mapped_value);
 
 
   PWM3_LoadDutyValue(duty_cycle);
@@ -10168,8 +10172,16 @@ static void set_color(int temperature)
 }
 
 
+static void turn_off(void)
+{
+  printf("Turning off led \r\n");
+  PWM3_LoadDutyValue(255);
+}
+
+
 void initialize_led(led_adapter *led)
 {
   led->set_brightness = set_brightness;
   led->set_color = set_color;
+  led->turn_off = turn_off;
 }

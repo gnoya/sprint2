@@ -11,6 +11,7 @@
 #include "menu_controller.h"
 #include "lcd.h"
 #include "eeprom.h"
+#include "rtc.h"
 
 #define MAIN_MENU 0
 #define MAIN_BACK_INDEX 4
@@ -18,11 +19,16 @@
 #define SENSORS_MENU 1
 #define SENSORS_BACK_INDEX 2
 
+#define TURN_OFF_TIMER_MENU 2
+#define TURN_OFF_TIMER_BACK_INDEX 4
+
 // ----------------------- Static (private) variables ----------------------- //
 static bool temp_sensor_opened = false;
 static bool light_sensor_opened = false;
 static int menu_current = 0;
 static int menu_index = 0;
+
+extern bool is_pic_on;
 
 // ----------------------- Static (private) functions ----------------------- //
 static void index_add(void)
@@ -66,9 +72,51 @@ static void index_sub(void)
 // TODO: add comments to this function
 static void index_enter(void)
 {
+  // Turning on pic if it was off
+  is_pic_on = true;
+
   // Back button of sensors menu
   if (menu_current == SENSORS_MENU && menu_index == SENSORS_BACK_INDEX)
   {
+    menu_current = 0;
+    menu_index = 0;
+    show = 1;
+    return;
+  }
+
+  // Back button of turn off timer menu
+  if (menu_current == TURN_OFF_TIMER_MENU && menu_index == TURN_OFF_TIMER_BACK_INDEX)
+  {
+    menu_current = 0;
+    menu_index = 0;
+    show = 1;
+    return;
+  }
+
+  // Enter on any turn off timer item
+  if (menu_current == TURN_OFF_TIMER_MENU && menu_index != TURN_OFF_TIMER_BACK_INDEX)
+  {
+    int seconds;
+    switch (menu_index)
+    {
+    case 0:
+      seconds = 5;
+      break;
+    case 1:
+      seconds = 10;
+      break;
+    case 2:
+      seconds = 15;
+      break;
+    case 3:
+      seconds = 20;
+      break;
+    default:
+      seconds = 20;
+      break;
+    }
+
+    rtc_sleep(seconds);
     menu_current = 0;
     menu_index = 0;
     show = 1;
@@ -80,7 +128,7 @@ static void index_enter(void)
   {
     temp_sensor_enabled = !temp_sensor_enabled;
     show = 1;
-    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
+    eeprom_write(temp_sensor_enabled, light_sensor_enabled);
     return;
   }
 
@@ -89,11 +137,11 @@ static void index_enter(void)
   {
     light_sensor_enabled = !light_sensor_enabled;
     show = 1;
-    eeprom_write(temp_sensor_enabled,light_sensor_enabled);
+    eeprom_write(temp_sensor_enabled, light_sensor_enabled);
     return;
   }
 
-  if (menu_current != MAIN_MENU || (menu_current == MAIN_MENU && menu_index > 1))
+  if (menu_current != MAIN_MENU || (menu_current == MAIN_MENU && menu_index > 2))
     return;
   menu_current = menu_index + 1;
   menu_index = 0;
@@ -144,9 +192,6 @@ static void show_main_menu(void)
 
 static void show_sensors_menu(void)
 {
-  printf("menu_index: %d \n\r", menu_index);
-  printf("menu_current: %d \n\r", menu_current);
-
   switch (menu_index)
   {
   case 0:
@@ -202,6 +247,49 @@ static void show_sensors_menu(void)
   }
 }
 
+static void show_turn_off_timer_menu(void)
+{
+  switch (menu_index)
+  {
+  case 0:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("      5      >");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 1:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<      10      >");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 2:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<      15      >");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 3:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<      20      ");
+    LCDGoto(0, 1);
+    LCDPutStr("     minutos   ");
+    break;
+  case 4:
+    LCDClear();
+    LCDGoto(0, 0);
+    LCDPutStr("<   Regresar   ");
+    break;
+  default:
+    menu_index = 1;
+    break;
+  }
+}
+
 static void show_menu(void)
 {
   if (!show)
@@ -217,6 +305,9 @@ static void show_menu(void)
   case SENSORS_MENU:
     show_sensors_menu();
     break;
+  case TURN_OFF_TIMER_MENU:
+    show_turn_off_timer_menu();
+    break;
   default:
     menu_current = MAIN_MENU;
     break;
@@ -230,7 +321,7 @@ void initialize_menu(menu_controller *menu, bool sensors_opened[])
   menu->index_add = index_add;
   menu->index_sub = index_sub;
   menu->index_enter = index_enter;
-//  menu->show_index = show_index;
+  //  menu->show_index = show_index;
   menu->show_menu = show_menu;
   menu->show_main_menu = show_main_menu;
   menu->show_sensors_menu = show_sensors_menu;

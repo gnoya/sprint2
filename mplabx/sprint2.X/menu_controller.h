@@ -203,6 +203,9 @@ static void show_mode_menu(void);
 */
 static void show_sensors_menu(void);
 
+// TODO: comentar
+static void show_turn_off_timer_menu(void);
+
 /**
   @Summary
     Initializes the menu controller

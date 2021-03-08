@@ -13,4 +13,5 @@ mcc_generated_files/eusart.h  \
 mcc_generated_files/drivers/i2c_simple_master.h  \
 menu_controller.h  \
 lcd.h  \
-eeprom.h 
+eeprom.h  \
+rtc.h 
