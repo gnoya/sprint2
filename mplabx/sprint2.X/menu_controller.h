@@ -40,11 +40,11 @@ typedef struct menu_controller
   void (*index_add)(void);
   void (*index_sub)(void);
   void (*index_enter)(void);
-  void (*show_index)(void);
   void (*show_menu)(void);
   void (*show_main_menu)(void);
   void (*show_mode_menu)(void);
   void (*show_sensors_menu)(void);
+  void (*off)(void);
 } menu_controller;
 
 // --------- Public variables --------- //
@@ -190,7 +190,7 @@ static void show_mode_menu(void);
 
   @Description
     This function sets the Sensors submenu template and displays the option 
- *  corresponding to the value of menu_index in the GUI.
+    corresponding to the value of menu_index in the GUI.
 
   @Preconditions
     None
@@ -203,8 +203,59 @@ static void show_mode_menu(void);
 */
 static void show_sensors_menu(void);
 
-// TODO: comentar
+/**
+  @Summary
+    Shows the menu so the user can pick the timer to shutdown the lights
+
+  @Description
+    Shows the menu so the user can pick the timer to shutdown the lights
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void show_turn_off_timer_menu(void);
+
+/**
+  @Summary
+    Cleans the LCD screen so it looks off
+
+  @Description
+    Cleans the LCD screen so it looks off
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+static void off(void);
+
+/**
+  @Summary
+    Resets the menu
+
+  @Description
+    Resets the indexes of the menu
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+static void reset_menu(void);
 
 /**
   @Summary

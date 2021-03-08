@@ -9980,27 +9980,27 @@ _Bool TMR4_HasOverflowOccured(void);
 # 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/tmr2.h" 1
-# 104 "./mcc_generated_files/tmr2.h"
+# 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 133 "./mcc_generated_files/tmr2.h"
+# 132 "./mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 165 "./mcc_generated_files/tmr2.h"
+# 164 "./mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 200 "./mcc_generated_files/tmr2.h"
+# 199 "./mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 239 "./mcc_generated_files/tmr2.h"
+# 238 "./mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 291 "./mcc_generated_files/tmr2.h"
+# 290 "./mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 309 "./mcc_generated_files/tmr2.h"
+# 308 "./mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 327 "./mcc_generated_files/tmr2.h"
+# 326 "./mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 344 "./mcc_generated_files/tmr2.h"
+# 343 "./mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "./mcc_generated_files/tmr2.h"
+# 361 "./mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 380 "./mcc_generated_files/tmr2.h"
+# 379 "./mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
 
 void TMR2_InterruptEnable(void);
@@ -10113,11 +10113,11 @@ typedef struct menu_controller
   void (*index_add)(void);
   void (*index_sub)(void);
   void (*index_enter)(void);
-  void (*show_index)(void);
   void (*show_menu)(void);
   void (*show_main_menu)(void);
   void (*show_mode_menu)(void);
   void (*show_sensors_menu)(void);
+  void (*off)(void);
 } menu_controller;
 
 
@@ -10140,10 +10140,13 @@ static void show_main_menu(void);
 static void show_mode_menu(void);
 # 204 "./menu_controller.h"
 static void show_sensors_menu(void);
-
-
+# 222 "./menu_controller.h"
 static void show_turn_off_timer_menu(void);
-# 225 "./menu_controller.h"
+# 240 "./menu_controller.h"
+static void off(void);
+# 258 "./menu_controller.h"
+static void reset_menu(void);
+# 276 "./menu_controller.h"
 void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 53 "main.c" 2
 
@@ -10187,12 +10190,11 @@ static void set_brightness(int brightness);
 static void set_color(int temperature);
 # 150 "./led_adapter.h"
 static void turn_selectors(_Bool selector1, _Bool selector2);
-
-
+# 168 "./led_adapter.h"
 static void turn_off(void);
-# 172 "./led_adapter.h"
+# 187 "./led_adapter.h"
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
-# 190 "./led_adapter.h"
+# 205 "./led_adapter.h"
 void initialize_led(led_adapter *led);
 # 57 "main.c" 2
 
@@ -10220,11 +10222,15 @@ void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
 # 59 "main.c" 2
 
 # 1 "./rtc.h" 1
-# 29 "./rtc.h"
+# 45 "./rtc.h"
 void rtc_time(void);
+# 63 "./rtc.h"
 void rtc_sleep(int time);
-void rtc_wakeup(int h, int m);
-void rtc_shutdown(int h, int m);
+# 81 "./rtc.h"
+void rtc_wakeup(int hour, int minute);
+# 99 "./rtc.h"
+void rtc_shutdown(int hour, int minute);
+# 117 "./rtc.h"
 void rtc_sleep_ISR(void);
 # 60 "main.c" 2
 
@@ -10275,6 +10281,7 @@ void main(void)
 
 
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
+  TMR2_InterruptDisable();
 
 
   LCDPutStr("Bienvenido!");
@@ -10301,8 +10308,9 @@ void main(void)
     }
     else
     {
-      printf("Mode off\r\n");
+      printf("PIC apagado...\r\n");
       led.turn_off();
+      menu.off();
     }
   }
 }

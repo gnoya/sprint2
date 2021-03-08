@@ -149,7 +149,22 @@ static void set_color(int temperature);
 */
 static void turn_selectors(bool selector1, bool selector2);
 
-// TODO: comentar
+/**
+  @Summary
+    This functions turns off the lights
+
+  @Description
+    This functions turns off the lights by changing the duty cycle of the PWM
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 static void turn_off(void);
 
 /**

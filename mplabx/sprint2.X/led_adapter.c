@@ -101,10 +101,8 @@ static void set_color(int temperature)
   }
 }
 
-// TODO: comentar
 static void turn_off(void)
 {
-  printf("Turning off led \r\n");
   PWM3_LoadDutyValue(255);
 }
 

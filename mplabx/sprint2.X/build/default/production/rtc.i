@@ -14,11 +14,15 @@
 
 
 # 1 "./rtc.h" 1
-# 29 "./rtc.h"
+# 45 "./rtc.h"
 void rtc_time(void);
+# 63 "./rtc.h"
 void rtc_sleep(int time);
-void rtc_wakeup(int h, int m);
-void rtc_shutdown(int h, int m);
+# 81 "./rtc.h"
+void rtc_wakeup(int hour, int minute);
+# 99 "./rtc.h"
+void rtc_shutdown(int hour, int minute);
+# 117 "./rtc.h"
 void rtc_sleep_ISR(void);
 # 7 "rtc.c" 2
 
@@ -351,27 +355,27 @@ void i2c_readNBytes(i2c_address_t address, void *data, size_t len);
 # 9 "rtc.c" 2
 
 # 1 "./mcc_generated_files/tmr2.h" 1
-# 104 "./mcc_generated_files/tmr2.h"
+# 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 133 "./mcc_generated_files/tmr2.h"
+# 132 "./mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 165 "./mcc_generated_files/tmr2.h"
+# 164 "./mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 200 "./mcc_generated_files/tmr2.h"
+# 199 "./mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 239 "./mcc_generated_files/tmr2.h"
+# 238 "./mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 291 "./mcc_generated_files/tmr2.h"
+# 290 "./mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 309 "./mcc_generated_files/tmr2.h"
+# 308 "./mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 327 "./mcc_generated_files/tmr2.h"
+# 326 "./mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 344 "./mcc_generated_files/tmr2.h"
+# 343 "./mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "./mcc_generated_files/tmr2.h"
+# 361 "./mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 380 "./mcc_generated_files/tmr2.h"
+# 379 "./mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
 
 void TMR2_InterruptEnable(void);
@@ -406,37 +410,33 @@ void rtc_sleep(int time)
 {
   time_to_sleep = time;
   TMR2_InterruptEnable();
-  printf("Turning off in %d seconds", time);
+  printf("Apagando en %d segundos", time_to_sleep);
 }
 
-void rtc_wakeup(int h, int m)
+void rtc_wakeup(int hour, int minute)
 {
   rtc_time();
-
-
-
-  if ((time[1] == m) && (time[2] == h))
-    printf("WakeeUP!!");
+  if ((time[1] == minute) && (time[2] == hour))
+    printf("Despertando...");
 }
 
-void rtc_shutdown(int h, int m)
+void rtc_shutdown(int hour, int minute)
 {
   rtc_time();
-  if ((time[1] == m) && (time[2] == h))
-    printf("Shutdow!!");
+  if ((time[1] == minute) && (time[2] == hour))
+    printf("Apagando...");
 }
 
 
 void rtc_sleep_ISR(void)
 {
-  printf("Inside sleep ISR \r\n");
-  time_sleep += 5;
+
+  time_sleep += 1;
 
   if (time_sleep >= time_to_sleep)
   {
-    printf("Entro al if, apagando... \r\n");
+    printf("Apagando... \r\n");
     TMR2_InterruptDisable();
-
     time_sleep = 0;
     time_to_sleep = 0;
     is_pic_on = 0;

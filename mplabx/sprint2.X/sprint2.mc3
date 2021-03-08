@@ -1432,7 +1432,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="tickerFactor"/>
-         <value>5</value>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAN" settingAlias="IOCAN3" alias="enabled"/>
@@ -4888,7 +4888,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR2" name="CallbackFuncRate"/>
-         <value>4.99712</value>
+         <value>0.999424</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="MSSP" registerAlias="SSPSTAT"/>
@@ -8222,7 +8222,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\tmr2.h</file>
-         <hash>7ebc6bc9344a1f8a0565dd49c50bdc7e3ac93bc7247c9aaa4b59e646060f6790</hash>
+         <hash>fabf338775be05ec6ab58c17270128965f4a939800a9dfdfa11baf0fbe0f23ca</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\device_config.c</file>
@@ -8230,7 +8230,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\tmr2.c</file>
-         <hash>6c3474a640fe3b76204243f5c3c280f791ec3bc37c0aa8bdd8971a1992e6e519</hash>
+         <hash>ec626a418b8cb45b4b629cc518bd638aa4ead09589e878fa07be0aec421653eb</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>

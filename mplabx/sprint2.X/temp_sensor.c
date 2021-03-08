@@ -33,7 +33,6 @@ static int read()
   {
     // 19 to 358
     int measure = (int)ADC_GetConversion(SENSOR_TEMP);
-    // printf("Measure of the temperature sensor: %d \r\n", measure);
     return measure;
   }
   return 0;

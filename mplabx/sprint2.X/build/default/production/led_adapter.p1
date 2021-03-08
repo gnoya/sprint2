@@ -13,8 +13,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "129 ./mcc_generated_files/pwm3.h
 [; ;./mcc_generated_files/pwm3.h: 129:  void PWM3_LoadDutyValue(uint16_t dutyValue);
 [v _PWM3_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [v F325 `(v ~T0 @X0 0 tf1`i ]
 [v F328 `(v ~T0 @X0 0 tf1`i ]
 [v F331 `(v ~T0 @X0 0 tf ]
@@ -1234,49 +1232,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;led_adapter.c: 102: }
 [e :UE 809 ]
 }
-"105
-[; ;led_adapter.c: 105: static void turn_off(void)
+"104
+[; ;led_adapter.c: 104: static void turn_off(void)
 [v _turn_off `(v ~T0 @X0 1 sf ]
-"106
-[; ;led_adapter.c: 106: {
+"105
+[; ;led_adapter.c: 105: {
 {
 [e :U _turn_off ]
 [f ]
-"107
-[; ;led_adapter.c: 107:   printf("Turning off led \r\n");
-[e ( _printf :s 1C ]
-"108
-[; ;led_adapter.c: 108:   PWM3_LoadDutyValue(255);
+"106
+[; ;led_adapter.c: 106:   PWM3_LoadDutyValue(255);
 [e ( _PWM3_LoadDutyValue (1 -> -> 255 `i `us ]
-"109
-[; ;led_adapter.c: 109: }
+"107
+[; ;led_adapter.c: 107: }
 [e :UE 816 ]
 }
-"112
-[; ;led_adapter.c: 112: void initialize_led(led_adapter *led)
+"110
+[; ;led_adapter.c: 110: void initialize_led(led_adapter *led)
 [v _initialize_led `(v ~T0 @X0 1 ef1`*S3 ]
-"113
-[; ;led_adapter.c: 113: {
+"111
+[; ;led_adapter.c: 111: {
 {
 [e :U _initialize_led ]
-"112
-[; ;led_adapter.c: 112: void initialize_led(led_adapter *led)
+"110
+[; ;led_adapter.c: 110: void initialize_led(led_adapter *led)
 [v _led `*S3 ~T0 @X0 1 r1 ]
-"113
-[; ;led_adapter.c: 113: {
+"111
+[; ;led_adapter.c: 111: {
 [f ]
-"114
-[; ;led_adapter.c: 114:   led->set_brightness = set_brightness;
+"112
+[; ;led_adapter.c: 112:   led->set_brightness = set_brightness;
 [e = . *U _led 0 &U _set_brightness ]
-"115
-[; ;led_adapter.c: 115:   led->set_color = set_color;
+"113
+[; ;led_adapter.c: 113:   led->set_color = set_color;
 [e = . *U _led 1 &U _set_color ]
-"116
-[; ;led_adapter.c: 116:   led->turn_off = turn_off;
+"114
+[; ;led_adapter.c: 114:   led->turn_off = turn_off;
 [e = . *U _led 2 &U _turn_off ]
-"117
-[; ;led_adapter.c: 117: }
+"115
+[; ;led_adapter.c: 115: }
 [e :UE 817 ]
 }
-[p f _printf 8388608 ]
-[a 1C 84 117 114 110 105 110 103 32 111 102 102 32 108 101 100 32 13 10 0 ]

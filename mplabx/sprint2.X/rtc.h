@@ -20,16 +20,100 @@
  */
 
 /* 
- * File:   
- * Author: 
+ * File: rtc.h
+ * Author: Group 2
  * Comments:
  * Revision history: 
  */
 
+/**
+  @Summary
+    Read the values of the RTC
+
+  @Description
+    Read the values of the RTC
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 void rtc_time(void);
+
+/**
+  @Summary
+    Puts the PIC on "sleep" mode in "time" seconds
+
+  @Description
+    Puts the PIC on "sleep" mode in "time" seconds
+
+  @Preconditions
+    None
+
+  @Param
+    int time: time in seconds to put on sleep mode
+
+  @Returns
+    None
+*/
 void rtc_sleep(int time);
-void rtc_wakeup(int h, int m);
-void rtc_shutdown(int h, int m);
+
+/**
+  @Summary
+    Wakes up the PIC at hour "h" and minute "m"
+
+  @Description
+    Wakes up the PIC at hour "h" and minute "m"
+
+  @Preconditions
+    None
+
+  @Param
+    int hour, int minute: hour and minute to wake up
+
+  @Returns
+    None
+*/
+void rtc_wakeup(int hour, int minute);
+
+/**
+  @Summary
+    Shuts down the PIC at hour "h" and minute "m"
+
+  @Description
+    Shuts down the PIC at hour "h" and minute "m"
+
+  @Preconditions
+    None
+
+  @Param
+    int hour, int minute: hour and minute to shut down
+
+  @Returns
+    None
+*/
+void rtc_shutdown(int hour, int minute);
+
+/**
+  @Summary
+    Callback function to add +1 to the second timer
+
+  @Description
+    Callback function to add +1 to the second timer
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
 void rtc_sleep_ISR(void);
 
 /**

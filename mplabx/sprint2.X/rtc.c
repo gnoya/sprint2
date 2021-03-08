@@ -36,37 +36,33 @@ void rtc_sleep(int time) //time in seconds
 {
   time_to_sleep = time;
   TMR2_InterruptEnable();
-  printf("Turning off in %d seconds", time);
+  printf("Apagando en %d segundos", time_to_sleep);
 }
 
-void rtc_wakeup(int h, int m)
+void rtc_wakeup(int hour, int minute)
 {
   rtc_time();
-  //int min = time[1], hour = time[2];
-  //printf("Hora y minutos: %x:%x \n\r",time[2],time[1]);
-  //printf("Hora y minutos entrante: %x:%x \n\r",h, m);
-  if ((time[1] == m) && (time[2] == h))
-    printf("WakeeUP!!");
+  if ((time[1] == minute) && (time[2] == hour))
+    printf("Despertando...");
 }
 
-void rtc_shutdown(int h, int m)
+void rtc_shutdown(int hour, int minute)
 {
   rtc_time();
-  if ((time[1] == m) && (time[2] == h))
-    printf("Shutdow!!");
+  if ((time[1] == minute) && (time[2] == hour))
+    printf("Apagando...");
 }
 
-// This function is called every 5 seconds if the interrupt is enabled
+// This function is called every second if the interrupt is enabled
 void rtc_sleep_ISR(void)
 {
-  printf("Inside sleep ISR \r\n");
-  time_sleep += 5;
+  // Adding 1 seconds to the timer
+  time_sleep += 1;
 
   if (time_sleep >= time_to_sleep)
   {
-    printf("Entro al if, apagando... \r\n");
+    printf("Apagando... \r\n");
     TMR2_InterruptDisable();
-    //rtc_wakeup(0x14,0x06);
     time_sleep = 0;
     time_to_sleep = 0;
     is_pic_on = false;

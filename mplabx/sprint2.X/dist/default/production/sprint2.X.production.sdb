@@ -158,9 +158,9 @@ channel_FVRBuffer1 31
 [v _set_brightness set_brightness `(v  1 s 1 set_brightness ]
 "77
 [v _set_color set_color `(v  1 s 1 set_color ]
-"105
+"104
 [v _turn_off turn_off `(v  1 s 1 turn_off ]
-"112
+"110
 [v _initialize_led initialize_led `(v  1 e 1 0 ]
 "22 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _open open `(a  1 s 1 open ]
@@ -367,44 +367,49 @@ channel_FVRBuffer1 31
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "119
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
-"137
+"130
 [v _TMR2_CallBack TMR2_CallBack `(v  1 e 1 0 ]
-"147
+"140
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
-"151
+"144
 [v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
-"156
+"149
 [v _TMR2_InterruptEnable TMR2_InterruptEnable `(v  1 e 1 0 ]
-"165
+"158
 [v _TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
+[v i1_TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
 "62 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
 [v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
 "34 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _index_add index_add `(v  1 s 1 index_add ]
-"45
+"44
 [v _index_sub index_sub `(v  1 s 1 index_sub ]
-"73
+"80
+[v _reset_menu reset_menu `(v  1 s 1 reset_menu ]
+"88
 [v _index_enter index_enter `(v  1 s 1 index_enter ]
-"157
+"168
 [v _show_main_menu show_main_menu `(v  1 s 1 show_main_menu ]
-"193
+"204
 [v _show_sensors_menu show_sensors_menu `(v  1 s 1 show_sensors_menu ]
-"250
+"261
 [v _show_turn_off_timer_menu show_turn_off_timer_menu `(v  1 s 1 show_turn_off_timer_menu ]
-"293
+"304
 [v _show_menu show_menu `(v  1 s 1 show_menu ]
-"319
+"330
+[v _off off `(v  1 s 1 off ]
+"337
 [v _initialize_menu initialize_menu `(v  1 e 1 0 ]
 "18 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
 [v _rtc_time rtc_time `(v  1 e 1 0 ]
 "35
 [v _rtc_sleep rtc_sleep `(v  1 e 1 0 ]
-"60
+"57
 [v _rtc_sleep_ISR rtc_sleep_ISR `(v  1 e 1 0 ]
 "20 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _open@temp_sensor$F1512 open `(a  1 s 1 open ]
+[v _open@temp_sensor$F1514 open `(a  1 s 1 open ]
 "30
-[v _read@temp_sensor$F1514 read `(i  1 s 2 read ]
+[v _read@temp_sensor$F1516 read `(i  1 s 2 read ]
 "42
 [v _initialize_temp initialize_temp `(v  1 e 1 0 ]
 "51 C:\SE1\sprint2\mplabx\sprint2.X/menu_controller.h
@@ -566,7 +571,7 @@ channel_FVRBuffer1 31
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2352
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S1522 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1524 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -576,8 +581,8 @@ channel_FVRBuffer1 31
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2369
-[u S1531 . 1 `S1522 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1531  1 e 1 @269 ]
+[u S1533 . 1 `S1524 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1533  1 e 1 @269 ]
 "2414
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "2476
@@ -802,17 +807,17 @@ channel_FVRBuffer1 31
 [v _duty_cycle duty_cycle `us  1 e 2 0 ]
 "19 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _is_connected is_connected `a  1 s 1 is_connected ]
-[s S1300 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
+[s S1299 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
 "65 C:\SE1\sprint2\mplabx\sprint2.X\main.c
-[v _light_sensor light_sensor `S1300  1 e 6 0 ]
+[v _light_sensor light_sensor `S1299  1 e 6 0 ]
 "66
-[v _temp_sensor temp_sensor `S1300  1 e 6 0 ]
-[s S1307 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
+[v _temp_sensor temp_sensor `S1299  1 e 6 0 ]
+[s S1306 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
 "67
-[v _led led `S1307  1 e 6 0 ]
-[s S1327 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_index 2 8 `*.37(v 1 show_menu 2 10 `*.37(v 1 show_main_menu 2 12 `*.37(v 1 show_mode_menu 2 14 `*.37(v 1 show_sensors_menu 2 16 ]
+[v _led led `S1306  1 e 6 0 ]
+[s S1326 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_menu 2 8 `*.37(v 1 show_main_menu 2 10 `*.37(v 1 show_mode_menu 2 12 `*.37(v 1 show_sensors_menu 2 14 `*.37(v 1 off 2 16 ]
 "68
-[v _menu menu `S1327  1 e 18 0 ]
+[v _menu menu `S1326  1 e 18 0 ]
 "72
 [v _is_pic_on is_pic_on `a  1 e 1 0 ]
 [s S400 . 1 `uc 1 perr 1 0 :1:0 
@@ -861,13 +866,13 @@ channel_FVRBuffer1 31
 "16
 [v _time_to_sleep time_to_sleep `i  1 s 2 time_to_sleep ]
 "18 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _is_connected@temp_sensor$F1511 is_connected `a  1 s 1 is_connected ]
+[v _is_connected@temp_sensor$F1513 is_connected `a  1 s 1 is_connected ]
 "74 C:\SE1\sprint2\mplabx\sprint2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"123
+"124
 [v main@light_value light_value `i  1 a 2 8 ]
-"122
+"123
 [v main@temp_value temp_value `i  1 a 2 6 ]
 "79
 [v main@sensor_names sensor_names `[3]*.1uc  1 a 3 2 ]
@@ -877,226 +882,32 @@ channel_FVRBuffer1 31
 [v main@light_sensor_opened light_sensor_opened `a  1 a 1 11 ]
 "88
 [v main@temp_sensor_opened temp_sensor_opened `a  1 a 1 10 ]
-"138
+"140
 } 0
-"105 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+"104 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
 [v _turn_off turn_off `(v  1 s 1 turn_off ]
 {
-"109
+"107
 } 0
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-[v _printf printf `(i  1 e 2 0 ]
-{
-"8
-[v printf@ap ap `[1]*.5v  1 a 1 19 ]
-"5
-[v printf@fmt fmt `*.25DCuc  1 p 2 15 ]
-"13
-} 0
-"1390 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-[v _vfprintf vfprintf `(i  1 e 2 0 ]
-{
-[s S2129 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.1S2129  1 a 1 wreg ]
-"1393
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 13 ]
-"1390
-[v vfprintf@fp fp `*.1S2129  1 a 1 wreg ]
-[v vfprintf@fmt fmt `*.25DCuc  1 p 2 9 ]
-[v vfprintf@ap ap `*.5*.5v  1 p 1 11 ]
-"1395
-"1390
-[v vfprintf@fp fp `*.1S2129  1 a 1 12 ]
-"1404
-} 0
-"692
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
-{
-[s S2129 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.1S2129  1 a 1 wreg ]
-"696
-[v vfpfcnvrt@ll ll `o  1 a 8 0 ]
-"692
-[v vfpfcnvrt@fp fp `*.1S2129  1 a 1 wreg ]
-[v vfpfcnvrt@fmt fmt `*.5*.25uc  1 p 1 62 ]
-[v vfpfcnvrt@ap ap `*.5*.5v  1 p 1 63 ]
-"702
-"692
-[v vfpfcnvrt@fp fp `*.1S2129  1 a 1 8 ]
-"1387
-} 0
-"287
-[v _dtoa dtoa `(i  1 s 2 dtoa ]
-{
-[s S2129 _IO_FILE 0 ]
-[v dtoa@fp fp `*.1S2129  1 a 1 wreg ]
-"290
-[v dtoa@n n `o  1 a 8 52 ]
-"289
-[v dtoa@i i `i  1 a 2 60 ]
-[v dtoa@s s `i  1 a 2 50 ]
-[v dtoa@w w `i  1 a 2 48 ]
-[v dtoa@p p `i  1 a 2 46 ]
-"287
-[v dtoa@fp fp `*.1S2129  1 a 1 wreg ]
-[v dtoa@d d `o  1 p 8 32 ]
-"293
-"287
-[v dtoa@fp fp `*.1S2129  1 a 1 45 ]
-"328
-} 0
-"72
-[v _pad pad `(i  1 s 2 pad ]
-{
-[s S2129 _IO_FILE 0 ]
-[v pad@fp fp `*.1S2129  1 a 1 wreg ]
-"74
-[v pad@w w `i  1 a 2 29 ]
-[v pad@i i `i  1 a 2 27 ]
-"72
-[v pad@fp fp `*.1S2129  1 a 1 wreg ]
-[v pad@buf buf `*.6uc  1 p 1 23 ]
-[v pad@p p `i  1 p 2 24 ]
-"77
-"72
-[v pad@fp fp `*.1S2129  1 a 1 31 ]
-"95
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-[v strlen@s s `*.6DCuc  1 a 1 wreg ]
-"7
-[v strlen@a a `*.6DCuc  1 a 1 8 ]
-"5
-[v strlen@s s `*.6DCuc  1 a 1 wreg ]
-"7
-[v strlen@s s `*.6DCuc  1 a 1 9 ]
-"12
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-[v _fputs fputs `(i  1 e 2 0 ]
-{
-[v fputs@s s `*.6DCuc  1 a 1 wreg ]
-"11
-[v fputs@i i `i  1 a 2 20 ]
-"10
-[v fputs@c c `uc  1 a 1 19 ]
-"8
-[v fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S2113 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.1S2113  1 p 1 15 ]
-"13
-[v fputs@s s `*.6DCuc  1 a 1 22 ]
-"19
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-[v _fputc fputc `(i  1 e 2 0 ]
-{
-[v fputc@c c `i  1 p 2 7 ]
-[s S2113 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.1S2113  1 p 1 9 ]
-"24
-} 0
-"146 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
-[v _putch putch `(v  1 e 1 0 ]
-{
-[v putch@txData txData `uc  1 a 1 wreg ]
-[v putch@txData txData `uc  1 a 1 wreg ]
-"148
-[v putch@txData txData `uc  1 a 1 6 ]
-"149
-} 0
-"132
-[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
-{
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 5 ]
-"139
-} 0
-"1 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
-[v _abs abs `(i  1 e 2 0 ]
-{
-[v abs@a a `i  1 p 2 24 ]
-"4
-} 0
-"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-[v ___aomod __aomod `(o  1 e 8 0 ]
-{
-"12
-[v ___aomod@sign sign `uc  1 a 1 23 ]
-[v ___aomod@counter counter `uc  1 a 1 22 ]
-"7
-[v ___aomod@divisor divisor `o  1 p 8 5 ]
-[v ___aomod@dividend dividend `o  1 p 8 13 ]
-"36
-} 0
-"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-[v ___aodiv __aodiv `(o  1 e 8 0 ]
-{
-"12
-[v ___aodiv@quotient quotient `o  1 a 8 24 ]
-"13
-[v ___aodiv@sign sign `uc  1 a 1 23 ]
-[v ___aodiv@counter counter `uc  1 a 1 22 ]
-"7
-[v ___aodiv@divisor divisor `o  1 p 8 5 ]
-[v ___aodiv@dividend dividend `o  1 p 8 13 ]
-"43
-} 0
-"293 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
+"304 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _show_menu show_menu `(v  1 s 1 show_menu ]
 {
-"316
+"328
 } 0
-"250
+"261
 [v _show_turn_off_timer_menu show_turn_off_timer_menu `(v  1 s 1 show_turn_off_timer_menu ]
 {
-"291
+"302
 } 0
-"193
+"204
 [v _show_sensors_menu show_sensors_menu `(v  1 s 1 show_sensors_menu ]
 {
-"248
+"259
 } 0
-"157
+"168
 [v _show_main_menu show_main_menu `(v  1 s 1 show_main_menu ]
 {
-"191
-} 0
-"159 C:\SE1\sprint2\mplabx\sprint2.X\lcd.c
-[v _LCDClear LCDClear `(v  1 e 1 0 ]
-{
-"165
-} 0
-"131
-[v _LCDPutStr LCDPutStr `(v  1 e 1 0 ]
-{
-"133
-[v LCDPutStr@i i `uc  1 a 1 17 ]
-"131
-[v LCDPutStr@str str `*.25DCuc  1 p 2 12 ]
-"141
-} 0
-"101
-[v _LCDPutChar LCDPutChar `(v  1 e 1 0 ]
-{
-[v LCDPutChar@ch ch `uc  1 a 1 wreg ]
-[v LCDPutChar@ch ch `uc  1 a 1 wreg ]
-"103
-[v LCDPutChar@ch ch `uc  1 a 1 11 ]
-"113
-} 0
-"143
-[v _LCDGoto LCDGoto `(v  1 e 1 0 ]
-{
-[v LCDGoto@pos pos `uc  1 a 1 wreg ]
-[v LCDGoto@pos pos `uc  1 a 1 wreg ]
-[v LCDGoto@ln ln `uc  1 p 1 12 ]
-"146
-[v LCDGoto@pos pos `uc  1 a 1 15 ]
-"157
+"202
 } 0
 "77 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
 [v _set_color set_color `(v  1 s 1 set_color ]
@@ -1188,11 +999,172 @@ channel_FVRBuffer1 31
 "42
 } 0
 "30 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _read@temp_sensor$F1514 read `(i  1 s 2 read ]
+[v _read@temp_sensor$F1516 read `(i  1 s 2 read ]
 {
 "35
-[v read@temp_sensor$F1514@measure measure `i  1 a 2 11 ]
+[v read@temp_sensor$F1516@measure measure `i  1 a 2 11 ]
 "40
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.5v  1 a 1 19 ]
+"5
+[v printf@fmt fmt `*.25DCuc  1 p 2 15 ]
+"13
+} 0
+"1390 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+[s S2128 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S2128  1 a 1 wreg ]
+"1393
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 13 ]
+"1390
+[v vfprintf@fp fp `*.1S2128  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 9 ]
+[v vfprintf@ap ap `*.5*.5v  1 p 1 11 ]
+"1395
+"1390
+[v vfprintf@fp fp `*.1S2128  1 a 1 12 ]
+"1404
+} 0
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[s S2128 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S2128  1 a 1 wreg ]
+"696
+[v vfpfcnvrt@ll ll `o  1 a 8 0 ]
+"692
+[v vfpfcnvrt@fp fp `*.1S2128  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.5*.25uc  1 p 1 62 ]
+[v vfpfcnvrt@ap ap `*.5*.5v  1 p 1 63 ]
+"702
+"692
+[v vfpfcnvrt@fp fp `*.1S2128  1 a 1 8 ]
+"1387
+} 0
+"287
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+{
+[s S2128 _IO_FILE 0 ]
+[v dtoa@fp fp `*.1S2128  1 a 1 wreg ]
+"290
+[v dtoa@n n `o  1 a 8 52 ]
+"289
+[v dtoa@i i `i  1 a 2 60 ]
+[v dtoa@s s `i  1 a 2 50 ]
+[v dtoa@w w `i  1 a 2 48 ]
+[v dtoa@p p `i  1 a 2 46 ]
+"287
+[v dtoa@fp fp `*.1S2128  1 a 1 wreg ]
+[v dtoa@d d `o  1 p 8 32 ]
+"293
+"287
+[v dtoa@fp fp `*.1S2128  1 a 1 45 ]
+"328
+} 0
+"72
+[v _pad pad `(i  1 s 2 pad ]
+{
+[s S2128 _IO_FILE 0 ]
+[v pad@fp fp `*.1S2128  1 a 1 wreg ]
+"74
+[v pad@w w `i  1 a 2 29 ]
+[v pad@i i `i  1 a 2 27 ]
+"72
+[v pad@fp fp `*.1S2128  1 a 1 wreg ]
+[v pad@buf buf `*.6uc  1 p 1 23 ]
+[v pad@p p `i  1 p 2 24 ]
+"77
+"72
+[v pad@fp fp `*.1S2128  1 a 1 31 ]
+"95
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+[v strlen@s s `*.6DCuc  1 a 1 wreg ]
+"7
+[v strlen@a a `*.6DCuc  1 a 1 8 ]
+"5
+[v strlen@s s `*.6DCuc  1 a 1 wreg ]
+"7
+[v strlen@s s `*.6DCuc  1 a 1 9 ]
+"12
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+[v fputs@s s `*.6DCuc  1 a 1 wreg ]
+"11
+[v fputs@i i `i  1 a 2 20 ]
+"10
+[v fputs@c c `uc  1 a 1 19 ]
+"8
+[v fputs@s s `*.6DCuc  1 a 1 wreg ]
+[s S2112 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.1S2112  1 p 1 15 ]
+"13
+[v fputs@s s `*.6DCuc  1 a 1 22 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 7 ]
+[s S2112 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.1S2112  1 p 1 9 ]
+"24
+} 0
+"146 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"148
+[v putch@txData txData `uc  1 a 1 6 ]
+"149
+} 0
+"132
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 5 ]
+"139
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 24 ]
+"4
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+{
+"12
+[v ___aomod@sign sign `uc  1 a 1 23 ]
+[v ___aomod@counter counter `uc  1 a 1 22 ]
+"7
+[v ___aomod@divisor divisor `o  1 p 8 5 ]
+[v ___aomod@dividend dividend `o  1 p 8 13 ]
+"36
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+{
+"12
+[v ___aodiv@quotient quotient `o  1 a 8 24 ]
+"13
+[v ___aodiv@sign sign `uc  1 a 1 23 ]
+[v ___aodiv@counter counter `uc  1 a 1 22 ]
+"7
+[v ___aodiv@divisor divisor `o  1 p 8 5 ]
+[v ___aodiv@dividend dividend `o  1 p 8 13 ]
+"43
 } 0
 "22 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _open open `(a  1 s 1 open ]
@@ -1202,10 +1174,10 @@ channel_FVRBuffer1 31
 "30
 } 0
 "20 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _open@temp_sensor$F1512 open `(a  1 s 1 open ]
+[v _open@temp_sensor$F1514 open `(a  1 s 1 open ]
 {
 "23
-[v open@temp_sensor$F1512@opening_value opening_value `i  1 a 2 11 ]
+[v open@temp_sensor$F1514@opening_value opening_value `i  1 a 2 11 ]
 "28
 } 0
 "115 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
@@ -1217,49 +1189,87 @@ channel_FVRBuffer1 31
 [v ADC_GetConversion@channel channel `E5569  1 a 1 8 ]
 "136
 } 0
+"330 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
+[v _off off `(v  1 s 1 off ]
+{
+"334
+} 0
+"159 C:\SE1\sprint2\mplabx\sprint2.X\lcd.c
+[v _LCDClear LCDClear `(v  1 e 1 0 ]
+{
+"165
+} 0
+"131
+[v _LCDPutStr LCDPutStr `(v  1 e 1 0 ]
+{
+"133
+[v LCDPutStr@i i `uc  1 a 1 17 ]
+"131
+[v LCDPutStr@str str `*.25DCuc  1 p 2 12 ]
+"141
+} 0
+"101
+[v _LCDPutChar LCDPutChar `(v  1 e 1 0 ]
+{
+[v LCDPutChar@ch ch `uc  1 a 1 wreg ]
+[v LCDPutChar@ch ch `uc  1 a 1 wreg ]
+"103
+[v LCDPutChar@ch ch `uc  1 a 1 11 ]
+"113
+} 0
+"143
+[v _LCDGoto LCDGoto `(v  1 e 1 0 ]
+{
+[v LCDGoto@pos pos `uc  1 a 1 wreg ]
+[v LCDGoto@pos pos `uc  1 a 1 wreg ]
+[v LCDGoto@ln ln `uc  1 p 1 12 ]
+"146
+[v LCDGoto@pos pos `uc  1 a 1 15 ]
+"157
+} 0
 "42 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
 [v _initialize_temp initialize_temp `(v  1 e 1 0 ]
 {
-[v initialize_temp@sensor_var sensor_var `*.5S1300  1 a 1 wreg ]
-[v initialize_temp@sensor_var sensor_var `*.5S1300  1 a 1 wreg ]
+[v initialize_temp@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
+[v initialize_temp@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
 "44
 "42
-[v initialize_temp@sensor_var sensor_var `*.5S1300  1 a 1 5 ]
+[v initialize_temp@sensor_var sensor_var `*.5S1299  1 a 1 5 ]
 "47
 } 0
-"319 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
+"337 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _initialize_menu initialize_menu `(v  1 e 1 0 ]
 {
-[s S1327 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_index 2 8 `*.37(v 1 show_menu 2 10 `*.37(v 1 show_main_menu 2 12 `*.37(v 1 show_mode_menu 2 14 `*.37(v 1 show_sensors_menu 2 16 ]
-[v initialize_menu@menu menu `*.5S1327  1 a 1 wreg ]
-[v initialize_menu@menu menu `*.5S1327  1 a 1 wreg ]
+[s S1326 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_menu 2 8 `*.37(v 1 show_main_menu 2 10 `*.37(v 1 show_mode_menu 2 12 `*.37(v 1 show_sensors_menu 2 14 `*.37(v 1 off 2 16 ]
+[v initialize_menu@menu menu `*.5S1326  1 a 1 wreg ]
+[v initialize_menu@menu menu `*.5S1326  1 a 1 wreg ]
 [v initialize_menu@sensors_opened sensors_opened `*.6a  1 p 1 5 ]
-"321
-"319
-[v initialize_menu@menu menu `*.5S1327  1 a 1 7 ]
-"330
+"339
+"337
+[v initialize_menu@menu menu `*.5S1326  1 a 1 7 ]
+"348
 } 0
 "45 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _initialize_light initialize_light `(v  1 e 1 0 ]
 {
-[s S1300 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
-[v initialize_light@sensor_var sensor_var `*.5S1300  1 a 1 wreg ]
-[v initialize_light@sensor_var sensor_var `*.5S1300  1 a 1 wreg ]
+[s S1299 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
+[v initialize_light@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
+[v initialize_light@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
 "47
 "45
-[v initialize_light@sensor_var sensor_var `*.5S1300  1 a 1 5 ]
+[v initialize_light@sensor_var sensor_var `*.5S1299  1 a 1 5 ]
 "50
 } 0
-"112 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+"110 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
 [v _initialize_led initialize_led `(v  1 e 1 0 ]
 {
-[s S1307 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
-[v initialize_led@led led `*.5S1307  1 a 1 wreg ]
-[v initialize_led@led led `*.5S1307  1 a 1 wreg ]
-"114
+[s S1306 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
+[v initialize_led@led led `*.5S1306  1 a 1 wreg ]
+[v initialize_led@led led `*.5S1306  1 a 1 wreg ]
 "112
-[v initialize_led@led led `*.5S1307  1 a 1 5 ]
-"117
+"110
+[v initialize_led@led led `*.5S1306  1 a 1 5 ]
+"115
 } 0
 "14 C:\SE1\sprint2\mplabx\sprint2.X\eeprom.c
 [v _eeprom_read eeprom_read `(v  1 e 1 0 ]
@@ -1542,6 +1552,11 @@ channel_FVRBuffer1 31
 {
 "643
 } 0
+"158 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+[v _TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
+{
+"165
+} 0
 "50 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
@@ -1562,11 +1577,11 @@ channel_FVRBuffer1 31
 {
 "85
 } 0
-"147
+"140
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 5 ]
-"149
+"142
 } 0
 "58 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
@@ -1666,29 +1681,27 @@ channel_FVRBuffer1 31
 "119 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
 {
-"121
-[v TMR2_ISR@CountCallBack CountCallBack `VEui  1 s 2 CountCallBack ]
-"135
+"128
 } 0
-"137
+"130
 [v _TMR2_CallBack TMR2_CallBack `(v  1 e 1 0 ]
 {
-"145
+"138
 } 0
-"151
+"144
 [v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"154
+"147
 } 0
-"60 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
+"57 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
 [v _rtc_sleep_ISR rtc_sleep_ISR `(v  1 e 1 0 ]
 {
-"74
+"70
 } 0
-"165 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
-[v _TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
+"158 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+[v i1_TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
 {
-"172
+"165
 } 0
 "168 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -1705,12 +1718,12 @@ channel_FVRBuffer1 31
 {
 "275
 } 0
-"73 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
+"88 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _index_enter index_enter `(v  1 s 1 index_enter ]
 {
-"99
+"115
 [v index_enter@seconds seconds `i  1 a 2 3 ]
-"149
+"166
 } 0
 "35 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
 [v _rtc_sleep rtc_sleep `(v  1 e 1 0 ]
@@ -1730,40 +1743,40 @@ channel_FVRBuffer1 31
 "1390 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
 [v i1_vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S2129 _IO_FILE 0 ]
-[v i1vfprintf@fp fp `*.1S2129  1 a 1 wreg ]
+[s S2128 _IO_FILE 0 ]
+[v i1vfprintf@fp fp `*.1S2128  1 a 1 wreg ]
 "1393
 [v i1vfprintf@cfmt cfmt `*.25uc  1 a 2 70 ]
 "1390
-[v i1vfprintf@fp fp `*.1S2129  1 a 1 wreg ]
+[v i1vfprintf@fp fp `*.1S2128  1 a 1 wreg ]
 [v i1vfprintf@fmt fmt `*.25DCuc  1 p 2 64 ]
 [v i1vfprintf@ap ap `*.39*.39v  1 p 2 66 ]
 "1395
 "1390
-[v i1vfprintf@fp fp `*.1S2129  1 a 1 69 ]
+[v i1vfprintf@fp fp `*.1S2128  1 a 1 69 ]
 "1404
 } 0
 "692
 [v i1_vfpfcnvrt vfpfcnvrt `(i  1 s 2 i1_vfpfcnvrt ]
 {
-[s S2129 _IO_FILE 0 ]
-[v i1vfpfcnvrt@fp fp `*.1S2129  1 a 1 wreg ]
+[s S2128 _IO_FILE 0 ]
+[v i1vfpfcnvrt@fp fp `*.1S2128  1 a 1 wreg ]
 "696
 [v i1vfpfcnvrt@ll ll `o  1 a 8 55 ]
 "692
-[v i1vfpfcnvrt@fp fp `*.1S2129  1 a 1 wreg ]
+[v i1vfpfcnvrt@fp fp `*.1S2128  1 a 1 wreg ]
 [v i1vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 46 ]
 [v i1vfpfcnvrt@ap ap `*.39*.39v  1 p 2 48 ]
 "702
 "692
-[v i1vfpfcnvrt@fp fp `*.1S2129  1 a 1 63 ]
+[v i1vfpfcnvrt@fp fp `*.1S2128  1 a 1 63 ]
 "1387
 } 0
 "287
 [v i1_dtoa dtoa `(i  1 s 2 i1_dtoa ]
 {
-[s S2129 _IO_FILE 0 ]
-[v i1dtoa@fp fp `*.1S2129  1 a 1 wreg ]
+[s S2128 _IO_FILE 0 ]
+[v i1dtoa@fp fp `*.1S2128  1 a 1 wreg ]
 "290
 [v i1dtoa@n n `o  1 a 8 36 ]
 "289
@@ -1772,28 +1785,28 @@ channel_FVRBuffer1 31
 [v i1dtoa@w w `i  1 a 2 32 ]
 [v i1dtoa@p p `i  1 a 2 30 ]
 "287
-[v i1dtoa@fp fp `*.1S2129  1 a 1 wreg ]
+[v i1dtoa@fp fp `*.1S2128  1 a 1 wreg ]
 [v i1dtoa@d d `o  1 p 8 16 ]
 "293
 "287
-[v i1dtoa@fp fp `*.1S2129  1 a 1 27 ]
+[v i1dtoa@fp fp `*.1S2128  1 a 1 27 ]
 "328
 } 0
 "72
 [v i1_pad pad `(i  1 s 2 i1_pad ]
 {
-[s S2129 _IO_FILE 0 ]
-[v i1pad@fp fp `*.1S2129  1 a 1 wreg ]
+[s S2128 _IO_FILE 0 ]
+[v i1pad@fp fp `*.1S2128  1 a 1 wreg ]
 "74
 [v i1pad@w w `i  1 a 2 10 ]
 [v i1pad@i i `i  1 a 2 8 ]
 "72
-[v i1pad@fp fp `*.1S2129  1 a 1 wreg ]
+[v i1pad@fp fp `*.1S2128  1 a 1 wreg ]
 [v i1pad@buf buf `*.6uc  1 p 1 4 ]
 [v i1pad@p p `i  1 p 2 5 ]
 "77
 "72
-[v i1pad@fp fp `*.1S2129  1 a 1 12 ]
+[v i1pad@fp fp `*.1S2128  1 a 1 12 ]
 "95
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
@@ -1818,8 +1831,8 @@ channel_FVRBuffer1 31
 [v i1fputs@c c `uc  1 a 1 1 ]
 "8
 [v i1fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S2113 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v i1fputs@fp fp `*.1S2113  1 p 1 10 ]
+[s S2112 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v i1fputs@fp fp `*.1S2112  1 p 1 10 ]
 "13
 [v i1fputs@s s `*.6DCuc  1 a 1 0 ]
 "19
@@ -1828,8 +1841,8 @@ channel_FVRBuffer1 31
 [v i1_fputc fputc `(i  1 e 2 0 ]
 {
 [v i1fputc@c c `i  1 p 2 2 ]
-[s S2113 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v i1fputc@fp fp `*.1S2113  1 p 1 4 ]
+[s S2112 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v i1fputc@fp fp `*.1S2112  1 p 1 4 ]
 "24
 } 0
 "146 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
@@ -1879,10 +1892,15 @@ channel_FVRBuffer1 31
 [v i1___aodiv@dividend dividend `o  1 p 8 8 ]
 "43
 } 0
-"156 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+"149 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v _TMR2_InterruptEnable TMR2_InterruptEnable `(v  1 e 1 0 ]
 {
-"163
+"156
+} 0
+"80 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
+[v _reset_menu reset_menu `(v  1 s 1 reset_menu ]
+{
+"86
 } 0
 "37 C:\SE1\sprint2\mplabx\sprint2.X\eeprom.c
 [v _eeprom_write eeprom_write `(v  1 e 1 0 ]
@@ -2160,10 +2178,10 @@ channel_FVRBuffer1 31
 {
 "245
 } 0
-"45 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
+"44 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _index_sub index_sub `(v  1 s 1 index_sub ]
 {
-"70
+"78
 } 0
 "190 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
 [v _IOCAF5_ISR IOCAF5_ISR `(v  1 e 1 0 ]

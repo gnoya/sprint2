@@ -196,12 +196,11 @@ static void set_brightness(int brightness);
 static void set_color(int temperature);
 # 150 "./led_adapter.h"
 static void turn_selectors(_Bool selector1, _Bool selector2);
-
-
+# 168 "./led_adapter.h"
 static void turn_off(void);
-# 172 "./led_adapter.h"
+# 187 "./led_adapter.h"
 static long map(int x, long in_min, long in_max, long out_min, long out_max);
-# 190 "./led_adapter.h"
+# 205 "./led_adapter.h"
 void initialize_led(led_adapter *led);
 # 10 "led_adapter.c" 2
 
@@ -9955,27 +9954,27 @@ _Bool TMR4_HasOverflowOccured(void);
 # 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/tmr2.h" 1
-# 104 "./mcc_generated_files/tmr2.h"
+# 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 133 "./mcc_generated_files/tmr2.h"
+# 132 "./mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 165 "./mcc_generated_files/tmr2.h"
+# 164 "./mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 200 "./mcc_generated_files/tmr2.h"
+# 199 "./mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 239 "./mcc_generated_files/tmr2.h"
+# 238 "./mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 291 "./mcc_generated_files/tmr2.h"
+# 290 "./mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 309 "./mcc_generated_files/tmr2.h"
+# 308 "./mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 327 "./mcc_generated_files/tmr2.h"
+# 326 "./mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 344 "./mcc_generated_files/tmr2.h"
+# 343 "./mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "./mcc_generated_files/tmr2.h"
+# 361 "./mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 380 "./mcc_generated_files/tmr2.h"
+# 379 "./mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
 
 void TMR2_InterruptEnable(void);
@@ -10171,10 +10170,8 @@ static void set_color(int temperature)
   }
 }
 
-
 static void turn_off(void)
 {
-  printf("Turning off led \r\n");
   PWM3_LoadDutyValue(255);
 }
 

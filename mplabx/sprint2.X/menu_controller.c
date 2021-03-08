@@ -41,11 +41,18 @@ static void index_add(void)
   show = 1;
 }
 
-// TODO: add comments to this function
 static void index_sub(void)
 {
+  /* If the current menu is sensors' menu
+     This is a particular case since the previous
+     index is not always the menu_index--
+  */
   if (menu_current == SENSORS_MENU)
   {
+    /* If we are in the last item of this menu
+      we need to check which sensors are available
+      so we don't show unavailable sensors in the screen
+    */
     if (menu_index == SENSORS_BACK_INDEX)
     {
       if (light_sensor_opened)
@@ -63,40 +70,49 @@ static void index_sub(void)
     menu_index--;
   }
 
+  // The index should always be greater than 0
   if (menu_index < 0)
     menu_index = 0;
 
   show = 1;
 }
 
-// TODO: add comments to this function
+static void reset_menu(void)
+{
+  // Reset indexes
+  menu_current = 0;
+  menu_index = 0;
+  show = 1;
+}
+
 static void index_enter(void)
 {
   // Turning on pic if it was off
-  is_pic_on = true;
+  if (!is_pic_on)
+  {
+    is_pic_on = true;
+    reset_menu();
+    return;
+  }
 
   // Back button of sensors menu
   if (menu_current == SENSORS_MENU && menu_index == SENSORS_BACK_INDEX)
   {
-    menu_current = 0;
-    menu_index = 0;
-    show = 1;
+    reset_menu();
     return;
   }
 
   // Back button of turn off timer menu
   if (menu_current == TURN_OFF_TIMER_MENU && menu_index == TURN_OFF_TIMER_BACK_INDEX)
   {
-    menu_current = 0;
-    menu_index = 0;
-    show = 1;
+    reset_menu();
     return;
   }
 
   // Enter on any turn off timer item
   if (menu_current == TURN_OFF_TIMER_MENU && menu_index != TURN_OFF_TIMER_BACK_INDEX)
   {
-    int seconds;
+    int seconds = 5;
     switch (menu_index)
     {
     case 0:
@@ -112,14 +128,12 @@ static void index_enter(void)
       seconds = 20;
       break;
     default:
-      seconds = 20;
+      seconds = 5;
       break;
     }
 
     rtc_sleep(seconds);
-    menu_current = 0;
-    menu_index = 0;
-    show = 1;
+    reset_menu();
     return;
   }
 
@@ -141,18 +155,15 @@ static void index_enter(void)
     return;
   }
 
+  // For unavailable options like "Hora apagado/encendido"
   if (menu_current != MAIN_MENU || (menu_current == MAIN_MENU && menu_index > 2))
     return;
+
+  // Update the menu and index (this only occurs in the main menu)
   menu_current = menu_index + 1;
   menu_index = 0;
   show = 1;
 }
-
-/*static void show_index(void)
-{
-  printf("menu_index: %d \n\r", menu_index);
-  printf("menu_current: %d \n\r", menu_current);
-}*/
 
 static void show_main_menu(void)
 {
@@ -168,7 +179,7 @@ static void show_main_menu(void)
     LCDGoto(0, 0);
     LCDPutStr("< Temporizador >");
     LCDGoto(0, 1);
-    LCDPutStr("    Apagado     ");
+    LCDPutStr("   de Apagado   ");
     break;
   case 2:
     LCDClear();
@@ -292,6 +303,7 @@ static void show_turn_off_timer_menu(void)
 
 static void show_menu(void)
 {
+  // So we don't reset the screen everytime
   if (!show)
   {
     return;
@@ -315,16 +327,22 @@ static void show_menu(void)
   show = 0;
 }
 
+static void off(void)
+{
+  // Clear the screen
+  LCDClear();
+}
+
 // ----------------------- Public functions ----------------------- //
 void initialize_menu(menu_controller *menu, bool sensors_opened[])
 {
   menu->index_add = index_add;
   menu->index_sub = index_sub;
   menu->index_enter = index_enter;
-  //  menu->show_index = show_index;
   menu->show_menu = show_menu;
   menu->show_main_menu = show_main_menu;
   menu->show_sensors_menu = show_sensors_menu;
+  menu->off = off;
   temp_sensor_opened = sensors_opened[0];
   light_sensor_opened = sensors_opened[1];
 }

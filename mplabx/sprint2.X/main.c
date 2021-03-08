@@ -44,7 +44,7 @@
 /*
   This project was developed by the Group 2 in the Embbeded Systems 1 course from USB.
   This project aims to develop a lighting system using sensors.
-  Version: 1.0
+  Version: 1.1
 */
 
 #include <stdbool.h>
@@ -105,6 +105,7 @@ void main(void)
 
   //--------------Setting Timer Interrupt Handlers ---------------//
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
+  TMR2_InterruptDisable();
 
   // ----------- Writing a welcome message in the LCD ----------- //
   LCDPutStr("Bienvenido!");
@@ -131,8 +132,9 @@ void main(void)
     }
     else
     {
-      printf("Mode off\r\n");
+      printf("PIC apagado...\r\n");
       led.turn_off();
+      menu.off();
     }
   }
 }
