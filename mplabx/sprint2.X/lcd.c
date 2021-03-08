@@ -106,7 +106,7 @@ void LCDPutChar(uint8_t ch)
   LCDWriteNibble(ch, data);
 
   //get the lower nibble
-  ch = (ch << 4);
+  ch = (uint8_t)(ch << 4);
 
   // Now send the low nibble
   LCDWriteNibble(ch, data);
@@ -120,7 +120,7 @@ void LCDPutCmd(uint8_t ch)
   LCDWriteNibble(ch, instr);
 
   //get the lower nibble
-  ch = (ch << 4);
+  ch = (uint8_t)(ch << 4);
 
   __delay_ms(1);
 

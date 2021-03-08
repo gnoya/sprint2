@@ -184,7 +184,7 @@ static void turn_off(void);
   @Returns
     long var
 */
-static long map(int x, long in_min, long in_max, long out_min, long out_max);
+long map(int x, long in_min, long in_max, long out_min, long out_max);
 
 /**
   @Summary

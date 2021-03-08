@@ -136,27 +136,27 @@ static void index_enter(void)
   // Enter on any turn off timer item
   if (menu_current == TURN_OFF_TIMER_MENU && menu_index != TURN_OFF_TIMER_BACK_INDEX)
   {
-    // switch (menu_index)
-    // {
-    // case 0:
-    //   rtc_sleep(5);
-    //   break;
-    // case 1:
-    //   rtc_sleep(10);
-    //   break;
-    // case 2:
-    //   rtc_sleep(15);
-    //   break;
-    // case 3:
-    //   rtc_sleep(20);
-    //   break;
-    // default:
-    //   rtc_sleep(5);
-    //   break;
-    // }
-    rtc_sleep(5);
-    // __delay_ms(500);
-    // reset_menu();
+    switch (menu_index)
+    {
+    case 0:
+      rtc_sleep(5);
+      break;
+    case 1:
+      rtc_sleep(10);
+      break;
+    case 2:
+      rtc_sleep(15);
+      break;
+    case 3:
+      rtc_sleep(20);
+      break;
+    default:
+      rtc_sleep(5);
+      break;
+    }
+
+    __delay_ms(500);
+    reset_menu();
     return;
   }
 
@@ -359,7 +359,7 @@ static void off(void)
 static void debouncing_ISR(void)
 {
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
-  TMR2_LoadPeriodRegister(999);
+  TMR2_LoadPeriodRegister((uint8_t)999);
   TMR2_InterruptDisable();
   debouncing = false;
 }

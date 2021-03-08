@@ -18,6 +18,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63 ./rtc.h
 [; ;./rtc.h: 63: void rtc_sleep(int time);
 [v _rtc_sleep `(v ~T0 @X0 0 ef1`i ]
+[v F5839 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
+[v __delay `JF5839 ~T0 @X0 0 e ]
+[p i __delay ]
 "23 ./eeprom.h
 [; ;./eeprom.h: 23: void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
 [v _eeprom_write `(v ~T0 @X0 0 ef2`a`a ]
@@ -30,8 +34,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "174
 [; ;./lcd.h: 174:   void LCDPutStr(const char *);
 [v _LCDPutStr `(v ~T0 @X0 0 ef1`*Cuc ]
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "117 ./rtc.h
 [; ;./rtc.h: 117: void rtc_sleep_ISR(void);
 [v _rtc_sleep_ISR `(v ~T0 @X0 0 ef ]
@@ -1275,9 +1277,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 "138
 [; ;menu_controller.c: 138:   {
 {
-"157
-[; ;menu_controller.c: 157:     rtc_sleep(5);
+"139
+[; ;menu_controller.c: 139:     switch (menu_index)
+[e $U 808  ]
+"140
+[; ;menu_controller.c: 140:     {
+{
+"141
+[; ;menu_controller.c: 141:     case 0:
+[e :U 809 ]
+"142
+[; ;menu_controller.c: 142:       rtc_sleep(5);
 [e ( _rtc_sleep (1 -> 5 `i ]
+"143
+[; ;menu_controller.c: 143:       break;
+[e $U 807  ]
+"144
+[; ;menu_controller.c: 144:     case 1:
+[e :U 810 ]
+"145
+[; ;menu_controller.c: 145:       rtc_sleep(10);
+[e ( _rtc_sleep (1 -> 10 `i ]
+"146
+[; ;menu_controller.c: 146:       break;
+[e $U 807  ]
+"147
+[; ;menu_controller.c: 147:     case 2:
+[e :U 811 ]
+"148
+[; ;menu_controller.c: 148:       rtc_sleep(15);
+[e ( _rtc_sleep (1 -> 15 `i ]
+"149
+[; ;menu_controller.c: 149:       break;
+[e $U 807  ]
+"150
+[; ;menu_controller.c: 150:     case 3:
+[e :U 812 ]
+"151
+[; ;menu_controller.c: 151:       rtc_sleep(20);
+[e ( _rtc_sleep (1 -> 20 `i ]
+"152
+[; ;menu_controller.c: 152:       break;
+[e $U 807  ]
+"153
+[; ;menu_controller.c: 153:     default:
+[e :U 813 ]
+"154
+[; ;menu_controller.c: 154:       rtc_sleep(5);
+[e ( _rtc_sleep (1 -> 5 `i ]
+"155
+[; ;menu_controller.c: 155:       break;
+[e $U 807  ]
+"156
+[; ;menu_controller.c: 156:     }
+}
+[e $U 807  ]
+[e :U 808 ]
+[e [\ _menu_index , $ -> 0 `i 809
+ , $ -> 1 `i 810
+ , $ -> 2 `i 811
+ , $ -> 3 `i 812
+ 813 ]
+[e :U 807 ]
+"158
+[; ;menu_controller.c: 158:     _delay((unsigned long)((500)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+"159
+[; ;menu_controller.c: 159:     reset_menu();
+[e ( _reset_menu ..  ]
 "160
 [; ;menu_controller.c: 160:     return;
 [e $UE 801  ]
@@ -1287,7 +1354,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 806 ]
 "164
 [; ;menu_controller.c: 164:   if (menu_current == 1 && menu_index == 0)
-[e $ ! && == _menu_current -> 1 `i == _menu_index -> 0 `i 807  ]
+[e $ ! && == _menu_current -> 1 `i == _menu_index -> 0 `i 814  ]
 "165
 [; ;menu_controller.c: 165:   {
 {
@@ -1306,10 +1373,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "170
 [; ;menu_controller.c: 170:   }
 }
-[e :U 807 ]
+[e :U 814 ]
 "173
 [; ;menu_controller.c: 173:   if (menu_current == 1 && menu_index == 1)
-[e $ ! && == _menu_current -> 1 `i == _menu_index -> 1 `i 808  ]
+[e $ ! && == _menu_current -> 1 `i == _menu_index -> 1 `i 815  ]
 "174
 [; ;menu_controller.c: 174:   {
 {
@@ -1328,14 +1395,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "179
 [; ;menu_controller.c: 179:   }
 }
-[e :U 808 ]
+[e :U 815 ]
 "182
 [; ;menu_controller.c: 182:   if (menu_current != 0 || (menu_current == 0 && menu_index > 2))
-[e $ ! || != _menu_current -> 0 `i && == _menu_current -> 0 `i > _menu_index -> 2 `i 809  ]
+[e $ ! || != _menu_current -> 0 `i && == _menu_current -> 0 `i > _menu_index -> 2 `i 816  ]
 "183
 [; ;menu_controller.c: 183:     return;
 [e $UE 801  ]
-[e :U 809 ]
+[e :U 816 ]
 "186
 [; ;menu_controller.c: 186:   menu_current = menu_index + 1;
 [e = _menu_current + _menu_index -> 1 `i ]
@@ -1359,13 +1426,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "193
 [; ;menu_controller.c: 193:   switch (menu_index)
-[e $U 812  ]
+[e $U 819  ]
 "194
 [; ;menu_controller.c: 194:   {
 {
 "195
 [; ;menu_controller.c: 195:   case 0:
-[e :U 813 ]
+[e :U 820 ]
 "196
 [; ;menu_controller.c: 196:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1377,10 +1444,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 1C ]
 "199
 [; ;menu_controller.c: 199:     break;
-[e $U 811  ]
+[e $U 818  ]
 "200
 [; ;menu_controller.c: 200:   case 1:
-[e :U 814 ]
+[e :U 821 ]
 "201
 [; ;menu_controller.c: 201:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1398,10 +1465,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 3C ]
 "206
 [; ;menu_controller.c: 206:     break;
-[e $U 811  ]
+[e $U 818  ]
 "207
 [; ;menu_controller.c: 207:   case 2:
-[e :U 815 ]
+[e :U 822 ]
 "208
 [; ;menu_controller.c: 208:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1419,10 +1486,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 5C ]
 "213
 [; ;menu_controller.c: 213:     break;
-[e $U 811  ]
+[e $U 818  ]
 "214
 [; ;menu_controller.c: 214:   case 3:
-[e :U 816 ]
+[e :U 823 ]
 "215
 [; ;menu_controller.c: 215:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1440,30 +1507,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 7C ]
 "220
 [; ;menu_controller.c: 220:     break;
-[e $U 811  ]
+[e $U 818  ]
 "221
 [; ;menu_controller.c: 221:   default:
-[e :U 817 ]
+[e :U 824 ]
 "222
 [; ;menu_controller.c: 222:     menu_index = 1;
 [e = _menu_index -> 1 `i ]
 "223
 [; ;menu_controller.c: 223:     break;
-[e $U 811  ]
+[e $U 818  ]
 "224
 [; ;menu_controller.c: 224:   }
 }
-[e $U 811  ]
-[e :U 812 ]
-[e [\ _menu_index , $ -> 0 `i 813
- , $ -> 1 `i 814
- , $ -> 2 `i 815
- , $ -> 3 `i 816
- 817 ]
-[e :U 811 ]
+[e $U 818  ]
+[e :U 819 ]
+[e [\ _menu_index , $ -> 0 `i 820
+ , $ -> 1 `i 821
+ , $ -> 2 `i 822
+ , $ -> 3 `i 823
+ 824 ]
+[e :U 818 ]
 "225
 [; ;menu_controller.c: 225: }
-[e :UE 810 ]
+[e :UE 817 ]
 }
 "227
 [; ;menu_controller.c: 227: static void show_sensors_menu(void)
@@ -1475,16 +1542,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "229
 [; ;menu_controller.c: 229:   switch (menu_index)
-[e $U 820  ]
+[e $U 827  ]
 "230
 [; ;menu_controller.c: 230:   {
 {
 "231
 [; ;menu_controller.c: 231:   case 0:
-[e :U 821 ]
+[e :U 828 ]
 "233
 [; ;menu_controller.c: 233:     if (temp_sensor_opened)
-[e $ ! != -> _temp_sensor_opened `i -> 0 `i 822  ]
+[e $ ! != -> _temp_sensor_opened `i -> 0 `i 829  ]
 "234
 [; ;menu_controller.c: 234:     {
 {
@@ -1502,7 +1569,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "239
 [; ;menu_controller.c: 239:       if (temp_sensor_enabled)
-[e $ ! != -> _temp_sensor_enabled `i -> 0 `i 823  ]
+[e $ ! != -> _temp_sensor_enabled `i -> 0 `i 830  ]
 "240
 [; ;menu_controller.c: 240:       {
 {
@@ -1512,10 +1579,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "242
 [; ;menu_controller.c: 242:       }
 }
-[e $U 824  ]
+[e $U 831  ]
 "243
 [; ;menu_controller.c: 243:       else
-[e :U 823 ]
+[e :U 830 ]
 "244
 [; ;menu_controller.c: 244:       {
 {
@@ -1525,27 +1592,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "246
 [; ;menu_controller.c: 246:       }
 }
-[e :U 824 ]
+[e :U 831 ]
 "247
 [; ;menu_controller.c: 247:       break;
-[e $U 819  ]
+[e $U 826  ]
 "248
 [; ;menu_controller.c: 248:     }
 }
-[e $U 825  ]
+[e $U 832  ]
 "249
 [; ;menu_controller.c: 249:     else
-[e :U 822 ]
+[e :U 829 ]
 "250
 [; ;menu_controller.c: 250:       menu_index++;
 [e ++ _menu_index -> 1 `i ]
-[e :U 825 ]
+[e :U 832 ]
 "252
 [; ;menu_controller.c: 252:   case 1:
-[e :U 826 ]
+[e :U 833 ]
 "254
 [; ;menu_controller.c: 254:     if (light_sensor_opened)
-[e $ ! != -> _light_sensor_opened `i -> 0 `i 827  ]
+[e $ ! != -> _light_sensor_opened `i -> 0 `i 834  ]
 "255
 [; ;menu_controller.c: 255:     {
 {
@@ -1563,7 +1630,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
 "260
 [; ;menu_controller.c: 260:       if (light_sensor_enabled)
-[e $ ! != -> _light_sensor_enabled `i -> 0 `i 828  ]
+[e $ ! != -> _light_sensor_enabled `i -> 0 `i 835  ]
 "261
 [; ;menu_controller.c: 261:       {
 {
@@ -1573,10 +1640,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "263
 [; ;menu_controller.c: 263:       }
 }
-[e $U 829  ]
+[e $U 836  ]
 "264
 [; ;menu_controller.c: 264:       else
-[e :U 828 ]
+[e :U 835 ]
 "265
 [; ;menu_controller.c: 265:       {
 {
@@ -1586,24 +1653,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "267
 [; ;menu_controller.c: 267:       }
 }
-[e :U 829 ]
+[e :U 836 ]
 "268
 [; ;menu_controller.c: 268:       break;
-[e $U 819  ]
+[e $U 826  ]
 "269
 [; ;menu_controller.c: 269:     }
 }
-[e $U 830  ]
+[e $U 837  ]
 "270
 [; ;menu_controller.c: 270:     else
-[e :U 827 ]
+[e :U 834 ]
 "271
 [; ;menu_controller.c: 271:       menu_index++;
 [e ++ _menu_index -> 1 `i ]
-[e :U 830 ]
+[e :U 837 ]
 "273
 [; ;menu_controller.c: 273:   case 2:
-[e :U 831 ]
+[e :U 838 ]
 "274
 [; ;menu_controller.c: 274:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1615,29 +1682,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 14C ]
 "277
 [; ;menu_controller.c: 277:     break;
-[e $U 819  ]
+[e $U 826  ]
 "278
 [; ;menu_controller.c: 278:   default:
-[e :U 832 ]
+[e :U 839 ]
 "279
 [; ;menu_controller.c: 279:     menu_index = 1;
 [e = _menu_index -> 1 `i ]
 "280
 [; ;menu_controller.c: 280:     break;
-[e $U 819  ]
+[e $U 826  ]
 "281
 [; ;menu_controller.c: 281:   }
 }
-[e $U 819  ]
-[e :U 820 ]
-[e [\ _menu_index , $ -> 0 `i 821
- , $ -> 1 `i 826
- , $ -> 2 `i 831
- 832 ]
-[e :U 819 ]
+[e $U 826  ]
+[e :U 827 ]
+[e [\ _menu_index , $ -> 0 `i 828
+ , $ -> 1 `i 833
+ , $ -> 2 `i 838
+ 839 ]
+[e :U 826 ]
 "282
 [; ;menu_controller.c: 282: }
-[e :UE 818 ]
+[e :UE 825 ]
 }
 "284
 [; ;menu_controller.c: 284: static void show_turn_off_timer_menu(void)
@@ -1649,13 +1716,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "286
 [; ;menu_controller.c: 286:   switch (menu_index)
-[e $U 835  ]
+[e $U 842  ]
 "287
 [; ;menu_controller.c: 287:   {
 {
 "288
 [; ;menu_controller.c: 288:   case 0:
-[e :U 836 ]
+[e :U 843 ]
 "289
 [; ;menu_controller.c: 289:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1673,10 +1740,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 16C ]
 "294
 [; ;menu_controller.c: 294:     break;
-[e $U 834  ]
+[e $U 841  ]
 "295
 [; ;menu_controller.c: 295:   case 1:
-[e :U 837 ]
+[e :U 844 ]
 "296
 [; ;menu_controller.c: 296:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1694,10 +1761,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 18C ]
 "301
 [; ;menu_controller.c: 301:     break;
-[e $U 834  ]
+[e $U 841  ]
 "302
 [; ;menu_controller.c: 302:   case 2:
-[e :U 838 ]
+[e :U 845 ]
 "303
 [; ;menu_controller.c: 303:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1715,10 +1782,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 20C ]
 "308
 [; ;menu_controller.c: 308:     break;
-[e $U 834  ]
+[e $U 841  ]
 "309
 [; ;menu_controller.c: 309:   case 3:
-[e :U 839 ]
+[e :U 846 ]
 "310
 [; ;menu_controller.c: 310:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1736,10 +1803,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 22C ]
 "315
 [; ;menu_controller.c: 315:     break;
-[e $U 834  ]
+[e $U 841  ]
 "316
 [; ;menu_controller.c: 316:   case 4:
-[e :U 840 ]
+[e :U 847 ]
 "317
 [; ;menu_controller.c: 317:     LCDClear();
 [e ( _LCDClear ..  ]
@@ -1751,31 +1818,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDPutStr (1 :s 23C ]
 "320
 [; ;menu_controller.c: 320:     break;
-[e $U 834  ]
+[e $U 841  ]
 "321
 [; ;menu_controller.c: 321:   default:
-[e :U 841 ]
+[e :U 848 ]
 "322
 [; ;menu_controller.c: 322:     menu_index = 1;
 [e = _menu_index -> 1 `i ]
 "323
 [; ;menu_controller.c: 323:     break;
-[e $U 834  ]
+[e $U 841  ]
 "324
 [; ;menu_controller.c: 324:   }
 }
-[e $U 834  ]
-[e :U 835 ]
-[e [\ _menu_index , $ -> 0 `i 836
- , $ -> 1 `i 837
- , $ -> 2 `i 838
- , $ -> 3 `i 839
- , $ -> 4 `i 840
- 841 ]
-[e :U 834 ]
+[e $U 841  ]
+[e :U 842 ]
+[e [\ _menu_index , $ -> 0 `i 843
+ , $ -> 1 `i 844
+ , $ -> 2 `i 845
+ , $ -> 3 `i 846
+ , $ -> 4 `i 847
+ 848 ]
+[e :U 841 ]
 "325
 [; ;menu_controller.c: 325: }
-[e :UE 833 ]
+[e :UE 840 ]
 }
 "327
 [; ;menu_controller.c: 327: static void show_menu(void)
@@ -1787,75 +1854,75 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "330
 [; ;menu_controller.c: 330:   if (!show)
-[e $ ! ! != -> _show `i -> 0 `i 843  ]
+[e $ ! ! != -> _show `i -> 0 `i 850  ]
 "331
 [; ;menu_controller.c: 331:   {
 {
 "332
 [; ;menu_controller.c: 332:     return;
-[e $UE 842  ]
+[e $UE 849  ]
 "333
 [; ;menu_controller.c: 333:   }
 }
-[e :U 843 ]
+[e :U 850 ]
 "335
 [; ;menu_controller.c: 335:   switch (menu_current)
-[e $U 845  ]
+[e $U 852  ]
 "336
 [; ;menu_controller.c: 336:   {
 {
 "337
 [; ;menu_controller.c: 337:   case 0:
-[e :U 846 ]
+[e :U 853 ]
 "338
 [; ;menu_controller.c: 338:     show_main_menu();
 [e ( _show_main_menu ..  ]
 "339
 [; ;menu_controller.c: 339:     break;
-[e $U 844  ]
+[e $U 851  ]
 "340
 [; ;menu_controller.c: 340:   case 1:
-[e :U 847 ]
+[e :U 854 ]
 "341
 [; ;menu_controller.c: 341:     show_sensors_menu();
 [e ( _show_sensors_menu ..  ]
 "342
 [; ;menu_controller.c: 342:     break;
-[e $U 844  ]
+[e $U 851  ]
 "343
 [; ;menu_controller.c: 343:   case 2:
-[e :U 848 ]
+[e :U 855 ]
 "344
 [; ;menu_controller.c: 344:     show_turn_off_timer_menu();
 [e ( _show_turn_off_timer_menu ..  ]
 "345
 [; ;menu_controller.c: 345:     break;
-[e $U 844  ]
+[e $U 851  ]
 "346
 [; ;menu_controller.c: 346:   default:
-[e :U 849 ]
+[e :U 856 ]
 "347
 [; ;menu_controller.c: 347:     menu_current = 0;
 [e = _menu_current -> 0 `i ]
 "348
 [; ;menu_controller.c: 348:     break;
-[e $U 844  ]
+[e $U 851  ]
 "349
 [; ;menu_controller.c: 349:   }
 }
-[e $U 844  ]
-[e :U 845 ]
-[e [\ _menu_current , $ -> 0 `i 846
- , $ -> 1 `i 847
- , $ -> 2 `i 848
- 849 ]
-[e :U 844 ]
+[e $U 851  ]
+[e :U 852 ]
+[e [\ _menu_current , $ -> 0 `i 853
+ , $ -> 1 `i 854
+ , $ -> 2 `i 855
+ 856 ]
+[e :U 851 ]
 "350
 [; ;menu_controller.c: 350:   show = 0;
 [e = _show -> -> 0 `i `a ]
 "351
 [; ;menu_controller.c: 351: }
-[e :UE 842 ]
+[e :UE 849 ]
 }
 "353
 [; ;menu_controller.c: 353: static void off(void)
@@ -1870,7 +1937,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _LCDClear ..  ]
 "357
 [; ;menu_controller.c: 357: }
-[e :UE 850 ]
+[e :UE 857 ]
 }
 "359
 [; ;menu_controller.c: 359: static void debouncing_ISR(void)
@@ -1881,71 +1948,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _debouncing_ISR ]
 [f ]
 "361
-[; ;menu_controller.c: 361:   printf("AAAAAAAAAAA");
-[e ( _printf :s 24C ]
-"362
-[; ;menu_controller.c: 362:   TMR2_SetInterruptHandler(rtc_sleep_ISR);
+[; ;menu_controller.c: 361:   TMR2_SetInterruptHandler(rtc_sleep_ISR);
 [e ( _TMR2_SetInterruptHandler (1 &U _rtc_sleep_ISR ]
-"363
-[; ;menu_controller.c: 363:   TMR2_LoadPeriodRegister(999);
+"362
+[; ;menu_controller.c: 362:   TMR2_LoadPeriodRegister((uint8_t)999);
 [e ( _TMR2_LoadPeriodRegister (1 -> -> 999 `i `uc ]
-"364
-[; ;menu_controller.c: 364:   TMR2_InterruptDisable();
+"363
+[; ;menu_controller.c: 363:   TMR2_InterruptDisable();
 [e ( _TMR2_InterruptDisable ..  ]
-"365
-[; ;menu_controller.c: 365:   debouncing = 0;
+"364
+[; ;menu_controller.c: 364:   debouncing = 0;
 [e = _debouncing -> -> 0 `i `a ]
-"366
-[; ;menu_controller.c: 366: }
-[e :UE 851 ]
+"365
+[; ;menu_controller.c: 365: }
+[e :UE 858 ]
 }
-"369
-[; ;menu_controller.c: 369: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
+"368
+[; ;menu_controller.c: 368: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
 [v _initialize_menu `(v ~T0 @X0 1 ef2`*S785`*a ]
-"370
-[; ;menu_controller.c: 370: {
+"369
+[; ;menu_controller.c: 369: {
 {
 [e :U _initialize_menu ]
-"369
-[; ;menu_controller.c: 369: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
+"368
+[; ;menu_controller.c: 368: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
 [v _menu `*S785 ~T0 @X0 1 r1 ]
 [v _sensors_opened `*a ~T0 @X0 1 r2 ]
-"370
-[; ;menu_controller.c: 370: {
+"369
+[; ;menu_controller.c: 369: {
 [f ]
-"371
-[; ;menu_controller.c: 371:   menu->index_add = index_add;
+"370
+[; ;menu_controller.c: 370:   menu->index_add = index_add;
 [e = . *U _menu 2 &U _index_add ]
-"372
-[; ;menu_controller.c: 372:   menu->index_sub = index_sub;
+"371
+[; ;menu_controller.c: 371:   menu->index_sub = index_sub;
 [e = . *U _menu 3 &U _index_sub ]
-"373
-[; ;menu_controller.c: 373:   menu->index_enter = index_enter;
+"372
+[; ;menu_controller.c: 372:   menu->index_enter = index_enter;
 [e = . *U _menu 4 &U _index_enter ]
-"374
-[; ;menu_controller.c: 374:   menu->show_menu = show_menu;
+"373
+[; ;menu_controller.c: 373:   menu->show_menu = show_menu;
 [e = . *U _menu 5 &U _show_menu ]
-"375
-[; ;menu_controller.c: 375:   menu->show_main_menu = show_main_menu;
+"374
+[; ;menu_controller.c: 374:   menu->show_main_menu = show_main_menu;
 [e = . *U _menu 6 &U _show_main_menu ]
-"376
-[; ;menu_controller.c: 376:   menu->show_sensors_menu = show_sensors_menu;
+"375
+[; ;menu_controller.c: 375:   menu->show_sensors_menu = show_sensors_menu;
 [e = . *U _menu 8 &U _show_sensors_menu ]
-"377
-[; ;menu_controller.c: 377:   menu->off = off;
+"376
+[; ;menu_controller.c: 376:   menu->off = off;
 [e = . *U _menu 9 &U _off ]
-"378
-[; ;menu_controller.c: 378:   temp_sensor_opened = sensors_opened[0];
+"377
+[; ;menu_controller.c: 377:   temp_sensor_opened = sensors_opened[0];
 [e = _temp_sensor_opened *U + _sensors_opened * -> -> 0 `i `x -> -> # *U _sensors_opened `i `x ]
-"379
-[; ;menu_controller.c: 379:   light_sensor_opened = sensors_opened[1];
+"378
+[; ;menu_controller.c: 378:   light_sensor_opened = sensors_opened[1];
 [e = _light_sensor_opened *U + _sensors_opened * -> -> 1 `i `x -> -> # *U _sensors_opened `i `x ]
-"380
-[; ;menu_controller.c: 380: }
-[e :UE 852 ]
+"379
+[; ;menu_controller.c: 379: }
+[e :UE 859 ]
 }
-[p f _printf 8388608 ]
-[a 24C 65 65 65 65 65 65 65 65 65 65 65 0 ]
 [a 2C 60 32 84 101 109 112 111 114 105 122 97 100 111 114 32 62 0 ]
 [a 11C 60 32 32 76 117 109 105 110 111 115 105 100 97 100 32 62 0 ]
 [a 8C 60 32 32 84 101 109 112 101 114 97 116 117 114 97 32 62 0 ]

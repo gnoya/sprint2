@@ -42,7 +42,7 @@
   @Returns
     None
 */
-void rtc_time(void);
+// void rtc_time(void);
 
 /**
   @Summary
@@ -78,7 +78,7 @@ void rtc_sleep(int time);
   @Returns
     None
 */
-void rtc_wakeup(int hour, int minute);
+// void rtc_wakeup(int hour, int minute);
 
 /**
   @Summary
@@ -96,7 +96,7 @@ void rtc_wakeup(int hour, int minute);
   @Returns
     None
 */
-void rtc_shutdown(int hour, int minute);
+// void rtc_shutdown(int hour, int minute);
 
 /**
   @Summary

@@ -10127,7 +10127,7 @@ void LCDPutChar(uint8_t ch)
   LCDWriteNibble(ch, 1);
 
 
-  ch = (ch << 4);
+  ch = (uint8_t)(ch << 4);
 
 
   LCDWriteNibble(ch, 1);
@@ -10141,7 +10141,7 @@ void LCDPutCmd(uint8_t ch)
   LCDWriteNibble(ch, 0);
 
 
-  ch = (ch << 4);
+  ch = (uint8_t)(ch << 4);
 
   _delay((unsigned long)((1)*(1000000/4000.0)));
 

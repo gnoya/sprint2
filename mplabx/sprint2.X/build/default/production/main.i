@@ -10195,7 +10195,7 @@ static void turn_selectors(_Bool selector1, _Bool selector2);
 # 168 "./led_adapter.h"
 static void turn_off(void);
 # 187 "./led_adapter.h"
-static long map(int x, long in_min, long in_max, long out_min, long out_max);
+long map(int x, long in_min, long in_max, long out_min, long out_max);
 # 205 "./led_adapter.h"
 void initialize_led(led_adapter *led);
 # 57 "main.c" 2
@@ -10224,14 +10224,8 @@ void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
 # 59 "main.c" 2
 
 # 1 "./rtc.h" 1
-# 45 "./rtc.h"
-void rtc_time(void);
 # 63 "./rtc.h"
 void rtc_sleep(int time);
-# 81 "./rtc.h"
-void rtc_wakeup(int hour, int minute);
-# 99 "./rtc.h"
-void rtc_shutdown(int hour, int minute);
 # 117 "./rtc.h"
 void rtc_sleep_ISR(void);
 # 60 "main.c" 2
@@ -10288,6 +10282,20 @@ void main(void)
 
   LCDPutStr("Bienvenido!");
   _delay((unsigned long)((200)*(1000000/4000.0)));
+
+
+  for (int i = 0; i < 5; i++)
+  {
+
+    int temp_value = temp_sensor.read();
+    int light_value = light_sensor.read();
+
+
+    int degrees = (int)map(temp_value, 19, 358, -40, 125);
+    printf("Sensor de temp: %d C\r\n", degrees);
+
+    printf("Sensor de luz crudo: %d\r\n", light_value);
+  }
 
 
   eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);

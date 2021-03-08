@@ -199,7 +199,7 @@ static void turn_selectors(_Bool selector1, _Bool selector2);
 # 168 "./led_adapter.h"
 static void turn_off(void);
 # 187 "./led_adapter.h"
-static long map(int x, long in_min, long in_max, long out_min, long out_max);
+long map(int x, long in_min, long in_max, long out_min, long out_max);
 # 205 "./led_adapter.h"
 void initialize_led(led_adapter *led);
 # 10 "led_adapter.c" 2
@@ -10083,11 +10083,6 @@ uint16_t duty_cycle = 0;
 
 
 
-static long map(int x, long in_min, long in_max, long out_min, long out_max)
-{
-  return ((long)x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-
 static void turn_selectors(_Bool selector1, _Bool selector2)
 {
   if (selector1)
@@ -10134,9 +10129,6 @@ static void set_brightness(int brightness)
   }
 
 
-  printf("Sensor de luz crudo: %d\r\n", brightness);
-
-
   int mapped_value = (int)map(brightness, 10, 1000, 0, 255);
 
 
@@ -10154,10 +10146,6 @@ static void set_color(int temperature)
     turn_red();
     return;
   }
-
-
-  int degrees = (int)map(temperature, 19, 358, -40, 125);
-  printf("Sensor de temp: %d C\r\n", degrees);
 
 
   int color = (int)map(temperature, 19, 358, 0, 60);
@@ -10188,4 +10176,9 @@ void initialize_led(led_adapter *led)
   led->set_brightness = set_brightness;
   led->set_color = set_color;
   led->turn_off = turn_off;
+}
+
+long map(int x, long in_min, long in_max, long out_min, long out_max)
+{
+  return ((long)x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }

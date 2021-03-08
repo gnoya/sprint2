@@ -84,6 +84,7 @@ void TMR2_Initialize(void)
   T2CON = 0x7F;
 }
 
+/*
 void TMR2_StartTimer(void)
 {
   // Start the Timer by writing to TMRxON bit
@@ -110,6 +111,7 @@ void TMR2_WriteTimer(uint8_t timerVal)
   // Write to the Timer2 register
   TMR2 = timerVal;
 }
+*/
 
 void TMR2_LoadPeriodRegister(uint8_t periodVal)
 {
@@ -122,26 +124,28 @@ void TMR2_ISR(void)
   // clear the TMR2 interrupt flag
   PIR1bits.TMR2IF = 0;
 
-    // ticker function call;
-    // ticker is 1 -> Callback function gets called everytime this ISR executes
-    TMR2_CallBack();
-  }
+  // ticker function call;
+  // ticker is 1 -> Callback function gets called everytime this ISR executes
+  TMR2_CallBack();
+}
 
 void TMR2_CallBack(void)
 {
   // Add your custom callback code here
   // this code executes every TMR2_INTERRUPT_TICKER_FACTOR periods of TMR2
-    if(TMR2_InterruptHandler)
+  if (TMR2_InterruptHandler)
   {
     TMR2_InterruptHandler();
   }
 }
 
-void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
+void TMR2_SetInterruptHandler(void (*InterruptHandler)(void))
+{
   TMR2_InterruptHandler = InterruptHandler;
 }
 
-void TMR2_DefaultInterruptHandler(void){
+void TMR2_DefaultInterruptHandler(void)
+{
   // add your TMR2 interrupt custom code
   // or set custom function using TMR2_SetInterruptHandler()
 }
@@ -163,6 +167,7 @@ void TMR2_InterruptDisable(void)
   // Enabling TMR2 interrupt.
   PIE1bits.TMR2IE = 0;
 }
+
 /**
   End of File
 */

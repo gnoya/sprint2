@@ -111,6 +111,21 @@ void main(void)
   LCDPutStr("Bienvenido!");
   __delay_ms(200);
 
+  // ----------------- Printing to calibrate ------------------- //
+  printf("Imprimiendo sensores para calibrar: \r\n");
+  for (int i = 0; i < 5; i++)
+  {
+    // Reading sensors
+    int temp_value = temp_sensor.read();
+    int light_value = light_sensor.read();
+
+    // Converting and printing
+    int degrees = (int)map(temp_value, 19, 358, -40, 125);
+    printf("Sensor de temp: %d C\r\n", degrees);
+    // We print the raw value because the sensor is not linear
+    printf("Sensor de luz crudo: %d\r\n", light_value);
+  }
+
   // -------------- Reading status from EEPROM ----------------- //
   eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
 
@@ -127,7 +142,7 @@ void main(void)
       led.set_color(temp_value);
       led.set_brightness(light_value);
 
-      // -------------------- Showing menu --------------------- //
+      // -------------------- Showing menu ---------------------- //
       menu.show_menu();
     }
     else

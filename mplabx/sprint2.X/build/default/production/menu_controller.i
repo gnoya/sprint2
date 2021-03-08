@@ -10122,14 +10122,8 @@ void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
 # 13 "menu_controller.c" 2
 
 # 1 "./rtc.h" 1
-# 45 "./rtc.h"
-void rtc_time(void);
 # 63 "./rtc.h"
 void rtc_sleep(int time);
-# 81 "./rtc.h"
-void rtc_wakeup(int hour, int minute);
-# 99 "./rtc.h"
-void rtc_shutdown(int hour, int minute);
 # 117 "./rtc.h"
 void rtc_sleep_ISR(void);
 # 14 "menu_controller.c" 2
@@ -10247,10 +10241,27 @@ static void index_enter(void)
 
   if (menu_current == 2 && menu_index != 4)
   {
-# 157 "menu_controller.c"
-    rtc_sleep(5);
+    switch (menu_index)
+    {
+    case 0:
+      rtc_sleep(5);
+      break;
+    case 1:
+      rtc_sleep(10);
+      break;
+    case 2:
+      rtc_sleep(15);
+      break;
+    case 3:
+      rtc_sleep(20);
+      break;
+    default:
+      rtc_sleep(5);
+      break;
+    }
 
-
+    _delay((unsigned long)((500)*(1000000/4000.0)));
+    reset_menu();
     return;
   }
 
@@ -10452,9 +10463,8 @@ static void off(void)
 
 static void debouncing_ISR(void)
 {
-  printf("AAAAAAAAAAA");
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
-  TMR2_LoadPeriodRegister(999);
+  TMR2_LoadPeriodRegister((uint8_t)999);
   TMR2_InterruptDisable();
   debouncing = 0;
 }

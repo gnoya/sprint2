@@ -1051,7 +1051,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lcd.c: 106:   LCDWriteNibble(ch, 1);
 [e ( _LCDWriteNibble (2 , _ch -> -> 1 `i `uc ]
 "109
-[; ;lcd.c: 109:   ch = (ch << 4);
+[; ;lcd.c: 109:   ch = (uint8_t)(ch << 4);
 [e = _ch -> << -> _ch `i -> 4 `i `uc ]
 "112
 [; ;lcd.c: 112:   LCDWriteNibble(ch, 1);
@@ -1080,7 +1080,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lcd.c: 120:   LCDWriteNibble(ch, 0);
 [e ( _LCDWriteNibble (2 , _ch -> -> 0 `i `uc ]
 "123
-[; ;lcd.c: 123:   ch = (ch << 4);
+[; ;lcd.c: 123:   ch = (uint8_t)(ch << 4);
 [e = _ch -> << -> _ch `i -> 4 `i `uc ]
 "125
 [; ;lcd.c: 125:   _delay((unsigned long)((1)*(1000000/4000.0)));

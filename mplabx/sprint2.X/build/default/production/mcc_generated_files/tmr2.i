@@ -9684,34 +9684,7 @@ void TMR2_Initialize(void)
 
   T2CON = 0x7F;
 }
-
-void TMR2_StartTimer(void)
-{
-
-  T2CONbits.TMR2ON = 1;
-}
-
-void TMR2_StopTimer(void)
-{
-
-  T2CONbits.TMR2ON = 0;
-}
-
-uint8_t TMR2_ReadTimer(void)
-{
-  uint8_t readVal;
-
-  readVal = TMR2;
-
-  return readVal;
-}
-
-void TMR2_WriteTimer(uint8_t timerVal)
-{
-
-  TMR2 = timerVal;
-}
-
+# 116 "mcc_generated_files/tmr2.c"
 void TMR2_LoadPeriodRegister(uint8_t periodVal)
 {
   PR2 = periodVal;
@@ -9725,24 +9698,26 @@ void TMR2_ISR(void)
 
 
 
-    TMR2_CallBack();
-  }
+  TMR2_CallBack();
+}
 
 void TMR2_CallBack(void)
 {
 
 
-    if(TMR2_InterruptHandler)
+  if (TMR2_InterruptHandler)
   {
     TMR2_InterruptHandler();
   }
 }
 
-void TMR2_SetInterruptHandler(void (* InterruptHandler)(void)){
+void TMR2_SetInterruptHandler(void (*InterruptHandler)(void))
+{
   TMR2_InterruptHandler = InterruptHandler;
 }
 
-void TMR2_DefaultInterruptHandler(void){
+void TMR2_DefaultInterruptHandler(void)
+{
 
 
 }

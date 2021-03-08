@@ -145,23 +145,23 @@ channel_FVRBuffer1 31
 "159
 [v _LCDClear LCDClear `(v  1 e 1 0 ]
 "17 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-[v _map map `(l  1 s 4 map ]
-"22
 [v _turn_selectors turn_selectors `(v  1 s 1 turn_selectors ]
-"43
+"38
 [v _turn_blue turn_blue `(v  1 s 1 turn_blue ]
-"48
+"43
 [v _turn_green turn_green `(v  1 s 1 turn_green ]
-"53
+"48
 [v _turn_red turn_red `(v  1 s 1 turn_red ]
-"58
+"53
 [v _set_brightness set_brightness `(v  1 s 1 set_brightness ]
-"80
+"72
 [v _set_color set_color `(v  1 s 1 set_color ]
-"111
+"99
 [v _turn_off turn_off `(v  1 s 1 turn_off ]
-"117
+"105
 [v _initialize_led initialize_led `(v  1 e 1 0 ]
+"112
+[v _map map `(l  1 e 4 0 ]
 "22 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _open open `(a  1 s 1 open ]
 "32
@@ -365,20 +365,20 @@ channel_FVRBuffer1 31
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
 "64 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-"114
+"116
 [v _TMR2_LoadPeriodRegister TMR2_LoadPeriodRegister `(v  1 e 1 0 ]
-"119
+"121
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
-"130
+"132
 [v _TMR2_CallBack TMR2_CallBack `(v  1 e 1 0 ]
-"140
+"142
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 [v i1_TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
-"144
+"147
 [v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
-"149
+"153
 [v _TMR2_InterruptEnable TMR2_InterruptEnable `(v  1 e 1 0 ]
-"158
+"162
 [v _TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
 [v i1_TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
 "62 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr4.c
@@ -403,18 +403,16 @@ channel_FVRBuffer1 31
 [v _off off `(v  1 s 1 off ]
 "359
 [v _debouncing_ISR debouncing_ISR `(v  1 s 1 debouncing_ISR ]
-"369
+"368
 [v _initialize_menu initialize_menu `(v  1 e 1 0 ]
-"18 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
-[v _rtc_time rtc_time `(v  1 e 1 0 ]
-"35
+"28 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
 [v _rtc_sleep rtc_sleep `(v  1 e 1 0 ]
-"57
+"54
 [v _rtc_sleep_ISR rtc_sleep_ISR `(v  1 e 1 0 ]
 "20 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _open@temp_sensor$F1514 open `(a  1 s 1 open ]
+[v _open@temp_sensor$F1451 open `(a  1 s 1 open ]
 "30
-[v _read@temp_sensor$F1516 read `(i  1 s 2 read ]
+[v _read@temp_sensor$F1453 read `(i  1 s 2 read ]
 "41
 [v _initialize_temp initialize_temp `(v  1 e 1 0 ]
 "51 C:\SE1\sprint2\mplabx\sprint2.X/menu_controller.h
@@ -442,7 +440,7 @@ channel_FVRBuffer1 31
 [v _INTCONbits INTCONbits `VES292  1 e 1 @11 ]
 "615
 [v _PORTD PORTD `VEuc  1 e 1 @15 ]
-[s S1606 . 1 `uc 1 RD0 1 0 :1:0 
+[s S1539 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -452,8 +450,8 @@ channel_FVRBuffer1 31
 `uc 1 RD7 1 0 :1:7 
 ]
 "632
-[u S1615 . 1 `S1606 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES1615  1 e 1 @15 ]
+[u S1548 . 1 `S1539 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES1548  1 e 1 @15 ]
 [s S446 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -484,21 +482,6 @@ channel_FVRBuffer1 31
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "1139
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S1241 . 1 `uc 1 T2CKPS 1 0 :2:0 
-`uc 1 TMR2ON 1 0 :1:2 
-`uc 1 T2OUTPS 1 0 :4:3 
-]
-"1160
-[s S1245 . 1 `uc 1 T2CKPS0 1 0 :1:0 
-`uc 1 T2CKPS1 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 T2OUTPS0 1 0 :1:3 
-`uc 1 T2OUTPS1 1 0 :1:4 
-`uc 1 T2OUTPS2 1 0 :1:5 
-`uc 1 T2OUTPS3 1 0 :1:6 
-]
-[u S1253 . 1 `S1241 1 . 1 0 `S1245 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1253  1 e 1 @28 ]
 "1210
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1272
@@ -509,7 +492,7 @@ channel_FVRBuffer1 31
 [v _TRISD TRISD `VEuc  1 e 1 @143 ]
 "1458
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
-[s S732 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S691 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -519,8 +502,8 @@ channel_FVRBuffer1 31
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1513
-[u S741 . 1 `S732 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES741  1 e 1 @145 ]
+[u S700 . 1 `S691 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES700  1 e 1 @145 ]
 [s S138 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
@@ -550,12 +533,12 @@ channel_FVRBuffer1 31
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "2109
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S665 . 1 `uc 1 ADON 1 0 :1:0 
+[s S624 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
 "2134
-[s S669 . 1 `uc 1 . 1 0 :1:0 
+[s S628 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -563,11 +546,11 @@ channel_FVRBuffer1 31
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S677 . 1 `uc 1 . 1 0 :1:0 
+[s S636 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S680 . 1 `S665 1 . 1 0 `S669 1 . 1 0 `S677 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES680  1 e 1 @157 ]
+[u S639 . 1 `S624 1 . 1 0 `S628 1 . 1 0 `S636 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES639  1 e 1 @157 ]
 "2189
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2242
@@ -576,7 +559,7 @@ channel_FVRBuffer1 31
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2352
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S1524 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1461 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -586,8 +569,8 @@ channel_FVRBuffer1 31
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2369
-[u S1533 . 1 `S1524 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1533  1 e 1 @269 ]
+[u S1470 . 1 `S1461 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1470  1 e 1 @269 ]
 "2414
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "2476
@@ -648,23 +631,23 @@ channel_FVRBuffer1 31
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
 "6234
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S902 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S861 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6267
-[s S908 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S867 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S913 . 1 `S902 1 . 1 0 `S908 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES913  1 e 1 @533 ]
+[u S872 . 1 `S861 1 . 1 0 `S867 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES872  1 e 1 @533 ]
 "6504
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S1044 . 1 `uc 1 SEN 1 0 :1:0 
+[s S1003 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -674,8 +657,8 @@ channel_FVRBuffer1 31
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6526
-[u S1053 . 1 `S1044 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES1053  1 e 1 @534 ]
+[u S1012 . 1 `S1003 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES1012  1 e 1 @534 ]
 "6748
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
 "6810
@@ -686,13 +669,13 @@ channel_FVRBuffer1 31
 [v _ODCOND ODCOND `VEuc  1 e 1 @655 ]
 "6996
 [v _ODCONE ODCONE `VEuc  1 e 1 @656 ]
-[s S613 . 1 `uc 1 C1TSEL 1 0 :2:0 
+[s S572 . 1 `uc 1 C1TSEL 1 0 :2:0 
 `uc 1 C2TSEL 1 0 :2:2 
 `uc 1 P3TSEL 1 0 :2:4 
 `uc 1 P4TSEL 1 0 :2:6 
 ]
 "7457
-[s S618 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+[s S577 . 1 `uc 1 C1TSEL0 1 0 :1:0 
 `uc 1 C1TSEL1 1 0 :1:1 
 `uc 1 C2TSEL0 1 0 :1:2 
 `uc 1 C2TSEL1 1 0 :1:3 
@@ -701,8 +684,8 @@ channel_FVRBuffer1 31
 `uc 1 P4TSEL0 1 0 :1:6 
 `uc 1 P4TSEL1 1 0 :1:7 
 ]
-[u S627 . 1 `S613 1 . 1 0 `S618 1 . 1 0 ]
-[v _CCPTMRSbits CCPTMRSbits `VES627  1 e 1 @670 ]
+[u S586 . 1 `S572 1 . 1 0 `S577 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES586  1 e 1 @670 ]
 "7522
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
 "7584
@@ -765,21 +748,6 @@ channel_FVRBuffer1 31
 [v _PR4 PR4 `VEuc  1 e 1 @1046 ]
 "8749
 [v _T4CON T4CON `VEuc  1 e 1 @1047 ]
-[s S560 . 1 `uc 1 T4CKPS 1 0 :2:0 
-`uc 1 TMR4ON 1 0 :1:2 
-`uc 1 T4OUTPS 1 0 :4:3 
-]
-"8770
-[s S564 . 1 `uc 1 T4CKPS0 1 0 :1:0 
-`uc 1 T4CKPS1 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 T4OUTPS0 1 0 :1:3 
-`uc 1 T4OUTPS1 1 0 :1:4 
-`uc 1 T4OUTPS2 1 0 :1:5 
-`uc 1 T4OUTPS3 1 0 :1:6 
-]
-[u S572 . 1 `S560 1 . 1 0 `S564 1 . 1 0 ]
-[v _T4CONbits T4CONbits `VES572  1 e 1 @1047 ]
 "9529
 [v _PWM3DCL PWM3DCL `VEuc  1 e 1 @1559 ]
 "9565
@@ -812,17 +780,17 @@ channel_FVRBuffer1 31
 [v _duty_cycle duty_cycle `us  1 e 2 0 ]
 "19 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _is_connected is_connected `a  1 s 1 is_connected ]
-[s S1299 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
+[s S1221 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
 "65 C:\SE1\sprint2\mplabx\sprint2.X\main.c
-[v _light_sensor light_sensor `S1299  1 e 6 0 ]
+[v _light_sensor light_sensor `S1221  1 e 6 0 ]
 "66
-[v _temp_sensor temp_sensor `S1299  1 e 6 0 ]
-[s S1306 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
+[v _temp_sensor temp_sensor `S1221  1 e 6 0 ]
+[s S1228 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
 "67
-[v _led led `S1306  1 e 6 0 ]
-[s S1326 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_menu 2 8 `*.37(v 1 show_main_menu 2 10 `*.37(v 1 show_mode_menu 2 12 `*.37(v 1 show_sensors_menu 2 14 `*.37(v 1 off 2 16 ]
+[v _led led `S1228  1 e 6 0 ]
+[s S1248 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_menu 2 8 `*.37(v 1 show_main_menu 2 10 `*.37(v 1 show_mode_menu 2 12 `*.37(v 1 show_sensors_menu 2 14 `*.37(v 1 off 2 16 ]
 "68
-[v _menu menu `S1326  1 e 18 0 ]
+[v _menu menu `S1248  1 e 18 0 ]
 "72
 [v _is_pic_on is_pic_on `a  1 e 1 0 ]
 [s S400 . 1 `uc 1 perr 1 0 :1:0 
@@ -841,13 +809,13 @@ channel_FVRBuffer1 31
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
 "146 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/i2c_master.c
 [v _i2c_fsmStateTable i2c_fsmStateTable `DC[16]*.37(E5954  1 e 32 0 ]
-[s S876 . 30 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.39uc 1 data_ptr 2 23 `ui 1 data_length 2 25 `E5954 1 state 1 27 `E355 1 error 1 28 `uc 1 addressNackCheck 1 29 :1:0 
-`uc 1 busy 1 29 :1:1 
-`uc 1 inUse 1 29 :1:2 
-`uc 1 bufferFree 1 29 :1:3 
+[s S835 . 29 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E5954 1 state 1 26 `E355 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+`uc 1 busy 1 28 :1:1 
+`uc 1 inUse 1 28 :1:2 
+`uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C_Status I2C_Status `S876  1 e 30 0 ]
+[v _I2C_Status I2C_Status `S835  1 e 29 0 ]
 "54 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
 [v _IOCAF5_InterruptHandler IOCAF5_InterruptHandler `*.37(v  1 e 2 0 ]
 "55
@@ -866,35 +834,41 @@ channel_FVRBuffer1 31
 [v _menu_current menu_current `i  1 s 2 menu_current ]
 "30
 [v _menu_index menu_index `i  1 s 2 menu_index ]
-"12 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
+"13 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
 [v _time_sleep time_sleep `uc  1 s 1 time_sleep ]
-"14
-[v _time time `[8]uc  1 s 8 time ]
-"16
+"17
 [v _time_to_sleep time_to_sleep `uc  1 s 1 time_to_sleep ]
 "18 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _is_connected@temp_sensor$F1513 is_connected `a  1 s 1 is_connected ]
+[v _is_connected@temp_sensor$F1450 is_connected `a  1 s 1 is_connected ]
 "74 C:\SE1\sprint2\mplabx\sprint2.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"124
+"138
+[v main@light_value_1399 light_value `i  1 a 2 14 ]
+"137
+[v main@temp_value_1398 temp_value `i  1 a 2 12 ]
+"122
+[v main@degrees degrees `i  1 a 2 10 ]
+"119
 [v main@light_value light_value `i  1 a 2 8 ]
-"123
+"118
 [v main@temp_value temp_value `i  1 a 2 6 ]
+"115
+[v main@i i `i  1 a 2 20 ]
 "79
 [v main@sensor_names sensor_names `[3]*.1uc  1 a 3 2 ]
 "91
-[v main@sensors_opened sensors_opened `[2]a  1 a 2 12 ]
+[v main@sensors_opened sensors_opened `[2]a  1 a 2 18 ]
 "89
-[v main@light_sensor_opened light_sensor_opened `a  1 a 1 11 ]
+[v main@light_sensor_opened light_sensor_opened `a  1 a 1 17 ]
 "88
-[v main@temp_sensor_opened temp_sensor_opened `a  1 a 1 10 ]
-"140
+[v main@temp_sensor_opened temp_sensor_opened `a  1 a 1 16 ]
+"154
 } 0
-"111 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+"99 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
 [v _turn_off turn_off `(v  1 s 1 turn_off ]
 {
-"114
+"102
 } 0
 "327 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _show_menu show_menu `(v  1 s 1 show_menu ]
@@ -916,50 +890,101 @@ channel_FVRBuffer1 31
 {
 "225
 } 0
-"80 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+"72 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
 [v _set_color set_color `(v  1 s 1 set_color ]
 {
-"94
-[v set_color@color color `i  1 a 2 24 ]
-"90
-[v set_color@degrees degrees `i  1 a 2 22 ]
-"80
-[v set_color@temperature temperature `i  1 p 2 19 ]
-"109
-} 0
-"53
-[v _turn_red turn_red `(v  1 s 1 turn_red ]
-{
-"56
+"82
+[v set_color@color color `i  1 a 2 68 ]
+"72
+[v set_color@temperature temperature `i  1 p 2 65 ]
+"97
 } 0
 "48
-[v _turn_green turn_green `(v  1 s 1 turn_green ]
+[v _turn_red turn_red `(v  1 s 1 turn_red ]
 {
 "51
 } 0
 "43
-[v _turn_blue turn_blue `(v  1 s 1 turn_blue ]
+[v _turn_green turn_green `(v  1 s 1 turn_green ]
 {
 "46
 } 0
-"22
+"38
+[v _turn_blue turn_blue `(v  1 s 1 turn_blue ]
+{
+"41
+} 0
+"17
 [v _turn_selectors turn_selectors `(v  1 s 1 turn_selectors ]
 {
 [v turn_selectors@selector1 selector1 `a  1 a 1 wreg ]
 [v turn_selectors@selector1 selector1 `a  1 a 1 wreg ]
 [v turn_selectors@selector2 selector2 `a  1 p 1 4 ]
-"24
+"19
 [v turn_selectors@selector1 selector1 `a  1 a 1 5 ]
-"41
+"36
 } 0
-"58
+"53
 [v _set_brightness set_brightness `(v  1 s 1 set_brightness ]
 {
-"71
-[v set_brightness@mapped_value mapped_value `i  1 a 2 22 ]
-"58
-[v set_brightness@brightness brightness `i  1 p 2 19 ]
-"78
+"63
+[v set_brightness@mapped_value mapped_value `i  1 a 2 68 ]
+"53
+[v set_brightness@brightness brightness `i  1 p 2 65 ]
+"70
+} 0
+"112
+[v _map map `(l  1 e 4 0 ]
+{
+[v map@x x `i  1 p 2 31 ]
+[v map@in_min in_min `l  1 p 4 33 ]
+[v map@in_max in_max `l  1 p 4 37 ]
+[v map@out_min out_min `l  1 p 4 41 ]
+[v map@out_max out_max `l  1 p 4 45 ]
+"115
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 12 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 4 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 8 ]
+"129
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 27 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 26 ]
+[v ___aldiv@counter counter `uc  1 a 1 25 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 16 ]
+[v ___aldiv@dividend dividend `l  1 p 4 20 ]
+"41
+} 0
+"74 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
+[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM3_LoadDutyValue@dutyValue dutyValue `us  1 p 2 4 ]
+"81
+} 0
+"32 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
+[v _read read `(i  1 s 2 read ]
+{
+"37
+[v read@measure measure `i  1 a 2 10 ]
+"41
+} 0
+"30 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
+[v _read@temp_sensor$F1453 read `(i  1 s 2 read ]
+{
+"35
+[v read@temp_sensor$F1453@measure measure `i  1 a 2 10 ]
+"39
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -973,40 +998,40 @@ channel_FVRBuffer1 31
 "1390 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S2146 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S2067  1 a 1 wreg ]
 "1393
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 10 ]
 "1390
-[v vfprintf@fp fp `*.1S2146  1 a 1 wreg ]
+[v vfprintf@fp fp `*.1S2067  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 68 ]
 [v vfprintf@ap ap `*.5*.5v  1 p 1 70 ]
 "1395
 "1390
-[v vfprintf@fp fp `*.1S2146  1 a 1 9 ]
+[v vfprintf@fp fp `*.1S2067  1 a 1 9 ]
 "1404
 } 0
 "692
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S2146 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S2067  1 a 1 wreg ]
 "696
 [v vfpfcnvrt@ll ll `o  1 a 8 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.1S2146  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.1S2067  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.5*.25uc  1 p 1 61 ]
 [v vfpfcnvrt@ap ap `*.5*.5v  1 p 1 62 ]
 "702
 "692
-[v vfpfcnvrt@fp fp `*.1S2146  1 a 1 8 ]
+[v vfpfcnvrt@fp fp `*.1S2067  1 a 1 8 ]
 "1387
 } 0
 "287
 [v _dtoa dtoa `(i  1 s 2 dtoa ]
 {
-[s S2146 _IO_FILE 0 ]
-[v dtoa@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v dtoa@fp fp `*.1S2067  1 a 1 wreg ]
 "290
 [v dtoa@n n `o  1 a 8 51 ]
 "289
@@ -1015,28 +1040,28 @@ channel_FVRBuffer1 31
 [v dtoa@w w `i  1 a 2 47 ]
 [v dtoa@p p `i  1 a 2 45 ]
 "287
-[v dtoa@fp fp `*.1S2146  1 a 1 wreg ]
+[v dtoa@fp fp `*.1S2067  1 a 1 wreg ]
 [v dtoa@d d `o  1 p 8 31 ]
 "293
 "287
-[v dtoa@fp fp `*.1S2146  1 a 1 44 ]
+[v dtoa@fp fp `*.1S2067  1 a 1 44 ]
 "328
 } 0
 "72
 [v _pad pad `(i  1 s 2 pad ]
 {
-[s S2146 _IO_FILE 0 ]
-[v pad@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v pad@fp fp `*.1S2067  1 a 1 wreg ]
 "74
 [v pad@w w `i  1 a 2 28 ]
 [v pad@i i `i  1 a 2 26 ]
 "72
-[v pad@fp fp `*.1S2146  1 a 1 wreg ]
+[v pad@fp fp `*.1S2067  1 a 1 wreg ]
 [v pad@buf buf `*.6uc  1 p 1 22 ]
 [v pad@p p `i  1 p 2 23 ]
 "77
 "72
-[v pad@fp fp `*.1S2146  1 a 1 30 ]
+[v pad@fp fp `*.1S2067  1 a 1 30 ]
 "95
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
@@ -1061,8 +1086,8 @@ channel_FVRBuffer1 31
 [v fputs@c c `uc  1 a 1 18 ]
 "8
 [v fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S2130 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.1S2130  1 p 1 14 ]
+[s S2051 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.1S2051  1 p 1 14 ]
 "13
 [v fputs@s s `*.6DCuc  1 a 1 21 ]
 "19
@@ -1071,8 +1096,8 @@ channel_FVRBuffer1 31
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 6 ]
-[s S2130 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.1S2130  1 p 1 8 ]
+[s S2051 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.1S2051  1 p 1 8 ]
 "24
 } 0
 "146 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
@@ -1122,59 +1147,6 @@ channel_FVRBuffer1 31
 [v ___aodiv@dividend dividend `o  1 p 8 12 ]
 "43
 } 0
-"17 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
-[v _map map `(l  1 s 4 map ]
-{
-[v map@x x `i  1 p 2 31 ]
-[v map@in_min in_min `l  1 p 4 33 ]
-[v map@in_max in_max `l  1 p 4 37 ]
-[v map@out_min out_min `l  1 p 4 41 ]
-[v map@out_max out_max `l  1 p 4 45 ]
-"20
-} 0
-"15 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul32.c
-[v ___lmul __lmul `(ul  1 e 4 0 ]
-{
-"17
-[v ___lmul@product product `ul  1 a 4 12 ]
-"15
-[v ___lmul@multiplier multiplier `ul  1 p 4 4 ]
-[v ___lmul@multiplicand multiplicand `ul  1 p 4 8 ]
-"129
-} 0
-"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\aldiv.c
-[v ___aldiv __aldiv `(l  1 e 4 0 ]
-{
-"10
-[v ___aldiv@quotient quotient `l  1 a 4 27 ]
-"11
-[v ___aldiv@sign sign `uc  1 a 1 26 ]
-[v ___aldiv@counter counter `uc  1 a 1 25 ]
-"5
-[v ___aldiv@divisor divisor `l  1 p 4 16 ]
-[v ___aldiv@dividend dividend `l  1 p 4 20 ]
-"41
-} 0
-"74 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
-[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
-{
-[v PWM3_LoadDutyValue@dutyValue dutyValue `us  1 p 2 4 ]
-"81
-} 0
-"32 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
-[v _read read `(i  1 s 2 read ]
-{
-"37
-[v read@measure measure `i  1 a 2 10 ]
-"41
-} 0
-"30 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _read@temp_sensor$F1516 read `(i  1 s 2 read ]
-{
-"35
-[v read@temp_sensor$F1516@measure measure `i  1 a 2 10 ]
-"39
-} 0
 "22 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _open open `(a  1 s 1 open ]
 {
@@ -1183,10 +1155,10 @@ channel_FVRBuffer1 31
 "30
 } 0
 "20 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
-[v _open@temp_sensor$F1514 open `(a  1 s 1 open ]
+[v _open@temp_sensor$F1451 open `(a  1 s 1 open ]
 {
 "23
-[v open@temp_sensor$F1514@opening_value opening_value `i  1 a 2 10 ]
+[v open@temp_sensor$F1451@opening_value opening_value `i  1 a 2 10 ]
 "28
 } 0
 "115 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/adc.c
@@ -1239,46 +1211,46 @@ channel_FVRBuffer1 31
 "41 C:\SE1\sprint2\mplabx\sprint2.X\temp_sensor.c
 [v _initialize_temp initialize_temp `(v  1 e 1 0 ]
 {
-[v initialize_temp@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
-[v initialize_temp@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
+[v initialize_temp@sensor_var sensor_var `*.5S1221  1 a 1 wreg ]
+[v initialize_temp@sensor_var sensor_var `*.5S1221  1 a 1 wreg ]
 "43
 "41
-[v initialize_temp@sensor_var sensor_var `*.5S1299  1 a 1 4 ]
+[v initialize_temp@sensor_var sensor_var `*.5S1221  1 a 1 4 ]
 "46
 } 0
-"369 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
+"368 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _initialize_menu initialize_menu `(v  1 e 1 0 ]
 {
-[s S1326 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_menu 2 8 `*.37(v 1 show_main_menu 2 10 `*.37(v 1 show_mode_menu 2 12 `*.37(v 1 show_sensors_menu 2 14 `*.37(v 1 off 2 16 ]
-[v initialize_menu@menu menu `*.5S1326  1 a 1 wreg ]
-[v initialize_menu@menu menu `*.5S1326  1 a 1 wreg ]
+[s S1248 menu_controller 18 `a 1 light_sensor_opened 1 0 `a 1 temp_sensor_opened 1 1 `*.37(v 1 index_add 2 2 `*.37(v 1 index_sub 2 4 `*.37(v 1 index_enter 2 6 `*.37(v 1 show_menu 2 8 `*.37(v 1 show_main_menu 2 10 `*.37(v 1 show_mode_menu 2 12 `*.37(v 1 show_sensors_menu 2 14 `*.37(v 1 off 2 16 ]
+[v initialize_menu@menu menu `*.5S1248  1 a 1 wreg ]
+[v initialize_menu@menu menu `*.5S1248  1 a 1 wreg ]
 [v initialize_menu@sensors_opened sensors_opened `*.6a  1 p 1 4 ]
-"371
-"369
-[v initialize_menu@menu menu `*.5S1326  1 a 1 6 ]
-"380
+"370
+"368
+[v initialize_menu@menu menu `*.5S1248  1 a 1 6 ]
+"379
 } 0
 "44 C:\SE1\sprint2\mplabx\sprint2.X\light_sensor.c
 [v _initialize_light initialize_light `(v  1 e 1 0 ]
 {
-[s S1299 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
-[v initialize_light@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
-[v initialize_light@sensor_var sensor_var `*.5S1299  1 a 1 wreg ]
+[s S1221 sensor 6 `*.25uc 1 name 2 0 `*.37(a 1 open 2 2 `*.37(i 1 read 2 4 ]
+[v initialize_light@sensor_var sensor_var `*.5S1221  1 a 1 wreg ]
+[v initialize_light@sensor_var sensor_var `*.5S1221  1 a 1 wreg ]
 "46
 "44
-[v initialize_light@sensor_var sensor_var `*.5S1299  1 a 1 4 ]
+[v initialize_light@sensor_var sensor_var `*.5S1221  1 a 1 4 ]
 "49
 } 0
-"117 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
+"105 C:\SE1\sprint2\mplabx\sprint2.X\led_adapter.c
 [v _initialize_led initialize_led `(v  1 e 1 0 ]
 {
-[s S1306 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
-[v initialize_led@led led `*.5S1306  1 a 1 wreg ]
-[v initialize_led@led led `*.5S1306  1 a 1 wreg ]
-"119
-"117
-[v initialize_led@led led `*.5S1306  1 a 1 4 ]
-"122
+[s S1228 led_adapter 6 `*.37(v 1 set_brightness 2 0 `*.37(v 1 set_color 2 2 `*.37(v 1 turn_off 2 4 ]
+[v initialize_led@led led `*.5S1228  1 a 1 wreg ]
+[v initialize_led@led led `*.5S1228  1 a 1 wreg ]
+"107
+"105
+[v initialize_led@led led `*.5S1228  1 a 1 4 ]
+"110
 } 0
 "14 C:\SE1\sprint2\mplabx\sprint2.X\eeprom.c
 [v _eeprom_read eeprom_read `(v  1 e 1 0 ]
@@ -1290,7 +1262,7 @@ channel_FVRBuffer1 31
 [v eeprom_read@address address `[2]uc  1 a 2 20 ]
 "14
 [v eeprom_read@temp_sensor_enabled temp_sensor_enabled `*.5a  1 a 1 wreg ]
-[v eeprom_read@light_sensor_enabled light_sensor_enabled `*.5a  1 p 1 19 ]
+[v eeprom_read@light_sensor_enabled light_sensor_enabled `*.5a  1 p 1 18 ]
 "17
 [v eeprom_read@temp_sensor_enabled temp_sensor_enabled `*.5a  1 a 1 24 ]
 "34
@@ -1300,9 +1272,9 @@ channel_FVRBuffer1 31
 {
 [v i2c_writeNBytes@address address `uc  1 a 1 wreg ]
 [v i2c_writeNBytes@address address `uc  1 a 1 wreg ]
-[v i2c_writeNBytes@data data `*.39v  1 p 2 14 ]
-[v i2c_writeNBytes@len len `ui  1 p 2 16 ]
-[v i2c_writeNBytes@address address `uc  1 a 1 18 ]
+[v i2c_writeNBytes@data data `*.4v  1 p 1 14 ]
+[v i2c_writeNBytes@len len `ui  1 p 2 15 ]
+[v i2c_writeNBytes@address address `uc  1 a 1 17 ]
 "78
 } 0
 "283 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/i2c_master.c
@@ -1333,16 +1305,19 @@ channel_FVRBuffer1 31
 {
 [v i2c_readNBytes@address address `uc  1 a 1 wreg ]
 [v i2c_readNBytes@address address `uc  1 a 1 wreg ]
-[v i2c_readNBytes@data data `*.39v  1 p 2 14 ]
-[v i2c_readNBytes@len len `ui  1 p 2 16 ]
-[v i2c_readNBytes@address address `uc  1 a 1 18 ]
+[v i2c_readNBytes@data data `*.4v  1 p 1 14 ]
+[v i2c_readNBytes@len len `ui  1 p 2 15 ]
+[v i2c_readNBytes@address address `uc  1 a 1 17 ]
 "234
 } 0
 "263 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/i2c_master.c
 [v _I2C_SetBuffer I2C_SetBuffer `(v  1 e 1 0 ]
 {
-[v I2C_SetBuffer@buffer buffer `*.39v  1 p 2 4 ]
-[v I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 6 ]
+[v I2C_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 4 ]
+"265
+[v I2C_SetBuffer@buffer buffer `*.4v  1 a 1 7 ]
 "271
 } 0
 "176
@@ -1561,10 +1536,10 @@ channel_FVRBuffer1 31
 {
 "643
 } 0
-"158 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+"162 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v _TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
 {
-"165
+"169
 } 0
 "50 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1586,11 +1561,11 @@ channel_FVRBuffer1 31
 {
 "85
 } 0
-"140
+"142
 [v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 4 ]
-"142
+"145
 } 0
 "58 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
@@ -1687,35 +1662,35 @@ channel_FVRBuffer1 31
 {
 "74
 } 0
-"119 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+"121 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
 {
-"128
-} 0
 "130
+} 0
+"132
 [v _TMR2_CallBack TMR2_CallBack `(v  1 e 1 0 ]
 {
-"138
+"140
 } 0
 "359 C:\SE1\sprint2\mplabx\sprint2.X\menu_controller.c
 [v _debouncing_ISR debouncing_ISR `(v  1 s 1 debouncing_ISR ]
 {
-"366
+"365
 } 0
-"144 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+"147 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"147
+"151
 } 0
-"57 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
+"54 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
 [v _rtc_sleep_ISR rtc_sleep_ISR `(v  1 e 1 0 ]
 {
-"70
+"67
 } 0
-"158 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+"162 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v i1_TMR2_InterruptDisable TMR2_InterruptDisable `(v  1 e 1 0 ]
 {
-"165
+"169
 } 0
 "168 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -1737,11 +1712,11 @@ channel_FVRBuffer1 31
 {
 "189
 } 0
-"35 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
+"28 C:\SE1\sprint2\mplabx\sprint2.X\rtc.c
 [v _rtc_sleep rtc_sleep `(v  1 e 1 0 ]
 {
 [v rtc_sleep@time time `i  1 p 2 0 ]
-"40
+"34
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
 [v i1_printf printf `(i  1 e 2 0 ]
@@ -1755,40 +1730,40 @@ channel_FVRBuffer1 31
 "1390 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
 [v i1_vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S2146 _IO_FILE 0 ]
-[v i1vfprintf@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v i1vfprintf@fp fp `*.1S2067  1 a 1 wreg ]
 "1393
 [v i1vfprintf@cfmt cfmt `*.25uc  1 a 2 70 ]
 "1390
-[v i1vfprintf@fp fp `*.1S2146  1 a 1 wreg ]
+[v i1vfprintf@fp fp `*.1S2067  1 a 1 wreg ]
 [v i1vfprintf@fmt fmt `*.25DCuc  1 p 2 64 ]
 [v i1vfprintf@ap ap `*.39*.39v  1 p 2 66 ]
 "1395
 "1390
-[v i1vfprintf@fp fp `*.1S2146  1 a 1 69 ]
+[v i1vfprintf@fp fp `*.1S2067  1 a 1 69 ]
 "1404
 } 0
 "692
 [v i1_vfpfcnvrt vfpfcnvrt `(i  1 s 2 i1_vfpfcnvrt ]
 {
-[s S2146 _IO_FILE 0 ]
-[v i1vfpfcnvrt@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v i1vfpfcnvrt@fp fp `*.1S2067  1 a 1 wreg ]
 "696
 [v i1vfpfcnvrt@ll ll `o  1 a 8 55 ]
 "692
-[v i1vfpfcnvrt@fp fp `*.1S2146  1 a 1 wreg ]
+[v i1vfpfcnvrt@fp fp `*.1S2067  1 a 1 wreg ]
 [v i1vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 46 ]
 [v i1vfpfcnvrt@ap ap `*.39*.39v  1 p 2 48 ]
 "702
 "692
-[v i1vfpfcnvrt@fp fp `*.1S2146  1 a 1 63 ]
+[v i1vfpfcnvrt@fp fp `*.1S2067  1 a 1 63 ]
 "1387
 } 0
 "287
 [v i1_dtoa dtoa `(i  1 s 2 i1_dtoa ]
 {
-[s S2146 _IO_FILE 0 ]
-[v i1dtoa@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v i1dtoa@fp fp `*.1S2067  1 a 1 wreg ]
 "290
 [v i1dtoa@n n `o  1 a 8 36 ]
 "289
@@ -1797,28 +1772,28 @@ channel_FVRBuffer1 31
 [v i1dtoa@w w `i  1 a 2 32 ]
 [v i1dtoa@p p `i  1 a 2 30 ]
 "287
-[v i1dtoa@fp fp `*.1S2146  1 a 1 wreg ]
+[v i1dtoa@fp fp `*.1S2067  1 a 1 wreg ]
 [v i1dtoa@d d `o  1 p 8 16 ]
 "293
 "287
-[v i1dtoa@fp fp `*.1S2146  1 a 1 27 ]
+[v i1dtoa@fp fp `*.1S2067  1 a 1 27 ]
 "328
 } 0
 "72
 [v i1_pad pad `(i  1 s 2 i1_pad ]
 {
-[s S2146 _IO_FILE 0 ]
-[v i1pad@fp fp `*.1S2146  1 a 1 wreg ]
+[s S2067 _IO_FILE 0 ]
+[v i1pad@fp fp `*.1S2067  1 a 1 wreg ]
 "74
 [v i1pad@w w `i  1 a 2 10 ]
 [v i1pad@i i `i  1 a 2 8 ]
 "72
-[v i1pad@fp fp `*.1S2146  1 a 1 wreg ]
+[v i1pad@fp fp `*.1S2067  1 a 1 wreg ]
 [v i1pad@buf buf `*.6uc  1 p 1 4 ]
 [v i1pad@p p `i  1 p 2 5 ]
 "77
 "72
-[v i1pad@fp fp `*.1S2146  1 a 1 12 ]
+[v i1pad@fp fp `*.1S2067  1 a 1 12 ]
 "95
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
@@ -1843,8 +1818,8 @@ channel_FVRBuffer1 31
 [v i1fputs@c c `uc  1 a 1 1 ]
 "8
 [v i1fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S2130 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v i1fputs@fp fp `*.1S2130  1 p 1 10 ]
+[s S2051 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v i1fputs@fp fp `*.1S2051  1 p 1 10 ]
 "13
 [v i1fputs@s s `*.6DCuc  1 a 1 0 ]
 "19
@@ -1853,8 +1828,8 @@ channel_FVRBuffer1 31
 [v i1_fputc fputc `(i  1 e 2 0 ]
 {
 [v i1fputc@c c `i  1 p 2 2 ]
-[s S2130 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v i1fputc@fp fp `*.1S2130  1 p 1 4 ]
+[s S2051 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v i1fputc@fp fp `*.1S2051  1 p 1 4 ]
 "24
 } 0
 "146 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/eusart.c
@@ -1914,14 +1889,14 @@ channel_FVRBuffer1 31
 {
 [v eeprom_write@temp_sensor_enabled temp_sensor_enabled `a  1 a 1 wreg ]
 "40
-[v eeprom_write@sendData sendData `[4]uc  1 a 4 3 ]
+[v eeprom_write@sendData sendData `[4]uc  1 a 4 2 ]
 "37
 [v eeprom_write@temp_sensor_enabled temp_sensor_enabled `a  1 a 1 wreg ]
-[v eeprom_write@light_sensor_enabled light_sensor_enabled `a  1 p 1 0 ]
+[v eeprom_write@light_sensor_enabled light_sensor_enabled `a  1 p 1 13 ]
 "38
 [v eeprom_write@F6120 F6120 `[4]uc  1 s 4 F6120 ]
 "40
-[v eeprom_write@temp_sensor_enabled temp_sensor_enabled `a  1 a 1 2 ]
+[v eeprom_write@temp_sensor_enabled temp_sensor_enabled `a  1 a 1 1 ]
 "51
 } 0
 "71 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/drivers/i2c_simple_master.c
@@ -1929,16 +1904,19 @@ channel_FVRBuffer1 31
 {
 [v i1i2c_writeNBytes@address address `uc  1 a 1 wreg ]
 [v i1i2c_writeNBytes@address address `uc  1 a 1 wreg ]
-[v i1i2c_writeNBytes@data data `*.39v  1 p 2 9 ]
-[v i1i2c_writeNBytes@len len `ui  1 p 2 11 ]
-[v i1i2c_writeNBytes@address address `uc  1 a 1 13 ]
+[v i1i2c_writeNBytes@data data `*.4v  1 p 1 9 ]
+[v i1i2c_writeNBytes@len len `ui  1 p 2 10 ]
+[v i1i2c_writeNBytes@address address `uc  1 a 1 12 ]
 "78
 } 0
 "263 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/i2c_master.c
 [v i1_I2C_SetBuffer I2C_SetBuffer `(v  1 e 1 0 ]
 {
-[v i1I2C_SetBuffer@buffer buffer `*.39v  1 p 2 0 ]
-[v i1I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 2 ]
+[v i1I2C_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v i1I2C_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v i1I2C_SetBuffer@bufferSize bufferSize `ui  1 p 2 0 ]
+"265
+[v i1I2C_SetBuffer@buffer buffer `*.4v  1 a 1 3 ]
 "271
 } 0
 "283
@@ -2205,23 +2183,23 @@ channel_FVRBuffer1 31
 {
 "50
 } 0
-"140 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
+"142 C:\SE1\sprint2\mplabx\sprint2.X\mcc_generated_files/tmr2.c
 [v i1_TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v i1TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"142
+"145
 } 0
-"114
+"116
 [v _TMR2_LoadPeriodRegister TMR2_LoadPeriodRegister `(v  1 e 1 0 ]
 {
 [v TMR2_LoadPeriodRegister@periodVal periodVal `uc  1 a 1 wreg ]
 [v TMR2_LoadPeriodRegister@periodVal periodVal `uc  1 a 1 wreg ]
-"116
+"118
 [v TMR2_LoadPeriodRegister@periodVal periodVal `uc  1 a 1 0 ]
-"117
+"119
 } 0
-"149
+"153
 [v _TMR2_InterruptEnable TMR2_InterruptEnable `(v  1 e 1 0 ]
 {
-"156
+"160
 } 0
