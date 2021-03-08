@@ -4,6 +4,7 @@
  *
  * Created on March 6, 2021, 7:10 PM
  */
+#include "mcc_generated_files/mcc.h"
 #include "rtc.h"
 #include "mcc_generated_files/i2c_master.h"
 #include "mcc_generated_files/drivers/i2c_simple_master.h"
@@ -34,7 +35,7 @@ void rtc_time(void)
 
 void rtc_sleep(int time) //time in seconds
 {
-  printf("Apagando en %d segundos", time);
+  //printf("Apagando en %d segundos", time);
   time_to_sleep = (uint8_t)time;
   TMR2_InterruptEnable();
 }

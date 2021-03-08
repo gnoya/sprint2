@@ -30,8 +30,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "174
 [; ;./lcd.h: 174:   void LCDPutStr(const char *);
 [v _LCDPutStr `(v ~T0 @X0 0 ef1`*Cuc ]
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "117 ./rtc.h
 [; ;./rtc.h: 117: void rtc_sleep_ISR(void);
 [v _rtc_sleep_ISR `(v ~T0 @X0 0 ef ]
@@ -1881,71 +1879,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _debouncing_ISR ]
 [f ]
 "361
-[; ;menu_controller.c: 361:   printf("AAAAAAAAAAA");
-[e ( _printf :s 24C ]
-"362
-[; ;menu_controller.c: 362:   TMR2_SetInterruptHandler(rtc_sleep_ISR);
+[; ;menu_controller.c: 361:   TMR2_SetInterruptHandler(rtc_sleep_ISR);
 [e ( _TMR2_SetInterruptHandler (1 &U _rtc_sleep_ISR ]
-"363
-[; ;menu_controller.c: 363:   TMR2_LoadPeriodRegister(999);
+"362
+[; ;menu_controller.c: 362:   TMR2_LoadPeriodRegister(999);
 [e ( _TMR2_LoadPeriodRegister (1 -> -> 999 `i `uc ]
-"364
-[; ;menu_controller.c: 364:   TMR2_InterruptDisable();
+"363
+[; ;menu_controller.c: 363:   TMR2_InterruptDisable();
 [e ( _TMR2_InterruptDisable ..  ]
-"365
-[; ;menu_controller.c: 365:   debouncing = 0;
+"364
+[; ;menu_controller.c: 364:   debouncing = 0;
 [e = _debouncing -> -> 0 `i `a ]
-"366
-[; ;menu_controller.c: 366: }
+"365
+[; ;menu_controller.c: 365: }
 [e :UE 851 ]
 }
-"369
-[; ;menu_controller.c: 369: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
+"368
+[; ;menu_controller.c: 368: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
 [v _initialize_menu `(v ~T0 @X0 1 ef2`*S785`*a ]
-"370
-[; ;menu_controller.c: 370: {
+"369
+[; ;menu_controller.c: 369: {
 {
 [e :U _initialize_menu ]
-"369
-[; ;menu_controller.c: 369: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
+"368
+[; ;menu_controller.c: 368: void initialize_menu(menu_controller *menu, _Bool sensors_opened[])
 [v _menu `*S785 ~T0 @X0 1 r1 ]
 [v _sensors_opened `*a ~T0 @X0 1 r2 ]
-"370
-[; ;menu_controller.c: 370: {
+"369
+[; ;menu_controller.c: 369: {
 [f ]
-"371
-[; ;menu_controller.c: 371:   menu->index_add = index_add;
+"370
+[; ;menu_controller.c: 370:   menu->index_add = index_add;
 [e = . *U _menu 2 &U _index_add ]
-"372
-[; ;menu_controller.c: 372:   menu->index_sub = index_sub;
+"371
+[; ;menu_controller.c: 371:   menu->index_sub = index_sub;
 [e = . *U _menu 3 &U _index_sub ]
-"373
-[; ;menu_controller.c: 373:   menu->index_enter = index_enter;
+"372
+[; ;menu_controller.c: 372:   menu->index_enter = index_enter;
 [e = . *U _menu 4 &U _index_enter ]
-"374
-[; ;menu_controller.c: 374:   menu->show_menu = show_menu;
+"373
+[; ;menu_controller.c: 373:   menu->show_menu = show_menu;
 [e = . *U _menu 5 &U _show_menu ]
-"375
-[; ;menu_controller.c: 375:   menu->show_main_menu = show_main_menu;
+"374
+[; ;menu_controller.c: 374:   menu->show_main_menu = show_main_menu;
 [e = . *U _menu 6 &U _show_main_menu ]
-"376
-[; ;menu_controller.c: 376:   menu->show_sensors_menu = show_sensors_menu;
+"375
+[; ;menu_controller.c: 375:   menu->show_sensors_menu = show_sensors_menu;
 [e = . *U _menu 8 &U _show_sensors_menu ]
-"377
-[; ;menu_controller.c: 377:   menu->off = off;
+"376
+[; ;menu_controller.c: 376:   menu->off = off;
 [e = . *U _menu 9 &U _off ]
-"378
-[; ;menu_controller.c: 378:   temp_sensor_opened = sensors_opened[0];
+"377
+[; ;menu_controller.c: 377:   temp_sensor_opened = sensors_opened[0];
 [e = _temp_sensor_opened *U + _sensors_opened * -> -> 0 `i `x -> -> # *U _sensors_opened `i `x ]
-"379
-[; ;menu_controller.c: 379:   light_sensor_opened = sensors_opened[1];
+"378
+[; ;menu_controller.c: 378:   light_sensor_opened = sensors_opened[1];
 [e = _light_sensor_opened *U + _sensors_opened * -> -> 1 `i `x -> -> # *U _sensors_opened `i `x ]
-"380
-[; ;menu_controller.c: 380: }
+"379
+[; ;menu_controller.c: 379: }
 [e :UE 852 ]
 }
-[p f _printf 8388608 ]
-[a 24C 65 65 65 65 65 65 65 65 65 65 65 0 ]
 [a 2C 60 32 84 101 109 112 111 114 105 122 97 100 111 114 32 62 0 ]
 [a 11C 60 32 32 76 117 109 105 110 111 115 105 100 97 100 32 62 0 ]
 [a 8C 60 32 32 84 101 109 112 101 114 97 116 117 114 97 32 62 0 ]

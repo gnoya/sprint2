@@ -10452,7 +10452,6 @@ static void off(void)
 
 static void debouncing_ISR(void)
 {
-  printf("AAAAAAAAAAA");
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
   TMR2_LoadPeriodRegister(999);
   TMR2_InterruptDisable();
