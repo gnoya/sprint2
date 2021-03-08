@@ -259,6 +259,24 @@ static void reset_menu(void);
 
 /**
   @Summary
+    Solves the decouncing of the buttons
+
+  @Description
+    Solves the decouncing of the buttons
+
+  @Preconditions
+    None
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+static void debouncing_ISR(void);
+
+/**
+  @Summary
     Initializes the menu controller
 
   @Description

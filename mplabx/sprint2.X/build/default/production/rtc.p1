@@ -5,12 +5,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "44
 [; ;./mcc_generated_files/drivers/i2c_simple_master.h: 44: void i2c_readNBytes(i2c_address_t address, void *data, size_t len);
 [v _i2c_readNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
+"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "381 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 381: void TMR2_InterruptEnable(void);
 [v _TMR2_InterruptEnable `(v ~T0 @X0 0 ef ]
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"382 ./mcc_generated_files/tmr2.h
+"382
 [; ;./mcc_generated_files/tmr2.h: 382: void TMR2_InterruptDisable(void);
 [v _TMR2_InterruptDisable `(v ~T0 @X0 0 ef ]
 "15 rtc.c
@@ -32,8 +32,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc.c: 14: static uint8_t time[8];
 [v _time `uc ~T0 @X0 -> 8 `i s ]
 "16
-[; ;rtc.c: 16: static int time_to_sleep;
-[v _time_to_sleep `i ~T0 @X0 1 s ]
+[; ;rtc.c: 16: static uint8_t time_to_sleep;
+[v _time_to_sleep `uc ~T0 @X0 1 s ]
 "18
 [; ;rtc.c: 18: void rtc_time(void)
 [v _rtc_time `(v ~T0 @X0 1 ef ]
@@ -70,14 +70,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc.c: 36: {
 [f ]
 "37
-[; ;rtc.c: 37:   time_to_sleep = time;
-[e = _time_to_sleep _time ]
+[; ;rtc.c: 37:   printf("Apagando en %d segundos", time);
+[e ( _printf , (. :s 1C _time ]
 "38
-[; ;rtc.c: 38:   TMR2_InterruptEnable();
-[e ( _TMR2_InterruptEnable ..  ]
+[; ;rtc.c: 38:   time_to_sleep = (uint8_t)time;
+[e = _time_to_sleep -> _time `uc ]
 "39
-[; ;rtc.c: 39:   printf("Apagando en %d segundos", time_to_sleep);
-[e ( _printf , (. :s 1C _time_to_sleep ]
+[; ;rtc.c: 39:   TMR2_InterruptEnable();
+[e ( _TMR2_InterruptEnable ..  ]
 "40
 [; ;rtc.c: 40: }
 [e :UE 4 ]
@@ -151,7 +151,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =+ _time_sleep -> -> 1 `i `uc ]
 "62
 [; ;rtc.c: 62:   if (time_sleep >= time_to_sleep)
-[e $ ! >= -> _time_sleep `i _time_to_sleep 10  ]
+[e $ ! >= -> _time_sleep `i -> _time_to_sleep `i 10  ]
 "63
 [; ;rtc.c: 63:   {
 {
@@ -166,7 +166,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _time_sleep -> -> 0 `i `uc ]
 "67
 [; ;rtc.c: 67:     time_to_sleep = 0;
-[e = _time_to_sleep -> 0 `i ]
+[e = _time_to_sleep -> -> 0 `i `uc ]
 "68
 [; ;rtc.c: 68:     is_pic_on = 0;
 [e = _is_pic_on -> -> 0 `i `a ]

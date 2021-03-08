@@ -387,7 +387,7 @@ static uint8_t time_sleep = 0;
 static _Bool timer_on = 0;
 static uint8_t time[8];
 extern _Bool is_pic_on;
-static int time_to_sleep;
+static uint8_t time_to_sleep;
 
 void rtc_time(void)
 {
@@ -408,9 +408,9 @@ void rtc_time(void)
 
 void rtc_sleep(int time)
 {
-  time_to_sleep = time;
+  printf("Apagando en %d segundos", time);
+  time_to_sleep = (uint8_t)time;
   TMR2_InterruptEnable();
-  printf("Apagando en %d segundos", time_to_sleep);
 }
 
 void rtc_wakeup(int hour, int minute)

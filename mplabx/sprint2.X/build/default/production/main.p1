@@ -1,16 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F6312 `(a ~T0 @X0 0 tf ]
-[v F6314 `(i ~T0 @X0 0 tf ]
+[v F6313 `(a ~T0 @X0 0 tf ]
+[v F6315 `(i ~T0 @X0 0 tf ]
 "16 ./sensor_adapter.h
 [; ;./sensor_adapter.h: 16: {
-[s S787 `*uc 1 `*F6312 1 `*F6314 1 ]
+[s S787 `*uc 1 `*F6313 1 `*F6315 1 ]
 [n S787 sensor name open read ]
-[v F6322 `(v ~T0 @X0 0 tf1`i ]
-[v F6325 `(v ~T0 @X0 0 tf1`i ]
-[v F6328 `(v ~T0 @X0 0 tf ]
+[v F6323 `(v ~T0 @X0 0 tf1`i ]
+[v F6326 `(v ~T0 @X0 0 tf1`i ]
+[v F6329 `(v ~T0 @X0 0 tf ]
 "37 ./led_adapter.h
 [; ;./led_adapter.h: 37: {
-[s S788 `*F6322 1 `*F6325 1 `*F6328 1 ]
+[s S788 `*F6323 1 `*F6326 1 `*F6329 1 ]
 [n S788 led_adapter set_brightness set_color turn_off ]
 [v F6276 `(v ~T0 @X0 0 tf ]
 [v F6278 `(v ~T0 @X0 0 tf ]
@@ -40,8 +40,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "205 ./led_adapter.h
 [; ;./led_adapter.h: 205: void initialize_led(led_adapter *led);
 [v _initialize_led `(v ~T0 @X0 0 ef1`*S788 ]
-"276 ./menu_controller.h
-[; ;./menu_controller.h: 276: void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
+"294 ./menu_controller.h
+[; ;./menu_controller.h: 294: void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 [v _initialize_menu `(v ~T0 @X0 0 ef2`*S786`*a ]
 "357 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 357:     struct {
@@ -1076,15 +1076,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "77
 [; ;main.c: 77:   LCD_Initialize();
 [e ( _LCD_Initialize ..  ]
-[v F6387 `*uc ~T0 @X0 -> 3 `i s ]
-[i F6387
+[v F6388 `*uc ~T0 @X0 -> 3 `i s ]
+[i F6388
 :U ..
 ..
 ]
 "79
 [; ;main.c: 79:   char *sensor_names[3] = {};
 [v _sensor_names `*uc ~T0 @X0 -> 3 `i a ]
-[e = _sensor_names F6387 ]
+[e = _sensor_names F6388 ]
 "80
 [; ;main.c: 80:   char **names_pointer = sensor_names;
 [v _names_pointer `**uc ~T0 @X0 1 a ]
@@ -1107,8 +1107,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 89:   _Bool light_sensor_opened = light_sensor.open();
 [v _light_sensor_opened `a ~T0 @X0 1 a ]
 [e = _light_sensor_opened ( *U . _light_sensor 1 ..  ]
-[v F6395 `a ~T0 @X0 -> 2 `i s ]
-[i F6395
+[v F6396 `a ~T0 @X0 -> 2 `i s ]
+[i F6396
 :U ..
 "91
 [; ;main.c: 91:   _Bool sensors_opened[2] = {temp_sensor_opened, light_sensor_opened};
@@ -1117,7 +1117,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _sensors_opened `a ~T0 @X0 -> 2 `i a ]
-[e = _sensors_opened F6395 ]
+[e = _sensors_opened F6396 ]
 [e ; = *U + &U _sensors_opened * -> -> -> 0 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _temp_sensor_opened = *U + &U _sensors_opened * -> -> -> 1 `i `ui `ux -> -> # *U &U _sensors_opened `ui `ux _light_sensor_opened ]
 "94
 [; ;main.c: 94:   initialize_led(&led);

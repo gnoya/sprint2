@@ -10093,6 +10093,8 @@ static void off(void);
 # 258 "./menu_controller.h"
 static void reset_menu(void);
 # 276 "./menu_controller.h"
+static void debouncing_ISR(void);
+# 294 "./menu_controller.h"
 void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 11 "menu_controller.c" 2
 
@@ -10134,14 +10136,22 @@ void rtc_sleep_ISR(void);
 # 26 "menu_controller.c"
 static _Bool temp_sensor_opened = 0;
 static _Bool light_sensor_opened = 0;
+static _Bool debouncing = 0;
 static int menu_current = 0;
 static int menu_index = 0;
-
 extern _Bool is_pic_on;
 
 
 static void index_add(void)
 {
+
+  if (debouncing)
+    return;
+
+  TMR2_InterruptEnable();
+  TMR2_LoadPeriodRegister(5);
+  TMR2_SetInterruptHandler(debouncing_ISR);
+
   menu_index++;
   if (menu_current == 0 && menu_index > 4)
     menu_index = 4;
@@ -10152,6 +10162,14 @@ static void index_add(void)
 
 static void index_sub(void)
 {
+
+  if (debouncing)
+    return;
+
+  TMR2_InterruptEnable();
+  TMR2_LoadPeriodRegister(5);
+  TMR2_SetInterruptHandler(debouncing_ISR);
+
 
 
 
@@ -10197,6 +10215,14 @@ static void reset_menu(void)
 static void index_enter(void)
 {
 
+  if (debouncing)
+    return;
+
+  TMR2_InterruptEnable();
+  TMR2_LoadPeriodRegister(5);
+  TMR2_SetInterruptHandler(debouncing_ISR);
+
+
   if (!is_pic_on)
   {
     is_pic_on = 1;
@@ -10221,28 +10247,10 @@ static void index_enter(void)
 
   if (menu_current == 2 && menu_index != 4)
   {
-    int seconds = 5;
-    switch (menu_index)
-    {
-    case 0:
-      seconds = 5;
-      break;
-    case 1:
-      seconds = 10;
-      break;
-    case 2:
-      seconds = 15;
-      break;
-    case 3:
-      seconds = 20;
-      break;
-    default:
-      seconds = 5;
-      break;
-    }
+# 157 "menu_controller.c"
+    rtc_sleep(5);
 
-    rtc_sleep(seconds);
-    reset_menu();
+
     return;
   }
 
@@ -10440,6 +10448,15 @@ static void off(void)
 {
 
   LCDClear();
+}
+
+static void debouncing_ISR(void)
+{
+  printf("AAAAAAAAAAA");
+  TMR2_SetInterruptHandler(rtc_sleep_ISR);
+  TMR2_LoadPeriodRegister(999);
+  TMR2_InterruptDisable();
+  debouncing = 0;
 }
 
 

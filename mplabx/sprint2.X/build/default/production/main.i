@@ -10147,6 +10147,8 @@ static void off(void);
 # 258 "./menu_controller.h"
 static void reset_menu(void);
 # 276 "./menu_controller.h"
+static void debouncing_ISR(void);
+# 294 "./menu_controller.h"
 void initialize_menu(menu_controller *menu, _Bool sensors_opened[]);
 # 53 "main.c" 2
 

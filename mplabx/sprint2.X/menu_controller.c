@@ -25,14 +25,22 @@
 // ----------------------- Static (private) variables ----------------------- //
 static bool temp_sensor_opened = false;
 static bool light_sensor_opened = false;
+static bool debouncing = false;
 static int menu_current = 0;
 static int menu_index = 0;
-
 extern bool is_pic_on;
 
 // ----------------------- Static (private) functions ----------------------- //
 static void index_add(void)
 {
+  // ------------- Setting debouncing ------------- //
+  if (debouncing)
+    return;
+
+  TMR2_InterruptEnable();
+  TMR2_LoadPeriodRegister(5);
+  TMR2_SetInterruptHandler(debouncing_ISR);
+
   menu_index++;
   if (menu_current == MAIN_MENU && menu_index > 4)
     menu_index = MAIN_BACK_INDEX; // Main Menu
@@ -43,6 +51,14 @@ static void index_add(void)
 
 static void index_sub(void)
 {
+  // ------------- Setting debouncing ------------- //
+  if (debouncing)
+    return;
+
+  TMR2_InterruptEnable();
+  TMR2_LoadPeriodRegister(5);
+  TMR2_SetInterruptHandler(debouncing_ISR);
+
   /* If the current menu is sensors' menu
      This is a particular case since the previous
      index is not always the menu_index--
@@ -87,6 +103,14 @@ static void reset_menu(void)
 
 static void index_enter(void)
 {
+  // ------------- Setting debouncing ------------- //
+  if (debouncing)
+    return;
+
+  TMR2_InterruptEnable();
+  TMR2_LoadPeriodRegister(5);
+  TMR2_SetInterruptHandler(debouncing_ISR);
+
   // Turning on pic if it was off
   if (!is_pic_on)
   {
@@ -112,28 +136,27 @@ static void index_enter(void)
   // Enter on any turn off timer item
   if (menu_current == TURN_OFF_TIMER_MENU && menu_index != TURN_OFF_TIMER_BACK_INDEX)
   {
-    int seconds = 5;
-    switch (menu_index)
-    {
-    case 0:
-      seconds = 5;
-      break;
-    case 1:
-      seconds = 10;
-      break;
-    case 2:
-      seconds = 15;
-      break;
-    case 3:
-      seconds = 20;
-      break;
-    default:
-      seconds = 5;
-      break;
-    }
-
-    rtc_sleep(seconds);
-    reset_menu();
+    // switch (menu_index)
+    // {
+    // case 0:
+    //   rtc_sleep(5);
+    //   break;
+    // case 1:
+    //   rtc_sleep(10);
+    //   break;
+    // case 2:
+    //   rtc_sleep(15);
+    //   break;
+    // case 3:
+    //   rtc_sleep(20);
+    //   break;
+    // default:
+    //   rtc_sleep(5);
+    //   break;
+    // }
+    rtc_sleep(5);
+    // __delay_ms(500);
+    // reset_menu();
     return;
   }
 
@@ -331,6 +354,14 @@ static void off(void)
 {
   // Clear the screen
   LCDClear();
+}
+
+static void debouncing_ISR(void)
+{
+  TMR2_SetInterruptHandler(rtc_sleep_ISR);
+  TMR2_LoadPeriodRegister(999);
+  TMR2_InterruptDisable();
+  debouncing = false;
 }
 
 // ----------------------- Public functions ----------------------- //
