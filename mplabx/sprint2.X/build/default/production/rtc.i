@@ -13,13 +13,6 @@
 
 
 
-# 1 "./rtc.h" 1
-# 63 "./rtc.h"
-void rtc_sleep(int time);
-# 117 "./rtc.h"
-void rtc_sleep_ISR(void);
-# 7 "rtc.c" 2
-
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
@@ -10056,7 +10049,15 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 102 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
+# 7 "rtc.c" 2
+
+# 1 "./rtc.h" 1
+# 63 "./rtc.h"
+void rtc_sleep(int time);
+# 117 "./rtc.h"
+void rtc_sleep_ISR(void);
 # 8 "rtc.c" 2
+
 
 
 
@@ -10067,15 +10068,15 @@ static _Bool timer_on = 0;
 static uint8_t time[8];
 extern _Bool is_pic_on;
 static uint8_t time_to_sleep;
-# 28 "rtc.c"
+# 29 "rtc.c"
 void rtc_sleep(int time)
 {
-  printf("Apagando en %d segundos", time);
+
   time_to_sleep = (uint8_t)time;
   _delay((unsigned long)((750)*(1000000/4000.0)));
   TMR2_InterruptEnable();
 }
-# 54 "rtc.c"
+# 55 "rtc.c"
 void rtc_sleep_ISR(void)
 {
 

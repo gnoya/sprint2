@@ -1,18 +1,18 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-[v F5524 `(v ~T0 @X0 1 tf1`ul ]
+[v F5521 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
-[v __delay `JF5524 ~T0 @X0 0 e ]
+[v __delay `JF5521 ~T0 @X0 0 e ]
 [p i __delay ]
 "381 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 381: void TMR2_InterruptEnable(void);
 [v _TMR2_InterruptEnable `(v ~T0 @X0 0 ef ]
-"382
+"111 C:\Program Files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"382 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 382: void TMR2_InterruptDisable(void);
 [v _TMR2_InterruptDisable `(v ~T0 @X0 0 ef ]
-"16 rtc.c
-[; ;rtc.c: 16: extern _Bool is_pic_on;
+"17 rtc.c
+[; ;rtc.c: 17: extern _Bool is_pic_on;
 [v _is_pic_on `a ~T0 @X0 0 e ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
@@ -941,93 +941,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16123
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 16123: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"13 rtc.c
-[; ;rtc.c: 13: static uint8_t time_sleep = 0;
+"14 rtc.c
+[; ;rtc.c: 14: static uint8_t time_sleep = 0;
 [v _time_sleep `uc ~T0 @X0 1 s ]
 [i _time_sleep
 -> -> 0 `i `uc
 ]
-"14
-[; ;rtc.c: 14: static _Bool timer_on = 0;
+"15
+[; ;rtc.c: 15: static _Bool timer_on = 0;
 [v _timer_on `a ~T0 @X0 1 s ]
 [i _timer_on
 -> -> 0 `i `a
 ]
-"15
-[; ;rtc.c: 15: static uint8_t time[8];
+"16
+[; ;rtc.c: 16: static uint8_t time[8];
 [v _time `uc ~T0 @X0 -> 8 `i s ]
-"17
-[; ;rtc.c: 17: static uint8_t time_to_sleep;
+"18
+[; ;rtc.c: 18: static uint8_t time_to_sleep;
 [v _time_to_sleep `uc ~T0 @X0 1 s ]
-"28
-[; ;rtc.c: 28: void rtc_sleep(int time)
-[v _rtc_sleep `(v ~T0 @X0 1 ef1`i ]
 "29
-[; ;rtc.c: 29: {
+[; ;rtc.c: 29: void rtc_sleep(int time)
+[v _rtc_sleep `(v ~T0 @X0 1 ef1`i ]
+"30
+[; ;rtc.c: 30: {
 {
 [e :U _rtc_sleep ]
-"28
-[; ;rtc.c: 28: void rtc_sleep(int time)
-[v _time `i ~T0 @X0 1 r1 ]
 "29
-[; ;rtc.c: 29: {
-[f ]
+[; ;rtc.c: 29: void rtc_sleep(int time)
+[v _time `i ~T0 @X0 1 r1 ]
 "30
-[; ;rtc.c: 30:   printf("Apagando en %d segundos", time);
-[e ( _printf , (. :s 1C _time ]
-"31
-[; ;rtc.c: 31:   time_to_sleep = (uint8_t)time;
-[e = _time_to_sleep -> _time `uc ]
+[; ;rtc.c: 30: {
+[f ]
 "32
-[; ;rtc.c: 32:   _delay((unsigned long)((750)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 750 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
+[; ;rtc.c: 32:   time_to_sleep = (uint8_t)time;
+[e = _time_to_sleep -> _time `uc ]
 "33
-[; ;rtc.c: 33:   TMR2_InterruptEnable();
-[e ( _TMR2_InterruptEnable ..  ]
+[; ;rtc.c: 33:   _delay((unsigned long)((750)*(1000000/4000.0)));
+[e ( __delay (1 -> * -> -> 750 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
 "34
-[; ;rtc.c: 34: }
+[; ;rtc.c: 34:   TMR2_InterruptEnable();
+[e ( _TMR2_InterruptEnable ..  ]
+"35
+[; ;rtc.c: 35: }
 [e :UE 785 ]
 }
-"54
-[; ;rtc.c: 54: void rtc_sleep_ISR(void)
-[v _rtc_sleep_ISR `(v ~T0 @X0 1 ef ]
 "55
-[; ;rtc.c: 55: {
+[; ;rtc.c: 55: void rtc_sleep_ISR(void)
+[v _rtc_sleep_ISR `(v ~T0 @X0 1 ef ]
+"56
+[; ;rtc.c: 56: {
 {
 [e :U _rtc_sleep_ISR ]
 [f ]
-"57
-[; ;rtc.c: 57:   time_sleep += 1;
+"58
+[; ;rtc.c: 58:   time_sleep += 1;
 [e =+ _time_sleep -> -> 1 `i `uc ]
-"59
-[; ;rtc.c: 59:   if (time_sleep >= time_to_sleep)
-[e $ ! >= -> _time_sleep `i -> _time_to_sleep `i 787  ]
 "60
-[; ;rtc.c: 60:   {
-{
+[; ;rtc.c: 60:   if (time_sleep >= time_to_sleep)
+[e $ ! >= -> _time_sleep `i -> _time_to_sleep `i 787  ]
 "61
-[; ;rtc.c: 61:     printf("Apagando... \r\n");
-[e ( _printf :s 2C ]
+[; ;rtc.c: 61:   {
+{
 "62
-[; ;rtc.c: 62:     TMR2_InterruptDisable();
-[e ( _TMR2_InterruptDisable ..  ]
+[; ;rtc.c: 62:     printf("Apagando... \r\n");
+[e ( _printf :s 1C ]
 "63
-[; ;rtc.c: 63:     time_sleep = 0;
-[e = _time_sleep -> -> 0 `i `uc ]
+[; ;rtc.c: 63:     TMR2_InterruptDisable();
+[e ( _TMR2_InterruptDisable ..  ]
 "64
-[; ;rtc.c: 64:     time_to_sleep = 0;
-[e = _time_to_sleep -> -> 0 `i `uc ]
+[; ;rtc.c: 64:     time_sleep = 0;
+[e = _time_sleep -> -> 0 `i `uc ]
 "65
-[; ;rtc.c: 65:     is_pic_on = 0;
-[e = _is_pic_on -> -> 0 `i `a ]
+[; ;rtc.c: 65:     time_to_sleep = 0;
+[e = _time_to_sleep -> -> 0 `i `uc ]
 "66
-[; ;rtc.c: 66:   }
+[; ;rtc.c: 66:     is_pic_on = 0;
+[e = _is_pic_on -> -> 0 `i `a ]
+"67
+[; ;rtc.c: 67:   }
 }
 [e :U 787 ]
-"67
-[; ;rtc.c: 67: }
+"68
+[; ;rtc.c: 68: }
 [e :UE 786 ]
 }
-[p f _printf 8388736 ]
-[a 1C 65 112 97 103 97 110 100 111 32 101 110 32 37 100 32 115 101 103 117 110 100 111 115 0 ]
-[a 2C 65 112 97 103 97 110 100 111 46 46 46 32 13 10 0 ]
+[p f _printf 8388608 ]
+[a 1C 65 112 97 103 97 110 100 111 46 46 46 32 13 10 0 ]

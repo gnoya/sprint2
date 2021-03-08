@@ -10284,6 +10284,7 @@ void main(void)
   _delay((unsigned long)((200)*(1000000/4000.0)));
 
 
+  printf("Imprimiendo sensores para calibrar: \r\n");
   for (int i = 0; i < 5; i++)
   {
 
