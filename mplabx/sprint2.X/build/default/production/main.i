@@ -9981,30 +9981,27 @@ _Bool TMR4_HasOverflowOccured(void);
 
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
+  void TMR2_Initialize(void);
 # 132 "./mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
+  void TMR2_StartTimer(void);
 # 164 "./mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
+  void TMR2_StopTimer(void);
 # 199 "./mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
+  uint8_t TMR2_ReadTimer(void);
 # 238 "./mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
+  void TMR2_WriteTimer(uint8_t timerVal);
 # 290 "./mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
+  void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 308 "./mcc_generated_files/tmr2.h"
-void TMR2_ISR(void);
+  void TMR2_ISR(void);
 # 326 "./mcc_generated_files/tmr2.h"
- void TMR2_CallBack(void);
+  void TMR2_CallBack(void);
 # 343 "./mcc_generated_files/tmr2.h"
- void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+  void TMR2_SetInterruptHandler(void (*InterruptHandler)(void));
 # 361 "./mcc_generated_files/tmr2.h"
-extern void (*TMR2_InterruptHandler)(void);
+  extern void (*TMR2_InterruptHandler)(void);
 # 379 "./mcc_generated_files/tmr2.h"
-void TMR2_DefaultInterruptHandler(void);
-
-void TMR2_InterruptEnable(void);
-void TMR2_InterruptDisable(void);
+  void TMR2_DefaultInterruptHandler(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm3.h" 1
@@ -10225,7 +10222,7 @@ void eeprom_write (_Bool temp_sensor_enabled, _Bool light_sensor_enabled);
 
 # 1 "./rtc.h" 1
 # 63 "./rtc.h"
-void rtc_sleep(int time);
+void rtc_sleep(uint8_t time);
 # 117 "./rtc.h"
 void rtc_sleep_ISR(void);
 # 60 "main.c" 2
@@ -10277,11 +10274,13 @@ void main(void)
 
 
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
-  TMR2_InterruptDisable();
 
 
   LCDPutStr("Bienvenido!");
   _delay((unsigned long)((200)*(1000000/4000.0)));
+
+
+  eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
 
 
   printf("Imprimiendo sensores para calibrar: \r\n");
@@ -10297,9 +10296,6 @@ void main(void)
 
     printf("Sensor de luz crudo: %d\r\n", light_value);
   }
-
-
-  eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
 
 
   while (1)

@@ -9625,30 +9625,27 @@ typedef uint32_t uint_fast32_t;
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
 # 55 "mcc_generated_files/tmr2.h" 2
 # 103 "mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
+  void TMR2_Initialize(void);
 # 132 "mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
+  void TMR2_StartTimer(void);
 # 164 "mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
+  void TMR2_StopTimer(void);
 # 199 "mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
+  uint8_t TMR2_ReadTimer(void);
 # 238 "mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
+  void TMR2_WriteTimer(uint8_t timerVal);
 # 290 "mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
+  void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 308 "mcc_generated_files/tmr2.h"
-void TMR2_ISR(void);
+  void TMR2_ISR(void);
 # 326 "mcc_generated_files/tmr2.h"
- void TMR2_CallBack(void);
+  void TMR2_CallBack(void);
 # 343 "mcc_generated_files/tmr2.h"
- void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+  void TMR2_SetInterruptHandler(void (*InterruptHandler)(void));
 # 361 "mcc_generated_files/tmr2.h"
-extern void (*TMR2_InterruptHandler)(void);
+  extern void (*TMR2_InterruptHandler)(void);
 # 379 "mcc_generated_files/tmr2.h"
-void TMR2_DefaultInterruptHandler(void);
-
-void TMR2_InterruptEnable(void);
-void TMR2_InterruptDisable(void);
+  void TMR2_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/tmr2.c" 2
 
 
@@ -9684,7 +9681,7 @@ void TMR2_Initialize(void)
 
   T2CON = 0x7F;
 }
-# 116 "mcc_generated_files/tmr2.c"
+# 114 "mcc_generated_files/tmr2.c"
 void TMR2_LoadPeriodRegister(uint8_t periodVal)
 {
   PR2 = periodVal;
@@ -9720,22 +9717,4 @@ void TMR2_DefaultInterruptHandler(void)
 {
 
 
-}
-
-void TMR2_InterruptEnable(void)
-{
-
-  PIR1bits.TMR2IF = 0;
-
-
-  PIE1bits.TMR2IE = 1;
-}
-
-void TMR2_InterruptDisable(void)
-{
-
-  PIR1bits.TMR2IF = 0;
-
-
-  PIE1bits.TMR2IE = 0;
 }

@@ -54,22 +54,22 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#ifdef __cplusplus  // Provide C++ Compatibility
+#ifdef __cplusplus // Provide C++ Compatibility
 
-    extern "C" {
+extern "C"
+{
 
 #endif
 
-
-/**
+  /**
   Section: Macro Declarations
 */
 
-/**
+  /**
   Section: TMR2 APIs
 */
 
-/**
+  /**
   @Summary
     Initializes the TMR2 module.
 
@@ -100,9 +100,9 @@
     }
     </code>
 */
-void TMR2_Initialize(void);
+  void TMR2_Initialize(void);
 
-/**
+  /**
   @Summary
     This function starts the TMR2.
 
@@ -129,9 +129,9 @@ void TMR2_Initialize(void);
     // Do something else...
     </code>
 */
-void TMR2_StartTimer(void);
+  void TMR2_StartTimer(void);
 
-/**
+  /**
   @Summary
     This function stops the TMR2.
 
@@ -161,9 +161,9 @@ void TMR2_StartTimer(void);
     TMR2_StopTimer();
     </code>
 */
-void TMR2_StopTimer(void);
+  void TMR2_StopTimer(void);
 
-/**
+  /**
   @Summary
     Reads the TMR2 register.
 
@@ -196,9 +196,9 @@ void TMR2_StopTimer(void);
     }
     </code>
 */
-uint8_t TMR2_ReadTimer(void);
+  uint8_t TMR2_ReadTimer(void);
 
-/**
+  /**
   @Summary
     Writes the TMR2 register.
 
@@ -235,9 +235,9 @@ uint8_t TMR2_ReadTimer(void);
     }
     </code>
 */
-void TMR2_WriteTimer(uint8_t timerVal);
+  void TMR2_WriteTimer(uint8_t timerVal);
 
-/**
+  /**
   @Summary
     Load value to Period Register.
 
@@ -287,9 +287,9 @@ void TMR2_WriteTimer(uint8_t timerVal);
     }
     </code>
 */
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
+  void TMR2_LoadPeriodRegister(uint8_t periodVal);
 
-/**
+  /**
   @Summary
     Timer Interrupt Service Routine
 
@@ -305,9 +305,9 @@ void TMR2_LoadPeriodRegister(uint8_t periodVal);
   @Returns
     None
 */
-void TMR2_ISR(void);
+  void TMR2_ISR(void);
 
-/**
+  /**
   @Summary
     CallBack function
 
@@ -323,8 +323,8 @@ void TMR2_ISR(void);
   @Returns
     None
 */
- void TMR2_CallBack(void);
-/**
+  void TMR2_CallBack(void);
+  /**
   @Summary
     Set Timer Interrupt Handler
 
@@ -340,9 +340,9 @@ void TMR2_ISR(void);
   @Returns
     None
 */
- void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+  void TMR2_SetInterruptHandler(void (*InterruptHandler)(void));
 
-/**
+  /**
   @Summary
     Timer Interrupt Handler
 
@@ -358,9 +358,9 @@ void TMR2_ISR(void);
   @Returns
     None
 */
-extern void (*TMR2_InterruptHandler)(void);
+  extern void (*TMR2_InterruptHandler)(void);
 
-/**
+  /**
   @Summary
     Default Timer Interrupt Handler
 
@@ -376,15 +376,10 @@ extern void (*TMR2_InterruptHandler)(void);
   @Returns
     None
 */
-void TMR2_DefaultInterruptHandler(void);
+  void TMR2_DefaultInterruptHandler(void);
 
-void TMR2_InterruptEnable(void);
-void TMR2_InterruptDisable(void);
-
-
- #ifdef __cplusplus  // Provide C++ Compatibility
-
-    }
+#ifdef __cplusplus // Provide C++ Compatibility
+}
 
 #endif
 
@@ -392,4 +387,3 @@ void TMR2_InterruptDisable(void);
 /**
  End of File
 */
-

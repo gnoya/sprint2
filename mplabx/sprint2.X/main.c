@@ -105,11 +105,13 @@ void main(void)
 
   //--------------Setting Timer Interrupt Handlers ---------------//
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
-  TMR2_InterruptDisable();
 
   // ----------- Writing a welcome message in the LCD ----------- //
   LCDPutStr("Bienvenido!");
   __delay_ms(200);
+
+  // -------------- Reading status from EEPROM ----------------- //
+  eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
 
   // ----------------- Printing to calibrate ------------------- //
   printf("Imprimiendo sensores para calibrar: \r\n");
@@ -125,9 +127,6 @@ void main(void)
     // We print the raw value because the sensor is not linear
     printf("Sensor de luz crudo: %d\r\n", light_value);
   }
-
-  // -------------- Reading status from EEPROM ----------------- //
-  eeprom_read(&temp_sensor_enabled, &light_sensor_enabled);
 
   // ------------------------ Main loop ----------------------- //
   while (1)

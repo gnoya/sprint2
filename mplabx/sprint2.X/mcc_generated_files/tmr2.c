@@ -83,7 +83,6 @@ void TMR2_Initialize(void)
   // T2CKPS 1:64; T2OUTPS 1:16; TMR2ON on;
   T2CON = 0x7F;
 }
-
 /*
 void TMR2_StartTimer(void)
 {
@@ -112,7 +111,6 @@ void TMR2_WriteTimer(uint8_t timerVal)
   TMR2 = timerVal;
 }
 */
-
 void TMR2_LoadPeriodRegister(uint8_t periodVal)
 {
   PR2 = periodVal;
@@ -148,24 +146,6 @@ void TMR2_DefaultInterruptHandler(void)
 {
   // add your TMR2 interrupt custom code
   // or set custom function using TMR2_SetInterruptHandler()
-}
-
-void TMR2_InterruptEnable(void)
-{
-  // Clearing IF flag before enabling the interrupt.
-  PIR1bits.TMR2IF = 0;
-
-  // Enabling TMR2 interrupt.
-  PIE1bits.TMR2IE = 1;
-}
-
-void TMR2_InterruptDisable(void)
-{
-  // Clearing IF flag before enabling the interrupt.
-  PIR1bits.TMR2IF = 0;
-
-  // Enabling TMR2 interrupt.
-  PIE1bits.TMR2IE = 0;
 }
 
 /**

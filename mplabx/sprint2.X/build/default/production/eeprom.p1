@@ -953,8 +953,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16
 [; ;eeprom.c: 16:   uint8_t receiveData[2];
 [v _receiveData `uc ~T0 @X0 -> 2 `i a ]
-[v F6115 `uc ~T0 @X0 -> 2 `i s ]
-[i F6115
+[v F6113 `uc ~T0 @X0 -> 2 `i s ]
+[i F6113
 :U ..
 "17
 [; ;eeprom.c: 17:   uint8_t address[2] = {0x00,0x00};
@@ -963,7 +963,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _address `uc ~T0 @X0 -> 2 `i a ]
-[e = _address F6115 ]
+[e = _address F6113 ]
 "18
 [; ;eeprom.c: 18:   i2c_writeNBytes(0x50,address,2);
 [e ( _i2c_writeNBytes (3 , , -> -> 80 `i `uc -> &U _address `*v -> -> 2 `i `ui ]
@@ -1032,8 +1032,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38
 [; ;eeprom.c: 38: {
 [f ]
-[v F6120 `uc ~T0 @X0 -> 4 `i s ]
-[i F6120
+[v F6118 `uc ~T0 @X0 -> 4 `i s ]
+[i F6118
 :U ..
 "40
 [; ;eeprom.c: 40:     uint8_t sendData[4] = {0x00,0x00,0x00,0x00};
@@ -1044,7 +1044,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _sendData `uc ~T0 @X0 -> 4 `i a ]
-[e = _sendData F6120 ]
+[e = _sendData F6118 ]
 "42
 [; ;eeprom.c: 42:     if (temp_sensor_enabled){
 [e $ ! != -> _temp_sensor_enabled `i -> 0 `i 791  ]

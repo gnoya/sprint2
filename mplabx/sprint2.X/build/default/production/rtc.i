@@ -9928,30 +9928,27 @@ _Bool TMR4_HasOverflowOccured(void);
 
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
+  void TMR2_Initialize(void);
 # 132 "./mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
+  void TMR2_StartTimer(void);
 # 164 "./mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
+  void TMR2_StopTimer(void);
 # 199 "./mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
+  uint8_t TMR2_ReadTimer(void);
 # 238 "./mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
+  void TMR2_WriteTimer(uint8_t timerVal);
 # 290 "./mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
+  void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 308 "./mcc_generated_files/tmr2.h"
-void TMR2_ISR(void);
+  void TMR2_ISR(void);
 # 326 "./mcc_generated_files/tmr2.h"
- void TMR2_CallBack(void);
+  void TMR2_CallBack(void);
 # 343 "./mcc_generated_files/tmr2.h"
- void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+  void TMR2_SetInterruptHandler(void (*InterruptHandler)(void));
 # 361 "./mcc_generated_files/tmr2.h"
-extern void (*TMR2_InterruptHandler)(void);
+  extern void (*TMR2_InterruptHandler)(void);
 # 379 "./mcc_generated_files/tmr2.h"
-void TMR2_DefaultInterruptHandler(void);
-
-void TMR2_InterruptEnable(void);
-void TMR2_InterruptDisable(void);
+  void TMR2_DefaultInterruptHandler(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm3.h" 1
@@ -10053,7 +10050,7 @@ void WDT_Initialize(void);
 
 # 1 "./rtc.h" 1
 # 63 "./rtc.h"
-void rtc_sleep(int time);
+void rtc_sleep(uint8_t time);
 # 117 "./rtc.h"
 void rtc_sleep_ISR(void);
 # 8 "rtc.c" 2
@@ -10062,32 +10059,34 @@ void rtc_sleep_ISR(void);
 
 
 
+uint8_t time_sleep = 0;
 
-static uint8_t time_sleep = 0;
-static _Bool timer_on = 0;
-static uint8_t time[8];
 extern _Bool is_pic_on;
-static uint8_t time_to_sleep;
-# 29 "rtc.c"
-void rtc_sleep(int time)
+uint8_t time_to_sleep;
+static _Bool couting = 0;
+# 26 "rtc.c"
+void rtc_sleep(uint8_t time)
 {
-
-  time_to_sleep = (uint8_t)time;
-  _delay((unsigned long)((750)*(1000000/4000.0)));
-  TMR2_InterruptEnable();
+  printf("Apagando en %d segundos", time);
+  time_to_sleep = time;
+  couting = 1;
 }
-# 55 "rtc.c"
+# 51 "rtc.c"
 void rtc_sleep_ISR(void)
 {
+  if (!couting)
+    return;
+
 
   time_sleep += 1;
+  printf("Apagando en %d segundos... \r\n", time_to_sleep - time_sleep);
 
   if (time_sleep >= time_to_sleep)
   {
     printf("Apagando... \r\n");
-    TMR2_InterruptDisable();
     time_sleep = 0;
     time_to_sleep = 0;
+    couting = 0;
     is_pic_on = 0;
   }
 }

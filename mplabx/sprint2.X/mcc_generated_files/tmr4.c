@@ -61,65 +61,20 @@
 
 void TMR4_Initialize(void)
 {
-    // Set TMR4 to the options selected in the User Interface
+  // Set TMR4 to the options selected in the User Interface
 
-    // PR4 64; 
-    PR4 = 0x40;
+  // PR4 64;
+  PR4 = 0x40;
 
-    // TMR4 0; 
-    TMR4 = 0x00;
+  // TMR4 0;
+  TMR4 = 0x00;
 
-    // Clearing IF flag.
-    PIR2bits.TMR4IF = 0;
+  // Clearing IF flag.
+  PIR2bits.TMR4IF = 0;
 
-    // T4CKPS 1:64; T4OUTPS 1:1; TMR4ON on; 
-    T4CON = 0x07;
+  // T4CKPS 1:64; T4OUTPS 1:1; TMR4ON on;
+  T4CON = 0x07;
 }
-/*
-void TMR4_StartTimer(void)
-{
-    // Start the Timer by writing to TMRxON bit
-    T4CONbits.TMR4ON = 1;
-}
-
-void TMR4_StopTimer(void)
-{
-    // Stop the Timer by writing to TMRxON bit
-    T4CONbits.TMR4ON = 0;
-}
-
-uint8_t TMR4_ReadTimer(void)
-{
-    uint8_t readVal;
-
-    readVal = TMR4;
-
-    return readVal;
-}
-
-void TMR4_WriteTimer(uint8_t timerVal)
-{
-    // Write to the Timer4 register
-    TMR4 = timerVal;
-}
-
-void TMR4_LoadPeriodRegister(uint8_t periodVal)
-{
-   PR4 = periodVal;
-}
-
-bool TMR4_HasOverflowOccured(void)
-{
-    // check if  overflow has occurred by checking the TMRIF bit
-    bool status = PIR2bits.TMR4IF;
-    if(status)
-    {
-        // Clearing IF flag.
-        PIR2bits.TMR4IF = 0;
-    }
-    return status;
-}
-*/
 
 /**
   End of File

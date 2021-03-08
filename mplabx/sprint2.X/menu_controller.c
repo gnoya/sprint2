@@ -37,7 +37,6 @@ static void index_add(void)
   if (debouncing)
     return;
 
-  TMR2_InterruptEnable();
   TMR2_LoadPeriodRegister(5);
   TMR2_SetInterruptHandler(debouncing_ISR);
 
@@ -55,7 +54,6 @@ static void index_sub(void)
   if (debouncing)
     return;
 
-  TMR2_InterruptEnable();
   TMR2_LoadPeriodRegister(5);
   TMR2_SetInterruptHandler(debouncing_ISR);
 
@@ -107,7 +105,6 @@ static void index_enter(void)
   if (debouncing)
     return;
 
-  TMR2_InterruptEnable();
   TMR2_LoadPeriodRegister(5);
   TMR2_SetInterruptHandler(debouncing_ISR);
 
@@ -155,7 +152,6 @@ static void index_enter(void)
       break;
     }
 
-    __delay_ms(500);
     reset_menu();
     return;
   }
@@ -360,7 +356,6 @@ static void debouncing_ISR(void)
 {
   TMR2_SetInterruptHandler(rtc_sleep_ISR);
   TMR2_LoadPeriodRegister((uint8_t)999);
-  TMR2_InterruptDisable();
   debouncing = false;
 }
 

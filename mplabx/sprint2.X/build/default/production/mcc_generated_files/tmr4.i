@@ -9645,14 +9645,14 @@ void TMR4_Initialize(void)
 
 
 
-    PR4 = 0x40;
+  PR4 = 0x40;
 
 
-    TMR4 = 0x00;
+  TMR4 = 0x00;
 
 
-    PIR2bits.TMR4IF = 0;
+  PIR2bits.TMR4IF = 0;
 
 
-    T4CON = 0x07;
+  T4CON = 0x07;
 }

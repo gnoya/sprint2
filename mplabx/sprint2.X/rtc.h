@@ -60,7 +60,7 @@
   @Returns
     None
 */
-void rtc_sleep(int time);
+void rtc_sleep(uint8_t time);
 
 /**
   @Summary

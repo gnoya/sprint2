@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F5584 `(v ~T0 @X0 0 tf ]
+[v F5582 `(v ~T0 @X0 0 tf ]
 "1119 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 1119: extern volatile unsigned char PR2 __attribute__((address(0x01B)));
 [v _PR2 `Vuc ~T0 @X0 0 e@27 ]
@@ -30,20 +30,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PIE1bits `VS78 ~T0 @X0 0 e@145 ]
 [v F5575 `(v ~T0 @X0 0 tf ]
 "343 mcc_generated_files/tmr2.h
-[; ;mcc_generated_files/tmr2.h: 343:  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;mcc_generated_files/tmr2.h: 343:   void TMR2_SetInterruptHandler(void (*InterruptHandler)(void));
 [v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F5575 ]
 "379
-[; ;mcc_generated_files/tmr2.h: 379: void TMR2_DefaultInterruptHandler(void);
+[; ;mcc_generated_files/tmr2.h: 379:   void TMR2_DefaultInterruptHandler(void);
 [v _TMR2_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
 "1139 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 1139: extern volatile unsigned char T2CON __attribute__((address(0x01C)));
 [v _T2CON `Vuc ~T0 @X0 0 e@28 ]
 "326 mcc_generated_files/tmr2.h
-[; ;mcc_generated_files/tmr2.h: 326:  void TMR2_CallBack(void);
+[; ;mcc_generated_files/tmr2.h: 326:   void TMR2_CallBack(void);
 [v _TMR2_CallBack `(v ~T0 @X0 0 ef ]
+[v F5589 `(v ~T0 @X0 0 tf ]
 [v F5591 `(v ~T0 @X0 0 tf ]
 [v F5593 `(v ~T0 @X0 0 tf ]
-[v F5595 `(v ~T0 @X0 0 tf ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16lf1717.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -973,7 +973,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 0FEFh ;# ">
 "58 mcc_generated_files/tmr2.c
 [; ;mcc_generated_files/tmr2.c: 58: void (*TMR2_InterruptHandler)(void);
-[v _TMR2_InterruptHandler `*F5584 ~T0 @X0 1 e ]
+[v _TMR2_InterruptHandler `*F5582 ~T0 @X0 1 e ]
 "64
 [; ;mcc_generated_files/tmr2.c: 64: void TMR2_Initialize(void)
 [v _TMR2_Initialize `(v ~T0 @X0 1 ef ]
@@ -1004,134 +1004,98 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr2.c: 85: }
 [e :UE 780 ]
 }
-"116
-[; ;mcc_generated_files/tmr2.c: 116: void TMR2_LoadPeriodRegister(uint8_t periodVal)
+"114
+[; ;mcc_generated_files/tmr2.c: 114: void TMR2_LoadPeriodRegister(uint8_t periodVal)
 [v _TMR2_LoadPeriodRegister `(v ~T0 @X0 1 ef1`uc ]
-"117
-[; ;mcc_generated_files/tmr2.c: 117: {
+"115
+[; ;mcc_generated_files/tmr2.c: 115: {
 {
 [e :U _TMR2_LoadPeriodRegister ]
-"116
-[; ;mcc_generated_files/tmr2.c: 116: void TMR2_LoadPeriodRegister(uint8_t periodVal)
+"114
+[; ;mcc_generated_files/tmr2.c: 114: void TMR2_LoadPeriodRegister(uint8_t periodVal)
 [v _periodVal `uc ~T0 @X0 1 r1 ]
-"117
-[; ;mcc_generated_files/tmr2.c: 117: {
+"115
+[; ;mcc_generated_files/tmr2.c: 115: {
 [f ]
-"118
-[; ;mcc_generated_files/tmr2.c: 118:   PR2 = periodVal;
+"116
+[; ;mcc_generated_files/tmr2.c: 116:   PR2 = periodVal;
 [e = _PR2 _periodVal ]
-"119
-[; ;mcc_generated_files/tmr2.c: 119: }
+"117
+[; ;mcc_generated_files/tmr2.c: 117: }
 [e :UE 781 ]
 }
-"121
-[; ;mcc_generated_files/tmr2.c: 121: void TMR2_ISR(void)
+"119
+[; ;mcc_generated_files/tmr2.c: 119: void TMR2_ISR(void)
 [v _TMR2_ISR `(v ~T0 @X0 1 ef ]
-"122
-[; ;mcc_generated_files/tmr2.c: 122: {
+"120
+[; ;mcc_generated_files/tmr2.c: 120: {
 {
 [e :U _TMR2_ISR ]
 [f ]
-"125
-[; ;mcc_generated_files/tmr2.c: 125:   PIR1bits.TMR2IF = 0;
+"123
+[; ;mcc_generated_files/tmr2.c: 123:   PIR1bits.TMR2IF = 0;
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"129
-[; ;mcc_generated_files/tmr2.c: 129:   TMR2_CallBack();
+"127
+[; ;mcc_generated_files/tmr2.c: 127:   TMR2_CallBack();
 [e ( _TMR2_CallBack ..  ]
-"130
-[; ;mcc_generated_files/tmr2.c: 130: }
+"128
+[; ;mcc_generated_files/tmr2.c: 128: }
 [e :UE 782 ]
 }
-"132
-[; ;mcc_generated_files/tmr2.c: 132: void TMR2_CallBack(void)
+"130
+[; ;mcc_generated_files/tmr2.c: 130: void TMR2_CallBack(void)
 [v _TMR2_CallBack `(v ~T0 @X0 1 ef ]
-"133
-[; ;mcc_generated_files/tmr2.c: 133: {
+"131
+[; ;mcc_generated_files/tmr2.c: 131: {
 {
 [e :U _TMR2_CallBack ]
 [f ]
-"136
-[; ;mcc_generated_files/tmr2.c: 136:   if (TMR2_InterruptHandler)
-[e $ ! != _TMR2_InterruptHandler -> -> 0 `i `*F5591 784  ]
-"137
-[; ;mcc_generated_files/tmr2.c: 137:   {
+"134
+[; ;mcc_generated_files/tmr2.c: 134:   if (TMR2_InterruptHandler)
+[e $ ! != _TMR2_InterruptHandler -> -> 0 `i `*F5589 784  ]
+"135
+[; ;mcc_generated_files/tmr2.c: 135:   {
 {
-"138
-[; ;mcc_generated_files/tmr2.c: 138:     TMR2_InterruptHandler();
+"136
+[; ;mcc_generated_files/tmr2.c: 136:     TMR2_InterruptHandler();
 [e ( *U _TMR2_InterruptHandler ..  ]
-"139
-[; ;mcc_generated_files/tmr2.c: 139:   }
+"137
+[; ;mcc_generated_files/tmr2.c: 137:   }
 }
 [e :U 784 ]
-"140
-[; ;mcc_generated_files/tmr2.c: 140: }
+"138
+[; ;mcc_generated_files/tmr2.c: 138: }
 [e :UE 783 ]
 }
-"142
-[; ;mcc_generated_files/tmr2.c: 142: void TMR2_SetInterruptHandler(void (*InterruptHandler)(void))
-[v _TMR2_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F5593 ]
-"143
-[; ;mcc_generated_files/tmr2.c: 143: {
+"140
+[; ;mcc_generated_files/tmr2.c: 140: void TMR2_SetInterruptHandler(void (*InterruptHandler)(void))
+[v _TMR2_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F5591 ]
+"141
+[; ;mcc_generated_files/tmr2.c: 141: {
 {
 [e :U _TMR2_SetInterruptHandler ]
-"142
-[; ;mcc_generated_files/tmr2.c: 142: void TMR2_SetInterruptHandler(void (*InterruptHandler)(void))
-[v _InterruptHandler `*F5595 ~T0 @X0 1 r1 ]
-"143
-[; ;mcc_generated_files/tmr2.c: 143: {
+"140
+[; ;mcc_generated_files/tmr2.c: 140: void TMR2_SetInterruptHandler(void (*InterruptHandler)(void))
+[v _InterruptHandler `*F5593 ~T0 @X0 1 r1 ]
+"141
+[; ;mcc_generated_files/tmr2.c: 141: {
 [f ]
-"144
-[; ;mcc_generated_files/tmr2.c: 144:   TMR2_InterruptHandler = InterruptHandler;
+"142
+[; ;mcc_generated_files/tmr2.c: 142:   TMR2_InterruptHandler = InterruptHandler;
 [e = _TMR2_InterruptHandler _InterruptHandler ]
-"145
-[; ;mcc_generated_files/tmr2.c: 145: }
+"143
+[; ;mcc_generated_files/tmr2.c: 143: }
 [e :UE 785 ]
 }
-"147
-[; ;mcc_generated_files/tmr2.c: 147: void TMR2_DefaultInterruptHandler(void)
+"145
+[; ;mcc_generated_files/tmr2.c: 145: void TMR2_DefaultInterruptHandler(void)
 [v _TMR2_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-"148
-[; ;mcc_generated_files/tmr2.c: 148: {
+"146
+[; ;mcc_generated_files/tmr2.c: 146: {
 {
 [e :U _TMR2_DefaultInterruptHandler ]
 [f ]
-"151
-[; ;mcc_generated_files/tmr2.c: 151: }
+"149
+[; ;mcc_generated_files/tmr2.c: 149: }
 [e :UE 786 ]
-}
-"153
-[; ;mcc_generated_files/tmr2.c: 153: void TMR2_InterruptEnable(void)
-[v _TMR2_InterruptEnable `(v ~T0 @X0 1 ef ]
-"154
-[; ;mcc_generated_files/tmr2.c: 154: {
-{
-[e :U _TMR2_InterruptEnable ]
-[f ]
-"156
-[; ;mcc_generated_files/tmr2.c: 156:   PIR1bits.TMR2IF = 0;
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"159
-[; ;mcc_generated_files/tmr2.c: 159:   PIE1bits.TMR2IE = 1;
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-"160
-[; ;mcc_generated_files/tmr2.c: 160: }
-[e :UE 787 ]
-}
-"162
-[; ;mcc_generated_files/tmr2.c: 162: void TMR2_InterruptDisable(void)
-[v _TMR2_InterruptDisable `(v ~T0 @X0 1 ef ]
-"163
-[; ;mcc_generated_files/tmr2.c: 163: {
-{
-[e :U _TMR2_InterruptDisable ]
-[f ]
-"165
-[; ;mcc_generated_files/tmr2.c: 165:   PIR1bits.TMR2IF = 0;
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"168
-[; ;mcc_generated_files/tmr2.c: 168:   PIE1bits.TMR2IE = 0;
-[e = . . _PIE1bits 0 1 -> -> 0 `i `uc ]
-"169
-[; ;mcc_generated_files/tmr2.c: 169: }
-[e :UE 788 ]
 }
