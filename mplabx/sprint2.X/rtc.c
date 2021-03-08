@@ -43,7 +43,7 @@ void rtc_sleep(int time) //time in seconds
     {
         //printf("Entro al if, apagando... \r\n");
         TMR2_InterruptDisable();
-        rtc_wakeup(0x14,0x06);
+        //rtc_wakeup(0x14,0x06);
         time_sleep = 0;
     }
 }
@@ -66,5 +66,5 @@ void rtc_shutdown(int h, int m)
 
 void rtc_sleep_ISR(void)
 {
-    time_sleep += 30;
+    time_sleep += 15;
 }
