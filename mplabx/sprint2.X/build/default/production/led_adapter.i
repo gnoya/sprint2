@@ -10134,6 +10134,9 @@ static void set_brightness(int brightness)
   }
 
 
+  printf("Sensor de luz crudo: %d\r\n", brightness);
+
+
   int mapped_value = (int)map(brightness, 10, 1000, 0, 255);
 
 
@@ -10151,6 +10154,10 @@ static void set_color(int temperature)
     turn_red();
     return;
   }
+
+
+  int degrees = (int)map(temperature, 19, 358, -40, 125);
+  printf("Sensor de temp: %d C\r\n", degrees);
 
 
   int color = (int)map(temperature, 19, 358, 0, 60);

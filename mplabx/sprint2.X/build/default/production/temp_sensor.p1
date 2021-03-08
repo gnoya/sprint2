@@ -991,46 +991,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;temp_sensor.c: 35:     int measure = (int)ADC_GetConversion(SENSOR_TEMP);
 [v _measure `i ~T0 @X0 1 a ]
 [e = _measure -> ( _ADC_GetConversion (1 . `E6036 0 `i ]
-"37
-[; ;temp_sensor.c: 37:     return measure;
+"36
+[; ;temp_sensor.c: 36:     return measure;
 [e ) _measure ]
 [e $UE 787  ]
-"38
-[; ;temp_sensor.c: 38:   }
+"37
+[; ;temp_sensor.c: 37:   }
 }
 [e :U 788 ]
-"39
-[; ;temp_sensor.c: 39:   return 0;
+"38
+[; ;temp_sensor.c: 38:   return 0;
 [e ) -> 0 `i ]
 [e $UE 787  ]
-"40
-[; ;temp_sensor.c: 40: }
+"39
+[; ;temp_sensor.c: 39: }
 [e :UE 787 ]
 }
-"42
-[; ;temp_sensor.c: 42: void initialize_temp(sensor *sensor_var)
+"41
+[; ;temp_sensor.c: 41: void initialize_temp(sensor *sensor_var)
 [v _initialize_temp `(v ~T0 @X0 1 ef1`*S3 ]
-"43
-[; ;temp_sensor.c: 43: {
+"42
+[; ;temp_sensor.c: 42: {
 {
 [e :U _initialize_temp ]
-"42
-[; ;temp_sensor.c: 42: void initialize_temp(sensor *sensor_var)
+"41
+[; ;temp_sensor.c: 41: void initialize_temp(sensor *sensor_var)
 [v _sensor_var `*S3 ~T0 @X0 1 r1 ]
-"43
-[; ;temp_sensor.c: 43: {
+"42
+[; ;temp_sensor.c: 42: {
 [f ]
-"44
-[; ;temp_sensor.c: 44:   sensor_var->name = "Temperature";
+"43
+[; ;temp_sensor.c: 43:   sensor_var->name = "Temperature";
 [e = . *U _sensor_var 0 :s 1C ]
-"45
-[; ;temp_sensor.c: 45:   sensor_var->open = open;
+"44
+[; ;temp_sensor.c: 44:   sensor_var->open = open;
 [e = . *U _sensor_var 1 -> &U _open `*F6123 ]
-"46
-[; ;temp_sensor.c: 46:   sensor_var->read = read;
+"45
+[; ;temp_sensor.c: 45:   sensor_var->read = read;
 [e = . *U _sensor_var 2 -> &U _read `*F6127 ]
-"47
-[; ;temp_sensor.c: 47: }
+"46
+[; ;temp_sensor.c: 46: }
 [e :UE 789 ]
 }
 [a 1C 84 101 109 112 101 114 97 116 117 114 101 0 ]

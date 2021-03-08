@@ -10086,7 +10086,6 @@ static int read()
   {
 
     int measure = (int)ADC_GetConversion(SENSOR_LIGHT);
-
     return measure;
   }
   return 0;

@@ -991,46 +991,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;light_sensor.c: 37:     int measure = (int)ADC_GetConversion(SENSOR_LIGHT);
 [v _measure `i ~T0 @X0 1 a ]
 [e = _measure -> ( _ADC_GetConversion (1 . `E6036 1 `i ]
-"39
-[; ;light_sensor.c: 39:     return measure;
+"38
+[; ;light_sensor.c: 38:     return measure;
 [e ) _measure ]
 [e $UE 787  ]
-"40
-[; ;light_sensor.c: 40:   }
+"39
+[; ;light_sensor.c: 39:   }
 }
 [e :U 788 ]
-"41
-[; ;light_sensor.c: 41:   return 0;
+"40
+[; ;light_sensor.c: 40:   return 0;
 [e ) -> 0 `i ]
 [e $UE 787  ]
-"42
-[; ;light_sensor.c: 42: }
+"41
+[; ;light_sensor.c: 41: }
 [e :UE 787 ]
 }
-"45
-[; ;light_sensor.c: 45: void initialize_light(sensor *sensor_var)
+"44
+[; ;light_sensor.c: 44: void initialize_light(sensor *sensor_var)
 [v _initialize_light `(v ~T0 @X0 1 ef1`*S3 ]
-"46
-[; ;light_sensor.c: 46: {
+"45
+[; ;light_sensor.c: 45: {
 {
 [e :U _initialize_light ]
-"45
-[; ;light_sensor.c: 45: void initialize_light(sensor *sensor_var)
+"44
+[; ;light_sensor.c: 44: void initialize_light(sensor *sensor_var)
 [v _sensor_var `*S3 ~T0 @X0 1 r1 ]
-"46
-[; ;light_sensor.c: 46: {
+"45
+[; ;light_sensor.c: 45: {
 [f ]
-"47
-[; ;light_sensor.c: 47:   sensor_var->name = "Light";
+"46
+[; ;light_sensor.c: 46:   sensor_var->name = "Light";
 [e = . *U _sensor_var 0 :s 1C ]
-"48
-[; ;light_sensor.c: 48:   sensor_var->open = open;
+"47
+[; ;light_sensor.c: 47:   sensor_var->open = open;
 [e = . *U _sensor_var 1 -> &U _open `*F6124 ]
-"49
-[; ;light_sensor.c: 49:   sensor_var->read = read;
+"48
+[; ;light_sensor.c: 48:   sensor_var->read = read;
 [e = . *U _sensor_var 2 -> &U _read `*F6128 ]
-"50
-[; ;light_sensor.c: 50: }
+"49
+[; ;light_sensor.c: 49: }
 [e :UE 789 ]
 }
 [a 1C 76 105 103 104 116 0 ]

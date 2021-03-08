@@ -10084,7 +10084,6 @@ static int read()
   {
 
     int measure = (int)ADC_GetConversion(SENSOR_TEMP);
-
     return measure;
   }
   return 0;

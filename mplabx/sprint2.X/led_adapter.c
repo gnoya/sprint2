@@ -64,6 +64,9 @@ static void set_brightness(int brightness)
     return;
   }
 
+  // Prints the raw value
+  printf("Sensor de luz crudo: %d\r\n", brightness);
+
   // Map between a duty cycle of 0 to 255
   int mapped_value = (int)map(brightness, 10, 1000, 0, 255);
 
@@ -82,6 +85,10 @@ static void set_color(int temperature)
     turn_red();
     return;
   }
+
+  // Prints the mapped value to Celsious
+  int degrees = (int)map(temperature, 19, 358, -40, 125);
+  printf("Sensor de temp: %d C\r\n", degrees);
 
   // Map the temperature between 0 and 60 (arbitrary values)
   int color = (int)map(temperature, 19, 358, 0, 60);
